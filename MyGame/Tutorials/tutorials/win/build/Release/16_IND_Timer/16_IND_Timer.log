@@ -1,0 +1,21 @@
+﻿Build started 1.4.2015 г. 14:18:39 ч..
+     1>Project "C:\Users\Steve\Desktop\Организации\Codi Camp\Cources\Intro Game Development C++\Lecture5_Indielib\MyGame\Tutorials\tutorials\win\basic\16_IND_Timer\16_IND_Timer.vcxproj" on node 2 (Rebuild target(s)).
+     1>ClCompile:
+         D:\programs\vs2013express\VC\bin\CL.exe /c /I..\..\..\..\common\include /nologo /W4 /WX- /O2 /Ob2 /Oi /Ot /Oy- /GL /D WIN32 /D NDEBUG /Gm- /EHa /MD /GS- /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"C:\Users\Steve\Desktop\Организации\Codi Camp\Cources\Intro Game Development C++\Lecture5_Indielib\MyGame\Tutorials\tutorials\win\/build/Release/16_IND_Timer\\" /Fd"C:\Users\Steve\Desktop\Организации\Codi Camp\Cources\Intro Game Development C++\Lecture5_Indielib\MyGame\Tutorials\tutorials\win\/build/Release/16_IND_Timer\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\..\basic\16_IND_Timer\CIndieLib_vc2008.cpp ..\..\..\basic\16_IND_Timer\Tutorial16.cpp ..\..\..\WorkingPath.cpp
+         CIndieLib_vc2008.cpp
+         Tutorial16.cpp
+     1>..\..\..\basic\16_IND_Timer\Tutorial16.cpp(122): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>..\..\..\basic\16_IND_Timer\Tutorial16.cpp(88): warning C4189: 'mX' : local variable is initialized but not referenced
+         WorkingPath.cpp
+       Link:
+         D:\programs\vs2013express\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Steve\Desktop\Организации\Codi Camp\Cources\Intro Game Development C++\Lecture5_Indielib\MyGame\Tutorials\tutorials\win\basic\16_IND_Timer\/../../../../bin/win\16_IND_Timer.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:../../../../bin/win IndieLib.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:"C:\Users\Steve\Desktop\Организации\Codi Camp\Cources\Intro Game Development C++\Lecture5_Indielib\MyGame\Tutorials\tutorials\win\basic\16_IND_Timer\/../../../../bin/win\16_IND_Timer.pdb" /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Steve\Desktop\Организации\Codi Camp\Cources\Intro Game Development C++\Lecture5_Indielib\MyGame\Tutorials\tutorials\win\basic\16_IND_Timer\/../../../../bin/win\16_IND_Timer.lib" /MACHINE:X86 /SAFESEH "C:\Users\Steve\Desktop\Организации\Codi Camp\Cources\Intro Game Development C++\Lecture5_Indielib\MyGame\Tutorials\tutorials\win\/build/Release/16_IND_Timer\CIndieLib_vc2008.obj"
+         "C:\Users\Steve\Desktop\Организации\Codi Camp\Cources\Intro Game Development C++\Lecture5_Indielib\MyGame\Tutorials\tutorials\win\/build/Release/16_IND_Timer\Tutorial16.obj"
+         "C:\Users\Steve\Desktop\Организации\Codi Camp\Cources\Intro Game Development C++\Lecture5_Indielib\MyGame\Tutorials\tutorials\win\/build/Release/16_IND_Timer\WorkingPath.obj"
+         Generating code
+         Finished generating code
+         16_IND_Timer.vcxproj -> C:\Users\Steve\Desktop\Организации\Codi Camp\Cources\Intro Game Development C++\Lecture5_Indielib\MyGame\Tutorials\tutorials\win\basic\16_IND_Timer\/../../../../bin/win\16_IND_Timer.exe
+     1>Done Building Project "C:\Users\Steve\Desktop\Организации\Codi Camp\Cources\Intro Game Development C++\Lecture5_Indielib\MyGame\Tutorials\tutorials\win\basic\16_IND_Timer\16_IND_Timer.vcxproj" (Rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:03.05

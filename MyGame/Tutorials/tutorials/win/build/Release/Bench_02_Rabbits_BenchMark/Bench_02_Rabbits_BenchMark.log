@@ -1,0 +1,16 @@
+﻿Build started 1.4.2015 г. 14:18:25 ч..
+     1>Project "C:\Users\Steve\Desktop\Организации\Codi Camp\Cources\Intro Game Development C++\Lecture5_Indielib\MyGame\Tutorials\tutorials\win\benchmark\02_Rabbits_BenchMark\Bench_02_Rabbits_BenchMark.vcxproj" on node 2 (Rebuild target(s)).
+     1>ClCompile:
+         D:\programs\vs2013express\VC\bin\CL.exe /c /I..\..\..\..\common\include /nologo /W4 /WX- /O2 /Ob2 /Oi /Ot /Oy- /GL /D WIN32 /D NDEBUG /Gm- /EHa /MD /GS- /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"C:\Users\Steve\Desktop\Организации\Codi Camp\Cources\Intro Game Development C++\Lecture5_Indielib\MyGame\Tutorials\tutorials\win\/build/Release/Bench_02_Rabbits_BenchMark\\" /Fd"C:\Users\Steve\Desktop\Организации\Codi Camp\Cources\Intro Game Development C++\Lecture5_Indielib\MyGame\Tutorials\tutorials\win\/build/Release/Bench_02_Rabbits_BenchMark\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\..\benchmark\02_Rabbits_BenchMark\CIndieLib_vc2008.cpp ..\..\..\benchmark\02_Rabbits_BenchMark\CRabbit.cpp ..\..\..\benchmark\02_Rabbits_BenchMark\Tutorial02.cpp ..\..\..\WorkingPath.cpp
+         CIndieLib_vc2008.cpp
+     1>c1xx : fatal error C1083: Cannot open source file: '..\..\..\benchmark\02_Rabbits_BenchMark\CIndieLib_vc2008.cpp': No such file or directory
+         CRabbit.cpp
+     1>c1xx : fatal error C1083: Cannot open source file: '..\..\..\benchmark\02_Rabbits_BenchMark\CRabbit.cpp': No such file or directory
+         Tutorial02.cpp
+     1>c1xx : fatal error C1083: Cannot open source file: '..\..\..\benchmark\02_Rabbits_BenchMark\Tutorial02.cpp': No such file or directory
+         WorkingPath.cpp
+     1>Done Building Project "C:\Users\Steve\Desktop\Организации\Codi Camp\Cources\Intro Game Development C++\Lecture5_Indielib\MyGame\Tutorials\tutorials\win\benchmark\02_Rabbits_BenchMark\Bench_02_Rabbits_BenchMark.vcxproj" (Rebuild target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:00.76

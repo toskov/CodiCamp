@@ -1,0 +1,18 @@
+﻿Build started 1.4.2015 г. 14:18:13 ч..
+     1>Project "C:\Users\Steve\Desktop\Организации\Codi Camp\Cources\Intro Game Development C++\Lecture5_Indielib\MyGame\Tutorials\tutorials\win\benchmark\01_Alien_BenchMark\Bench_01_Alien_BenchMark.vcxproj" on node 2 (Rebuild target(s)).
+     1>ClCompile:
+         D:\programs\vs2013express\VC\bin\CL.exe /c /I..\..\..\..\common\include /nologo /W4 /WX- /O2 /Ob2 /Oi /Ot /Oy- /GL /D WIN32 /D NDEBUG /Gm- /EHa /MD /GS- /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"C:\Users\Steve\Desktop\Организации\Codi Camp\Cources\Intro Game Development C++\Lecture5_Indielib\MyGame\Tutorials\tutorials\win\/build/Release/Bench_01_Alien_BenchMark\\" /Fd"C:\Users\Steve\Desktop\Организации\Codi Camp\Cources\Intro Game Development C++\Lecture5_Indielib\MyGame\Tutorials\tutorials\win\/build/Release/Bench_01_Alien_BenchMark\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\..\benchmark\01_Alien_BenchMark\CIndieLib_vc2008.cpp ..\..\..\benchmark\01_Alien_BenchMark\CTerrain.cpp ..\..\..\benchmark\01_Alien_BenchMark\CUfo.cpp ..\..\..\benchmark\01_Alien_BenchMark\Tutorial01.cpp ..\..\..\WorkingPath.cpp
+         CIndieLib_vc2008.cpp
+     1>c1xx : fatal error C1083: Cannot open source file: '..\..\..\benchmark\01_Alien_BenchMark\CIndieLib_vc2008.cpp': No such file or directory
+         CTerrain.cpp
+     1>c1xx : fatal error C1083: Cannot open source file: '..\..\..\benchmark\01_Alien_BenchMark\CTerrain.cpp': No such file or directory
+         CUfo.cpp
+     1>c1xx : fatal error C1083: Cannot open source file: '..\..\..\benchmark\01_Alien_BenchMark\CUfo.cpp': No such file or directory
+         Tutorial01.cpp
+     1>c1xx : fatal error C1083: Cannot open source file: '..\..\..\benchmark\01_Alien_BenchMark\Tutorial01.cpp': No such file or directory
+         WorkingPath.cpp
+     1>Done Building Project "C:\Users\Steve\Desktop\Организации\Codi Camp\Cources\Intro Game Development C++\Lecture5_Indielib\MyGame\Tutorials\tutorials\win\benchmark\01_Alien_BenchMark\Bench_01_Alien_BenchMark.vcxproj" (Rebuild target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:00.76

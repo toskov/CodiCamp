@@ -1,0 +1,125 @@
+
+                         ''~``                          
+                        ( o o )                         
++------------------.oooO--(_)--Oooo.------------------+ 
+|                                                     | 
+|                .-------------------.                | 
+|                | I N D I E  L I B  |                | 
+|                .-------------------.                | 
+|                    .oooO                            | 
+|                    (   )   Oooo.                    | 
++---------------------\ (----(   )--------------------+
+                       \_)    ) /                      
+                             (_/                        
+Indielib version: 0.5.1
+
+[Init time]: (Monday, 22 of June 2015)
+
+[12:53:03] [ BEGIN ] -- Creating Render --
+                     {
+[12:53:03] [ BEGIN ]    -- Creating SDL window --
+                        {
+           [  OK   ]       Window created
+           [ INFO  ]       Mode: Window
+                        }
+[12:53:03] [  END  ]    Window OK [Elapsed time = 0.033 seg]
+[12:53:03] [ BEGIN ]    -- Initializing Direct3D --
+                        {
+           [  OK   ]       Creating D3D object
+           [  OK   ]       Obtaining the adapter
+           [  OK   ]       Creating the device (D3DCREATE_HARDWARE_VERTEXPROCESSING)
+           [ INFO  ]       Video mode: 800 x 600 x 32
+                        }
+[12:53:03] [  END  ]    Direct3D OK [Elapsed time = 0.032 seg]
+[12:53:03] [ BEGIN ]    -- Hardware information --
+                        {
+           [ INFO  ]       Direct3D version: DXSDK November 2007
+           [ INFO  ]       Mark: Nvidia
+           [ INFO  ]       Chip: NVIDIA GeForce 8800 GT 
+           [ INFO  ]       Primitive antialising (D3DRS_ANTIALIASEDLINEENABLE): No
+           [ INFO  ]       Maximum texture size: 8192 x 8192
+           [ INFO  ]       Vertex Shader: 3 . 0 
+           [ INFO  ]       Pixel Shader: 3 . 0
+                        }
+[12:53:03] [  END  ]    Hardware Ok [Elapsed time = 0.001 seg]
+[12:53:03] [ BEGIN ]    -- Initializing ImageManager --
+                        {
+           [  OK   ]       Preparing ImageManager
+           [ INFO  ]       Using FreeImage version:  3.15.3
+           [ INFO  ]       Copyright:  This program uses FreeImage, a free, open source image library supporting all common bitmap formats. See http://freeimage.sourceforge.net for details
+                        }
+[12:53:03] [  END  ]    ImageManager Initialised [Elapsed time = 0.005 seg]
+[12:53:03] [ BEGIN ]    -- Initializing SurfaceManager --
+                        {
+           [  OK   ]       Checking IND_Render
+           [  OK   ]       Checking IND_ImageManager
+                        }
+[12:53:03] [  END  ]    SurfaceManager OK [Elapsed time = 0 seg]
+[12:53:03] [ BEGIN ]    -- Initializing AnimationManager --
+                        {
+           [  OK   ]       SurfaceManager Ok
+           [  OK   ]       ImageManager Ok
+                        }
+[12:53:03] [  END  ]    AnimationManager OK [Elapsed time = 0 seg]
+[12:53:03] [ BEGIN ]    -- Initializing FontManager --
+                        {
+           [  OK   ]       SurfaceManager Ok
+           [  OK   ]       ImageManager Ok
+                        }
+[12:53:03] [  END  ]    FontManager OK [Elapsed time = 0 seg]
+[12:53:03] [ BEGIN ]    -- Initializing Entity2dManager --
+                        {
+           [  OK   ]       Preparing Entity2dManager
+           [  OK   ]        Checking IND_Render
+                        }
+[12:53:03] [  END  ]    Entity2dManager OK [Elapsed time = 0 seg]
+[12:53:06] [ BEGIN ]    -- Finalizing Entity2dManager --
+                        {
+[12:53:06] [ BEGIN ]       -- Freeing 2d entities --
+                           {
+                           }
+[12:53:06] [  END  ]       Entities freed [Elapsed time = 0 seg]
+                        }
+[12:53:06] [  END  ]    IND_Entity2dManager finalized [Elapsed time = 0 seg]
+[12:53:06] [ BEGIN ]    -- Finalizing FontManager --
+                        {
+[12:53:06] [ BEGIN ]       -- Freeing fonts --
+                           {
+                           }
+[12:53:06] [  END  ]       Fonts freed [Elapsed time = 0 seg]
+                        }
+[12:53:06] [  END  ]    FontManager finalized [Elapsed time = 0 seg]
+[12:53:06] [ BEGIN ]    -- Finalizing AnimationManager --
+                        {
+[12:53:06] [ BEGIN ]       -- Freeing animations --
+                           {
+                           }
+[12:53:06] [  END  ]       Animations freed [Elapsed time = 0 seg]
+                        }
+[12:53:06] [  END  ]    AnimationManager finalized [Elapsed time = 0 seg]
+[12:53:06] [ BEGIN ]    -- Finalizing SurfaceManager --
+                        {
+[12:53:06] [ BEGIN ]       -- Freeing surfaces --
+                           {
+                           }
+[12:53:06] [  END  ]       Surfaces freed [Elapsed time = 0 seg]
+                        }
+[12:53:06] [  END  ]    IND_SurfaceManager finalized [Elapsed time = 0 seg]
+[12:53:06] [ BEGIN ]    -- Finalizing ImageManager --
+                        {
+[12:53:06] [ BEGIN ]       -- Freeing images --
+                           {
+                           }
+[12:53:06] [  END  ]       Images freed [Elapsed time = 0 seg]
+                        }
+[12:53:06] [  END  ]    ImageManager finalized [Elapsed time = 0 seg]
+[12:53:06] [ BEGIN ]    -- Finalizing Direct3D --
+                        {
+           [  OK   ]       Finalizing the Device
+           [  OK   ]       Finalizing D3D object
+[12:53:06] [ BEGIN ]       -- Finalizing the window --
+                           {
+                           }
+[12:53:06] [  END  ]       Window finalized [Elapsed time = 0.002 seg]
+                        }
+[12:53:06] [  END  ]    Direct3D finalized  [Elapsed time = 0.022 seg]

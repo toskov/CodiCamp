@@ -1,0 +1,19 @@
+﻿Build started 22.6.2015 г. 12:53:00 ч..
+     1>Project "C:\Users\Steve\Desktop\Организации\Codi Camp\Cources\Intro Game Development C++\Lecture5_Indielib\MyGame\Tutorials\tutorials\win\basic\01_Installing\01_Installing.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         D:\programs\vs2013express\VC\bin\CL.exe /c /I..\..\..\..\common\include /nologo /W4 /WX- /O2 /Ob2 /Oi /Ot /Oy- /GL /D WIN32 /D NDEBUG /Gm- /EHa /MD /GS- /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"C:\Users\Steve\Desktop\Организации\Codi Camp\Cources\Intro Game Development C++\Lecture5_Indielib\MyGame\Tutorials\tutorials\win\basic\01_Installing\/build/Release/01_Installing\\" /Fd"C:\Users\Steve\Desktop\Организации\Codi Camp\Cources\Intro Game Development C++\Lecture5_Indielib\MyGame\Tutorials\tutorials\win\basic\01_Installing\/build/Release/01_Installing\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\..\basic\01_Installing\CIndieLib_vc2008.cpp ..\..\..\basic\01_Installing\Tutorial01.cpp ..\..\..\WorkingPath.cpp
+         CIndieLib_vc2008.cpp
+         Tutorial01.cpp
+         WorkingPath.cpp
+       Link:
+         D:\programs\vs2013express\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Steve\Desktop\Организации\Codi Camp\Cources\Intro Game Development C++\Lecture5_Indielib\MyGame\Tutorials\tutorials\win\basic\01_Installing\/../../../../bin/win\01_Installing.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:../../../../bin/win IndieLib.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:"C:\Users\Steve\Desktop\Организации\Codi Camp\Cources\Intro Game Development C++\Lecture5_Indielib\MyGame\Tutorials\tutorials\win\basic\01_Installing\/../../../../bin/win\01_Installing.pdb" /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Steve\Desktop\Организации\Codi Camp\Cources\Intro Game Development C++\Lecture5_Indielib\MyGame\Tutorials\tutorials\win\basic\01_Installing\/../../../../bin/win\01_Installing.lib" /MACHINE:X86 /SAFESEH "C:\Users\Steve\Desktop\Организации\Codi Camp\Cources\Intro Game Development C++\Lecture5_Indielib\MyGame\Tutorials\tutorials\win\basic\01_Installing\/build/Release/01_Installing\CIndieLib_vc2008.obj"
+         "C:\Users\Steve\Desktop\Организации\Codi Camp\Cources\Intro Game Development C++\Lecture5_Indielib\MyGame\Tutorials\tutorials\win\basic\01_Installing\/build/Release/01_Installing\Tutorial01.obj"
+         "C:\Users\Steve\Desktop\Организации\Codi Camp\Cources\Intro Game Development C++\Lecture5_Indielib\MyGame\Tutorials\tutorials\win\basic\01_Installing\/build/Release/01_Installing\WorkingPath.obj"
+         Generating code
+         Finished generating code
+         01_Installing.vcxproj -> C:\Users\Steve\Desktop\Организации\Codi Camp\Cources\Intro Game Development C++\Lecture5_Indielib\MyGame\Tutorials\tutorials\win\basic\01_Installing\/../../../../bin/win\01_Installing.exe
+     1>Done Building Project "C:\Users\Steve\Desktop\Организации\Codi Camp\Cources\Intro Game Development C++\Lecture5_Indielib\MyGame\Tutorials\tutorials\win\basic\01_Installing\01_Installing.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:02.48

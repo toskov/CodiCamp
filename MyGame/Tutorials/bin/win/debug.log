@@ -1,0 +1,197 @@
+
+                         ''~``                          
+                        ( o o )                         
++------------------.oooO--(_)--Oooo.------------------+ 
+|                                                     | 
+|                .-------------------.                | 
+|                | I N D I E  L I B  |                | 
+|                .-------------------.                | 
+|                    .oooO                            | 
+|                    (   )   Oooo.                    | 
++---------------------\ (----(   )--------------------+
+                       \_)    ) /                      
+                             (_/                        
+Indielib version: 0.5.1
+
+[Init time]: (Wednesday, 1 of April 2015)
+
+[14:18:50] [ BEGIN ] -- Creating Render --
+                     {
+[14:18:50] [ BEGIN ]    -- Creating SDL window --
+                        {
+           [  OK   ]       Window created
+           [ INFO  ]       Mode: Window
+                        }
+[14:18:50] [  END  ]    Window OK [Elapsed time = 0.018 seg]
+[14:18:50] [ BEGIN ]    -- Initializing Direct3D --
+                        {
+           [  OK   ]       Creating D3D object
+           [  OK   ]       Obtaining the adapter
+           [  OK   ]       Creating the device (D3DCREATE_HARDWARE_VERTEXPROCESSING)
+           [ INFO  ]       Video mode: 800 x 600 x 32
+                        }
+[14:18:50] [  END  ]    Direct3D OK [Elapsed time = 0.034 seg]
+[14:18:50] [ BEGIN ]    -- Hardware information --
+                        {
+           [ INFO  ]       Direct3D version: DXSDK November 2007
+           [ INFO  ]       Mark: Nvidia
+           [ INFO  ]       Chip: NVIDIA GeForce 8800 GT 
+           [ INFO  ]       Primitive antialising (D3DRS_ANTIALIASEDLINEENABLE): No
+           [ INFO  ]       Maximum texture size: 8192 x 8192
+           [ INFO  ]       Vertex Shader: 3 . 0 
+           [ INFO  ]       Pixel Shader: 3 . 0
+                        }
+[14:18:50] [  END  ]    Hardware Ok [Elapsed time = 0 seg]
+[14:18:50] [ BEGIN ]    -- Initializing ImageManager --
+                        {
+           [  OK   ]       Preparing ImageManager
+           [ INFO  ]       Using FreeImage version:  3.15.3
+           [ INFO  ]       Copyright:  This program uses FreeImage, a free, open source image library supporting all common bitmap formats. See http://freeimage.sourceforge.net for details
+                        }
+[14:18:50] [  END  ]    ImageManager Initialised [Elapsed time = 0.001 seg]
+[14:18:50] [ BEGIN ]    -- Initializing SurfaceManager --
+                        {
+           [  OK   ]       Checking IND_Render
+           [  OK   ]       Checking IND_ImageManager
+                        }
+[14:18:50] [  END  ]    SurfaceManager OK [Elapsed time = 0 seg]
+[14:18:50] [ BEGIN ]    -- Initializing AnimationManager --
+                        {
+           [  OK   ]       SurfaceManager Ok
+           [  OK   ]       ImageManager Ok
+                        }
+[14:18:50] [  END  ]    AnimationManager OK [Elapsed time = 0 seg]
+[14:18:50] [ BEGIN ]    -- Initializing FontManager --
+                        {
+           [  OK   ]       SurfaceManager Ok
+           [  OK   ]       ImageManager Ok
+                        }
+[14:18:50] [  END  ]    FontManager OK [Elapsed time = 0 seg]
+[14:18:50] [ BEGIN ]    -- Initializing Entity2dManager --
+                        {
+           [  OK   ]       Preparing Entity2dManager
+           [  OK   ]        Checking IND_Render
+                        }
+[14:18:50] [  END  ]    Entity2dManager OK [Elapsed time = 0 seg]
+[14:18:50] [ BEGIN ]    -- Loading Image --
+                        {
+           [ INFO  ]       File name: ../../resources/font_big.png
+           [ INFO  ]       Extension: png
+           [ INFO  ]       Size: 512 x 512
+           [ INFO  ]       Bpp: 4
+           [ INFO  ]       Format: IND_RGBA
+                        }
+[14:18:50] [  END  ]    Image loaded [Elapsed time = 0.007 seg]
+[14:18:50] [ BEGIN ]    -- Parsing and loading font --
+                        {
+           [ INFO  ]       File name: ../../resources/font_big.xml
+[14:18:50] [ BEGIN ]       -- Creating surface --
+                           {
+           [ INFO  ]          From image: ../../resources/font_big.png
+           [ INFO  ]          Type: IND_ALPHA
+           [ INFO  ]          Quality: IND_32
+           [ INFO  ]          Image size: 512 x 512
+           [ INFO  ]          Block size: 512 x 512
+           [ INFO  ]          Number of blocks: 1 x 1
+           [ INFO  ]          Spare (Right | Down): 0 x 0
+                           }
+[14:18:50] [  END  ]       Surface created [Elapsed time = 0.002 seg]
+                        }
+[14:18:50] [  END  ]    Font parsed and loaded [Elapsed time = 0.011 seg]
+[14:18:50] [ BEGIN ]    -- Freeing image --
+                        {
+           [ INFO  ]       File name: ../../resources/font_big.png
+                        }
+[14:18:50] [  END  ]    Ok [Elapsed time = 0 seg]
+[14:18:50] [ BEGIN ]    -- Loading Image --
+                        {
+           [ INFO  ]       File name: ../../resources/draco.png
+           [ INFO  ]       Extension: png
+           [ INFO  ]       Size: 512 x 512
+           [ INFO  ]       Bpp: 4
+           [ INFO  ]       Format: IND_RGBA
+                        }
+[14:18:50] [  END  ]    Image loaded [Elapsed time = 0.012 seg]
+[14:18:50] [ BEGIN ]    -- Creating surface --
+                        {
+           [ INFO  ]       From image: ../../resources/draco.png
+           [ INFO  ]       Type: IND_ALPHA
+           [ INFO  ]       Quality: IND_32
+           [ INFO  ]       Image size: 512 x 512
+           [ INFO  ]       Block size: 512 x 512
+           [ INFO  ]       Number of blocks: 1 x 1
+           [ INFO  ]       Spare (Right | Down): 0 x 0
+                        }
+[14:18:50] [  END  ]    Surface created [Elapsed time = 0.002 seg]
+[14:18:50] [ BEGIN ]    -- Freeing image --
+                        {
+           [ INFO  ]       File name: ../../resources/draco.png
+                        }
+[14:18:50] [  END  ]    Ok [Elapsed time = 0 seg]
+[14:18:50] [ BEGIN ]    -- Adding 2d entity --
+                        {
+           [ INFO  ]       Name: 0
+                        }
+[14:18:50] [  END  ]    2d entity added [Elapsed time = 0 seg]
+[14:18:50] [ BEGIN ]    -- Adding 2d entity --
+                        {
+           [ INFO  ]       Name: 1
+                        }
+[14:18:50] [  END  ]    2d entity added [Elapsed time = 0 seg]
+[14:19:04] [ BEGIN ]    -- Finalizing Entity2dManager --
+                        {
+[14:19:04] [ BEGIN ]       -- Freeing 2d entities --
+                           {
+           [ INFO  ]          Freeing 2d entity: 0
+           [ INFO  ]          Freeing 2d entity: 0
+                           }
+[14:19:04] [  END  ]       Entities freed [Elapsed time = 0 seg]
+                        }
+[14:19:04] [  END  ]    IND_Entity2dManager finalized [Elapsed time = 0 seg]
+[14:19:04] [ BEGIN ]    -- Finalizing FontManager --
+                        {
+[14:19:04] [ BEGIN ]       -- Freeing fonts --
+                           {
+           [ INFO  ]          Freeing font: ../../resources/font_big.xml
+[14:19:04] [ BEGIN ]          -- Freeing surface --
+                              {
+                              }
+[14:19:04] [  END  ]          Ok [Elapsed time = 0 seg]
+                           }
+[14:19:04] [  END  ]       Fonts freed [Elapsed time = 0 seg]
+                        }
+[14:19:04] [  END  ]    FontManager finalized [Elapsed time = 0 seg]
+[14:19:04] [ BEGIN ]    -- Finalizing AnimationManager --
+                        {
+[14:19:04] [ BEGIN ]       -- Freeing animations --
+                           {
+                           }
+[14:19:04] [  END  ]       Animations freed [Elapsed time = 0 seg]
+                        }
+[14:19:04] [  END  ]    AnimationManager finalized [Elapsed time = 0 seg]
+[14:19:04] [ BEGIN ]    -- Finalizing SurfaceManager --
+                        {
+[14:19:04] [ BEGIN ]       -- Freeing surfaces --
+                           {
+           [ INFO  ]          Freeing surface:                           }
+[14:19:04] [  END  ]       Surfaces freed [Elapsed time = 0 seg]
+                        }
+[14:19:04] [  END  ]    IND_SurfaceManager finalized [Elapsed time = 0.001 seg]
+[14:19:04] [ BEGIN ]    -- Finalizing ImageManager --
+                        {
+[14:19:04] [ BEGIN ]       -- Freeing images --
+                           {
+                           }
+[14:19:04] [  END  ]       Images freed [Elapsed time = 0 seg]
+                        }
+[14:19:04] [  END  ]    ImageManager finalized [Elapsed time = 0 seg]
+[14:19:04] [ BEGIN ]    -- Finalizing Direct3D --
+                        {
+           [  OK   ]       Finalizing the Device
+           [  OK   ]       Finalizing D3D object
+[14:19:04] [ BEGIN ]       -- Finalizing the window --
+                           {
+                           }
+[14:19:04] [  END  ]       Window finalized [Elapsed time = 0.003 seg]
+                        }
+[14:19:04] [  END  ]    Direct3D finalized  [Elapsed time = 0.038 seg]
