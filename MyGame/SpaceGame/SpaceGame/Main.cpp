@@ -6,6 +6,7 @@
 #include "IND_Surface.h"
 #include "IND_Entity2d.h"
 #include "IND_Animation.h"
+#include "Menu.h"
 
 /*
 ==================
@@ -18,16 +19,11 @@ int IndieLib() // main
 
 	CIndieLib *mI = CIndieLib::instance(); // engine
 	if (!mI->init()) return 0;
-
-	IND_Entity2dManager manager;
-	IND_Entity2d *object = IND_Entity2d::newEntity2d();
+		
 
 	IND_Surface *mSurfaceBack = IND_Surface::newSurface();
-	if (!mI->_surfaceManager->add(mSurfaceBack, "../SpaceGame/resources/blue_background.jpg", IND_OPAQUE, IND_32)) return 0;
+	if (!mI->_surfaceManager->add(mSurfaceBack, "../SpaceGame/resources/earth_bkg.jpg", IND_OPAQUE, IND_32)) return 0;
 
-	// Characters animations, we apply transparency
-	IND_Animation *mAnimationRobot = IND_Animation::newAnimation();
-	if (!mI->_animationManager->addToSurface(mAnimationRobot, "../SpaceGame/resources/animations/robot.xml", IND_ALPHA, IND_32)) return 0;
 
 	// Characters animations, we apply transparency
 	IND_Animation *mAnimationRocket = IND_Animation::newAnimation();
@@ -38,17 +34,13 @@ int IndieLib() // main
 	mI->_entity2dManager->add(mBack);					// Entity adding
 	mBack->setSurface(mSurfaceBack);					// Set the surface into the entity
 
-	// Character robot
-	IND_Entity2d *robot = IND_Entity2d::newEntity2d();
-	mI->_entity2dManager->add(robot);					// Entity adding
-	robot->setAnimation(mAnimationRobot);				// Set the animation into the entity
-	robot->setPosition(300, 200,0);
-
 	// Character rocket
 	IND_Entity2d *rocket = IND_Entity2d::newEntity2d();
 	mI->_entity2dManager->add(rocket);					// Entity adding
 	rocket->setAnimation(mAnimationRocket);				// Set the animation into the entity
-	rocket->setPosition(400, 300, 0);
+	rocket->setPosition(600, 300, 0);
+
+	//Menu *menu = new Menu(mI);
 
 
 	// ----- Main Loop -----
