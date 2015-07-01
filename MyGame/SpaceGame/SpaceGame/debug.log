@@ -15,23 +15,23 @@ Indielib version: 0.5.1
 
 [Init time]: (Wednesday, 1 of July 2015)
 
-[22:38:00] [ BEGIN ] -- Creating Render --
+[23:15:58] [ BEGIN ] -- Creating Render --
                      {
-[22:38:00] [ BEGIN ]    -- Creating SDL window --
+[23:15:58] [ BEGIN ]    -- Creating SDL window --
                         {
            [  OK   ]       Window created
            [ INFO  ]       Mode: Window
                         }
-[22:38:00] [  END  ]    Window OK [Elapsed time = 0.014 seg]
-[22:38:00] [ BEGIN ]    -- Initializing Direct3D --
+[23:15:58] [  END  ]    Window OK [Elapsed time = 0.103 seg]
+[23:15:58] [ BEGIN ]    -- Initializing Direct3D --
                         {
            [  OK   ]       Creating D3D object
            [  OK   ]       Obtaining the adapter
            [  OK   ]       Creating the device (D3DCREATE_HARDWARE_VERTEXPROCESSING)
            [ INFO  ]       Video mode: 800 x 600 x 32
                         }
-[22:38:00] [  END  ]    Direct3D OK [Elapsed time = 0.016 seg]
-[22:38:00] [ BEGIN ]    -- Hardware information --
+[23:15:58] [  END  ]    Direct3D OK [Elapsed time = 0.026 seg]
+[23:15:58] [ BEGIN ]    -- Hardware information --
                         {
            [ INFO  ]       Direct3D version: DXSDK November 2007
            [ INFO  ]       Mark: ?
@@ -41,39 +41,39 @@ Indielib version: 0.5.1
            [ INFO  ]       Vertex Shader: 3 . 0 
            [ INFO  ]       Pixel Shader: 3 . 0
                         }
-[22:38:00] [  END  ]    Hardware Ok [Elapsed time = 0 seg]
-[22:38:00] [ BEGIN ]    -- Initializing ImageManager --
+[23:15:58] [  END  ]    Hardware Ok [Elapsed time = 0 seg]
+[23:15:58] [ BEGIN ]    -- Initializing ImageManager --
                         {
            [  OK   ]       Preparing ImageManager
            [ INFO  ]       Using FreeImage version:  3.15.3
            [ INFO  ]       Copyright:  This program uses FreeImage, a free, open source image library supporting all common bitmap formats. See http://freeimage.sourceforge.net for details
                         }
-[22:38:00] [  END  ]    ImageManager Initialised [Elapsed time = 0 seg]
-[22:38:00] [ BEGIN ]    -- Initializing SurfaceManager --
+[23:15:58] [  END  ]    ImageManager Initialised [Elapsed time = 0.003 seg]
+[23:15:58] [ BEGIN ]    -- Initializing SurfaceManager --
                         {
            [  OK   ]       Checking IND_Render
            [  OK   ]       Checking IND_ImageManager
                         }
-[22:38:00] [  END  ]    SurfaceManager OK [Elapsed time = 0 seg]
-[22:38:00] [ BEGIN ]    -- Initializing AnimationManager --
+[23:15:58] [  END  ]    SurfaceManager OK [Elapsed time = 0 seg]
+[23:15:58] [ BEGIN ]    -- Initializing AnimationManager --
                         {
            [  OK   ]       SurfaceManager Ok
            [  OK   ]       ImageManager Ok
                         }
-[22:38:00] [  END  ]    AnimationManager OK [Elapsed time = 0 seg]
-[22:38:00] [ BEGIN ]    -- Initializing FontManager --
+[23:15:58] [  END  ]    AnimationManager OK [Elapsed time = 0 seg]
+[23:15:58] [ BEGIN ]    -- Initializing FontManager --
                         {
            [  OK   ]       SurfaceManager Ok
            [  OK   ]       ImageManager Ok
                         }
-[22:38:00] [  END  ]    FontManager OK [Elapsed time = 0 seg]
-[22:38:00] [ BEGIN ]    -- Initializing Entity2dManager --
+[23:15:58] [  END  ]    FontManager OK [Elapsed time = 0 seg]
+[23:15:58] [ BEGIN ]    -- Initializing Entity2dManager --
                         {
            [  OK   ]       Preparing Entity2dManager
            [  OK   ]        Checking IND_Render
                         }
-[22:38:00] [  END  ]    Entity2dManager OK [Elapsed time = 0 seg]
-[22:38:00] [ BEGIN ]    -- Loading Image --
+[23:15:58] [  END  ]    Entity2dManager OK [Elapsed time = 0 seg]
+[23:15:58] [ BEGIN ]    -- Loading Image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/genesis/Background_Blue_Space-800x600.jpg
            [ INFO  ]       Extension: jpg
@@ -81,8 +81,8 @@ Indielib version: 0.5.1
            [ INFO  ]       Bpp: 3
            [ INFO  ]       Format: IND_RGB
                         }
-[22:38:00] [  END  ]    Image loaded [Elapsed time = 0.028 seg]
-[22:38:00] [ BEGIN ]    -- Creating surface --
+[23:15:58] [  END  ]    Image loaded [Elapsed time = 0.04 seg]
+[23:15:58] [ BEGIN ]    -- Creating surface --
                         {
            [ INFO  ]       From image: ../SpaceGame/resources/genesis/Background_Blue_Space-800x600.jpg
            [  OK   ]       Image type converted to 32-bit RGB implicitly.
@@ -93,13 +93,13 @@ Indielib version: 0.5.1
            [ INFO  ]       Number of blocks: 1 x 1
            [ INFO  ]       Spare (Right | Down): 224 x 424
                         }
-[22:38:00] [  END  ]    Surface created [Elapsed time = 0.014 seg]
-[22:38:00] [ BEGIN ]    -- Freeing image --
+[23:15:58] [  END  ]    Surface created [Elapsed time = 0.011 seg]
+[23:15:58] [ BEGIN ]    -- Freeing image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/genesis/Background_Blue_Space-800x600.jpg
                         }
-[22:38:00] [  END  ]    Ok [Elapsed time = 0 seg]
-[22:38:00] [ BEGIN ]    -- Loading Image --
+[23:15:58] [  END  ]    Ok [Elapsed time = 0 seg]
+[23:15:58] [ BEGIN ]    -- Loading Image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/genesis/Space-Ship-icon2.png
            [ INFO  ]       Extension: png
@@ -107,8 +107,8 @@ Indielib version: 0.5.1
            [ INFO  ]       Bpp: 4
            [ INFO  ]       Format: IND_RGBA
                         }
-[22:38:00] [  END  ]    Image loaded [Elapsed time = 0.004 seg]
-[22:38:00] [ BEGIN ]    -- Creating surface --
+[23:15:58] [  END  ]    Image loaded [Elapsed time = 0.007 seg]
+[23:15:58] [ BEGIN ]    -- Creating surface --
                         {
            [ INFO  ]       From image: ../SpaceGame/resources/genesis/Space-Ship-icon2.png
            [ INFO  ]       Type: IND_ALPHA
@@ -118,13 +118,13 @@ Indielib version: 0.5.1
            [ INFO  ]       Number of blocks: 1 x 1
            [ INFO  ]       Spare (Right | Down): 162 x 162
                         }
-[22:38:00] [  END  ]    Surface created [Elapsed time = 0.001 seg]
-[22:38:00] [ BEGIN ]    -- Freeing image --
+[23:15:58] [  END  ]    Surface created [Elapsed time = 0.001 seg]
+[23:15:58] [ BEGIN ]    -- Freeing image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/genesis/Space-Ship-icon2.png
                         }
-[22:38:00] [  END  ]    Ok [Elapsed time = 0 seg]
-[22:38:00] [ BEGIN ]    -- Loading Image --
+[23:15:58] [  END  ]    Ok [Elapsed time = 0 seg]
+[23:15:58] [ BEGIN ]    -- Loading Image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/genesis/Sun-icon.png
            [ INFO  ]       Extension: png
@@ -132,8 +132,8 @@ Indielib version: 0.5.1
            [ INFO  ]       Bpp: 4
            [ INFO  ]       Format: IND_RGBA
                         }
-[22:38:00] [  END  ]    Image loaded [Elapsed time = 0.02 seg]
-[22:38:00] [ BEGIN ]    -- Creating surface --
+[23:15:58] [  END  ]    Image loaded [Elapsed time = 0.026 seg]
+[23:15:58] [ BEGIN ]    -- Creating surface --
                         {
            [ INFO  ]       From image: ../SpaceGame/resources/genesis/Sun-icon.png
            [ INFO  ]       Type: IND_ALPHA
@@ -143,13 +143,13 @@ Indielib version: 0.5.1
            [ INFO  ]       Number of blocks: 1 x 1
            [ INFO  ]       Spare (Right | Down): 0 x 0
                         }
-[22:38:00] [  END  ]    Surface created [Elapsed time = 0.002 seg]
-[22:38:00] [ BEGIN ]    -- Freeing image --
+[23:15:58] [  END  ]    Surface created [Elapsed time = 0.001 seg]
+[23:15:58] [ BEGIN ]    -- Freeing image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/genesis/Sun-icon.png
                         }
-[22:38:00] [  END  ]    Ok [Elapsed time = 0 seg]
-[22:38:00] [ BEGIN ]    -- Loading Image --
+[23:15:58] [  END  ]    Ok [Elapsed time = 0 seg]
+[23:15:58] [ BEGIN ]    -- Loading Image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/genesis/Mercury-icon.png
            [ INFO  ]       Extension: png
@@ -157,8 +157,8 @@ Indielib version: 0.5.1
            [ INFO  ]       Bpp: 4
            [ INFO  ]       Format: IND_RGBA
                         }
-[22:38:00] [  END  ]    Image loaded [Elapsed time = 0.015 seg]
-[22:38:00] [ BEGIN ]    -- Creating surface --
+[23:15:58] [  END  ]    Image loaded [Elapsed time = 0.018 seg]
+[23:15:58] [ BEGIN ]    -- Creating surface --
                         {
            [ INFO  ]       From image: ../SpaceGame/resources/genesis/Mercury-icon.png
            [ INFO  ]       Type: IND_ALPHA
@@ -168,13 +168,13 @@ Indielib version: 0.5.1
            [ INFO  ]       Number of blocks: 1 x 1
            [ INFO  ]       Spare (Right | Down): 0 x 0
                         }
-[22:38:00] [  END  ]    Surface created [Elapsed time = 0.002 seg]
-[22:38:00] [ BEGIN ]    -- Freeing image --
+[23:15:58] [  END  ]    Surface created [Elapsed time = 0.002 seg]
+[23:15:58] [ BEGIN ]    -- Freeing image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/genesis/Mercury-icon.png
                         }
-[22:38:00] [  END  ]    Ok [Elapsed time = 0 seg]
-[22:38:00] [ BEGIN ]    -- Loading Image --
+[23:15:58] [  END  ]    Ok [Elapsed time = 0 seg]
+[23:15:58] [ BEGIN ]    -- Loading Image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/genesis/Venus-icon.png
            [ INFO  ]       Extension: png
@@ -182,8 +182,8 @@ Indielib version: 0.5.1
            [ INFO  ]       Bpp: 4
            [ INFO  ]       Format: IND_RGBA
                         }
-[22:38:00] [  END  ]    Image loaded [Elapsed time = 0.014 seg]
-[22:38:00] [ BEGIN ]    -- Creating surface --
+[23:15:58] [  END  ]    Image loaded [Elapsed time = 0.018 seg]
+[23:15:58] [ BEGIN ]    -- Creating surface --
                         {
            [ INFO  ]       From image: ../SpaceGame/resources/genesis/Venus-icon.png
            [ INFO  ]       Type: IND_ALPHA
@@ -193,13 +193,13 @@ Indielib version: 0.5.1
            [ INFO  ]       Number of blocks: 1 x 1
            [ INFO  ]       Spare (Right | Down): 0 x 0
                         }
-[22:38:00] [  END  ]    Surface created [Elapsed time = 0.003 seg]
-[22:38:00] [ BEGIN ]    -- Freeing image --
+[23:15:58] [  END  ]    Surface created [Elapsed time = 0.002 seg]
+[23:15:58] [ BEGIN ]    -- Freeing image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/genesis/Venus-icon.png
                         }
-[22:38:00] [  END  ]    Ok [Elapsed time = 0 seg]
-[22:38:00] [ BEGIN ]    -- Loading Image --
+[23:15:58] [  END  ]    Ok [Elapsed time = 0 seg]
+[23:15:58] [ BEGIN ]    -- Loading Image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/genesis/Earth-icon.png
            [ INFO  ]       Extension: png
@@ -207,8 +207,8 @@ Indielib version: 0.5.1
            [ INFO  ]       Bpp: 4
            [ INFO  ]       Format: IND_RGBA
                         }
-[22:38:00] [  END  ]    Image loaded [Elapsed time = 0.012 seg]
-[22:38:00] [ BEGIN ]    -- Creating surface --
+[23:15:58] [  END  ]    Image loaded [Elapsed time = 0.017 seg]
+[23:15:58] [ BEGIN ]    -- Creating surface --
                         {
            [ INFO  ]       From image: ../SpaceGame/resources/genesis/Earth-icon.png
            [ INFO  ]       Type: IND_ALPHA
@@ -218,13 +218,13 @@ Indielib version: 0.5.1
            [ INFO  ]       Number of blocks: 1 x 1
            [ INFO  ]       Spare (Right | Down): 0 x 0
                         }
-[22:38:00] [  END  ]    Surface created [Elapsed time = 0.001 seg]
-[22:38:00] [ BEGIN ]    -- Freeing image --
+[23:15:58] [  END  ]    Surface created [Elapsed time = 0.002 seg]
+[23:15:58] [ BEGIN ]    -- Freeing image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/genesis/Earth-icon.png
                         }
-[22:38:00] [  END  ]    Ok [Elapsed time = 0 seg]
-[22:38:00] [ BEGIN ]    -- Loading Image --
+[23:15:58] [  END  ]    Ok [Elapsed time = 0 seg]
+[23:15:58] [ BEGIN ]    -- Loading Image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/genesis/Mars-icon.png
            [ INFO  ]       Extension: png
@@ -232,8 +232,8 @@ Indielib version: 0.5.1
            [ INFO  ]       Bpp: 4
            [ INFO  ]       Format: IND_RGBA
                         }
-[22:38:00] [  END  ]    Image loaded [Elapsed time = 0.011 seg]
-[22:38:00] [ BEGIN ]    -- Creating surface --
+[23:15:58] [  END  ]    Image loaded [Elapsed time = 0.016 seg]
+[23:15:58] [ BEGIN ]    -- Creating surface --
                         {
            [ INFO  ]       From image: ../SpaceGame/resources/genesis/Mars-icon.png
            [ INFO  ]       Type: IND_ALPHA
@@ -243,13 +243,13 @@ Indielib version: 0.5.1
            [ INFO  ]       Number of blocks: 1 x 1
            [ INFO  ]       Spare (Right | Down): 0 x 0
                         }
-[22:38:00] [  END  ]    Surface created [Elapsed time = 0.001 seg]
-[22:38:00] [ BEGIN ]    -- Freeing image --
+[23:15:58] [  END  ]    Surface created [Elapsed time = 0.003 seg]
+[23:15:58] [ BEGIN ]    -- Freeing image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/genesis/Mars-icon.png
                         }
-[22:38:00] [  END  ]    Ok [Elapsed time = 0.001 seg]
-[22:38:00] [ BEGIN ]    -- Loading Image --
+[23:15:58] [  END  ]    Ok [Elapsed time = 0 seg]
+[23:15:58] [ BEGIN ]    -- Loading Image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/genesis/Jupiter-icon.png
            [ INFO  ]       Extension: png
@@ -257,8 +257,8 @@ Indielib version: 0.5.1
            [ INFO  ]       Bpp: 4
            [ INFO  ]       Format: IND_RGBA
                         }
-[22:38:00] [  END  ]    Image loaded [Elapsed time = 0.012 seg]
-[22:38:00] [ BEGIN ]    -- Creating surface --
+[23:15:58] [  END  ]    Image loaded [Elapsed time = 0.019 seg]
+[23:15:58] [ BEGIN ]    -- Creating surface --
                         {
            [ INFO  ]       From image: ../SpaceGame/resources/genesis/Jupiter-icon.png
            [ INFO  ]       Type: IND_ALPHA
@@ -268,13 +268,13 @@ Indielib version: 0.5.1
            [ INFO  ]       Number of blocks: 1 x 1
            [ INFO  ]       Spare (Right | Down): 0 x 0
                         }
-[22:38:00] [  END  ]    Surface created [Elapsed time = 0.001 seg]
-[22:38:00] [ BEGIN ]    -- Freeing image --
+[23:15:58] [  END  ]    Surface created [Elapsed time = 0.002 seg]
+[23:15:58] [ BEGIN ]    -- Freeing image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/genesis/Jupiter-icon.png
                         }
-[22:38:00] [  END  ]    Ok [Elapsed time = 0 seg]
-[22:38:00] [ BEGIN ]    -- Loading Image --
+[23:15:58] [  END  ]    Ok [Elapsed time = 0 seg]
+[23:15:58] [ BEGIN ]    -- Loading Image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/genesis/Saturn-icon.png
            [ INFO  ]       Extension: png
@@ -282,8 +282,8 @@ Indielib version: 0.5.1
            [ INFO  ]       Bpp: 4
            [ INFO  ]       Format: IND_RGBA
                         }
-[22:38:00] [  END  ]    Image loaded [Elapsed time = 0.011 seg]
-[22:38:00] [ BEGIN ]    -- Creating surface --
+[23:15:58] [  END  ]    Image loaded [Elapsed time = 0.02 seg]
+[23:15:58] [ BEGIN ]    -- Creating surface --
                         {
            [ INFO  ]       From image: ../SpaceGame/resources/genesis/Saturn-icon.png
            [ INFO  ]       Type: IND_ALPHA
@@ -293,13 +293,13 @@ Indielib version: 0.5.1
            [ INFO  ]       Number of blocks: 1 x 1
            [ INFO  ]       Spare (Right | Down): 0 x 0
                         }
-[22:38:00] [  END  ]    Surface created [Elapsed time = 0.001 seg]
-[22:38:00] [ BEGIN ]    -- Freeing image --
+[23:15:58] [  END  ]    Surface created [Elapsed time = 0.001 seg]
+[23:15:58] [ BEGIN ]    -- Freeing image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/genesis/Saturn-icon.png
                         }
-[22:38:00] [  END  ]    Ok [Elapsed time = 0 seg]
-[22:38:00] [ BEGIN ]    -- Loading Image --
+[23:15:58] [  END  ]    Ok [Elapsed time = 0 seg]
+[23:15:58] [ BEGIN ]    -- Loading Image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/genesis/Uranus-icon.png
            [ INFO  ]       Extension: png
@@ -307,8 +307,8 @@ Indielib version: 0.5.1
            [ INFO  ]       Bpp: 4
            [ INFO  ]       Format: IND_RGBA
                         }
-[22:38:00] [  END  ]    Image loaded [Elapsed time = 0.009 seg]
-[22:38:00] [ BEGIN ]    -- Creating surface --
+[23:15:58] [  END  ]    Image loaded [Elapsed time = 0.012 seg]
+[23:15:58] [ BEGIN ]    -- Creating surface --
                         {
            [ INFO  ]       From image: ../SpaceGame/resources/genesis/Uranus-icon.png
            [ INFO  ]       Type: IND_ALPHA
@@ -318,13 +318,13 @@ Indielib version: 0.5.1
            [ INFO  ]       Number of blocks: 1 x 1
            [ INFO  ]       Spare (Right | Down): 0 x 0
                         }
-[22:38:00] [  END  ]    Surface created [Elapsed time = 0.001 seg]
-[22:38:00] [ BEGIN ]    -- Freeing image --
+[23:15:58] [  END  ]    Surface created [Elapsed time = 0.001 seg]
+[23:15:58] [ BEGIN ]    -- Freeing image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/genesis/Uranus-icon.png
                         }
-[22:38:00] [  END  ]    Ok [Elapsed time = 0 seg]
-[22:38:00] [ BEGIN ]    -- Loading Image --
+[23:15:58] [  END  ]    Ok [Elapsed time = 0.001 seg]
+[23:15:58] [ BEGIN ]    -- Loading Image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/genesis/Neptune-icon.png
            [ INFO  ]       Extension: png
@@ -332,8 +332,8 @@ Indielib version: 0.5.1
            [ INFO  ]       Bpp: 4
            [ INFO  ]       Format: IND_RGBA
                         }
-[22:38:00] [  END  ]    Image loaded [Elapsed time = 0.011 seg]
-[22:38:00] [ BEGIN ]    -- Creating surface --
+[23:15:58] [  END  ]    Image loaded [Elapsed time = 0.014 seg]
+[23:15:58] [ BEGIN ]    -- Creating surface --
                         {
            [ INFO  ]       From image: ../SpaceGame/resources/genesis/Neptune-icon.png
            [ INFO  ]       Type: IND_ALPHA
@@ -343,13 +343,13 @@ Indielib version: 0.5.1
            [ INFO  ]       Number of blocks: 1 x 1
            [ INFO  ]       Spare (Right | Down): 0 x 0
                         }
-[22:38:00] [  END  ]    Surface created [Elapsed time = 0.001 seg]
-[22:38:00] [ BEGIN ]    -- Freeing image --
+[23:15:58] [  END  ]    Surface created [Elapsed time = 0.001 seg]
+[23:15:58] [ BEGIN ]    -- Freeing image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/genesis/Neptune-icon.png
                         }
-[22:38:00] [  END  ]    Ok [Elapsed time = 0 seg]
-[22:38:00] [ BEGIN ]    -- Loading Image --
+[23:15:58] [  END  ]    Ok [Elapsed time = 0.001 seg]
+[23:15:58] [ BEGIN ]    -- Loading Image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/genesis/Pluto-icon.png
            [ INFO  ]       Extension: png
@@ -357,8 +357,8 @@ Indielib version: 0.5.1
            [ INFO  ]       Bpp: 4
            [ INFO  ]       Format: IND_RGBA
                         }
-[22:38:00] [  END  ]    Image loaded [Elapsed time = 0.015 seg]
-[22:38:00] [ BEGIN ]    -- Creating surface --
+[23:15:58] [  END  ]    Image loaded [Elapsed time = 0.016 seg]
+[23:15:58] [ BEGIN ]    -- Creating surface --
                         {
            [ INFO  ]       From image: ../SpaceGame/resources/genesis/Pluto-icon.png
            [ INFO  ]       Type: IND_ALPHA
@@ -368,75 +368,75 @@ Indielib version: 0.5.1
            [ INFO  ]       Number of blocks: 1 x 1
            [ INFO  ]       Spare (Right | Down): 0 x 0
                         }
-[22:38:00] [  END  ]    Surface created [Elapsed time = 0.002 seg]
-[22:38:00] [ BEGIN ]    -- Freeing image --
+[23:15:58] [  END  ]    Surface created [Elapsed time = 0.003 seg]
+[23:15:58] [ BEGIN ]    -- Freeing image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/genesis/Pluto-icon.png
                         }
-[22:38:00] [  END  ]    Ok [Elapsed time = 0 seg]
-[22:38:00] [ BEGIN ]    -- Adding 2d entity --
+[23:15:58] [  END  ]    Ok [Elapsed time = 0 seg]
+[23:15:58] [ BEGIN ]    -- Adding 2d entity --
                         {
            [ INFO  ]       Name: 0
                         }
-[22:38:00] [  END  ]    2d entity added [Elapsed time = 0 seg]
-[22:38:00] [ BEGIN ]    -- Adding 2d entity --
+[23:15:58] [  END  ]    2d entity added [Elapsed time = 0 seg]
+[23:15:58] [ BEGIN ]    -- Adding 2d entity --
                         {
            [ INFO  ]       Name: 1
                         }
-[22:38:00] [  END  ]    2d entity added [Elapsed time = 0 seg]
-[22:38:00] [ BEGIN ]    -- Adding 2d entity --
+[23:15:58] [  END  ]    2d entity added [Elapsed time = 0 seg]
+[23:15:58] [ BEGIN ]    -- Adding 2d entity --
                         {
            [ INFO  ]       Name: 2
                         }
-[22:38:00] [  END  ]    2d entity added [Elapsed time = 0 seg]
-[22:38:00] [ BEGIN ]    -- Adding 2d entity --
+[23:15:58] [  END  ]    2d entity added [Elapsed time = 0 seg]
+[23:15:58] [ BEGIN ]    -- Adding 2d entity --
                         {
            [ INFO  ]       Name: 3
                         }
-[22:38:00] [  END  ]    2d entity added [Elapsed time = 0 seg]
-[22:38:00] [ BEGIN ]    -- Adding 2d entity --
+[23:15:58] [  END  ]    2d entity added [Elapsed time = 0 seg]
+[23:15:58] [ BEGIN ]    -- Adding 2d entity --
                         {
            [ INFO  ]       Name: 4
                         }
-[22:38:00] [  END  ]    2d entity added [Elapsed time = 0 seg]
-[22:38:00] [ BEGIN ]    -- Adding 2d entity --
+[23:15:58] [  END  ]    2d entity added [Elapsed time = 0 seg]
+[23:15:58] [ BEGIN ]    -- Adding 2d entity --
                         {
            [ INFO  ]       Name: 5
                         }
-[22:38:00] [  END  ]    2d entity added [Elapsed time = 0 seg]
-[22:38:00] [ BEGIN ]    -- Adding 2d entity --
+[23:15:58] [  END  ]    2d entity added [Elapsed time = 0 seg]
+[23:15:58] [ BEGIN ]    -- Adding 2d entity --
                         {
            [ INFO  ]       Name: 6
                         }
-[22:38:00] [  END  ]    2d entity added [Elapsed time = 0 seg]
-[22:38:00] [ BEGIN ]    -- Adding 2d entity --
+[23:15:58] [  END  ]    2d entity added [Elapsed time = 0 seg]
+[23:15:58] [ BEGIN ]    -- Adding 2d entity --
                         {
            [ INFO  ]       Name: 7
                         }
-[22:38:00] [  END  ]    2d entity added [Elapsed time = 0 seg]
-[22:38:00] [ BEGIN ]    -- Adding 2d entity --
+[23:15:58] [  END  ]    2d entity added [Elapsed time = 0 seg]
+[23:15:58] [ BEGIN ]    -- Adding 2d entity --
                         {
            [ INFO  ]       Name: 8
                         }
-[22:38:00] [  END  ]    2d entity added [Elapsed time = 0 seg]
-[22:38:00] [ BEGIN ]    -- Adding 2d entity --
+[23:15:58] [  END  ]    2d entity added [Elapsed time = 0 seg]
+[23:15:58] [ BEGIN ]    -- Adding 2d entity --
                         {
            [ INFO  ]       Name: 9
                         }
-[22:38:00] [  END  ]    2d entity added [Elapsed time = 0 seg]
-[22:38:00] [ BEGIN ]    -- Adding 2d entity --
+[23:15:58] [  END  ]    2d entity added [Elapsed time = 0 seg]
+[23:15:58] [ BEGIN ]    -- Adding 2d entity --
                         {
            [ INFO  ]       Name: 10
                         }
-[22:38:00] [  END  ]    2d entity added [Elapsed time = 0 seg]
-[22:38:00] [ BEGIN ]    -- Adding 2d entity --
+[23:15:58] [  END  ]    2d entity added [Elapsed time = 0 seg]
+[23:15:58] [ BEGIN ]    -- Adding 2d entity --
                         {
            [ INFO  ]       Name: 11
                         }
-[22:38:00] [  END  ]    2d entity added [Elapsed time = 0 seg]
-[22:38:07] [ BEGIN ]    -- Finalizing Entity2dManager --
+[23:15:58] [  END  ]    2d entity added [Elapsed time = 0 seg]
+[23:16:49] [ BEGIN ]    -- Finalizing Entity2dManager --
                         {
-[22:38:07] [ BEGIN ]       -- Freeing 2d entities --
+[23:16:49] [ BEGIN ]       -- Freeing 2d entities --
                            {
            [ INFO  ]          Freeing 2d entity: 0
            [ INFO  ]          Freeing 2d entity: 0
@@ -451,48 +451,48 @@ Indielib version: 0.5.1
            [ INFO  ]          Freeing 2d entity: 0
            [ INFO  ]          Freeing 2d entity: 0
                            }
-[22:38:07] [  END  ]       Entities freed [Elapsed time = 0.001 seg]
+[23:16:49] [  END  ]       Entities freed [Elapsed time = 0 seg]
                         }
-[22:38:07] [  END  ]    IND_Entity2dManager finalized [Elapsed time = 0.001 seg]
-[22:38:07] [ BEGIN ]    -- Finalizing FontManager --
+[23:16:49] [  END  ]    IND_Entity2dManager finalized [Elapsed time = 0 seg]
+[23:16:49] [ BEGIN ]    -- Finalizing FontManager --
                         {
-[22:38:07] [ BEGIN ]       -- Freeing fonts --
+[23:16:49] [ BEGIN ]       -- Freeing fonts --
                            {
                            }
-[22:38:07] [  END  ]       Fonts freed [Elapsed time = 0 seg]
+[23:16:49] [  END  ]       Fonts freed [Elapsed time = 0 seg]
                         }
-[22:38:07] [  END  ]    FontManager finalized [Elapsed time = 0 seg]
-[22:38:07] [ BEGIN ]    -- Finalizing AnimationManager --
+[23:16:49] [  END  ]    FontManager finalized [Elapsed time = 0 seg]
+[23:16:49] [ BEGIN ]    -- Finalizing AnimationManager --
                         {
-[22:38:07] [ BEGIN ]       -- Freeing animations --
+[23:16:49] [ BEGIN ]       -- Freeing animations --
                            {
                            }
-[22:38:07] [  END  ]       Animations freed [Elapsed time = 0 seg]
+[23:16:49] [  END  ]       Animations freed [Elapsed time = 0 seg]
                         }
-[22:38:07] [  END  ]    AnimationManager finalized [Elapsed time = 0 seg]
-[22:38:07] [ BEGIN ]    -- Finalizing SurfaceManager --
+[23:16:49] [  END  ]    AnimationManager finalized [Elapsed time = 0 seg]
+[23:16:49] [ BEGIN ]    -- Finalizing SurfaceManager --
                         {
-[22:38:07] [ BEGIN ]       -- Freeing surfaces --
+[23:16:49] [ BEGIN ]       -- Freeing surfaces --
                            {
            [ INFO  ]          Freeing surface:           [ INFO  ]          Freeing surface:           [ INFO  ]          Freeing surface:           [ INFO  ]          Freeing surface:           [ INFO  ]          Freeing surface:           [ INFO  ]          Freeing surface:           [ INFO  ]          Freeing surface:           [ INFO  ]          Freeing surface:           [ INFO  ]          Freeing surface:           [ INFO  ]          Freeing surface:           [ INFO  ]          Freeing surface:           [ INFO  ]          Freeing surface:                           }
-[22:38:07] [  END  ]       Surfaces freed [Elapsed time = 0.01 seg]
+[23:16:49] [  END  ]       Surfaces freed [Elapsed time = 0.004 seg]
                         }
-[22:38:07] [  END  ]    IND_SurfaceManager finalized [Elapsed time = 0.01 seg]
-[22:38:07] [ BEGIN ]    -- Finalizing ImageManager --
+[23:16:49] [  END  ]    IND_SurfaceManager finalized [Elapsed time = 0.004 seg]
+[23:16:49] [ BEGIN ]    -- Finalizing ImageManager --
                         {
-[22:38:07] [ BEGIN ]       -- Freeing images --
+[23:16:49] [ BEGIN ]       -- Freeing images --
                            {
                            }
-[22:38:07] [  END  ]       Images freed [Elapsed time = 0 seg]
+[23:16:49] [  END  ]       Images freed [Elapsed time = 0 seg]
                         }
-[22:38:07] [  END  ]    ImageManager finalized [Elapsed time = 0 seg]
-[22:38:07] [ BEGIN ]    -- Finalizing Direct3D --
+[23:16:49] [  END  ]    ImageManager finalized [Elapsed time = 0 seg]
+[23:16:49] [ BEGIN ]    -- Finalizing Direct3D --
                         {
            [  OK   ]       Finalizing the Device
            [  OK   ]       Finalizing D3D object
-[22:38:07] [ BEGIN ]       -- Finalizing the window --
+[23:16:49] [ BEGIN ]       -- Finalizing the window --
                            {
                            }
-[22:38:07] [  END  ]       Window finalized [Elapsed time = 0.006 seg]
+[23:16:49] [  END  ]       Window finalized [Elapsed time = 0.011 seg]
                         }
-[22:38:07] [  END  ]    Direct3D finalized  [Elapsed time = 0.01 seg]
+[23:16:49] [  END  ]    Direct3D finalized  [Elapsed time = 0.016 seg]
