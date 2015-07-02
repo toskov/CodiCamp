@@ -69,8 +69,8 @@ int IndieLib() // main
 	mI->_entity2dManager->add(mSpaceShip);					 // Entity adding
 	mSpaceShip->setSurface(mSurfaceSpaceShip);			     // Set the surface into the entity
 	mSpaceShip->setHotSpot(0.5f, 0.5f);
-	mSpaceShip->setScale(1, 1);
-	mSpaceShip->setPosition(150, 450, 0);
+	mSpaceShip->setScale(0.3f, 0.3f);
+	mSpaceShip->setPosition(50, 550, 0);
 
 
 	IND_Entity2d *mSun= IND_Entity2d::newEntity2d();        // SUN 0

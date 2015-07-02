@@ -21,8 +21,14 @@
     <ClCompile Include="tools\editor_tileless\CIndieLib.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Planet.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ErrorHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="Menu.cpp">
-      <Filter>Resource Files</Filter>
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -30,6 +36,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Menu.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Planet.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ErrorHandler.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
