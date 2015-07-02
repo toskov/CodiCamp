@@ -9,7 +9,7 @@ private:
 	int *posX, *posY;
 
 public:
-	Menu(IND_Entity2dManager *myI);
+	Menu(CIndieLib *mI);
 	~Menu();
 	void ShowMenu(void);
 	void HideMenu(void);

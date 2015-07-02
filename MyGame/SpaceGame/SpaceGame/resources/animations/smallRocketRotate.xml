@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation>
+	<!-- frames declaration -->
+	<frames>	
+		<!-- rocket -->
+		<frame name="rocket0" file="../SpaceGame/resources/animations/smallRocketRotate/0061.png" />
+		<frame name="rocket1" file="../SpaceGame/resources/animations/smallRocketRotate/0062.png" />
+		<frame name="rocket2" file="../SpaceGame/resources/animations/smallRocketRotate/0063.png" />
+		<frame name="rocket3" file="../SpaceGame/resources/animations/smallRocketRotate/0064.png" />
+		<frame name="rocket4" file="../SpaceGame/resources/animations/smallRocketRotate/0065.png" />
+		<frame name="rocket5" file="../SpaceGame/resources/animations/smallRocketRotate/0066.png" />
+		<frame name="rocket6" file="../SpaceGame/resources/animations/smallRocketRotate/0067.png" />
+		<frame name="rocket7" file="../SpaceGame/resources/animations/smallRocketRotate/0068.png" />
+		<frame name="rocket8" file="../SpaceGame/resources/animations/smallRocketRotate/0069.png" />
+		<frame name="rocket9" file="../SpaceGame/resources/animations/smallRocketRotate/0070.png" />
+		<frame name="rocket10" file="../SpaceGame/resources/animations/smallRocketRotate/0071.png" />
+		<frame name="rocket11" file="../SpaceGame/resources/animations/smallRocketRotate/0072.png" />
+		<frame name="rocket12" file="../SpaceGame/resources/animations/smallRocketRotate/0073.png" />
+		<frame name="rocket13" file="../SpaceGame/resources/animations/smallRocketRotate/0074.png" />
+		<frame name="rocket14" file="../SpaceGame/resources/animations/smallRocketRotate/0075.png" />
+		<frame name="rocket15" file="../SpaceGame/resources/animations/smallRocketRotate/0076.png" />
+		<frame name="rocket16" file="../SpaceGame/resources/animations/smallRocketRotate/0077.png" />
+		<frame name="rocket17" file="../SpaceGame/resources/animations/smallRocketRotate/0078.png" />
+		<frame name="rocket18" file="../SpaceGame/resources/animations/smallRocketRotate/0079.png" />
+		<frame name="rocket19" file="../SpaceGame/resources/animations/smallRocketRotate/0080.png" />
+		<frame name="rocket20" file="../SpaceGame/resources/animations/smallRocketRotate/0081.png" />
+		<frame name="rocket21" file="../SpaceGame/resources/animations/smallRocketRotate/0082.png" />
+		<frame name="rocket22" file="../SpaceGame/resources/animations/smallRocketRotate/0083.png" />
+		<frame name="rocket23" file="../SpaceGame/resources/animations/smallRocketRotate/0084.png" />
+		<frame name="rocket24" file="../SpaceGame/resources/animations/smallRocketRotate/0085.png" />
+		<frame name="rocket25" file="../SpaceGame/resources/animations/smallRocketRotate/0086.png" />
+		<frame name="rocket26" file="../SpaceGame/resources/animations/smallRocketRotate/0087.png" />
+		<frame name="rocket27" file="../SpaceGame/resources/animations/smallRocketRotate/0088.png" />
+		<frame name="rocket28" file="../SpaceGame/resources/animations/smallRocketRotate/0089.png" />
+		<frame name="rocket29" file="../SpaceGame/resources/animations/smallRocketRotate/0090.png" />
+		<frame name="rocket30" file="../SpaceGame/resources/animations/smallRocketRotate/0091.png" />
+		<frame name="rocket31" file="../SpaceGame/resources/animations/smallRocketRotate/0092.png" />
+		<frame name="rocket32" file="../SpaceGame/resources/animations/smallRocketRotate/0093.png" />
+		<frame name="rocket33" file="../SpaceGame/resources/animations/smallRocketRotate/0094.png" />
+		<frame name="rocket34" file="../SpaceGame/resources/animations/smallRocketRotate/0095.png" />
+		<frame name="rocket35" file="../SpaceGame/resources/animations/smallRocketRotate/0096.png" />
+		<frame name="rocket36" file="../SpaceGame/resources/animations/smallRocketRotate/0097.png" />
+	</frames>
+		
+	<!-- sequences declaration -->
+	<sequences>
+		<!-- rocket -->
+		<sequence name="rocket">
+			<frame name="rocket0" time="50" />
+			<frame name="rocket1" time="50" />
+			<frame name="rocket2" time="50" />
+			<frame name="rocket3" time="50" />
+			<frame name="rocket4" time="50" />
+			<frame name="rocket5" time="50" />
+			<frame name="rocket6" time="50" />
+			<frame name="rocket7" time="50" />
+			<frame name="rocket8" time="50" />
+			<frame name="rocket9" time="50" />
+			<frame name="rocket10" time="50" />
+			<frame name="rocket11" time="50" />
+			<frame name="rocket12" time="50" />
+			<frame name="rocket13" time="50" />
+			<frame name="rocket14" time="50" />
+			<frame name="rocket15" time="50" />
+			<frame name="rocket16" time="50" />
+			<frame name="rocket17" time="50" />
+			<frame name="rocket18" time="50" />
+			<frame name="rocket19" time="50" />
+			<frame name="rocket20" time="50" />
+			<frame name="rocket21" time="50" />
+			<frame name="rocket22" time="50" />
+			<frame name="rocket23" time="50" />
+			<frame name="rocket24" time="50" />
+			<frame name="rocket25" time="50" />
+			<frame name="rocket26"  time="50" />
+			<frame name="rocket27"  time="50" /> 
+			<frame name="rocket28"  time="50" /> 
+			<frame name="rocket29"  time="50" /> 
+			<frame name="rocket30"  time="50" /> 
+			<frame name="rocket31"  time="50" /> 
+			<frame name="rocket32"  time="50" /> 
+			<frame name="rocket33"  time="50" /> 
+			<frame name="rocket34"  time="50" /> 
+			<frame name="rocket35"  time="50" /> 
+			<frame name="rocket36"  time="50" /> 
+			<frame name="rocket37"  time="50" /> 
+			<frame name="rocket38"  time="50" /> 
+			<frame name="rocket39"  time="50" /> 
+			<frame name="rocket40"  time="50" /> 
+			<frame name="rocket41"  time="50" /> 
+			<frame name="rocket42"  time="50" /> 
+			<frame name="rocket43"  time="50" /> 
+			<frame name="rocket44"  time="50" /> 
+			<frame name="rocket45"  time="50" /> 
+			<frame name="rocket46"  time="50" /> 
+			<frame name="rocket47"  time="50" /> 
+			<frame name="rocket48"  time="50" /> 
+			<frame name="rocket49"  time="50" /> 
+			<frame name="rocket50"  time="50" /> 
+			<frame name="rocket51"  time="50" /> 
+			<frame name="rocket52"  time="50" /> 
+			<frame name="rocket53"  time="50" /> 
+			<frame name="rocket54"  time="50" /> 
+			<frame name="rocket55"  time="50" /> 
+			<frame name="rocket56"  time="50" /> 
+			<frame name="rocket57"  time="50" /> 
+			<frame name="rocket58"  time="50" /> 
+			<frame name="rocket59"  time="50" /> 
+		</sequence>		
+	</sequences>
+</animation>
