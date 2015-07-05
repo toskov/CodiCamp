@@ -3,6 +3,11 @@
 #include "IND_Surface.h"
 #include "IND_Entity2d.h"
 
+Menu::Menu()
+{
+
+}
+
 Menu::Menu(CIndieLib  *myI)
 {
 

@@ -84,22 +84,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Error.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Menu.cpp" />
     <ClCompile Include="Planet.cpp" />
     <ClCompile Include="Ship.cpp" />
-    <ClCompile Include="Object.cpp" />
+    <ClCompile Include="GObject.cpp" />
     <ClCompile Include="tools\editor_tileless\CIndieLib.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Object.h" />
+    <ClInclude Include="Error.h" />
+    <ClInclude Include="GObject.h" />
     <ClInclude Include="Planet.h" />
     <ClInclude Include="Ship.h" />
     <ClInclude Include="Menu.h" />
     <ClInclude Include="tools\editor_tileless\CIndieLib.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="ClassDiagram.cd" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

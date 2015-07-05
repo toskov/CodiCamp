@@ -56,11 +56,12 @@ int IndieLib() // main
 	robot->setHotSpot(0.5f, 0.5f);
 	robot->setRegion(50, 50, 20, 20);
 
+	IND_Entity2d *error = IND_Entity2d::newEntity2d();
 
 
 	Menu *menu = new Menu(mI);
 
-	//Ship *ship = new Ship(mI,"../SpaceGame/resources/animations/rocket.xml" );
+	Ship *ship = new Ship(mI, "../SpaceGame/resources/animations/rocket.xml");
 
 	// ----- Main Loop -----
 

@@ -1,11 +1,17 @@
 #include "Ship.h"
 
-Ship::Ship(CIndieLib *mI, std::string str)
+Ship::Ship()
 {
+	//SetPosition(0,0,0);
+}
 
-		// Characters animations, we apply transparency
+Ship::Ship(CIndieLib *mI,const char *str)
+{
+	//SetPosition(0, 0, 0);	
+	
+	// Characters animations, we apply transparency
 	IND_Animation *mAnimationRocket = IND_Animation::newAnimation();
-	if (!mI->_animationManager->addToSurface(mAnimationRocket, "../SpaceGame/resources/animations/rocket.xml", IND_ALPHA, IND_32)){
+	if (!mI->_animationManager->addToSurface(mAnimationRocket, (const char*)str, IND_ALPHA, IND_32)){
 		// "../SpaceGame/resources/animations/rocket.xml"
 		// Error handler TODO
 	}	
@@ -17,8 +23,9 @@ Ship::Ship(CIndieLib *mI, std::string str)
 	rocket->setPosition(600, 300, 0);
 	rocket->setHotSpot(0.5f, 0.5f);
 	
-
-
+	
+	
+	
 }
 
 Ship::~Ship()
