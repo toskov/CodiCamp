@@ -1,12 +1,13 @@
 #include "CIndieLib.h"
 #include "IND_Surface.h"
 #include "IND_Entity2d.h"
-#include "IND_Animation.h"
+#include "IND_Font.h"
+#include "ErrorHandler.h"
 
 #ifndef MENU_H
 #define	MENU_H
 
-class Menu
+class Menu : public ErrorHandler
 {
 private:
 	int *posX, *posY;

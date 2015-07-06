@@ -1,7 +1,4 @@
 #include "Menu.h"
-#include "CIndieLib.h"
-#include "IND_Surface.h"
-#include "IND_Entity2d.h"
 
 Menu::Menu()
 {
@@ -11,9 +8,22 @@ Menu::Menu()
 Menu::Menu(CIndieLib  *myI)
 {
 
-	IND_Entity2d *object = IND_Entity2d::newEntity2d();
-	
-	// TODO Create animated menu buttons
+	// Font
+	IND_Font *mFontSmall = IND_Font::newFont();
+	if (!myI->_fontManager->add(mFontSmall, "../../resources/font_small.png", "../../resources/font_small.xml", IND_ALPHA, IND_32))
+	{
+		CatchError("Cannot find font resources!");
+	}
+
+	// ----- Font creation -----
+
+	IND_Entity2d *mTextSmallWhite = IND_Entity2d::newEntity2d();
+	myI->_entity2dManager->add(mTextSmallWhite);			// Entity adding
+	mTextSmallWhite->setFont(mFontSmall);				// Set the font into the entity
+	mTextSmallWhite->setLineSpacing(18);
+	mTextSmallWhite->setCharSpacing(-8);
+	mTextSmallWhite->setPosition(5, 5, 1);
+	mTextSmallWhite->setAlign(IND_LEFT);
 	
 }
 

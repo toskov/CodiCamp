@@ -14,6 +14,12 @@
 Main
 ==================
 */
+
+void CalculateMovement(Ship *ship)
+{
+	ship->SetPosition(0,0,0);
+}
+
 int IndieLib() // main
 {
 	// ----- IndieLib intialization -----
@@ -32,7 +38,7 @@ int IndieLib() // main
 
 	IND_Entity2d *error = IND_Entity2d::newEntity2d(); // TODO
 
-	Menu *menu = new Menu(mI); // TODO
+	 Menu *menu = new Menu(mI); // TODO
 
 	Ship *ship = new Ship(mI, "../SpaceGame/resources/animations/smallRocketRotate.xml");
 	//ship->SetPosition(50, 50, 0);
@@ -44,6 +50,11 @@ int IndieLib() // main
 		// ----- Input Update ----
 
 		mI->_input->update();
+
+		// --------- Game controll --------
+
+		CalculateMovement(ship);
+
 
 		// -------- Render -------
 

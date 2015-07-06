@@ -12,10 +12,11 @@ Ship::Ship(CIndieLib *mI,const char *str)
 	
 	// Characters animations, we apply transparency
 	IND_Animation *mAnimationRocket = IND_Animation::newAnimation();
-	if (!mI->_animationManager->addToSurface(mAnimationRocket, (const char*)str, IND_ALPHA, IND_32)){
-		// "../SpaceGame/resources/animations/rocket.xml"
-		//TODO Error handler 
-	}	
+
+	if (!mI->_animationManager->addToSurface(mAnimationRocket, (const char*)str, IND_ALPHA, IND_32))
+	{
+		CatchError("Cannot find animation resources!");
+	}
 	IND_Entity2d *ship_ = IND_Entity2d::newEntity2d();
 	// Character rocket
 	mI->_entity2dManager->add(ship_);					// Entity adding

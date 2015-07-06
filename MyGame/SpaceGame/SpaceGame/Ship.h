@@ -4,10 +4,11 @@
 #include "IND_Entity2d.h"
 #include "IND_Animation.h"
 #include "GObject.h"
+#include "ErrorHandler.h"
 
 
 
-class Ship : public GObject
+class Ship : public GObject,public ErrorHandler
 {
 
 public:

@@ -8,11 +8,10 @@ using namespace std;
 class ErrorHandler 
 {
 private:
-	string currentErrorStr = " ";
+	string currentErrorStr = "";
 public:
 	ErrorHandler();
    ~ErrorHandler();
 	static void CatchError(string currentErrorStr);
-
 };
 #endif
