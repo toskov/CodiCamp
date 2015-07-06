@@ -1,9 +1,8 @@
-﻿Build started 5.7.2015 г. 12:34:43.
+﻿Build started 6.7.2015 г. 11:29:04.
      1>Project "F:\Projects\CodiCamp\C-game-course\MyGame\SpaceGame\SpaceGame\SpaceGame.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         F:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"F:\Projects\CodiCamp\C-game-course\MyGame\SpaceGame\SpaceGame\tools\editor_tileless" /I"F:\Projects\CodiCamp\C-game-course\MyGame\SpaceGame\SpaceGame\common\include" /I"C:\Users\Steve\Desktop\Организации\Codi Camp\Cources\Intro Game Development C++\Lecture5_Indielib\MyGame\SpaceGame\SpaceGame\common\include" /I"C:\Users\Steve\Desktop\Организации\Codi Camp\Cources\Intro Game Development C++\Lecture5_Indielib\MyGame\SpaceGame\SpaceGame\tools\editor_tileless" /I..\..\..\..\common\include /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt GObject.cpp Ship.cpp
-         GObject.cpp
-         Ship.cpp
+         F:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"F:\Projects\CodiCamp\C-game-course\MyGame\SpaceGame\SpaceGame\tools\editor_tileless" /I"F:\Projects\CodiCamp\C-game-course\MyGame\SpaceGame\SpaceGame\common\include" /I"C:\Users\Steve\Desktop\Организации\Codi Camp\Cources\Intro Game Development C++\Lecture5_Indielib\MyGame\SpaceGame\SpaceGame\common\include" /I"C:\Users\Steve\Desktop\Организации\Codi Camp\Cources\Intro Game Development C++\Lecture5_Indielib\MyGame\SpaceGame\SpaceGame\tools\editor_tileless" /I..\..\..\..\common\include /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Main.cpp
+         Main.cpp
        Link:
          F:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"F:\Projects\CodiCamp\C-game-course\MyGame\SpaceGame\Release\SpaceGame.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:"F:\Projects\CodiCamp\C-game-course\MyGame\SpaceGame\SpaceGame\bin\win" /LIBPATH:"C:\Users\Steve\Desktop\Организации\Codi Camp\Cources\Intro Game Development C++\Lecture5_Indielib\MyGame\SpaceGame\SpaceGame\bin\win" /LIBPATH:../../../../bin/win IndieLib.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"F:\Projects\CodiCamp\C-game-course\MyGame\SpaceGame\Release\SpaceGame.pdb" /SUBSYSTEM:WINDOWS /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"F:\Projects\CodiCamp\C-game-course\MyGame\SpaceGame\Release\SpaceGame.lib" /MACHINE:X86 /SAFESEH Release\Error.obj
          Release\Main.obj
@@ -19,4 +18,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:02.16
+Time Elapsed 00:00:02.64

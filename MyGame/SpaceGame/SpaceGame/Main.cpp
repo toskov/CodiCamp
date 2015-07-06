@@ -61,7 +61,8 @@ int IndieLib() // main
 
 	Menu *menu = new Menu(mI);
 
-	Ship *ship = new Ship(mI, "../SpaceGame/resources/animations/rocket.xml");
+	Ship *ship = new Ship(mI, "../SpaceGame/resources/animations/smallRocketRotate.xml");
+	//ship->SetPosition(50, 50, 0);
 
 	// ----- Main Loop -----
 
