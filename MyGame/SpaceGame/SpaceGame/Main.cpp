@@ -15,13 +15,8 @@ Main
 ==================
 */
 
-void CalculateMovement(Ship *ship)
-{
-	//ship->MoveTo(1.0f, 1.0f);
-	ship->setSpeedX(0.01f);
-	ship->setSpeedX(0.01f);
-	ship->Move();
-}
+
+const float ROTSPEED = 0.1f;
 
 int IndieLib() // main
 {
@@ -30,7 +25,7 @@ int IndieLib() // main
 	CIndieLib *mI = CIndieLib::instance(); // engine
 	if (!mI->init()) return 0;
 		
-
+	// Creating surface for the background
 	IND_Surface *mSurfaceBack = IND_Surface::newSurface();
 	if (!mI->_surfaceManager->add(mSurfaceBack, "../SpaceGame/resources/genesis/Background_Colorful_Galaxy-800x600.jpg", IND_OPAQUE, IND_32)) return 0;
 
@@ -39,14 +34,10 @@ int IndieLib() // main
 	mI->_entity2dManager->add(mBack);					// Entity adding
 	mBack->setSurface(mSurfaceBack);					// Set the surface into the entity
 
-	IND_Entity2d *error = IND_Entity2d::newEntity2d(); // TODO
-
 	 Menu *menu = new Menu(mI); // TODO
 
 	Ship *ship = new Ship(mI, "../SpaceGame/resources/animations/smallRocketRotate.xml");
 
-	//Ship *sheep = new Ship(mI, "../SpaceGame/resources/animations/smallRocketRotate.xml");
-	//ship->SetPosition(0.1f, 0.1f, 0.1f);
 	ship->MoveTo(50,50);
 	// ----- Main Loop -----
 
@@ -55,10 +46,12 @@ int IndieLib() // main
 		// ----- Input Update ----
 
 		mI->_input->update();
+		
 
 		// --------- Game controll --------
+		ship->Update();
+		ship->ReadKeys(mI);
 
-		CalculateMovement(ship);
 
 		// -------- Render -------
 

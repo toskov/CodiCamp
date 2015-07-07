@@ -18,8 +18,13 @@ public:
 	Ship();
 	Ship(CIndieLib *mI, const char *str);
 	void MoveTo( float X,  float Y);
-	void Move();
+	void Update();
 	void setSpeedX(float sX);
 	void setSpeedY(float sY);
+	void increaseSpeed(float step);
+	void decreaseSpeed(float step);
+	void rotateLeft(float speed);
+	void rotateRight(float speed);
+	void ReadKeys(CIndieLib *mI);
 	~Ship();
 };
