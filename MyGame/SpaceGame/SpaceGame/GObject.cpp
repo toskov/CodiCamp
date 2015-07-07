@@ -3,30 +3,28 @@
 
 GObject::GObject()
 {
-	this->posX = 0;
-	this->posY = 0;
-	this->posZ = 0;
+
 }
 
-void GObject::SetPosition(int *x, int *y, int *z)
+void GObject::SetPosition(const float x, const float y, const float z)
 {
-	posX = x;
-	posY = y;
-	posZ = z;
+	*posX = x;
+	*posY = y;
+	*posZ = z;
 }
 
-int GObject::GetX()
+float GObject::GetX()
 {
 	return *posX;
 }
 
-int GObject::GetY()
+float GObject::GetY()
 {
 	return *posY;
 }
 
 
-int GObject::GetZ()
+float GObject::GetZ()
 {
 	return *posZ;
 }

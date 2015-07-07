@@ -17,7 +17,10 @@ Main
 
 void CalculateMovement(Ship *ship)
 {
-	ship->SetPosition(0,0,0);
+	//ship->MoveTo(1.0f, 1.0f);
+	ship->setSpeedX(0.01f);
+	ship->setSpeedX(0.01f);
+	ship->Move();
 }
 
 int IndieLib() // main
@@ -41,8 +44,10 @@ int IndieLib() // main
 	 Menu *menu = new Menu(mI); // TODO
 
 	Ship *ship = new Ship(mI, "../SpaceGame/resources/animations/smallRocketRotate.xml");
-	//ship->SetPosition(50, 50, 0);
 
+	//Ship *sheep = new Ship(mI, "../SpaceGame/resources/animations/smallRocketRotate.xml");
+	//ship->SetPosition(0.1f, 0.1f, 0.1f);
+	ship->MoveTo(50,50);
 	// ----- Main Loop -----
 
 	while (!mI->_input->onKeyPress(IND_ESCAPE) && !mI->_input->quit())
@@ -54,7 +59,6 @@ int IndieLib() // main
 		// --------- Game controll --------
 
 		CalculateMovement(ship);
-
 
 		// -------- Render -------
 

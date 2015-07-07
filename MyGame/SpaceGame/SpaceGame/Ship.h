@@ -8,12 +8,18 @@
 
 
 
-class Ship : public GObject,public ErrorHandler
+class Ship : public ErrorHandler
 {
 
+private:
+	float *sX_ = new float(0), *sY_ = new float(0);
 public:
+	IND_Entity2d *ship_ = IND_Entity2d::newEntity2d();
 	Ship();
 	Ship(CIndieLib *mI, const char *str);
-	void SetPosition(int x,int y,int z);
+	void MoveTo( float X,  float Y);
+	void Move();
+	void setSpeedX(float sX);
+	void setSpeedY(float sY);
 	~Ship();
 };

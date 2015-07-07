@@ -5,13 +5,13 @@
 class GObject
 {
 protected:
-	int *posX, *posY, *posZ;
+	float *posX=0, *posY=0, *posZ=0;
 
 public:
-	 void SetPosition(int *x, int *y, int *z);
-	 int GetX();
-	 int GetY();
-	 int GetZ();
+	void SetPosition(const float x, const float y, const float z);
+	float GetX();
+	float GetY();
+	float GetZ();
 	 ~GObject();
 	 GObject();
 	 void Hide();
