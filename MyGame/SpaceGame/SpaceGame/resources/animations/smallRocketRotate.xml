@@ -39,7 +39,6 @@
 		<frame name="rocket33" file="../SpaceGame/resources/animations/smallRocketRotate/0094.png" />
 		<frame name="rocket34" file="../SpaceGame/resources/animations/smallRocketRotate/0095.png" />
 		<frame name="rocket35" file="../SpaceGame/resources/animations/smallRocketRotate/0096.png" />
-		<frame name="rocket36" file="../SpaceGame/resources/animations/smallRocketRotate/0097.png" />
 	</frames>
 		
 	<!-- sequences declaration -->
@@ -82,7 +81,6 @@
 			<frame name="rocket33"  time="50" /> 
 			<frame name="rocket34"  time="50" /> 
 			<frame name="rocket35"  time="50" /> 
-			<frame name="rocket36"  time="50" /> 
 		</sequence>		
 	</sequences>
 </animation>

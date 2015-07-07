@@ -46,6 +46,11 @@ void Ship::setSpeedX(float sX)
 	*sX_ = sX;
 }
 
+void Ship::setSpeedY(float sY)
+{
+	*sY_ = sY;
+}
+
 Ship::~Ship()
 {
 
