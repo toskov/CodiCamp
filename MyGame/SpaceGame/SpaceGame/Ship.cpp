@@ -55,16 +55,16 @@ void Ship::setSpeedY(float sY)
 
 void Ship::increaseSpeed(float step)
 {
-	float angle = ship_->getAngleZ();
-	*sX_ = *sX_- std::sin(angle)*step;
-	*sY_ = *sY_+ std::cos(angle)*step;
+	float angle = ship_->getAngleZ()*3.14159265 / 180.f;
+	*sX_ = *sX_+ std::sin(angle)*step;
+	*sY_ = *sY_- std::cos(angle)*step;
 }
 
 void Ship::decreaseSpeed(float step)
 {
-	float angle = ship_->getAngleZ();
-	*sX_ = *sX_ + std::sin(angle)*step;
-	*sY_ = *sY_ - std::cos(angle)*step;
+	float angle = ship_->getAngleZ()*3.14159265 / 180.f;
+	*sX_ = *sX_ - std::sin(angle)*step;
+	*sY_ = *sY_ + std::cos(angle)*step;
 }
 
 void Ship::rotateLeft(float speed)
@@ -84,7 +84,7 @@ void Ship::ReadKeys(CIndieLib *mI)
 	// Rotate right
 	if (mI->_input->isKeyPressed(IND_KEYRIGHT))
 	{
-		this->rotateRight(0.1f);
+		this->rotateRight(0.03f);
 	}
 	else
 	{
@@ -93,7 +93,7 @@ void Ship::ReadKeys(CIndieLib *mI)
 	// Rotate left
 	if (mI->_input->isKeyPressed(IND_KEYLEFT))
 	{
-		this->rotateLeft(0.1f);
+		this->rotateLeft(0.03f);
 	}
 	else
 	{
