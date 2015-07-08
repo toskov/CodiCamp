@@ -1,6 +1,6 @@
-#include "CIndieLib.h"
 #ifndef OBJECT_H
 #define	OBJECT_H
+#include "CIndieLib.h"
 
 class GObject
 {

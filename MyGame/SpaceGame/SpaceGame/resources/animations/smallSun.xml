@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation>
+	<!-- frames declaration -->
+	<frames>	
+		<!-- sun -->
+		<frame name="sun0" file="../SpaceGame/resources/animations/smallSun/Sun01.png" />
+		<frame name="sun1" file="../SpaceGame/resources/animations/smallSun/Sun02.png" />
+		<frame name="sun2" file="../SpaceGame/resources/animations/smallSun/Sun03.png" />
+		<frame name="sun3" file="../SpaceGame/resources/animations/smallSun/Sun04.png" />
+		<frame name="sun4" file="../SpaceGame/resources/animations/smallSun/Sun05.png" />
+	</frames>	
+	<!-- sequences declaration -->
+	<sequences>
+		<!-- sun -->
+		<sequence name="smallRealSun">
+			<frame name="sun0" time="500" />
+			<frame name="sun1" time="500" />
+			<frame name="sun2" time="500" />
+			<frame name="sun3" time="500" />
+			<frame name="sun4" time="500" />
+		</sequence>		
+	</sequences>
+</animation>

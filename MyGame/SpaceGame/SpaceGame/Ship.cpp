@@ -21,7 +21,7 @@ Ship::Ship(CIndieLib *mI,const char *str)
 	mI->_entity2dManager->add(ship_);					// Entity adding
 	ship_->setAnimation(mAnimationRocket);				// Set the animation into the entity
 	ship_->setSequence(0);
-	ship_->setPosition(300,200, 0);
+	ship_->setPosition(300,200, 1);
 	ship_->setHotSpot(0.5f, 0.5f);
 }
 

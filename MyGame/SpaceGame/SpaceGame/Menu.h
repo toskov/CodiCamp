@@ -1,11 +1,11 @@
+#ifndef MENU_H
+#define	MENU_H
+
 #include "CIndieLib.h"
 #include "IND_Surface.h"
 #include "IND_Entity2d.h"
 #include "IND_Font.h"
 #include "ErrorHandler.h"
-
-#ifndef MENU_H
-#define	MENU_H
 
 class Menu : public ErrorHandler
 {
