@@ -5,6 +5,7 @@
 #include "IND_Animation.h"
 #include "GObject.h"
 #include "ErrorHandler.h"
+#include "Bullet.h"
 
 
 
@@ -13,6 +14,8 @@ class Ship : public ErrorHandler
 
 private:
 	float *sX_ = new float(0), *sY_ = new float(0);
+	float *shootTime_ = new float(0), *shootTimeOld_ = new float(0);
+
 public:
 	IND_Entity2d *ship_ = IND_Entity2d::newEntity2d();
 	Ship();

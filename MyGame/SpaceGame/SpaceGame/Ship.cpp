@@ -34,6 +34,7 @@ void Ship::MoveTo(float X, float Y)
 /// Update ship position
 void Ship::Update()
 {
+
 	float tempX = ship_->getPosX() + *sX_;
 	if (tempX > 800) tempX = 0;
 	if (tempX < 0) tempX = 800;
@@ -108,6 +109,12 @@ void Ship::ReadKeys(CIndieLib *mI)
 	if (mI->_input->isKeyPressed(IND_KEYDOWN))
 	{
 		this->decreaseSpeed(0.00001f);
+	}
+
+	if (mI->_input->onKeyPress(IND_SPACE))
+	{
+		
+		Bullet *bullet = new Bullet(mI, ship_->getAngleZ(), ship_->getPosX(), ship_->getPosY());
 	}
 }
 Ship::~Ship()

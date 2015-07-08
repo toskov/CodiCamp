@@ -9,6 +9,7 @@
 #include "Menu.h"
 #include "Ship.h"
 
+
 /*
 ==================
 Main
@@ -16,7 +17,7 @@ Main
 */
 
 
-const float ROTSPEED = 0.1f;
+
 
 int IndieLib() // main
 {
@@ -39,10 +40,18 @@ int IndieLib() // main
 	Ship *ship = new Ship(mI, "../SpaceGame/resources/animations/smallRocketRotate.xml");
 
 	ship->MoveTo(50,50);
-	// ----- Main Loop -----
+	
+	
+	// Create and start the timer;
+	IND_Timer *mTimer = new IND_Timer();
+	mTimer->start();
+	int mSecond = 0;
 
+	// ----- Main Loop -----
+	
 	while (!mI->_input->onKeyPress(IND_ESCAPE) && !mI->_input->quit())
 	{
+		mSecond = (int)(mTimer->getTicks() / 1000.0f);
 		// ----- Input Update ----
 
 		mI->_input->update();
