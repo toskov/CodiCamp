@@ -1,3 +1,5 @@
+#ifndef SHIP_H
+#define	SHIP_H
 
 #include "CIndieLib.h"
 #include "IND_Surface.h"
@@ -5,8 +7,6 @@
 #include "IND_Animation.h"
 #include "GObject.h"
 #include "ErrorHandler.h"
-
-
 
 class Ship : public ErrorHandler
 {
@@ -28,3 +28,4 @@ public:
 	void ReadKeys(CIndieLib *mI);
 	~Ship();
 };
+#endif

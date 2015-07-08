@@ -8,16 +8,16 @@
 		<frame name="sun2" file="../SpaceGame/resources/animations/smallSun/Sun03.png" />
 		<frame name="sun3" file="../SpaceGame/resources/animations/smallSun/Sun04.png" />
 		<frame name="sun4" file="../SpaceGame/resources/animations/smallSun/Sun05.png" />
-		
+	</frames>	
 	<!-- sequences declaration -->
 	<sequences>
 		<!-- sun -->
 		<sequence name="smallRealSun">
-			<frame name="sun0" time="50" />
-			<frame name="sun1" time="50" />
-			<frame name="sun2" time="50" />
-			<frame name="sun3" time="50" />
-			<frame name="sun4" time="50" />
+			<frame name="sun0" time="500" />
+			<frame name="sun1" time="500" />
+			<frame name="sun2" time="500" />
+			<frame name="sun3" time="500" />
+			<frame name="sun4" time="500" />
 		</sequence>		
 	</sequences>
 </animation>

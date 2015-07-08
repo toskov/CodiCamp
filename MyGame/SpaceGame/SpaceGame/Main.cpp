@@ -8,6 +8,7 @@
 #include "IND_Animation.h"
 #include "Menu.h"
 #include "Ship.h"
+#include "Planet.h"
 
 /*
 ==================
@@ -37,6 +38,7 @@ int IndieLib() // main
 	 Menu *menu = new Menu(mI); // TODO
 
 	Ship *ship = new Ship(mI, "../SpaceGame/resources/animations/smallRocketRotate.xml");
+	Planet *sunPlanet = new Planet(mI, "../SpaceGame/resources/animations/smallSun.xml");
 
 	ship->MoveTo(50,50);
 	// ----- Main Loop -----
@@ -48,7 +50,7 @@ int IndieLib() // main
 		mI->_input->update();
 		
 
-		// --------- Game controll --------
+		// --------- Game control --------
 		ship->Update();
 		ship->ReadKeys(mI);
 
