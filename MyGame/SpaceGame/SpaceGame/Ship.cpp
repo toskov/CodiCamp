@@ -7,9 +7,9 @@ Ship::Ship()
 
 Ship::Ship(CIndieLib *mI,const char *str)
 {
-	*speedX_ = 0.005f; // initial speed
+	*speedX_ = 100.0f; // initial speed
 
-	*speedY_ = 0.005f;
+	*speedY_ = 100.0f;
 	// Characters animations, we apply transparency
 	IND_Animation *mAnimationRocket = IND_Animation::newAnimation();
 
@@ -24,6 +24,7 @@ Ship::Ship(CIndieLib *mI,const char *str)
 	ship_->setSequence(0);
 	ship_->setPosition(300,200, 100);
 	ship_->setHotSpot(0.5f, 0.5f);
+	ship_->setScale(0.3, 0.3);
 
 
 	//Predefine 10 bullets 
@@ -40,16 +41,16 @@ Ship::Ship(CIndieLib *mI,const char *str)
 Update ship position
 ======================================
 */
-void Ship::Update()
+void Ship::Update(float* delta)
 {
 	/*
 	Infinite ship movement in rectangle
 	*/
-
-	float tempX = ship_->getPosX() + *speedX_;
+	this->mDelta = delta;
+	float tempX = ship_->getPosX() + (*mDelta)* (*speedX_);
 	if (tempX > 800) tempX = 0;
 	if (tempX < 0) tempX = 800;
-	float tempY = ship_->getPosY() + *speedY_;
+	float tempY = ship_->getPosY() + (*mDelta)* (*speedY_);
 	if (tempY > 600) tempY = 0;
 	if (tempY < 0) tempY = 600;
 	ship_->setPosition(tempX, tempY, 0);
@@ -107,7 +108,7 @@ void Ship::ReadKeys(CIndieLib *mI)
 	// Rotate right
 	if (mI->_input->isKeyPressed(IND_KEYRIGHT) || mI->_input->isKeyPressed(IND_D))
 	{
-		this->rotateRight(0.03f);
+		this->rotateRight(300.0f * (*mDelta));
 	}
 	else
 	{
@@ -116,7 +117,7 @@ void Ship::ReadKeys(CIndieLib *mI)
 	// Rotate left
 	if (mI->_input->isKeyPressed(IND_KEYLEFT) || mI->_input->isKeyPressed(IND_A))
 	{
-		this->rotateLeft(0.03f);
+		this->rotateLeft(300.0f * (*mDelta));
 	}
 	else
 	{
@@ -125,12 +126,12 @@ void Ship::ReadKeys(CIndieLib *mI)
 
 	if (mI->_input->isKeyPressed(IND_KEYUP) || mI->_input->isKeyPressed(IND_W))
 	{
-		this->increaseSpeed(0.00001f);
+		this->increaseSpeed(500.0f * (*mDelta));
 	}
 
 	if (mI->_input->isKeyPressed(IND_KEYDOWN) || mI->_input->isKeyPressed(IND_S))
 	{
-		this->decreaseSpeed(0.00001f);
+		this->decreaseSpeed(500.0f * (*mDelta));
 	}
 
 	if (mI->_input->onKeyPress(IND_SPACE))
@@ -157,11 +158,11 @@ void Ship::Shoot()
 		Calculate offset from the center of the ship to spawn bullet
 		*/
 		float offsetX, offsetY;
-		float angle = (ship_->getAngleZ()-25)*3.14159265 / 180.f;
+		float angle = ship_->getAngleZ()*3.14159265 / 180.f;
 		offsetX =ship_->getPosX() + std::sin(angle)*40;
 		offsetY =ship_->getPosY() - std::cos(angle)*40;
 		
-		bullets_[bulletIndex]->Set(ship_->getAngleZ(), offsetX, offsetY); // Move and rotate last bullet
+		bullets_[bulletIndex]->Set(ship_->getAngleZ(), offsetX, offsetY, mDelta); // Move and rotate last bullet
 	}
 
 Ship::~Ship()
