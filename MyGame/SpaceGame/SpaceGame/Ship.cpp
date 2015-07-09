@@ -147,7 +147,11 @@ void Ship::Shoot()
 		{
 			index = 0;
 		}
-		bullets_[index]->Set(ship_->getAngleZ(), ship_->getPosX(), ship_->getPosY());
+		float offsetX, offsetY;
+		float angle = (ship_->getAngleZ()-25)*3.14159265 / 180.f;
+		offsetX =ship_->getPosX() + std::sin(angle)*40;
+		offsetY =ship_->getPosY() - std::cos(angle)*40;
+		bullets_[index]->Set(ship_->getAngleZ(), offsetX, offsetY);
 	}
 
 Ship::~Ship()
