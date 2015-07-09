@@ -41,7 +41,7 @@ Ship::Ship(CIndieLib *mI,const char *str)
 Update ship position
 ======================================
 */
-void Ship::Update(float* delta)
+void Ship::Update(double* delta)
 {
 	/*
 	Infinite ship movement in rectangle
@@ -58,7 +58,7 @@ void Ship::Update(float* delta)
 	Update bullets 
 	*/
 	for (int i = 0; i < 10; i++){
-		bullets_[i]->Update();
+		bullets_[i]->Update(delta);
 	}
 }
 

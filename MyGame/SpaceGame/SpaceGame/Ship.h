@@ -16,13 +16,13 @@ private:
 	float *speedX_ = new float(0), *speedY_ = new float(0);
 	Bullet *bullets_ [20]; // Must define buffer size
 	int bulletIndex = 0;
-	float* mDelta;
+	double *mDelta;
 
 public:
 	IND_Entity2d *ship_ = IND_Entity2d::newEntity2d();
 	Ship();
 	Ship(CIndieLib *mI, const char *str);
-	void Update(float* mDelta);
+	void Update(double* mDelta);
 	void Shoot();
 	void setSpeedX(float sX);
 	void setSpeedY(float sY);

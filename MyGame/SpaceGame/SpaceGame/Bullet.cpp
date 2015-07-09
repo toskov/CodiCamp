@@ -22,15 +22,16 @@ Bullet::Bullet(CIndieLib *mI, float angle, float posX, float posY)
 
 }
 
-void Bullet::Update()
+void Bullet::Update(double *delta)
 {
+	mDelta = delta;
 	// Need to be updated every frame
 	float tempX = mBullet_->getPosX() + *speedX_;
 	float tempY = mBullet_->getPosY() + *speedY_;
 	mBullet_->setPosition(tempX, tempY, 0);
 }
 
-void Bullet::Set(float angle, float x, float y, float* delta)
+void Bullet::Set(float angle, float x, float y, double* delta)
 {
 	this->mDelta = delta;
 

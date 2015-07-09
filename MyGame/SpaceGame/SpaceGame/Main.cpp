@@ -43,7 +43,10 @@ int IndieLib() // main
 	
 	
 	//<------ DELTA TIME ------>
-	float* mDelta = new float(0.1);
+	double* mDelta = new double(0.1);
+	double *mDeltaAverage = new double(0.001);
+	double *mDeltaSum = new double(0.001);
+	double count = 0;
 	
 
 	 Menu *menu = new Menu(mI); // TODO
@@ -51,17 +54,24 @@ int IndieLib() // main
 	// ----- Main Loop -----
 	while (!mI->_input->onKeyPress(IND_ESCAPE) && !mI->_input->quit())
 	{
-		*mDelta = mI->_render->getFrameTime() / 1000.0f;
 
+			*mDelta = mI->_render->getFrameTime() / 1000.0f;
+			count++;
+			*mDeltaSum += *mDelta;
+
+			if (count == 100){			
+				count = 0;
+				*mDeltaAverage = *mDeltaSum / 100;
+				*mDeltaSum = 0;
+			}
 
 		// ----- Input Update ----
 		mI->_input->update();
 		
-
 		// --------- Game control --------
-		ship->Update(mDelta);
-		ship->ReadKeys(mI);
-
+				ship->Update(mDeltaAverage);
+				ship->ReadKeys(mI);
+		
 
 		// -------- Render -------
 		mI->_render->clearViewPort(0, 0, 60);
