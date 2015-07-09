@@ -17,9 +17,13 @@ Main
 ==================
 */
 
+
+
+
 int IndieLib() // main
 {
-	// ----- IndieLib intialization -----
+
+	// ----- IndieLib initialization -----
 
 	CIndieLib *mI = CIndieLib::instance(); // engine
 	if (!mI->init()) return 0;
@@ -37,19 +41,18 @@ int IndieLib() // main
 	Planet *sunPlanet = new Planet(mI, "../SpaceGame/resources/animations/smallSun.xml");
 	Ship *ship = new Ship(mI, "../SpaceGame/resources/animations/rocket.xml");
 	
-	// Create and start the timer;
-	IND_Timer *mTimer = new IND_Timer();
-	mTimer->start();
-	double mSecond = 0;
-	float *mDelta = new float(0);
-	float tempTimer = 0;
+	
+	//<------ DELTA TIME ------>
+	float* mDelta = new float(0.1);
+	
 
 	 Menu *menu = new Menu(mI); // TODO
+
 	// ----- Main Loop -----
-	
 	while (!mI->_input->onKeyPress(IND_ESCAPE) && !mI->_input->quit())
 	{
-		*mDelta = mI->_render->getFrameTime() / 1000.0f; 
+		*mDelta = mI->_render->getFrameTime() / 1000.0f;
+
 
 		// ----- Input Update ----
 		mI->_input->update();
@@ -69,7 +72,6 @@ int IndieLib() // main
 	}
 
 	// ----- Indielib End -----
-
 	mI->end();
 
 	return 0;

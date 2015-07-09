@@ -13,10 +13,10 @@ class Ship : public ErrorHandler
 {
 
 private:
-	float *speedX_ = new float(1), *speedY_ = new float(1);
+	float *speedX_ = new float(0), *speedY_ = new float(0);
 	Bullet *bullets_ [20]; // Must define buffer size
 	int bulletIndex = 0;
-	float *mDelta;
+	float* mDelta;
 
 public:
 	IND_Entity2d *ship_ = IND_Entity2d::newEntity2d();
