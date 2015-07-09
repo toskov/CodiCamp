@@ -10,6 +10,7 @@
 #include "Ship.h"
 #include "Planet.h"
 
+
 /*
 ==================
 Main
@@ -17,7 +18,7 @@ Main
 */
 
 
-const float ROTSPEED = 0.1f;
+
 
 int IndieLib() // main
 {
@@ -35,16 +36,21 @@ int IndieLib() // main
 	mI->_entity2dManager->add(mBack);					// Entity adding
 	mBack->setSurface(mSurfaceBack);					// Set the surface into the entity
 
-	 Menu *menu = new Menu(mI); // TODO
-
-	Ship *ship = new Ship(mI, "../SpaceGame/resources/animations/smallRocketRotate.xml");
+	
 	Planet *sunPlanet = new Planet(mI, "../SpaceGame/resources/animations/smallSun.xml");
+	Ship *ship = new Ship(mI, "../SpaceGame/resources/animations/smallRocketRotate.xml");
+	
+	// Create and start the timer;
+	IND_Timer *mTimer = new IND_Timer();
+	mTimer->start();
+	int mSecond = 0;
 
-	ship->MoveTo(50,50);
+	 Menu *menu = new Menu(mI); // TODO
 	// ----- Main Loop -----
-
+	
 	while (!mI->_input->onKeyPress(IND_ESCAPE) && !mI->_input->quit())
 	{
+		mSecond = (int)(mTimer->getTicks() / 1000.0f);
 		// ----- Input Update ----
 
 		mI->_input->update();
