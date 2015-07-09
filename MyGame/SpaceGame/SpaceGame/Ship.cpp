@@ -21,17 +21,23 @@ Ship::Ship(CIndieLib *mI,const char *str)
 	mI->_entity2dManager->add(ship_);					// Entity adding
 	ship_->setAnimation(mAnimationRocket);				// Set the animation into the entity
 	ship_->setSequence(0);
-	ship_->setPosition(300,200, 1);
+	ship_->setPosition(300,200, 100);
 	ship_->setHotSpot(0.5f, 0.5f);
+
+	//Predefine 10 bullets
+	for (int i = 0; i < 10; i++){
+		bullets_[i] = new Bullet(mI, 0, 100, 100);
+	}
+	
 }
 
 
-void Ship::MoveTo(float X, float Y)
-{
-	ship_->setPosition(X , Y, 0);
-}
 
-/// Update ship position
+/*
+======================================
+Update ship position
+======================================
+*/
 void Ship::Update()
 {
 
@@ -42,7 +48,19 @@ void Ship::Update()
 	if (tempY > 600) tempY = 0;
 	if (tempY < 0) tempY = 600;
 	ship_->setPosition(tempX, tempY, 0);
+
+	for (int i = 0; i < 10; i++){
+		bullets_[i]->Update();
+	}
 }
+
+
+/*
+======================================
+Update bullets 
+======================================
+*/
+
 
 void Ship::setSpeedX(float sX)
 {
@@ -113,12 +131,28 @@ void Ship::ReadKeys(CIndieLib *mI)
 
 	if (mI->_input->onKeyPress(IND_SPACE))
 	{
-		
-		Bullet *bullet = new Bullet(mI, ship_->getAngleZ(), ship_->getPosX(), ship_->getPosY());
+		Shoot();
 	}
 }
+
+/*
+======================================
+Create bullets
+======================================
+*/
+void Ship::Shoot()
+	{
+		index++;
+		if (index > 9)
+		{
+			index = 0;
+		}
+		bullets_[index]->Set(ship_->getAngleZ(), ship_->getPosX(), ship_->getPosY());
+	}
+
 Ship::~Ship()
 {
 	delete sX_;
 	delete sY_;
+	delete [] bullets_;
 }
