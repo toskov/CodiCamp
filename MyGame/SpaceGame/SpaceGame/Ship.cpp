@@ -7,14 +7,15 @@ Ship::Ship()
 
 Ship::Ship(CIndieLib *mI,const char *str)
 {
-	*sX_ = 0.05f;
-	*sY_ = 0.005f;
+	*speedX_ = 0.005f; // initial speed
+
+	*speedY_ = 0.005f;
 	// Characters animations, we apply transparency
 	IND_Animation *mAnimationRocket = IND_Animation::newAnimation();
 
 	if (!mI->_animationManager->addToSurface(mAnimationRocket, (const char*)str, IND_ALPHA, IND_32))
 	{
-		CatchError("Cannot find animation resources!");
+		CatchError("Cannot find animation resources!"); // TODO 
 	}
 	
 	// Character rocket
@@ -24,9 +25,10 @@ Ship::Ship(CIndieLib *mI,const char *str)
 	ship_->setPosition(300,200, 100);
 	ship_->setHotSpot(0.5f, 0.5f);
 
-	//Predefine 10 bullets
+
+	//Predefine 10 bullets 
 	for (int i = 0; i < 10; i++){
-		bullets_[i] = new Bullet(mI, 0, 100, 100);
+		bullets_[i] = new Bullet(mI, 0, 10000, 10000);
 	}
 	
 }
@@ -40,50 +42,47 @@ Update ship position
 */
 void Ship::Update()
 {
+	/*
+	Infinite ship movement in rectangle
+	*/
 
-	float tempX = ship_->getPosX() + *sX_;
+	float tempX = ship_->getPosX() + *speedX_;
 	if (tempX > 800) tempX = 0;
 	if (tempX < 0) tempX = 800;
-	float tempY = ship_->getPosY() + *sY_;
+	float tempY = ship_->getPosY() + *speedY_;
 	if (tempY > 600) tempY = 0;
 	if (tempY < 0) tempY = 600;
 	ship_->setPosition(tempX, tempY, 0);
-
+	/*
+	Update bullets 
+	*/
 	for (int i = 0; i < 10; i++){
 		bullets_[i]->Update();
 	}
 }
 
-
-/*
-======================================
-Update bullets 
-======================================
-*/
-
-
 void Ship::setSpeedX(float sX)
 {
-	*sX_ = sX;
+	*speedX_ = sX;
 }
 
 void Ship::setSpeedY(float sY)
 {
-	*sY_ = sY;
+	*speedY_ = sY;
 }
 
 void Ship::increaseSpeed(float step)
 {
 	float angle = ship_->getAngleZ()*3.14159265 / 180.f;
-	*sX_ = *sX_+ std::sin(angle)*step;
-	*sY_ = *sY_- std::cos(angle)*step;
+	*speedX_ = *speedX_ + std::sin(angle)*step;
+	*speedY_ = *speedY_ - std::cos(angle)*step;
 }
 
 void Ship::decreaseSpeed(float step)
 {
 	float angle = ship_->getAngleZ()*3.14159265 / 180.f;
-	*sX_ = *sX_ - std::sin(angle)*step;
-	*sY_ = *sY_ + std::cos(angle)*step;
+	*speedX_ = *speedX_ - std::sin(angle)*step;
+	*speedY_ = *speedY_ + std::cos(angle)*step;
 }
 
 void Ship::rotateLeft(float speed)
@@ -98,6 +97,11 @@ void Ship::rotateRight(float speed)
 	ship_->setAngleXYZ(0, 0, tempAngle + speed);
 }
 
+/*
+======================================
+Ship movement by keyboard
+======================================
+*/
 void Ship::ReadKeys(CIndieLib *mI)
 {
 	// Rotate right
@@ -137,26 +141,32 @@ void Ship::ReadKeys(CIndieLib *mI)
 
 /*
 ======================================
-Create bullets
+Control bullets
 ======================================
 */
 void Ship::Shoot()
 	{
-		index++;
-		if (index > 9)
+		//moving last to new position
+		bulletIndex++;
+		if (bulletIndex > 9)
 		{
-			index = 0;
+			bulletIndex = 0;
 		}
+		
+		/*
+		Calculate offset from the center of the ship to spawn bullet
+		*/
 		float offsetX, offsetY;
 		float angle = (ship_->getAngleZ()-25)*3.14159265 / 180.f;
 		offsetX =ship_->getPosX() + std::sin(angle)*40;
 		offsetY =ship_->getPosY() - std::cos(angle)*40;
-		bullets_[index]->Set(ship_->getAngleZ(), offsetX, offsetY);
+		
+		bullets_[bulletIndex]->Set(ship_->getAngleZ(), offsetX, offsetY); // Move and rotate last bullet
 	}
 
 Ship::~Ship()
 {
-	delete sX_;
-	delete sY_;
+	delete speedX_;
+	delete speedY_;
 	delete [] bullets_;
 }

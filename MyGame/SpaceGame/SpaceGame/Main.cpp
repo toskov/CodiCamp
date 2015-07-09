@@ -37,8 +37,6 @@ int IndieLib() // main
 	mBack->setSurface(mSurfaceBack);					// Set the surface into the entity
 
 	
-
-	
 	Planet *sunPlanet = new Planet(mI, "../SpaceGame/resources/animations/smallSun.xml");
 	Ship *ship = new Ship(mI, "../SpaceGame/resources/animations/smallRocketRotate.xml");
 	
@@ -46,6 +44,7 @@ int IndieLib() // main
 	IND_Timer *mTimer = new IND_Timer();
 	mTimer->start();
 	int mSecond = 0;
+
 	 Menu *menu = new Menu(mI); // TODO
 	// ----- Main Loop -----
 	

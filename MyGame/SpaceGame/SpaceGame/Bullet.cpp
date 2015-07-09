@@ -20,6 +20,7 @@ Bullet::Bullet(CIndieLib *mI, float angle, float posX, float posY)
 
 void Bullet::Update()
 {
+	// Need to be updated every frame
 	float tempX = mBullet_->getPosX() + *speedX_;
 	float tempY = mBullet_->getPosY() + *speedY_;
 	mBullet_->setPosition(tempX, tempY, 0);
@@ -27,10 +28,11 @@ void Bullet::Update()
 
 void Bullet::Set(float angle, float x, float y)
 {
+	// Set new position for bullet when the ship is shooting
 	mBullet_->setPosition(x, y, 0);	//mBullet_->setPosition(300, 200, 0);
-	mBullet_->setAngleXYZ(0, 0, angle);
-	angle = angle*3.14159265 / 180.f;
-	*speedX_ = std::sin(angle)*speedStep;
+	mBullet_->setAngleXYZ(0, 0, angle); // must be the same as the ship angle
+	angle = angle*3.14159265 / 180.f; // converting from radians to degrees
+	*speedX_ = std::sin(angle)*speedStep; 
 	*speedY_ = -std::cos(angle)*speedStep;
 }
 
