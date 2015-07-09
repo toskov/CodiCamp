@@ -21,7 +21,7 @@ const float ROTSPEED = 0.1f;
 
 int IndieLib() // main
 {
-	// ----- IndieLib intialization -----
+	// ----- IndieLib initialization -----
 
 	CIndieLib *mI = CIndieLib::instance(); // engine
 	if (!mI->init()) return 0;
