@@ -105,7 +105,7 @@ Ship movement by keyboard
 void Ship::ReadKeys(CIndieLib *mI)
 {
 	// Rotate right
-	if (mI->_input->isKeyPressed(IND_KEYRIGHT))
+	if (mI->_input->isKeyPressed(IND_KEYRIGHT) || mI->_input->isKeyPressed(IND_D))
 	{
 		this->rotateRight(0.03f);
 	}
@@ -114,7 +114,7 @@ void Ship::ReadKeys(CIndieLib *mI)
 		this->rotateRight(0);
 	}
 	// Rotate left
-	if (mI->_input->isKeyPressed(IND_KEYLEFT))
+	if (mI->_input->isKeyPressed(IND_KEYLEFT) || mI->_input->isKeyPressed(IND_A))
 	{
 		this->rotateLeft(0.03f);
 	}
@@ -123,12 +123,12 @@ void Ship::ReadKeys(CIndieLib *mI)
 		this->rotateLeft(0);
 	}
 
-	if (mI->_input->isKeyPressed(IND_KEYUP))
+	if (mI->_input->isKeyPressed(IND_KEYUP) || mI->_input->isKeyPressed(IND_W))
 	{
 		this->increaseSpeed(0.00001f);
 	}
 
-	if (mI->_input->isKeyPressed(IND_KEYDOWN))
+	if (mI->_input->isKeyPressed(IND_KEYDOWN) || mI->_input->isKeyPressed(IND_S))
 	{
 		this->decreaseSpeed(0.00001f);
 	}
