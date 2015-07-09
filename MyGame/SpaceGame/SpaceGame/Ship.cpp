@@ -7,9 +7,9 @@ Ship::Ship()
 
 Ship::Ship(CIndieLib *mI,const char *str)
 {
-	*speedX_ = 0.005f; // initial speed
+	*speedX_ = 100.0f; // initial speed
 
-	*speedY_ = 0.005f;
+	*speedY_ = 100.0f;
 	// Characters animations, we apply transparency
 	IND_Animation *mAnimationRocket = IND_Animation::newAnimation();
 
@@ -24,6 +24,8 @@ Ship::Ship(CIndieLib *mI,const char *str)
 	ship_->setSequence(0);
 	ship_->setPosition(300,200, 100);
 	ship_->setHotSpot(0.5f, 0.5f);
+	ship_->setSequence(0);
+	ship_->setScale(0.3f,0.3f);
 
 
 	//Predefine 10 bullets 
@@ -40,16 +42,17 @@ Ship::Ship(CIndieLib *mI,const char *str)
 Update ship position
 ======================================
 */
-void Ship::Update()
+void Ship::Update(float* delta)
 {
 	/*
 	Infinite ship movement in rectangle
 	*/
+	this->mDelta = delta;
 
-	float tempX = ship_->getPosX() + *speedX_;
+	float tempX = ship_->getPosX() + (*mDelta)*(*speedX_);
 	if (tempX > 800) tempX = 0;
 	if (tempX < 0) tempX = 800;
-	float tempY = ship_->getPosY() + *speedY_;
+	float tempY = ship_->getPosY() + (*mDelta)*(*speedY_);
 	if (tempY > 600) tempY = 0;
 	if (tempY < 0) tempY = 600;
 	ship_->setPosition(tempX, tempY, 0);
