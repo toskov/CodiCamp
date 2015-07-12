@@ -17,6 +17,7 @@ private:
 	Bullet *bullets_ [20]; // Must define buffer size
 	int bulletIndex = 0;
 	double *mDelta;
+	int *shots = new int(0), *health = new int(0), *score = new int(0);
 
 public:
 	IND_Entity2d *ship_ = IND_Entity2d::newEntity2d();
@@ -31,6 +32,9 @@ public:
 	void rotateLeft(float speed);
 	void rotateRight(float speed);
 	void ReadKeys(CIndieLib *mI);
+	int getScore();
+	int getHealth();
+	int getShots();
 	~Ship();
 };
 #endif

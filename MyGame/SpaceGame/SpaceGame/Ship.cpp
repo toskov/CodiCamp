@@ -8,8 +8,11 @@ Ship::Ship()
 Ship::Ship(CIndieLib *mI,const char *str)
 {
 	*speedX_ = 100.0f; // initial speed
-
 	*speedY_ = 100.0f;
+	// clear scores
+	//*shots = 0;
+	*health = 100;
+	//*score = 0;
 	// Characters animations, we apply transparency
 	IND_Animation *mAnimationRocket = IND_Animation::newAnimation();
 
@@ -147,6 +150,8 @@ Control bullets
 */
 void Ship::Shoot()
 	{
+		*shots+=1; 
+
 		//moving last to new position
 		bulletIndex++;
 		if (bulletIndex > 9)
@@ -165,10 +170,34 @@ void Ship::Shoot()
 		bullets_[bulletIndex]->Set(ship_->getAngleZ(), offsetX, offsetY, mDelta); // Move and rotate last bullet
 	}
 
+
+/*
+======================================
+Game status
+======================================
+*/
+int Ship:: getScore()
+{
+	return *score;
+}
+
+int Ship::getHealth()
+{
+	return *health;
+}
+
+int Ship::getShots()
+{
+	return *shots;
+}
+
 Ship::~Ship()
 {
 	delete speedX_;
 	delete speedY_;
 	delete [] bullets_;
+	delete shots;
+	delete health;
+	delete score;
 	ship_->destroy();
 }

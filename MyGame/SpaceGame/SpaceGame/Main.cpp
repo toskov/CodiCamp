@@ -44,17 +44,23 @@ int IndieLib() // main
 	
 
 	//<------ DELTA TIME ------>
-	double* mDelta = new double(0.1);
+	double *mDelta = new double(0.1);
 	double *mDeltaAverage = new double(0.001);
 	double *mDeltaSum = new double(0.001);
 	double count = 0;
 	
+	// time
+	int gameTime = 125;
 
-	// Menu *menu = new Menu(mI); moved into HUD
+	// Create and start the timer;
+	IND_Timer *mTimer = new IND_Timer();
+	mTimer->start();
 
 	// ----- Main Loop -----
 	while (!mI->_input->onKeyPress(IND_ESCAPE) && !mI->_input->quit())
 	{
+		gameTime = (int)(mTimer->getTicks() / 1000.0f); //time in seconds
+
 		// ------ Average delta time ---------
 			*mDelta = mI->_render->getFrameTime() / 1000.0f;
 			count++;
@@ -70,11 +76,11 @@ int IndieLib() // main
 		mI->_input->update();
 		
 		// --------- Game control --------
-				ship->Update(mDeltaAverage);
-				ship->ReadKeys(mI);
+		ship->Update(mDeltaAverage);
+		ship->ReadKeys(mI);
 	
 		// -------- UI ------------
-
+		hud->updateHud(ship->getScore(), ship->getHealth(), ship->getShots(), gameTime);
 
 		// -------- Render -------
 		mI->_render->clearViewPort(0, 0, 60);
