@@ -9,6 +9,7 @@
 #include "Menu.h"
 #include "Ship.h"
 #include "Planet.h"
+#include "HUD.h"
 
 
 /*
@@ -16,8 +17,6 @@
 Main
 ==================
 */
-
-
 
 
 int IndieLib() // main
@@ -40,8 +39,10 @@ int IndieLib() // main
 	
 	Planet *sunPlanet = new Planet(mI, "../SpaceGame/resources/animations/smallSun.xml");
 	Ship *ship = new Ship(mI, "../SpaceGame/resources/animations/rocket.xml");
+	HUD *hud = new HUD(mI);
+	hud->showAlert(" Message system is working!");
 	
-	
+
 	//<------ DELTA TIME ------>
 	double* mDelta = new double(0.1);
 	double *mDeltaAverage = new double(0.001);
@@ -49,12 +50,12 @@ int IndieLib() // main
 	double count = 0;
 	
 
-	 Menu *menu = new Menu(mI); // TODO
+	// Menu *menu = new Menu(mI); moved into HUD
 
 	// ----- Main Loop -----
 	while (!mI->_input->onKeyPress(IND_ESCAPE) && !mI->_input->quit())
 	{
-
+		// ------ Average delta time ---------
 			*mDelta = mI->_render->getFrameTime() / 1000.0f;
 			count++;
 			*mDeltaSum += *mDelta;
@@ -71,7 +72,9 @@ int IndieLib() // main
 		// --------- Game control --------
 				ship->Update(mDeltaAverage);
 				ship->ReadKeys(mI);
-		
+	
+		// -------- UI ------------
+
 
 		// -------- Render -------
 		mI->_render->clearViewPort(0, 0, 60);

@@ -170,4 +170,5 @@ Ship::~Ship()
 	delete speedX_;
 	delete speedY_;
 	delete [] bullets_;
+	ship_->destroy();
 }
