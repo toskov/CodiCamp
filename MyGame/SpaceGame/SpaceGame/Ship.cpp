@@ -10,9 +10,8 @@ Ship::Ship(CIndieLib *mI,const char *str)
 	*speedX_ = 100.0f; // initial speed
 	*speedY_ = 100.0f;
 	// clear scores
-	//*shots = 0;
 	*health = 100;
-	//*score = 0;
+
 	// Characters animations, we apply transparency
 	IND_Animation *mAnimationRocket = IND_Animation::newAnimation();
 
