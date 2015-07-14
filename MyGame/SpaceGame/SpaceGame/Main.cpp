@@ -40,7 +40,9 @@ int IndieLib() // main
 	Planet *sunPlanet = new Planet(mI, "../SpaceGame/resources/animations/smallSun.xml");
 	Ship *ship = new Ship(mI, "../SpaceGame/resources/animations/rocket.xml");
 	HUD *hud = new HUD(mI);
-	hud->showAlert(" Message system is working!");
+	Menu *menu = new Menu(mI);
+	menu->HideMenu();
+	hud->showAlert(" Quit F12!");
 	
 
 	//<------ DELTA TIME ------>
@@ -56,8 +58,9 @@ int IndieLib() // main
 	IND_Timer *mTimer = new IND_Timer();
 	mTimer->start();
 
+	bool play = true;
 	// ----- Main Loop -----
-	while (!mI->_input->onKeyPress(IND_ESCAPE) && !mI->_input->quit())
+	while (!mI->_input->onKeyPress(IND_F12)&&!mI->_input->quit())
 	{
 		gameTime = (int)(mTimer->getTicks() / 1000.0f); //time in seconds
 
@@ -71,16 +74,25 @@ int IndieLib() // main
 				*mDeltaAverage = *mDeltaSum / 100;
 				*mDeltaSum = 0;
 			}
+			// ----- Input Update ----
+			mI->_input->update();
 
-		// ----- Input Update ----
-		mI->_input->update();
-		
-		// --------- Game control --------
-		ship->Update(mDeltaAverage);
-		ship->ReadKeys(mI);
+			if (mI->_input->onKeyPress(IND_ESCAPE)) play = !play;
+			if (play)
+			{
+				menu->HideMenu();
+					// --------- Game control --------
+					ship->Update(mDeltaAverage);
+					ship->ReadKeys(mI);
 	
-		// -------- UI ------------
-		hud->updateHud(ship->getScore(), ship->getHealth(), ship->getShots(), gameTime);
+					// -------- UI ------------
+					hud->updateHud(ship->getScore(), ship->getHealth(), ship->getShots(), gameTime);
+			}
+			else{
+				menu->ShowMenu();
+			}
+			
+		
 
 		// -------- Render -------
 		mI->_render->clearViewPort(0, 0, 60);

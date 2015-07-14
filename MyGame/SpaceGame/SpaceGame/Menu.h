@@ -5,12 +5,13 @@
 #include "IND_Surface.h"
 #include "IND_Entity2d.h"
 #include "IND_Font.h"
-#include "ErrorHandler.h"
+#include "MenuItem.h"
 
-class Menu : public ErrorHandler
+class Menu 
 {
 private:
 	int *posX, *posY;
+	MenuItem *itemPlay, *itemQuit;
 
 public:
 	Menu();

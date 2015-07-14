@@ -7,26 +7,20 @@ Menu::Menu()
 
 Menu::Menu(CIndieLib  *myI)
 {
+	itemPlay = new MenuItem(myI, 400, 100, false, "Play");
+	itemQuit = new MenuItem(myI, 400, 150, false, "Quit");
 
-	// Font
-	IND_Font *mFontSmall = IND_Font::newFont();
-	if (!myI->_fontManager->add(mFontSmall, "../../resources/font_small.png", "../../resources/font_small.xml", IND_ALPHA, IND_32))
-	{
-		CatchError("Cannot find font resources!");
-	}
-
-	// ----- Font creation -----
-
-	IND_Entity2d *mTextSmallWhite = IND_Entity2d::newEntity2d();
-	myI->_entity2dManager->add(mTextSmallWhite);			// Entity adding
-	mTextSmallWhite->setFont(mFontSmall);				// Set the font into the entity
-	mTextSmallWhite->setLineSpacing(18);
-	mTextSmallWhite->setCharSpacing(-8);
-	mTextSmallWhite->setPosition(5, 5, 1);
-	mTextSmallWhite->setAlign(IND_LEFT);
-	
 }
-
+void Menu::ShowMenu()
+{
+	itemPlay->show();
+	itemQuit->show();
+}
+void Menu::HideMenu()
+{
+	itemPlay->hide();
+	itemQuit->hide();
+}
 Menu::~Menu()
 {
 	// Remove object
