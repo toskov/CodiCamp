@@ -10,6 +10,7 @@
 #include "Ship.h"
 #include "Planet.h"
 #include "HUD.h"
+#include "Thing.h"
 
 
 /*
@@ -41,6 +42,8 @@ int IndieLib() // main
 	Ship *ship = new Ship(mI, "../SpaceGame/resources/animations/rocket.xml");
 	HUD *hud = new HUD(mI);
 	Menu *menu = new Menu(mI);
+	Thing *health = new Thing(mI, "../SpaceGame/resources/animations/health.xml");
+
 	menu->HideMenu();
 	hud->showAlert(" Quit F12!");
 	
