@@ -125,8 +125,13 @@ int IndieLib() // main
 			// ----- Input Update ----
 			mI->_input->update();
 
-			if (mI->_input->onKeyPress(IND_ESCAPE)) play = !play;
-			if (play)
+			if (mI->_input->onKeyPress(IND_ESCAPE))
+			{
+				menu->ShowMenu();
+				play = !play;
+			}
+
+				if (play)
 			{
 				menu->HideMenu();
 					// --------- Game control --------
@@ -136,9 +141,8 @@ int IndieLib() // main
 					// -------- UI ------------
 					hud->updateHud(ship->getScore(), ship->getHealth(), ship->getShots(), gameTime);
 					hud->showAlert("F12 to quit!");
-			}
-			else{
-				menu->ShowMenu();
+			}else{
+				menu->Update();
 			}		
 			/*----- for test ---------
 			

@@ -4,12 +4,15 @@ Options::Options(){
 
 	//FILE *input = fopen("options", "r");
 	//fclose(input);
-	 *keyUp = IND_KEYUP;
+	/*
+		 *keyUp = IND_KEYUP;
 	 *keyDown = IND_KEYUP;
 	 *keyLeft = IND_KEYUP;
 	 *keyRight = IND_KEYUP;
 	 *keyShoot = IND_KEYUP;
 	 *soundValue = 50u; // 0-100
+	*/
+
 }
 
 bool Options::saveOptions()

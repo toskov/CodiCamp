@@ -11,12 +11,14 @@ class Menu
 {
 private:
 	int *posX, *posY;
-	MenuItem *itemPlay, *itemQuit, *itemOptions;
+	bool isHidden;
+	MenuItem *itemPlay, *itemQuit, *itemOptions, *itemControls, *itemSound, *itemBack;
 
 public:
 	Menu();
 	Menu(CIndieLib *mI);
 	~Menu();
+	void Update();
 	void ShowMenu(void);
 	void HideMenu(void);
 	void ShowOptions(void);
