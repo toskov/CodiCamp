@@ -9,6 +9,7 @@
 #include "ErrorHandler.h"
 #include "Bullet.h"
 #include "Asteroid.h"
+
 class Ship : public ErrorHandler
 {
 

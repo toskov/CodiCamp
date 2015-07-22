@@ -7,6 +7,7 @@ Ship::Ship()
 
  Ship::Ship(CIndieLib *mI, const char *str)
 {
+
 	*speedX_ = 100.0f; // initial speed
 	*speedY_ = 100.0f;
 	// clear scores

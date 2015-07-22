@@ -11,6 +11,7 @@
 #include "Planet.h"
 #include "HUD.h"
 #include "Thing.h"
+#include "Options.h"
 
 
 /*
@@ -23,7 +24,7 @@ Main
 int IndieLib() // main
 {
 
-
+	
 
 	// ----- IndieLib initialization -----
 
@@ -34,9 +35,16 @@ int IndieLib() // main
 	IND_Surface *mSurfaceBack = IND_Surface::newSurface();
 	if (!mI->_surfaceManager->add(mSurfaceBack, "../SpaceGame/resources/genesis/Background_Colorful_Galaxy-800x600.jpg", IND_OPAQUE, IND_32)) return 0;
 
+
+	// -------- Load Options ----------------
+	Options *gameOptions = new Options(); // read options from file
+	gameOptions->saveOptions(); // for tests
+
+
 	// ------------- FOR TESTS - COLLISIONS ---------------
 	// Loading Rocket
-	IND_Surface *mSurfaceRocket = IND_Surface::newSurface();
+	/*
+		IND_Surface *mSurfaceRocket = IND_Surface::newSurface();
 	if (!mI->_surfaceManager->add(mSurfaceRocket, "..\\SpaceGame\\resources\\rocket.png", IND_ALPHA, IND_32)) return 0;
 
 	// Loading Beetleship
@@ -64,6 +72,7 @@ int IndieLib() // main
 	mRocket->setPosition(200, 450, 3);
 	mRocket->setBoundingAreas("..\\SpaceGame\\resources\\rocket_collisions.xml");
 	//mRocket->deleteBoundingAreas("engines");
+	*/
 	// ------------- end FOR TEST ----------------
 
 	// Creating 2d entity for the background
@@ -131,15 +140,18 @@ int IndieLib() // main
 			else{
 				menu->ShowMenu();
 			}		
-			//----- for test ---------
+			/*----- for test ---------
+			
+			if (mI->_entity2dManager->isCollision(mBeetle, "beetle_boy_head", mRocket, "rocket_boy_head"))
+			{
+				hud->showAlert(" Collision detected!");
+			}
 			// beetle folow the ship
 			//mBeetle->setPosition(ship->getX(), ship->getY(), 1);
 			//mBeetle->setAngleXYZ(0, 0, ship->getAngleZ());
+			*/// ----- end for tests -------- 
 		// ------- Collisions -----------
-		if (mI->_entity2dManager->isCollision(mBeetle, "beetle_boy_head", mRocket, "rocket_boy_head"))
-		{
-				hud->showAlert(" Collision detected!");
-		}
+		
 		// -------- Render -------
 		mI->_render->clearViewPort(0, 0, 60);
 		mI->_render->beginScene();

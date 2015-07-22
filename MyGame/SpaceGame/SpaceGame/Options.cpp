@@ -1,12 +1,15 @@
-#include "Options.h"
+﻿#include "Options.h"
 Options::Options(){
 	//------- Load options file ---------
 
 	//FILE *input = fopen("options", "r");
-	//ch = getc(input);
-
-	
-
+	//fclose(input);
+	 *keyUp = IND_KEYUP;
+	 *keyDown = IND_KEYUP;
+	 *keyLeft = IND_KEYUP;
+	 *keyRight = IND_KEYUP;
+	 *keyShoot = IND_KEYUP;
+	 *soundValue = 50u; // 0-100
 }
 
 bool Options::saveOptions()
@@ -20,6 +23,9 @@ bool Options::saveOptions()
 	}
 	else {
 		//printf("The file is created successfully! ");
+		// WRITE
+		int numbers[6] = { *keyUp, *keyDown, *keyLeft, *keyRight, *keyShoot, *soundValue };
+		fwrite(numbers, sizeof(int), 6, file); //записва въведените от клавиатурата числа във файл
 		fclose(file);
 		return true;
 	}
