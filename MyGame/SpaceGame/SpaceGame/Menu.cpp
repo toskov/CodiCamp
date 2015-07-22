@@ -8,10 +8,6 @@ Menu::Menu()
 Menu::Menu(CIndieLib  *myI)
 {
 	isHidden = true;
-	// ------- set Cursor ---------
-	myI->_surfaceManager->add(mSurfaceCursor, "..\\SpaceGame\\resources\\cursor.png", IND_ALPHA, IND_32); // return?
-	myI->_entity2dManager->add(mCursor);					       // Entity adding
-	mCursor->setSurface(mSurfaceCursor);					   // Set the surface into the entity
 
 	// ---------- main menu ----------
 	itemPlay = new MenuItem(myI, 400, 150, false, "Play");
@@ -27,6 +23,7 @@ Menu::Menu(CIndieLib  *myI)
 	myI->_surfaceManager->add(mSurfaceCursor, "..\\SpaceGame\\resources\\cursor.png", IND_ALPHA, IND_32); // return?
 	myI->_entity2dManager->add(mCursor);					       // Entity adding
 	mCursor->setSurface(mSurfaceCursor);					   // Set the surface into the entity
+
 }
 void Menu::Update(CIndieLib  *myI)
 {
