@@ -5,7 +5,7 @@ Ship::Ship()
 	// mI->_window->getWidth / 0.2f, mI->_window->getHeight / 0.2f, 0);
 }
 
-Ship::Ship(CIndieLib *mI,const char *str)
+ Ship::Ship(CIndieLib *mI, const char *str)
 {
 	*speedX_ = 100.0f; // initial speed
 	*speedY_ = 100.0f;
@@ -24,19 +24,25 @@ Ship::Ship(CIndieLib *mI,const char *str)
 	mI->_entity2dManager->add(ship_);					// Entity adding
 	ship_->setAnimation(mAnimationRocket);				// Set the animation into the entity
 	ship_->setSequence(0);
-	ship_->setPosition(300,200, 100);
+	ship_->setPosition(300,200, 5);
 	ship_->setHotSpot(0.5f, 0.5f);
 	ship_->setScale(0.3, 0.3);
+
+	//only for test. Must be set by method
+	//ship_->setBoundingAreas("..\\resources\\myRocketCollisions.xml");
+	ship_->setBoundingCircle("ship", 0, 0, 30);
 
 
 	//Predefine 10 bullets 
 	for (int i = 0; i < 10; i++){
 		bullets_[i] = new Bullet(mI, 0, 10000, 10000);
 	}
-	
 }
 
-
+ IND_Entity2d Ship::getObject()
+ {
+	 return *ship_;
+ }
 
 /*
 ======================================
@@ -199,4 +205,19 @@ Ship::~Ship()
 	delete health;
 	delete score;
 	ship_->destroy();
+}
+
+int Ship::getX()
+{
+	return ship_->getPosX();
+}
+
+int Ship::getY()
+{
+	return ship_->getPosY();
+}
+
+int Ship::getAngleZ()
+{
+	return ship_->getAngleZ();
 }

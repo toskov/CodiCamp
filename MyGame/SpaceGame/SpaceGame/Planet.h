@@ -12,7 +12,7 @@
 
 using namespace std;
 
-class Planet : public ErrorHandler
+class Planet
 {
 private:
 	string resource = "";

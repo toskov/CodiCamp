@@ -18,9 +18,9 @@ private:
 	int bulletIndex = 0; // current bullet
 	double *mDelta; //speed synchronization
 	int *shots = new int(0), *health = new int(0), *score = new int(0);
-	IND_Entity2d *ship_ = IND_Entity2d::newEntity2d();
-public:
 	
+public:
+	IND_Entity2d *ship_ = IND_Entity2d::newEntity2d();
 	Ship();
 	Ship(CIndieLib *mI, const char *str);
 	void Update(double* mDelta); // update ship position
@@ -32,10 +32,13 @@ public:
 	void rotateLeft(float speed);
 	void rotateRight(float speed);
 	void ReadKeys(CIndieLib *mI);
-	int checkColizion(Asteroid *asteroids);
 	int getScore();
 	int getHealth();
 	int getShots();
+	int getX();
+	int getY();
+	int getAngleZ();
+	IND_Entity2d getObject();
 	~Ship();
 };
 #endif

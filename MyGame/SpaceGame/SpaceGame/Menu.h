@@ -11,7 +11,7 @@ class Menu
 {
 private:
 	int *posX, *posY;
-	MenuItem *itemPlay, *itemQuit;
+	MenuItem *itemPlay, *itemQuit, *itemOptions;
 
 public:
 	Menu();
@@ -19,6 +19,12 @@ public:
 	~Menu();
 	void ShowMenu(void);
 	void HideMenu(void);
+	void ShowOptions(void);
+	void HideOptions(void);
+	void ShowSoundOptions(void);
+	void HideSoundOptions(void);
+	void ShowControls(void);
+	void HideControls(void);
 };
 
 #endif

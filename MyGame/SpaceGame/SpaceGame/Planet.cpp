@@ -8,7 +8,7 @@ Planet::Planet(CIndieLib *mI, const char *resource)
 
 	if (!mI->_animationManager->addToSurface(mAnimationPlanet, (const char*)resource, IND_ALPHA, IND_32))
 	{
-		CatchError("Cannot find animation resources!");
+		//todo error handler
 	}
 
 	// Character planet
