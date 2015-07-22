@@ -13,12 +13,19 @@ private:
 	int *posX, *posY;
 	bool isHidden;
 	MenuItem *itemPlay, *itemQuit, *itemOptions, *itemControls, *itemSound, *itemBack;
+	enum currentMenu { MAIN = 1, OPTIONS, CONTROLS, SOUND, DIFFICULTY };
+	enum difficulty { EASY = 1, NORMAL, HARD, EXPERT, UNDEFINED };
+	difficulty gameDifficulty = EASY;
+	currentMenu gameCurrentMenu = MAIN;
+	IND_Surface *mSurfaceCursor = IND_Surface::newSurface();
+	IND_Entity2d *mCursor = IND_Entity2d::newEntity2d();
+
 
 public:
 	Menu();
 	Menu(CIndieLib *mI);
 	~Menu();
-	void Update();
+	void Update(CIndieLib  *myI);
 	void ShowMenu(void);
 	void HideMenu(void);
 	void ShowOptions(void);

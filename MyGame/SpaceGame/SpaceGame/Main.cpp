@@ -142,7 +142,7 @@ int IndieLib() // main
 					hud->updateHud(ship->getScore(), ship->getHealth(), ship->getShots(), gameTime);
 					hud->showAlert("F12 to quit!");
 			}else{
-				menu->Update();
+				menu->Update(mI);
 			}		
 			/*----- for test ---------
 			
