@@ -9,8 +9,14 @@ MenuItem::MenuItem(CIndieLib *mI,int posX, int posY, bool selected, const char *
 	{
 		// error handler
 	}
+	// ----- Background ------
+	mI->_surfaceManager->add(mBgSurface, "..\\SpaceGame\\resources\\buttonBg.png", IND_ALPHA, IND_32); // background?
+	mBackground->setSurface(mBgSurface);					   // Set the surface into the entity
+	mI->_entity2dManager->add(mBackground);					       // Entity adding
+	mBackground->setPosition(posX, posY, 1);
+	mBackground->setHotSpot(0.5f, 0.5f);
 	
-	// ----- MeniItem -----	
+	// ----- Text -----	
 	mI->_entity2dManager->add(item);
 	item->setFont(mFontBig);
 	item->setLineSpacing(18);
@@ -35,12 +41,16 @@ MenuItem::~MenuItem()
 {
 	item->destroy();
 	mFontBig->destroy();
+	mBgSurface->destroy();
+	mBackground->destroy();
 }
 void MenuItem::hide()
 {
 	item->setPosition(-100, -100, 1);
+	mBackground->setPosition(-100, -100, 1);
 }
 void MenuItem::show()
 {
 	item->setPosition(this->posX, this->posY, 1);
+	mBackground->setPosition(this->posX, this->posY+27, 1); // some offset
 }
