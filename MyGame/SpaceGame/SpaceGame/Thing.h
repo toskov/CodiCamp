@@ -9,13 +9,18 @@ private:
 	int health = 10; // increase or decrease players health etc. 
 	int *posX = new int(0);
 	int *posY = new int(0);
-
-public:
+	
+	
+	IND_Entity2d *thing = IND_Entity2d::newEntity2d();
+	IND_Entity2d *border = IND_Entity2d::newEntity2d();
 	IND_Animation *thingAnimation = IND_Animation::newAnimation();
 	IND_Surface *collisionSurface = IND_Surface::newSurface();
 
-	IND_Entity2d *thing = IND_Entity2d::newEntity2d();
-	IND_Entity2d *border = IND_Entity2d::newEntity2d();
+public:
+	
+	void hide(void);
+	void show(int x, int y);
+	IND_Entity2d* getColisionBorder();
 	Thing(CIndieLib *mI, const char *resource, int x, int y);
 	~Thing();
 };

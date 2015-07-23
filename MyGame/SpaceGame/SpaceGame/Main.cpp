@@ -112,16 +112,14 @@ int IndieLib() // main
 			}		
 			/*----- for test ---------
 			
-			if (mI->_entity2dManager->isCollision(mBeetle, "beetle_boy_head", mRocket, "rocket_boy_head"))
-			{
-				hud->showAlert(" Collision detected!");
-			}
-			// beetle folow the ship
-			//mBeetle->setPosition(ship->getX(), ship->getY(), 1);
-			//mBeetle->setAngleXYZ(0, 0, ship->getAngleZ());
+			
 			*/// ----- end for tests -------- 
 		// ------- Collisions -----------
-		
+				if (mI->_entity2dManager->isCollision(ship->getColisionBorder(), "body", health->getColisionBorder(), "health"))
+			{
+				hud->showAlert(" Collision detected!");
+				//health->hide();
+			}
 		// -------- Render -------
 		mI->_render->clearViewPort(0, 0, 60);
 		mI->_render->beginScene();

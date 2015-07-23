@@ -25,14 +25,15 @@ Ship::Ship()
 	mI->_entity2dManager->add(ship_);					// Entity adding
 	ship_->setAnimation(mAnimationRocket);				// Set the animation into the entity
 	ship_->setSequence(0);
-	ship_->setPosition(300,200, 5);
+	ship_->setPosition(400,200, 5);
 	ship_->setHotSpot(0.5f, 0.5f);
 	ship_->setScale(0.3, 0.3);
 
-	//only for test. Must be set by method
-	//ship_->setBoundingAreas("..\\resources\\myRocketCollisions.xml");
-	ship_->setBoundingCircle("ship", 0, 0, 30);
-
+	// Empty object for colisions!
+	mI->_entity2dManager->add(border);
+	border->setSurface(collisionSurface);
+	border->setPosition(ship_->getPosX(), ship_->getPosY(), 1);
+	border->setBoundingAreas("../SpaceGame/resources/shipBound.xml");
 
 	//Predefine 10 bullets 
 	for (int i = 0; i < 10; i++){
@@ -40,9 +41,9 @@ Ship::Ship()
 	}
 }
 
- IND_Entity2d Ship::getObject()
+ IND_Entity2d* Ship::getColisionBorder()
  {
-	 return *ship_;
+	 return border;
  }
 
 /*
@@ -63,6 +64,8 @@ void Ship::Update(double* delta)
 	if (tempY > 600) tempY = 0;
 	if (tempY < 0) tempY = 600;
 	ship_->setPosition(tempX, tempY, 0);
+	border->setPosition(tempX, tempY, 1);
+	border->setAngleXYZ(0, 0, ship_->getAngleZ());
 	/*
 	Update bullets 
 	*/

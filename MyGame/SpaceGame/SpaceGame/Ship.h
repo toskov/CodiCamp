@@ -8,7 +8,6 @@
 #include "GObject.h"
 #include "ErrorHandler.h"
 #include "Bullet.h"
-#include "Asteroid.h"
 
 class Ship : public ErrorHandler
 {
@@ -19,6 +18,9 @@ private:
 	int bulletIndex = 0; // current bullet
 	double *mDelta; //speed synchronization
 	int *shots = new int(0), *health = new int(0), *score = new int(0);
+
+	IND_Surface *collisionSurface = IND_Surface::newSurface();
+	IND_Entity2d *border = IND_Entity2d::newEntity2d();
 	
 public:
 	IND_Entity2d *ship_ = IND_Entity2d::newEntity2d();
@@ -39,7 +41,7 @@ public:
 	int getX();
 	int getY();
 	int getAngleZ();
-	IND_Entity2d getObject();
+	IND_Entity2d* getColisionBorder();
 	~Ship();
 };
 #endif
