@@ -41,41 +41,6 @@ int IndieLib() // main
 	gameOptions->saveOptions(); // for tests
 
 
-	// ------------- FOR TESTS - COLLISIONS ---------------
-	// Loading Rocket
-	/*
-		IND_Surface *mSurfaceRocket = IND_Surface::newSurface();
-	if (!mI->_surfaceManager->add(mSurfaceRocket, "..\\SpaceGame\\resources\\rocket.png", IND_ALPHA, IND_32)) return 0;
-
-	// Loading Beetleship
-	IND_Surface *mSurfaceBeetle = IND_Surface::newSurface();
-	if (!mI->_surfaceManager->add(mSurfaceBeetle, "..\\SpaceGame\\resources\\beetleship.png", IND_ALPHA, IND_32)) return 0;
-
-	// Creating 2d entity for the Rocket
-	IND_Entity2d *mRocket = IND_Entity2d::newEntity2d();
-	mI->_entity2dManager->add(mRocket);					       // Entity adding
-	mRocket->setSurface(mSurfaceRocket);					   // Set the surface into the entity
-
-	// Creating 2d entity for the Beetleship
-	IND_Entity2d *mBeetle = IND_Entity2d::newEntity2d();
-	mI->_entity2dManager->add(mBeetle);					       // Entity adding
-	mBeetle->setSurface(mSurfaceBeetle);					   // Set the surface into the entity
-	// Beetle
-	mBeetle->setHotSpot(0.5f, 0.5f);
-	mBeetle->setMirrorX(1);
-	mBeetle->setPosition(150, 400, 2);
-	mBeetle->setBoundingTriangle("beetle_head", 160, 105, 160, 170, 190, 135);
-	mBeetle->setBoundingCircle("beetle_boy_head", 85, 52, 55);
-
-	// Rocket
-	mRocket->setHotSpot(0.5f, 0.5f);
-	mRocket->setPosition(200, 450, 3);
-	mRocket->setBoundingAreas("..\\SpaceGame\\resources\\rocket_collisions.xml");
-	//mRocket->deleteBoundingAreas("engines");
-
-	*/
-	// ------------- end FOR TEST ----------------
-
 	// Creating 2d entity for the background
 	IND_Entity2d *mBack = IND_Entity2d::newEntity2d();
 	mI->_entity2dManager->add(mBack);					// Entity adding
@@ -86,7 +51,7 @@ int IndieLib() // main
 	Ship *ship = new Ship(mI, "../SpaceGame/resources/animations/rocket.xml");
 	HUD *hud = new HUD(mI);
 	Menu *menu = new Menu(mI);
-	//Thing *health = new Thing(mI, "../SpaceGame/resources/animations/health.xml");
+	Thing *health = new Thing(mI, "../SpaceGame/resources/animations/health.xml",150,250);
 
 	menu->HideMenu();
 	hud->showAlert("Quit F12!");
