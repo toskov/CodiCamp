@@ -18,6 +18,7 @@ Bullet::Bullet(CIndieLib *mI, float angle, float posX, float posY)
 	mBullet_->setPosition(posX, posY, 5);	//mBullet_->setPosition(300, 200, 0);
 	mBullet_->setHotSpot(0.5f, 0.5f);
 	mBullet_->setAngleXYZ(0, 0, angle);
+	mBullet_->setBoundingCircle("bullet",4,4,6);
 
 
 }

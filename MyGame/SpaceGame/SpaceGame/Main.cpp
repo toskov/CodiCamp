@@ -72,6 +72,7 @@ int IndieLib() // main
 	mRocket->setPosition(200, 450, 3);
 	mRocket->setBoundingAreas("..\\SpaceGame\\resources\\rocket_collisions.xml");
 	//mRocket->deleteBoundingAreas("engines");
+
 	*/
 	// ------------- end FOR TEST ----------------
 
@@ -85,7 +86,7 @@ int IndieLib() // main
 	Ship *ship = new Ship(mI, "../SpaceGame/resources/animations/rocket.xml");
 	HUD *hud = new HUD(mI);
 	Menu *menu = new Menu(mI);
-	Thing *health = new Thing(mI, "../SpaceGame/resources/animations/health.xml");
+	//Thing *health = new Thing(mI, "../SpaceGame/resources/animations/health.xml");
 
 	menu->HideMenu();
 	hud->showAlert("Quit F12!");

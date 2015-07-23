@@ -15,6 +15,7 @@ MenuItem::MenuItem(CIndieLib *mI,int posX, int posY, bool selected, const char *
 	mI->_entity2dManager->add(mBackground);					       // Entity adding
 	mBackground->setPosition(posX, posY, 1);
 	mBackground->setHotSpot(0.5f, 0.5f);
+	mBackground->setBoundingRectangle("rect", 0, 0, 188, 42); // If it is necessary
 	
 	// ----- Text -----	
 	mI->_entity2dManager->add(item);
@@ -53,4 +54,11 @@ void MenuItem::show()
 {
 	item->setPosition(this->posX, this->posY, 1);
 	mBackground->setPosition(this->posX, this->posY+27, 1); // some offset
+}
+
+bool  isMouseOver(int x, int y)
+{
+	// Return true if mouse over
+	// rectangular area must be set manualy
+	return true;
 }

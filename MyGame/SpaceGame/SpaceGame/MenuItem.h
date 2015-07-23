@@ -17,6 +17,7 @@ public:
 	MenuItem(CIndieLib *mI,int posX, int posY, bool selected, const char *str);
 	void selectItem(void);
 	void delesectItem(void);
+	bool isMouseOver(int x,int y);
 	void hide(void);
 	void show(void);
 	~MenuItem();

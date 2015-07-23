@@ -25,19 +25,24 @@ Menu::Menu(CIndieLib  *myI)
 	mCursor->setSurface(mSurfaceCursor);					   // Set the surface into the entity
 
 }
-void Menu::Update(CIndieLib  *myI)
+void Menu::Update(CIndieLib  *mI)
 {
 	int positionX, positionY; // mouse possition
 	if (isHidden)
 	{
 		HideMenu();
-		mCursor->setPosition(-100,-100,1);
+		mCursor->setPosition(-100,-100,100);
 		return;
 	}
-	positionX = myI->_input->getMouseX();
-	positionY = myI->_input->getMouseY();
+
+	positionX = mI->_input->getMouseX();
+	positionY = mI->_input->getMouseY();
 	mCursor->setPosition(positionX, positionY, 1);
+	if (mI->_input->isMouseButtonPressed(IND_MBUTTON_LEFT)){
+		//CheckMenuItem
+	}
 	ShowMenu();
+	
 }
 void Menu::ShowMenu()
 {
