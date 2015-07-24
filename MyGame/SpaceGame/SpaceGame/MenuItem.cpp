@@ -11,6 +11,7 @@ MenuItem::MenuItem(CIndieLib *mI,int posX, int posY, bool selected, const char *
 	}
 	// ----- Background ------
 	mI->_surfaceManager->add(mBgSurface, "..\\SpaceGame\\resources\\buttonBg.png", IND_ALPHA, IND_32); // background?
+	mI->_surfaceManager->add(mBgSurfaceSelected, "..\\SpaceGame\\resources\\buttonBg.png", IND_ALPHA, IND_32); // background?
 	mBackground->setSurface(mBgSurface);					   // Set the surface into the entity
 	mI->_entity2dManager->add(mBackground);					       // Entity adding
 	mBackground->setPosition(posX, posY, 1);
@@ -30,20 +31,23 @@ MenuItem::MenuItem(CIndieLib *mI,int posX, int posY, bool selected, const char *
 	item->setText(mText);
 
 }
-void MenuItem::selectItem()
+void MenuItem::selectedItem()
 {
-
+	// for mouseover visualisation
+	//mBackground->setSurface(mBgSurfaceSelected);
 }
-void MenuItem::delesectItem()
+void MenuItem::delesectedItem()
 {
-
+	//mBackground->setSurface(mBgSurface);
 }
 MenuItem::~MenuItem()
 {
+	// Must be used remove from Entity Manager!!!
 	item->destroy();
 	mFontBig->destroy();
 	mBgSurface->destroy();
 	mBackground->destroy();
+	mBgSurfaceSelected->destroy();
 }
 void MenuItem::hide()
 {
@@ -56,9 +60,14 @@ void MenuItem::show()
 	mBackground->setPosition(this->posX, this->posY+27, 1); // some offset
 }
 
-bool  isMouseOver(int x, int y)
+bool  MenuItem::isMouseOver(int x, int y)
 {
 	// Return true if mouse over
 	// rectangular area must be set manualy
 	return true;
+}
+
+IND_Entity2d* MenuItem::getBound(void)
+{
+	return mBackground;
 }

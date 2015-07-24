@@ -1,10 +1,10 @@
 #include "Thing.h"
 
-Thing::Thing(CIndieLib *mI, const char *resource,int x,int y)
+Thing::Thing(CIndieLib *mI, const char *resource,int x,int y,int life)
 {
 	*posX = x;
 	*posY = y;
-
+	*health = life;
 	if (!mI->_animationManager->addToSurface(thingAnimation, (const char*)resource, IND_ALPHA, IND_32))
 	{
 		// TODO 
@@ -29,6 +29,7 @@ Thing::~Thing()
 	thingAnimation->destroy();
 	delete posX;
 	delete posY;
+	delete health;
 }
 
 void Thing::hide()
@@ -48,4 +49,16 @@ void Thing::show(int x,int y)
 IND_Entity2d* Thing::getColisionBorder()
 {
 	return border;
+}
+
+void Thing::destroy(CIndieLib *mI)
+{
+	*health = 0;
+	mI->_entity2dManager->remove(thing);
+	mI->_entity2dManager->remove(border);
+}
+
+int Thing::getHealth(void)
+{
+	return *health;
 }

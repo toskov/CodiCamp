@@ -25,7 +25,7 @@ public:
 	Menu();
 	Menu(CIndieLib *mI);
 	~Menu();
-	void Update(CIndieLib  *myI);
+	bool Update(CIndieLib  *myI); // return true if menu is hidden
 	void ShowMenu(void);
 	void HideMenu(void);
 	void ShowOptions(void);

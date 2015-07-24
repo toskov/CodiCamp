@@ -12,6 +12,7 @@
 #include "HUD.h"
 #include "Thing.h"
 #include "Options.h"
+#include "windows.h"
 
 
 /*
@@ -39,6 +40,7 @@ int IndieLib() // main
 	// -------- Load Options ----------------
 	Options *gameOptions = new Options(); // read options from file
 	gameOptions->saveOptions(); // for tests
+	gameOptions->loadGameObjects();
 
 
 	// Creating 2d entity for the background
@@ -51,7 +53,7 @@ int IndieLib() // main
 	Ship *ship = new Ship(mI, "../SpaceGame/resources/animations/rocket.xml");
 	HUD *hud = new HUD(mI);
 	Menu *menu = new Menu(mI);
-	Thing *health = new Thing(mI, "../SpaceGame/resources/animations/health.xml",150,250);
+	Thing *health = new Thing(mI, "../SpaceGame/resources/animations/health.xml",150,250,-10);
 
 	menu->HideMenu();
 	hud->showAlert("Quit F12!");
@@ -97,7 +99,7 @@ int IndieLib() // main
 				play = !play;
 			}
 
-				if (play)
+			if (play)
 			{
 				menu->HideMenu();
 					// --------- Game control --------
@@ -108,17 +110,20 @@ int IndieLib() // main
 					hud->updateHud(ship->getScore(), ship->getHealth(), ship->getShots(), gameTime);
 					hud->showAlert("F12 to quit!");
 			}else{
-				menu->Update(mI);
+				if (menu->Update(mI)) play = true;
 			}		
-			/*----- for test ---------
 			
-			
-			*/// ----- end for tests -------- 
 		// ------- Collisions -----------
 				if (mI->_entity2dManager->isCollision(ship->getColisionBorder(), "body", health->getColisionBorder(), "health"))
 			{
 				hud->showAlert(" Collision detected!");
-				//health->hide();
+				if (gameTime > 2)
+				{
+					// initial all collisions are set true
+					ship->increaseHealth(health->getHealth());
+					health->destroy(mI);
+				}
+				
 			}
 		// -------- Render -------
 		mI->_render->clearViewPort(0, 0, 60);

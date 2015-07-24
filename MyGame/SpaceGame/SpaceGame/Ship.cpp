@@ -225,3 +225,8 @@ int Ship::getAngleZ()
 {
 	return ship_->getAngleZ();
 }
+
+void Ship::increaseHealth(int h)
+{
+	*health = *health + h;
+}

@@ -31,6 +31,7 @@ public:
 	void setSpeedX(float sX);
 	void setSpeedY(float sY);
 	void increaseSpeed(float step);
+	void increaseHealth(int h);
 	void decreaseSpeed(float step);
 	void rotateLeft(float speed);
 	void rotateRight(float speed);

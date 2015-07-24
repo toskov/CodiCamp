@@ -34,6 +34,11 @@ bool Options::saveOptions()
 	}
 }
 
+void Options::loadGameObjects()
+{
+
+}
+
 Options::~Options()
 {
 	delete keyUp;
