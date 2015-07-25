@@ -28,36 +28,73 @@ Menu::Menu(CIndieLib  *myI)
 	mCursor->setBoundingCircle("pointer",15, 15, 5);
 
 }
+
+
 bool Menu::Update(CIndieLib  *mI)
 {
 	// return true if menu is hidden
-	float positionX, positionY; // mouse possition
+	float positionX, positionY; // mouse position
 	if (isHidden)
 	{
 		HideMenu();
 		mCursor->setPosition(-100,-100,100);
 		return true;
 	}
-
 	positionX = mI->_input->getMouseX();
 	positionY = mI->_input->getMouseY();
 	mCursor->setPosition(positionX, positionY, 1);
+
+	// check button PLAY
 	if (mI->_entity2dManager->isCollision(itemPlay->getBound(), "rect", mCursor, "pointer"))
 	{
 		// mouse over
 		itemPlay->selectedItem();
-		if (mI->_input->isMouseButtonPressed(IND_MBUTTON_LEFT)){
-			//CheckMenuItem
+		if (mI->_input->isMouseButtonPressed(IND_MBUTTON_LEFT))
+		{
+			//On left mouse button click
 			HideMenu();
+			return true;
+		}
+	} else 
+	{
+		itemPlay->delesectedItem();
+	}
+
+	// check button OPTIONS
+	if (mI->_entity2dManager->isCollision(itemOptions->getBound(), "rect", mCursor, "pointer"))
+	{
+		// mouse over
+		itemOptions->selectedItem();
+		if (mI->_input->isMouseButtonPressed(IND_MBUTTON_LEFT))
+		{
+			//On left mouse button click
+	//TODO enter in submenu
 			return true;
 		}
 	}
 	else
 	{
-		itemPlay->delesectedItem();
-		ShowMenu();
-
+		itemOptions->delesectedItem();
 	}
+
+	 // check button QUIT
+	 if (mI->_entity2dManager->isCollision(itemQuit->getBound(), "rect", mCursor, "pointer"))
+	 {
+		 // mouse over
+		 itemQuit->selectedItem();
+		 if (mI->_input->isMouseButtonPressed(IND_MBUTTON_LEFT))
+		 {
+			 //On left mouse button click
+			 HideMenu();
+			 exitSelected = true;
+			 return true;
+		 }
+	 }
+	 else
+	 {
+		 itemQuit->delesectedItem();
+	 }
+	 ShowMenu();
 	return false;
 	
 }
@@ -121,4 +158,9 @@ void Menu::ShowControls(void)
 void Menu::HideControls(void)
 {
 
+}
+
+bool Menu::isExitSelected()
+{
+	return exitSelected;
 }

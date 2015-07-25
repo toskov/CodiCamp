@@ -11,7 +11,7 @@ class Menu
 {
 private:
 	int *posX, *posY;
-	bool isHidden;
+	bool isHidden = true,exitSelected = false;
 	MenuItem *itemPlay, *itemQuit, *itemOptions, *itemControls, *itemSound, *itemBack;
 	enum currentMenu { MAIN = 1, OPTIONS, CONTROLS, SOUND, DIFFICULTY };
 	enum difficulty { EASY = 1, NORMAL, HARD, EXPERT, UNDEFINED };
@@ -19,6 +19,7 @@ private:
 	currentMenu gameCurrentMenu = MAIN;
 	IND_Surface *mSurfaceCursor = IND_Surface::newSurface();
 	IND_Entity2d *mCursor = IND_Entity2d::newEntity2d();
+	
 
 
 public:
@@ -34,6 +35,7 @@ public:
 	void HideSoundOptions(void);
 	void ShowControls(void);
 	void HideControls(void);
+	bool isExitSelected(); // for game exit
 };
 
 #endif

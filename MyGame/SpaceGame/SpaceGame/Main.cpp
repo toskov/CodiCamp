@@ -21,12 +21,10 @@ Main
 ==================
 */
 
-
 int IndieLib() // main
 {
 
 	
-
 	// ----- IndieLib initialization -----
 
 	CIndieLib *mI = CIndieLib::instance(); // engine
@@ -76,7 +74,7 @@ int IndieLib() // main
 
 	bool play = true;
 	// ----- Main Loop -----
-	while (!mI->_input->onKeyPress(IND_F12)&&!mI->_input->quit())
+	while (!mI->_input->onKeyPress(IND_F12) && !mI->_input->quit() && !menu->isExitSelected())
 	{
 		gameTime = (int)(mTimer->getTicks() / 1000.0f); //time in seconds
 
