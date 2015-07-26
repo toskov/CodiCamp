@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation>
+	<!-- frames declaration -->
+	<frames>	
+		<!-- asteroid -->
+		<frame name="asteroid0" file="../SpaceGame/resources/animations/asteroid/0001.png" />
+		<frame name="asteroid1" file="../SpaceGame/resources/animations/asteroid/0002.png" />
+		<frame name="asteroid2" file="../SpaceGame/resources/animations/asteroid/0003.png" />
+		<frame name="asteroid3" file="../SpaceGame/resources/animations/asteroid/0004.png" />
+		<frame name="asteroid4" file="../SpaceGame/resources/animations/asteroid/0005.png" />
+		<frame name="asteroid5" file="../SpaceGame/resources/animations/asteroid/0006.png" />
+		<frame name="asteroid6" file="../SpaceGame/resources/animations/asteroid/0007.png" />
+		<frame name="asteroid7" file="../SpaceGame/resources/animations/asteroid/0008.png" />
+		<frame name="asteroid8" file="../SpaceGame/resources/animations/asteroid/0009.png" />
+		<frame name="asteroid9" file="../SpaceGame/resources/animations/asteroid/0010.png" />
+		<frame name="asteroid10" file="../SpaceGame/resources/animations/asteroid/0011.png" />
+		<frame name="asteroid11" file="../SpaceGame/resources/animations/asteroid/0012.png" />
+		<frame name="asteroid12" file="../SpaceGame/resources/animations/asteroid/0013.png" />
+		<frame name="asteroid13" file="../SpaceGame/resources/animations/asteroid/0014.png" />
+		<frame name="asteroid14" file="../SpaceGame/resources/animations/asteroid/0015.png" />
+		<frame name="asteroid15" file="../SpaceGame/resources/animations/asteroid/0016.png" />
+		<frame name="asteroid16" file="../SpaceGame/resources/animations/asteroid/0017.png" />
+		<frame name="asteroid17" file="../SpaceGame/resources/animations/asteroid/0018.png" />
+		<frame name="asteroid18" file="../SpaceGame/resources/animations/asteroid/0019.png" />
+		<frame name="asteroid19" file="../SpaceGame/resources/animations/asteroid/0020.png" />
+		<frame name="asteroid20" file="../SpaceGame/resources/animations/asteroid/0021.png" />
+		<frame name="asteroid21" file="../SpaceGame/resources/animations/asteroid/0022.png" />
+		<frame name="asteroid22" file="../SpaceGame/resources/animations/asteroid/0023.png" />
+		<frame name="asteroid23" file="../SpaceGame/resources/animations/asteroid/0024.png" />
+		<frame name="asteroid24" file="../SpaceGame/resources/animations/asteroid/0025.png" />
+		<frame name="asteroid25" file="../SpaceGame/resources/animations/asteroid/0026.png" />
+		<frame name="asteroid26" file="../SpaceGame/resources/animations/asteroid/0027.png" />
+		<frame name="asteroid27" file="../SpaceGame/resources/animations/asteroid/0028.png" />
+		<frame name="asteroid28" file="../SpaceGame/resources/animations/asteroid/0029.png" />
+	</frames>
+		
+	<!-- sequences declaration -->
+	<sequences>
+		<!-- asteroid -->
+		<sequence name="asteroid">
+			<frame name="asteroid0" time="100" />
+			<frame name="asteroid1" time="100" />
+			<frame name="asteroid2" time="100" />
+			<frame name="asteroid3" time="100" />
+			<frame name="asteroid4" time="100" />
+			<frame name="asteroid5" time="100" />
+			<frame name="asteroid6" time="100" />
+			<frame name="asteroid7" time="100" />
+			<frame name="asteroid8" time="100" />
+			<frame name="asteroid9" time="100" />
+			<frame name="asteroid10" time="100" />
+			<frame name="asteroid11" time="100" />
+			<frame name="asteroid12" time="100" />
+			<frame name="asteroid13" time="100" />
+			<frame name="asteroid14" time="100" />
+			<frame name="asteroid15" time="100" />
+			<frame name="asteroid16" time="100" />
+			<frame name="asteroid17" time="100" />
+			<frame name="asteroid18" time="100" />
+			<frame name="asteroid19" time="100" />
+			<frame name="asteroid20" time="100" />
+			<frame name="asteroid21" time="100" />
+			<frame name="asteroid22" time="100" />
+			<frame name="asteroid23" time="100" />
+			<frame name="asteroid24" time="100" />
+			<frame name="asteroid25" time="100" />
+			<frame name="asteroid26"  time="100" />
+			<frame name="asteroid27"  time="100" /> 
+			<frame name="asteroid28"  time="100" /> 
+		</sequence>		
+	</sequences>
+</animation>

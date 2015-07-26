@@ -9,6 +9,7 @@ private:
 	int *health = new int(10); // increase or decrease players health etc. 
 	int *posX = new int(0);
 	int *posY = new int(0);
+	int *type = new int(0);
 	
 	
 	IND_Entity2d *thing = IND_Entity2d::newEntity2d();
@@ -18,11 +19,12 @@ private:
 
 public:
 	int getHealth(void);
+	int getType();
 	void hide(void);
 	void show(int x, int y);
 	void destroy(CIndieLib *mI);
 	//void getHealth(void);
 	IND_Entity2d* getColisionBorder();
-	Thing(CIndieLib *mI, const char *resource, int x, int y,int health);
+	Thing(CIndieLib *mI, const char *resource, int type, int x, int y, int life);
 	~Thing();
 };

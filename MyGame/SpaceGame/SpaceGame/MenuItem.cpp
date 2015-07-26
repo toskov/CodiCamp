@@ -14,7 +14,7 @@ MenuItem::MenuItem(CIndieLib *mI,int posX, int posY, bool selected, const char *
 	mI->_surfaceManager->add(mBgSurfaceSelected, "..\\SpaceGame\\resources\\buttonBgSel.png", IND_ALPHA, IND_32); // background?
 	mBackground->setSurface(mBgSurface);					   // Set the surface into the entity
 	mI->_entity2dManager->add(mBackground);					       // Entity adding
-	mBackground->setPosition(posX, posY, 1);
+	mBackground->setPosition(posX, posY, 9);
 	mBackground->setHotSpot(0.5f, 0.5f);
 	mBackground->setBoundingRectangle("rect", 0, 0, 188, 42); // If it is necessary
 	
@@ -23,7 +23,7 @@ MenuItem::MenuItem(CIndieLib *mI,int posX, int posY, bool selected, const char *
 	item->setFont(mFontBig);
 	item->setLineSpacing(18);
 	item->setCharSpacing(-8);
-	item->setPosition(posX, posY, 1);
+	item->setPosition(posX, posY, 10);
 	item->setAlign(IND_CENTER);
 
 	char mText[10];
@@ -51,13 +51,13 @@ MenuItem::~MenuItem()
 }
 void MenuItem::hide()
 {
-	item->setPosition(-100, -100, 1);
-	mBackground->setPosition(-100, -100, 1);
+	item->setPosition(-100, -100, 10);
+	mBackground->setPosition(-100, -100, 9);
 }
 void MenuItem::show()
 {
-	item->setPosition(this->posX, this->posY, 1);
-	mBackground->setPosition(this->posX, this->posY+27, 1); // some offset
+	item->setPosition(this->posX, this->posY, 10);
+	mBackground->setPosition(this->posX, this->posY+27, 9); // some offset
 }
 
 bool  MenuItem::isMouseOver(int x, int y)

@@ -27,7 +27,7 @@ Ship::Ship()
 	ship_->setSequence(0);
 	ship_->setPosition(400,200, 5);
 	ship_->setHotSpot(0.5f, 0.5f);
-	ship_->setScale(0.3, 0.3);
+	//ship_->setScale(0.3, 0.3);
 
 	// Empty object for colisions!
 	mI->_entity2dManager->add(border);

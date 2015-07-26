@@ -23,7 +23,7 @@ Main
 
 int IndieLib() // main
 {
-
+	int i;//for loop. Just for tests
 	
 	// ----- IndieLib initialization -----
 
@@ -51,7 +51,11 @@ int IndieLib() // main
 	Ship *ship = new Ship(mI, "../SpaceGame/resources/animations/rocket.xml");
 	HUD *hud = new HUD(mI);
 	Menu *menu = new Menu(mI);
-	Thing *health = new Thing(mI, "../SpaceGame/resources/animations/health.xml",150,250,-10);
+	
+	Thing *health = new Thing(mI, "../SpaceGame/resources/animations/health.xml",1, 150, 250, 10);
+
+	//Thing *asteroid = new Thing(mI, "../SpaceGame/resources/animations/asteroid.xml", 250, 550, -20);
+
 
 	menu->HideMenu();
 	hud->showAlert("Quit F12!");
@@ -112,6 +116,7 @@ int IndieLib() // main
 			}		
 			
 		// ------- Collisions -----------
+			
 				if (mI->_entity2dManager->isCollision(ship->getColisionBorder(), "body", health->getColisionBorder(), "health"))
 			{
 				hud->showAlert(" Collision detected!");
@@ -127,7 +132,7 @@ int IndieLib() // main
 		mI->_render->clearViewPort(0, 0, 60);
 		mI->_render->beginScene();
 		mI->_entity2dManager->renderEntities2d();
-		mI->_entity2dManager->renderCollisionAreas(255, 0, 0, 255); // for tests
+		//mI->_entity2dManager->renderCollisionAreas(255, 0, 0, 255); // for tests
 		mI->_render->endScene();
 		mI->_render->showFpsInWindowTitle(); //FPS
 		//mI->_entity2dManager->renderGridAreas(255, 255, 0, 255);

@@ -25,7 +25,7 @@ Menu::Menu(CIndieLib  *myI)
 	mCursor->setSurface(mSurfaceCursor);					   // Set the surface into the entity
 	mCursor->setHotSpot(0.5f, 0.5f);
 	// Empty object for colisions!
-	mCursor->setBoundingCircle("pointer",15, 15, 5);
+	mCursor->setBoundingCircle("pointer",15, 15, 3);
 
 }
 
@@ -42,7 +42,7 @@ bool Menu::Update(CIndieLib  *mI)
 	}
 	positionX = mI->_input->getMouseX();
 	positionY = mI->_input->getMouseY();
-	mCursor->setPosition(positionX, positionY, 1);
+	mCursor->setPosition(positionX, positionY, 20);
 
 	// check button PLAY
 	if (mI->_entity2dManager->isCollision(itemPlay->getBound(), "rect", mCursor, "pointer"))
@@ -108,7 +108,7 @@ void Menu::ShowMenu()
 
 void Menu::HideMenu()
 {
-	mCursor->setPosition(-100, -100, 1);
+	mCursor->setPosition(-100, -100, 20);
 	isHidden = true;
 	itemPlay->hide();
 	itemQuit->hide();
@@ -119,8 +119,6 @@ void Menu::HideMenu()
 }
 Menu::~Menu()
 {
-	mSurfaceCursor->destroy();
-	mCursor->destroy();
 	mSurfaceCursor->destroy();
 	mCursor->destroy();
 	delete itemPlay;
