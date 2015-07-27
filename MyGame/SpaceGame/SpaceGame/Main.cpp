@@ -55,11 +55,13 @@ int IndieLib() // main
 	Menu *menu = new Menu(mI);
 	
 	srand(time(NULL)); // random generfated possition
-	int xx = rand() % windowMaxX;
-	int yy = rand() % windowMaxY;
-	
-	Thing *health = new Thing(mI, HEALTH, xx, yy, 10);
-	Thing *asteroid = new Thing(mI, ASTEROID, 250, 450, 10);
+	int randomX = rand() % windowMaxX;
+	int randomY = rand() % windowMaxY;	
+	Thing *health = new Thing(mI, HEALTH, randomX, randomY, 10); 
+
+	 randomX = rand() % windowMaxX;
+	 randomY = rand() % windowMaxY;
+	 Thing *asteroid = new Thing(mI, ASTEROID, randomX, randomY, -20);
 
 
 	menu->HideMenu();
@@ -122,17 +124,30 @@ int IndieLib() // main
 			
 		// ------- Collisions -----------
 			
-				if (mI->_entity2dManager->isCollision(ship->getColisionBorder(), "body", health->getColisionBorder(), "thing"))
+				if (mI->_entity2dManager->isCollision(ship->getColisionBorder(), "body", asteroid->getColisionBorder(), "thing"))
 			{
 				hud->showAlert(" Collision detected!");
 				if (gameTime > 2)
 				{
 					// initial all collisions are set true
-					ship->increaseHealth(health->getHealth());
-					health->destroy(mI);
+					ship->increaseHealth(asteroid->getHealth());
+					asteroid->destroy(mI);
 				}
 				
 			}
+				// asteroid collision
+
+				if (mI->_entity2dManager->isCollision(ship->getColisionBorder(), "body", health->getColisionBorder(), "thing"))
+				{
+					hud->showAlert(" Collision detected!");
+					if (gameTime > 2)
+					{
+						// initial all collisions are set true
+						ship->increaseHealth(health->getHealth());
+						health->destroy(mI);
+					}
+
+				}
 		// -------- Render -------
 		mI->_render->clearViewPort(0, 0, 60);
 		mI->_render->beginScene();
