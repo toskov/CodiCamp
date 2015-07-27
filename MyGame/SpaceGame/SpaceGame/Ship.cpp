@@ -130,6 +130,7 @@ Ship movement by keyboard
 */
 void Ship::ReadKeys(CIndieLib *mI)
 {
+	engine->sprite->setShow(false);
 	// Rotate right
 	if (mI->_input->isKeyPressed(IND_KEYRIGHT) || mI->_input->isKeyPressed(IND_D))
 	{
@@ -152,6 +153,7 @@ void Ship::ReadKeys(CIndieLib *mI)
 	if (mI->_input->isKeyPressed(IND_KEYUP) || mI->_input->isKeyPressed(IND_W))
 	{
 		this->increaseSpeed(500.0f * (*mDelta));
+		engine->sprite->setShow(true);
 	}
 
 	if (mI->_input->isKeyPressed(IND_KEYDOWN) || mI->_input->isKeyPressed(IND_S))
