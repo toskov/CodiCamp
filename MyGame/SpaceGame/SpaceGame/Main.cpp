@@ -12,7 +12,8 @@
 #include "HUD.h"
 #include "Thing.h"
 #include "Options.h"
-#include "windows.h"
+#include <time.h>       /* time */
+#include "GlobalHeader.h"
 
 
 /*
@@ -23,10 +24,11 @@ Main
 
 int IndieLib() // main
 {
-	int i;//for loop. Just for tests
 	
-	// ----- IndieLib initialization -----
+	// ----- Sound Library --------------
 
+
+	// ----- new engine instance ------------
 	CIndieLib *mI = CIndieLib::instance(); // engine
 	if (!mI->init()) return 0;
 		
@@ -52,9 +54,12 @@ int IndieLib() // main
 	HUD *hud = new HUD(mI);
 	Menu *menu = new Menu(mI);
 	
-	Thing *health = new Thing(mI, "../SpaceGame/resources/animations/health.xml",1, 150, 250, 10);
-
-	//Thing *asteroid = new Thing(mI, "../SpaceGame/resources/animations/asteroid.xml", 250, 550, -20);
+	srand(time(NULL)); // random generfated possition
+	int xx = rand() % windowMaxX;
+	int yy = rand() % windowMaxY;
+	
+	Thing *health = new Thing(mI, HEALTH, xx, yy, 10);
+	Thing *asteroid = new Thing(mI, ASTEROID, 250, 450, 10);
 
 
 	menu->HideMenu();
@@ -117,7 +122,7 @@ int IndieLib() // main
 			
 		// ------- Collisions -----------
 			
-				if (mI->_entity2dManager->isCollision(ship->getColisionBorder(), "body", health->getColisionBorder(), "health"))
+				if (mI->_entity2dManager->isCollision(ship->getColisionBorder(), "body", health->getColisionBorder(), "thing"))
 			{
 				hud->showAlert(" Collision detected!");
 				if (gameTime > 2)
@@ -132,7 +137,7 @@ int IndieLib() // main
 		mI->_render->clearViewPort(0, 0, 60);
 		mI->_render->beginScene();
 		mI->_entity2dManager->renderEntities2d();
-		//mI->_entity2dManager->renderCollisionAreas(255, 0, 0, 255); // for tests
+		mI->_entity2dManager->renderCollisionAreas(255, 0, 0, 255); // for tests
 		mI->_render->endScene();
 		mI->_render->showFpsInWindowTitle(); //FPS
 		//mI->_entity2dManager->renderGridAreas(255, 255, 0, 255);

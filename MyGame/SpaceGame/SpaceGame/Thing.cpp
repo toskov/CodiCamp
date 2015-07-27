@@ -1,28 +1,42 @@
 #include "Thing.h"
 
-Thing::Thing(CIndieLib *mI, const char *resource, int type, int x, int y, int life)
+Thing::Thing()
+{
+}
+
+// Create flying thing
+Thing::Thing(CIndieLib *mI, int type, int x, int y, int life)
 {
 	*posX = x;
 	*posY = y;
 	*health = life;
 	*this->type = type;
-
-	if (!mI->_animationManager->addToSurface(thingAnimation, (const char*)resource, IND_ALPHA, IND_32))
-	{
-		// TODO 
-	}
+	
+	!mI->_animationManager->addToSurface(thingAnimation, "../SpaceGame/resources/animations/thing.xml", IND_ALPHA, IND_32);	
 	mI->_entity2dManager->add(thing);					// Entity adding
 	thing->setAnimation(thingAnimation);				// Set the animation into the entity
-	thing->setSequence(0); 
+	thing->setSequence(type-1); //animation file have to contain all animations for things. Sequence begins from 0
 	thing->setPosition(x, y, 1);
 	thing->setHotSpot(0.5f, 0.5f);
-	//thing->setScale(0.3, 0.3);
 
 	// Empty object for colisions!
 	mI->_entity2dManager->add(border);
 	border->setSurface(collisionSurface);
-	border->setBoundingCircle("health", x, y, 20);
+
+	// diferent Objects
+	
+	if (type == HEALTH)
+	{
+		border->setBoundingCircle("thing", x, y, 20);
+	}
+	if (type == ASTEROID)
+	{
+		thing->setScale(0.7, 0.7);
+		border->setBoundingCircle("thing", x, y, 40);
+		
+	}
 }
+
 Thing::~Thing()
 {
 	thing->destroy();
@@ -59,7 +73,7 @@ void Thing::destroy(CIndieLib *mI)
 	delete type;
 	delete posX;
 	delete posY;
-	border->deleteBoundingAreas("health");
+	border->deleteBoundingAreas("thing");
 	mI->_entity2dManager->remove(thing);
 	mI->_entity2dManager->remove(border);
 }

@@ -1,7 +1,10 @@
+#ifndef THING_H
+#define	THING_H
 #include "CIndieLib.h"
 #include "IND_Entity2d.h"
 #include "IND_Animation.h"
 #include "IND_Surface.h"
+#include "GlobalHeader.h"
 
 class Thing
 {
@@ -25,6 +28,8 @@ public:
 	void destroy(CIndieLib *mI);
 	//void getHealth(void);
 	IND_Entity2d* getColisionBorder();
-	Thing(CIndieLib *mI, const char *resource, int type, int x, int y, int life);
+	Thing();
+	Thing(CIndieLib *mI, int type, int x, int y, int life);
 	~Thing();
 };
+#endif

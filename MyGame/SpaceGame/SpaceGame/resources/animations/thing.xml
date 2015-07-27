@@ -2,6 +2,36 @@
 <animation>
 	<!-- frames declaration -->
 	<frames>	
+		<!-- health -->
+		<frame name="health0" file="../SpaceGame/resources/animations/health/0001.png" />
+		<frame name="health1" file="../SpaceGame/resources/animations/health/0002.png" />
+		<frame name="health2" file="../SpaceGame/resources/animations/health/0003.png" />
+		<frame name="health3" file="../SpaceGame/resources/animations/health/0004.png" />
+		<frame name="health4" file="../SpaceGame/resources/animations/health/0005.png" />
+		<frame name="health5" file="../SpaceGame/resources/animations/health/0006.png" />
+		<frame name="health6" file="../SpaceGame/resources/animations/health/0007.png" />
+		<frame name="health7" file="../SpaceGame/resources/animations/health/0008.png" />
+		<frame name="health8" file="../SpaceGame/resources/animations/health/0009.png" />
+		<frame name="health9" file="../SpaceGame/resources/animations/health/0010.png" />
+		<frame name="health10" file="../SpaceGame/resources/animations/health/0011.png" />
+		<frame name="health11" file="../SpaceGame/resources/animations/health/0012.png" />
+		<frame name="health12" file="../SpaceGame/resources/animations/health/0013.png" />
+		<frame name="health13" file="../SpaceGame/resources/animations/health/0014.png" />
+		<frame name="health14" file="../SpaceGame/resources/animations/health/0015.png" />
+		<frame name="health15" file="../SpaceGame/resources/animations/health/0016.png" />
+		<frame name="health16" file="../SpaceGame/resources/animations/health/0017.png" />
+		<frame name="health17" file="../SpaceGame/resources/animations/health/0018.png" />
+		<frame name="health18" file="../SpaceGame/resources/animations/health/0019.png" />
+		<frame name="health19" file="../SpaceGame/resources/animations/health/0020.png" />
+		<frame name="health20" file="../SpaceGame/resources/animations/health/0021.png" />
+		<frame name="health21" file="../SpaceGame/resources/animations/health/0022.png" />
+		<frame name="health22" file="../SpaceGame/resources/animations/health/0023.png" />
+		<frame name="health23" file="../SpaceGame/resources/animations/health/0024.png" />
+		<frame name="health24" file="../SpaceGame/resources/animations/health/0025.png" />
+		<frame name="health25" file="../SpaceGame/resources/animations/health/0026.png" />
+		<frame name="health26" file="../SpaceGame/resources/animations/health/0027.png" />
+		<frame name="health27" file="../SpaceGame/resources/animations/health/0028.png" />
+		<frame name="health28" file="../SpaceGame/resources/animations/health/0029.png" />
 		<!-- asteroid -->
 		<frame name="asteroid0" file="../SpaceGame/resources/animations/asteroid/0001.png" />
 		<frame name="asteroid1" file="../SpaceGame/resources/animations/asteroid/0002.png" />
@@ -56,7 +86,39 @@
 		
 	<!-- sequences declaration -->
 	<sequences>
-		<!-- asteroid -->
+		<!-- health -->
+		<sequence name="health">
+			<frame name="health0" time="50" />
+			<frame name="health1" time="50" />
+			<frame name="health2" time="50" />
+			<frame name="health3" time="50" />
+			<frame name="health4" time="50" />
+			<frame name="health5" time="50" />
+			<frame name="health6" time="50" />
+			<frame name="health7" time="50" />
+			<frame name="health8" time="50" />
+			<frame name="health9" time="50" />
+			<frame name="health10" time="50" />
+			<frame name="health11" time="50" />
+			<frame name="health12" time="50" />
+			<frame name="health13" time="50" />
+			<frame name="health14" time="50" />
+			<frame name="health15" time="50" />
+			<frame name="health16" time="50" />
+			<frame name="health17" time="50" />
+			<frame name="health18" time="50" />
+			<frame name="health19" time="50" />
+			<frame name="health20" time="50" />
+			<frame name="health21" time="50" />
+			<frame name="health22" time="50" />
+			<frame name="health23" time="50" />
+			<frame name="health24" time="50" />
+			<frame name="health25" time="50" />
+			<frame name="health26"  time="50" />
+			<frame name="health27"  time="50" /> 
+			<frame name="health28"  time="50" /> 
+		</sequence>	
+	<!-- asteroid -->
 		<sequence name="asteroid">
 			<frame name="asteroid0" time="70" />
 			<frame name="asteroid1" time="70" />
