@@ -8,6 +8,7 @@
 #include "GObject.h"
 #include "ErrorHandler.h"
 #include "Bullet.h"
+#include "Sprite.h"
 
 class Ship : public ErrorHandler
 {
@@ -21,6 +22,7 @@ private:
 
 	IND_Surface *collisionSurface = IND_Surface::newSurface();
 	IND_Entity2d *border = IND_Entity2d::newEntity2d();
+	Sprite *engine = new Sprite();
 	
 public:
 	IND_Entity2d *ship_ = IND_Entity2d::newEntity2d();

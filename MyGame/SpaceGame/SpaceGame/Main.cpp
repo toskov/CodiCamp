@@ -14,6 +14,7 @@
 #include "Options.h"
 #include <time.h>       /* time */
 #include "GlobalHeader.h"
+#include "Sprite.h"
 
 
 /*
@@ -53,6 +54,7 @@ int IndieLib() // main
 	Ship *ship = new Ship(mI, "../SpaceGame/resources/animations/rocket.xml");
 	HUD *hud = new HUD(mI);
 	Menu *menu = new Menu(mI);
+	
 	
 	srand(time(NULL)); // random generfated possition
 	int randomX = rand() % windowMaxX;
@@ -105,7 +107,6 @@ int IndieLib() // main
 			}
 			// ----- Input Update ----
 			mI->_input->update();
-
 			if (mI->_input->onKeyPress(IND_ESCAPE))
 			{
 				menu->ShowMenu();
@@ -156,7 +157,7 @@ int IndieLib() // main
 		mI->_render->clearViewPort(0, 0, 60);
 		mI->_render->beginScene();
 		mI->_entity2dManager->renderEntities2d();
-		mI->_entity2dManager->renderCollisionAreas(255, 0, 0, 255); // for tests
+		//mI->_entity2dManager->renderCollisionAreas(255, 0, 0, 255); // for tests
 		mI->_render->endScene();
 		mI->_render->showFpsInWindowTitle(); //FPS
 		//mI->_entity2dManager->renderGridAreas(255, 255, 0, 255);

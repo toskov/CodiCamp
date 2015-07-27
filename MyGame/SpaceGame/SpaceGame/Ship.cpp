@@ -12,6 +12,8 @@ Ship::Ship()
 	*speedY_ = 100.0f;
 	// clear scores
 	*health = 100;
+	engine  = new Sprite(mI, "../SpaceGame/resources/sEngine.png", 0,0);
+	
 
 	// Characters animations, we apply transparency
 	IND_Animation *mAnimationRocket = IND_Animation::newAnimation();
@@ -72,6 +74,17 @@ void Ship::Update(double* delta)
 	for (int i = 0; i < 10; i++){
 		bullets_[i]->Update(delta);
 	}
+	/*
+	Calculate offset from the center of the ship to spawn bullet
+	*/
+	float offsetX, offsetY;
+	float angle = (ship_->getAngleZ()-145)*3.14159265 / 180.f;
+	offsetX = ship_->getPosX() + std::sin(angle) * 40;
+	offsetY = ship_->getPosY() - std::cos(angle) * 40;
+
+	engine->sprite->setPosition(offsetX, offsetY, 0);
+	engine->sprite->setAngleXYZ(0, 0, ship_->getAngleZ());
+	engine->Update();
 }
 
 void Ship::setSpeedX(float sX)
