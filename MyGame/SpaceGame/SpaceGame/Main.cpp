@@ -63,6 +63,10 @@ int IndieLib() // main
 	 randomY = rand() % windowMaxY;
 	 Thing *asteroid = new Thing(mI, ASTEROID, randomX, randomY, -20);
 
+	 randomX = rand() % windowMaxX;
+	 randomY = rand() % windowMaxY;
+	 Thing *rock = new Thing(mI, ROCK, randomX, randomY, -20);
+
 
 	menu->HideMenu();
 	hud->showAlert("Quit F12!");

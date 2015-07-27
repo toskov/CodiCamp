@@ -82,6 +82,56 @@
 		<frame name="asteroid46" file="../SpaceGame/resources/animations/asteroid/0047.png" />
 		<frame name="asteroid47" file="../SpaceGame/resources/animations/asteroid/0048.png" />
 		<frame name="asteroid48" file="../SpaceGame/resources/animations/asteroid/0049.png" />
+		<!-- rock -->
+		<frame name="rock0" file="../SpaceGame/resources/animations/rock/0001.png" />
+		<frame name="rock1" file="../SpaceGame/resources/animations/rock/0002.png" />
+		<frame name="rock2" file="../SpaceGame/resources/animations/rock/0003.png" />
+		<frame name="rock3" file="../SpaceGame/resources/animations/rock/0004.png" />
+		<frame name="rock4" file="../SpaceGame/resources/animations/rock/0005.png" />
+		<frame name="rock5" file="../SpaceGame/resources/animations/rock/0006.png" />
+		<frame name="rock6" file="../SpaceGame/resources/animations/rock/0007.png" />
+		<frame name="rock7" file="../SpaceGame/resources/animations/rock/0008.png" />
+		<frame name="rock8" file="../SpaceGame/resources/animations/rock/0009.png" />
+		<frame name="rock9" file="../SpaceGame/resources/animations/rock/0010.png" />
+		<frame name="rock10" file="../SpaceGame/resources/animations/rock/0011.png" />
+		<frame name="rock11" file="../SpaceGame/resources/animations/rock/0012.png" />
+		<frame name="rock12" file="../SpaceGame/resources/animations/rock/0013.png" />
+		<frame name="rock13" file="../SpaceGame/resources/animations/rock/0014.png" />
+		<frame name="rock14" file="../SpaceGame/resources/animations/rock/0015.png" />
+		<frame name="rock15" file="../SpaceGame/resources/animations/rock/0016.png" />
+		<frame name="rock16" file="../SpaceGame/resources/animations/rock/0017.png" />
+		<frame name="rock17" file="../SpaceGame/resources/animations/rock/0018.png" />
+		<frame name="rock18" file="../SpaceGame/resources/animations/rock/0019.png" />
+		<frame name="rock19" file="../SpaceGame/resources/animations/rock/0020.png" />
+		<frame name="rock20" file="../SpaceGame/resources/animations/rock/0021.png" />
+		<frame name="rock21" file="../SpaceGame/resources/animations/rock/0022.png" />
+		<frame name="rock22" file="../SpaceGame/resources/animations/rock/0023.png" />
+		<frame name="rock23" file="../SpaceGame/resources/animations/rock/0024.png" />
+		<frame name="rock24" file="../SpaceGame/resources/animations/rock/0025.png" />
+		<frame name="rock25" file="../SpaceGame/resources/animations/rock/0026.png" />
+		<frame name="rock26" file="../SpaceGame/resources/animations/rock/0027.png" />
+		<frame name="rock27" file="../SpaceGame/resources/animations/rock/0028.png" />
+		<frame name="rock28" file="../SpaceGame/resources/animations/rock/0029.png" />
+		<frame name="rock29" file="../SpaceGame/resources/animations/rock/0030.png" />
+		<frame name="rock30" file="../SpaceGame/resources/animations/rock/0031.png" />
+		<frame name="rock31" file="../SpaceGame/resources/animations/rock/0032.png" />
+		<frame name="rock32" file="../SpaceGame/resources/animations/rock/0033.png" />
+		<frame name="rock33" file="../SpaceGame/resources/animations/rock/0034.png" />
+		<frame name="rock34" file="../SpaceGame/resources/animations/rock/0035.png" />
+		<frame name="rock35" file="../SpaceGame/resources/animations/rock/0036.png" />
+		<frame name="rock36" file="../SpaceGame/resources/animations/rock/0037.png" />
+		<frame name="rock37" file="../SpaceGame/resources/animations/rock/0038.png" />
+		<frame name="rock38" file="../SpaceGame/resources/animations/rock/0039.png" />
+		<frame name="rock39" file="../SpaceGame/resources/animations/rock/0040.png" />
+		<frame name="rock40" file="../SpaceGame/resources/animations/rock/0041.png" />
+		<frame name="rock41" file="../SpaceGame/resources/animations/rock/0042.png" />
+		<frame name="rock42" file="../SpaceGame/resources/animations/rock/0043.png" />
+		<frame name="rock43" file="../SpaceGame/resources/animations/rock/0044.png" />
+		<frame name="rock44" file="../SpaceGame/resources/animations/rock/0045.png" />
+		<frame name="rock45" file="../SpaceGame/resources/animations/rock/0046.png" />
+		<frame name="rock46" file="../SpaceGame/resources/animations/rock/0047.png" />
+		<frame name="rock47" file="../SpaceGame/resources/animations/rock/0048.png" />
+		<frame name="rock48" file="../SpaceGame/resources/animations/rock/0049.png" />
 	</frames>
 		
 	<!-- sequences declaration -->
@@ -169,6 +219,58 @@
 			<frame name="asteroid46"  time="70" /> 
 			<frame name="asteroid47"  time="70" /> 
 			<frame name="asteroid48"  time="70" />
+		</sequence>		
+		<!-- rock -->
+		<sequence name="rock">
+			<frame name="rock0" time="70" />
+			<frame name="rock1" time="70" />
+			<frame name="rock2" time="70" />
+			<frame name="rock3" time="70" />
+			<frame name="rock4" time="70" />
+			<frame name="rock5" time="70" />
+			<frame name="rock6" time="70" />
+			<frame name="rock7" time="70" />
+			<frame name="rock8" time="70" />
+			<frame name="rock9" time="70" />
+			<frame name="rock10" time="70" />
+			<frame name="rock11" time="70" />
+			<frame name="rock12" time="70" />
+			<frame name="rock13" time="70" />
+			<frame name="rock14" time="70" />
+			<frame name="rock15" time="70" />
+			<frame name="rock16" time="70" />
+			<frame name="rock17" time="70" />
+			<frame name="rock18" time="70" />
+			<frame name="rock19" time="70" />
+			<frame name="rock20" time="70" />
+			<frame name="rock21" time="70" />
+			<frame name="rock22" time="70" />
+			<frame name="rock23" time="70" />
+			<frame name="rock24" time="70" />
+			<frame name="rock25" time="70" />
+			<frame name="rock26"  time="70" />
+			<frame name="rock27"  time="70" /> 
+			<frame name="rock28"  time="70" /> 
+			<frame name="rock29"  time="70" /> 
+			<frame name="rock30"  time="70" /> 
+			<frame name="rock31"  time="70" /> 
+			<frame name="rock32"  time="70" /> 
+			<frame name="rock33"  time="70" /> 
+			<frame name="rock34"  time="70" /> 
+			<frame name="rock35"  time="70" /> 
+			<frame name="rock36"  time="70" /> 
+			<frame name="rock37"  time="70" /> 
+			<frame name="rock38"  time="70" /> 
+			<frame name="rock39"  time="70" /> 
+			<frame name="rock40"  time="70" /> 
+			<frame name="rock41"  time="70" /> 
+			<frame name="rock42"  time="70" /> 
+			<frame name="rock43"  time="70" /> 
+			<frame name="rock44"  time="70" /> 
+			<frame name="rock45"  time="70" /> 
+			<frame name="rock46"  time="70" /> 
+			<frame name="rock47"  time="70" /> 
+			<frame name="rock48"  time="70" />
 		</sequence>		
 	</sequences>
 </animation>

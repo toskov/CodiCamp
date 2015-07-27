@@ -35,6 +35,12 @@ Thing::Thing(CIndieLib *mI, int type, int x, int y, int life)
 		border->setBoundingCircle("thing", x, y, 40);
 		
 	}
+	if (type == ROCK)
+	{
+		//thing->setScale(0.7, 0.7);
+		border->setBoundingCircle("thing", x, y, 20);
+
+	}
 }
 
 Thing::~Thing()
