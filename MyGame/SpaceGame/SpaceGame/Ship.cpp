@@ -38,7 +38,7 @@ Ship::Ship()
 	border->setBoundingAreas("../SpaceGame/resources/shipBound.xml");
 
 	//Predefine 10 bullets 
-	for (int i = 0; i < 10; i++){
+	for (int i = 0; i < MAX_BULLETS; i++){
 		bullets_[i] = new Bullet(mI, 0, 10000, 10000);
 	}
 }
@@ -71,7 +71,7 @@ void Ship::Update(double* delta)
 	/*
 	Update bullets 
 	*/
-	for (int i = 0; i < 10; i++){
+	for (int i = 0; i < MAX_BULLETS; i++){
 		bullets_[i]->Update(delta);
 	}
 	/*
@@ -227,7 +227,7 @@ Ship::~Ship()
 }
 
 int Ship::getX()
-{
+{ 
 	return ship_->getPosX();
 }
 
@@ -241,7 +241,7 @@ int Ship::getAngleZ()
 	return ship_->getAngleZ();
 }
 
-void Ship::increaseHealth(int h)
+void Ship::changeHealth(int h)
 {
 	*health = *health + h;
 }
@@ -249,6 +249,11 @@ void Ship::increaseHealth(int h)
 void Ship::increaseScore()
 {
 	*score +=1;
+}
+
+void Ship::increaseScore(int points)
+{
+	*score += points;
 }
 
 // Return bullet border

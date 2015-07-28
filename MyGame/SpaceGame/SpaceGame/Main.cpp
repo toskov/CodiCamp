@@ -61,23 +61,23 @@ int IndieLib() // main
 	
 	srand(time(NULL)); // random generfated possition
 
-	int randomX = rand() % windowMaxX;
-	int randomY = rand() % windowMaxY;
+	int randomX = rand() % WINDOW_WIDTH;
+	int randomY = rand() % WINDOW_HEIGH;
 	Thing *asteroid = new Thing(mI, ASTEROID, randomX, randomY, -20);	
 
-	 randomX = rand() % windowMaxX;
-	 randomY = rand() % windowMaxY;
-	Thing *diamond = new Thing(mI, DIAMOND, randomX, randomY, 20);
+	randomX = rand() % WINDOW_WIDTH;
+	randomY = rand() % WINDOW_HEIGH;
+	Thing *diamond = new Thing(mI, DIAMOND, randomX, randomY, 0);
 	allObjects.push_back(diamond);
 	allObjects.push_back(asteroid);
 
 // old way	
-//	randomX = rand() % windowMaxX;
-// randomY = rand() % windowMaxY;
+//	randomX = rand() % WINDOW_WIDTH;
+// randomY = rand() % WINDOW_HEIGH;
 //	Thing *health = new Thing(mI, HEALTH, randomX, randomY, 10); 	
 
-//	 randomX = rand() % windowMaxX;
-//	 randomY = rand() % windowMaxY;
+//	 randomX = rand() % WINDOW_WIDTH;
+//	 randomY = rand() % WINDOW_HEIGH;
 //	 Thing *rock = new Thing(mI, ROCK, randomX, randomY, -20);
 //	allObjects.push_back(health);
 //	allObjects.push_back(rock);
@@ -85,17 +85,17 @@ int IndieLib() // main
 	for (int i = 0; i < 5; i++)
 	{
 		// create 5 more rocks objects
-	randomX = rand() % windowMaxX;
-	randomY = rand() % windowMaxY;
+		randomX = rand() % WINDOW_WIDTH;
+		randomY = rand() % WINDOW_HEIGH;
 	int angle = rand() % 360;
 	allObjects.push_back(new Thing(mI, ROCK, randomX, randomY, -20, angle)); // create object anonymously
 	}
 	
-	for (int i = 0; i < 5; i++)
+	for (int i = 0; i < 2; i++)
 	{
 		// create 5 more health objects
-		randomX = rand() % windowMaxX;
-		randomY = rand() % windowMaxY;
+		randomX = rand() % WINDOW_WIDTH;
+		randomY = rand() % WINDOW_HEIGH;
 		int angle = rand() % 360;
 		allObjects.push_back(new Thing(mI, HEALTH, randomX, randomY, 10)); // create object anonymously
 	}
@@ -169,24 +169,40 @@ int IndieLib() // main
 					if (mI->_entity2dManager->isCollision(ship->getColisionBorder(), "body", allObjects[i]->getColisionBorder(), "thing"))
 					{
 						hud->showAlert(" Collision detected!"); // for tests only
-						ship->increaseHealth(allObjects.at(i)->getHealth()); // corect ship health
+						if (allObjects[i]->getType() == HEALTH)
+						{
+							ship->changeHealth(allObjects.at(i)->getHealth()); // corect ship health
+						}
+						if (allObjects[i]->getType() == DIAMOND)
+						{
+							ship->increaseScore(DIAMOND_SCORE); // corect ship health
+						}
+						if ((allObjects[i]->getType() == ROCK) || (allObjects[i]->getType() == ASTEROID))
+						{
+							ship->changeHealth(allObjects.at(i)->getHealth()); // corect ship health
+						}
 
 						allObjects.at(i)->destroy(mI); // destroy object
 						allObjects.erase((allObjects.begin() + i)); // remove pointer from vector
 					}
 					// test for bullet collisions
-					/*
-					for (int k = 0; k < MAX_BULLETS; k++)
+					/**/
+					for (int k = 0; k < 10; k++)
 					{
 						if (mI->_entity2dManager->isCollision(ship->getBulletBorder(k), "bullet", allObjects[i]->getColisionBorder(), "thing"))
 						{
-							// collision detected
-							ship->increaseScore();
-						//	allObjects.at(i)->destroy(mI); // destroy object
-						//	allObjects.erase((allObjects.begin() + i)); // remove pointer from vector
+							if ((allObjects[i]->getType() == ROCK) || (allObjects[i]->getType() == ASTEROID))
+							{
+								// collision with rock detected
+								hud->showAlert(" Collision detected!"); // for tests only
+								ship->increaseScore(); // increase game score
+								allObjects.at(i)->destroy(mI); // destroy object
+								allObjects.erase((allObjects.begin() + i)); // remove pointer from vector
+							}
+							
 						}
 					}
-					*/
+					
 					
 				}
 			}

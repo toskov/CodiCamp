@@ -9,13 +9,14 @@
 #include "ErrorHandler.h"
 #include "Bullet.h"
 #include "Sprite.h"
+#include "GlobalHeader.h"
 
 class Ship : public ErrorHandler
 {
 
 private:
 	float *speedX_ = new float(0), *speedY_ = new float(0); // Ship speed
-	Bullet *bullets_ [20]; // Must define buffer size
+	Bullet *bullets_[MAX_BULLETS]; //buffer for bullets
 	int bulletIndex = 0; // current bullet
 	double *mDelta; //speed synchronization
 	int *shots = new int(0), *health = new int(0), *score = new int(0);
@@ -33,12 +34,13 @@ public:
 	void setSpeedX(float sX);
 	void setSpeedY(float sY);
 	void increaseSpeed(float step);
-	void increaseHealth(int h);
+	void changeHealth(int h);
 	void decreaseSpeed(float step);
 	void rotateLeft(float speed);
 	void rotateRight(float speed);
 	void ReadKeys(CIndieLib *mI);
 	void increaseScore(); // increase by 1 point
+	void increaseScore(int i); // increase by 1 point
 	int getScore();
 	int getHealth();
 	int getShots();

@@ -1,9 +1,9 @@
-﻿Build started 28.7.2015 г. 20:26:00.
+﻿Build started 29.7.2015 г. 0:00:20.
      1>Project "F:\Projects\CodiCamp\C-game-course\MyGame\SpaceGame\SpaceGame\SpaceGame.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
          F:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"F:\Projects\CodiCamp\C-game-course\MyGame\SpaceGame\SpaceGame\tools\editor_tileless" /I"F:\Projects\CodiCamp\C-game-course\MyGame\SpaceGame\SpaceGame\common\include" /I"C:\Users\Steve\Desktop\Организации\Codi Camp\Cources\Intro Game Development C++\Lecture5_Indielib\MyGame\SpaceGame\SpaceGame\common\include" /I"C:\Users\Steve\Desktop\Организации\Codi Camp\Cources\Intro Game Development C++\Lecture5_Indielib\MyGame\SpaceGame\SpaceGame\tools\editor_tileless" /I..\..\..\..\common\include /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Main.cpp
          Main.cpp
-     1>f:\projects\codicamp\c-game-course\mygame\spacegame\spacegame\GlobalHeader.h(8): warning C4005: 'PI' : macro redefinition
+     1>f:\projects\codicamp\c-game-course\mygame\spacegame\spacegame\GlobalHeader.h(10): warning C4005: 'PI' : macro redefinition
                  f:\projects\codicamp\c-game-course\mygame\spacegame\spacegame\common\include\Defines.h(249) : see previous definition of 'PI'
      1>Main.cpp(62): warning C4244: 'argument' : conversion from 'time_t' to 'unsigned int', possible loss of data
      1>Main.cpp(166): warning C4018: '<' : signed/unsigned mismatch
@@ -28,4 +28,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:02.40
+Time Elapsed 00:00:02.05
