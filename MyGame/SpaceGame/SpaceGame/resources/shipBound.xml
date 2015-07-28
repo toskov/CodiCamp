@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<bounding_areas>
+	<triangle id="body" ax="0" ay="-33" bx="-11" by="-13" cx="11" cy="-13" />
+	<circle id="body" x="0" y="0" radius="17" />
+	<circle id="body" x="0" y="28" radius="12" />
+</bounding_areas>
