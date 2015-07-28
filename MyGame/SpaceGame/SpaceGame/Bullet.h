@@ -16,5 +16,6 @@ public:
 	Bullet(CIndieLib *mI,float angle,float posX, float posY);
 	void Update(double *delta);
 	void Set(float angle, float x, float y, double* delta);
+	IND_Entity2d* getColisionBorder(); //return object for collision detection
 	~Bullet();
 };

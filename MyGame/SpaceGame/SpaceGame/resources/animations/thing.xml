@@ -132,6 +132,67 @@
 		<frame name="rock46" file="../SpaceGame/resources/animations/rock/0047.png" />
 		<frame name="rock47" file="../SpaceGame/resources/animations/rock/0048.png" />
 		<frame name="rock48" file="../SpaceGame/resources/animations/rock/0049.png" />
+		<!-- diamond -->
+		<frame name="diamond0" file="../SpaceGame/resources/animations/diamond/0001.png" />
+		<frame name="diamond1" file="../SpaceGame/resources/animations/diamond/0002.png" />
+		<frame name="diamond2" file="../SpaceGame/resources/animations/diamond/0003.png" />
+		<frame name="diamond3" file="../SpaceGame/resources/animations/diamond/0004.png" />
+		<frame name="diamond4" file="../SpaceGame/resources/animations/diamond/0005.png" />
+		<frame name="diamond5" file="../SpaceGame/resources/animations/diamond/0006.png" />
+		<frame name="diamond6" file="../SpaceGame/resources/animations/diamond/0007.png" />
+		<frame name="diamond7" file="../SpaceGame/resources/animations/diamond/0008.png" />
+		<frame name="diamond8" file="../SpaceGame/resources/animations/diamond/0009.png" />
+		<frame name="diamond9" file="../SpaceGame/resources/animations/diamond/0010.png" />
+		<frame name="diamond10" file="../SpaceGame/resources/animations/diamond/0011.png" />
+		<frame name="diamond11" file="../SpaceGame/resources/animations/diamond/0012.png" />
+		<frame name="diamond12" file="../SpaceGame/resources/animations/diamond/0013.png" />
+		<frame name="diamond13" file="../SpaceGame/resources/animations/diamond/0014.png" />
+		<frame name="diamond14" file="../SpaceGame/resources/animations/diamond/0015.png" />
+		<frame name="diamond15" file="../SpaceGame/resources/animations/diamond/0016.png" />
+		<frame name="diamond16" file="../SpaceGame/resources/animations/diamond/0017.png" />
+		<frame name="diamond17" file="../SpaceGame/resources/animations/diamond/0018.png" />
+		<frame name="diamond18" file="../SpaceGame/resources/animations/diamond/0019.png" />
+		<frame name="diamond19" file="../SpaceGame/resources/animations/diamond/0020.png" />
+		<frame name="diamond20" file="../SpaceGame/resources/animations/diamond/0021.png" />
+		<frame name="diamond21" file="../SpaceGame/resources/animations/diamond/0022.png" />
+		<frame name="diamond22" file="../SpaceGame/resources/animations/diamond/0023.png" />
+		<frame name="diamond23" file="../SpaceGame/resources/animations/diamond/0024.png" />
+		<frame name="diamond24" file="../SpaceGame/resources/animations/diamond/0025.png" />
+		<frame name="diamond25" file="../SpaceGame/resources/animations/diamond/0026.png" />
+		<frame name="diamond26" file="../SpaceGame/resources/animations/diamond/0027.png" />
+		<frame name="diamond27" file="../SpaceGame/resources/animations/diamond/0028.png" />
+		<frame name="diamond28" file="../SpaceGame/resources/animations/diamond/0029.png" />
+		<frame name="diamond29" file="../SpaceGame/resources/animations/diamond/0030.png" />
+		<frame name="diamond30" file="../SpaceGame/resources/animations/diamond/0031.png" />
+		<frame name="diamond31" file="../SpaceGame/resources/animations/diamond/0032.png" />
+		<frame name="diamond32" file="../SpaceGame/resources/animations/diamond/0033.png" />
+		<frame name="diamond33" file="../SpaceGame/resources/animations/diamond/0034.png" />
+		<frame name="diamond34" file="../SpaceGame/resources/animations/diamond/0035.png" />
+		<frame name="diamond35" file="../SpaceGame/resources/animations/diamond/0036.png" />
+		<frame name="diamond36" file="../SpaceGame/resources/animations/diamond/0037.png" />
+		<frame name="diamond37" file="../SpaceGame/resources/animations/diamond/0038.png" />
+		<frame name="diamond38" file="../SpaceGame/resources/animations/diamond/0039.png" />
+		<frame name="diamond39" file="../SpaceGame/resources/animations/diamond/0040.png" />
+		<frame name="diamond40" file="../SpaceGame/resources/animations/diamond/0041.png" />
+		<frame name="diamond41" file="../SpaceGame/resources/animations/diamond/0042.png" />
+		<frame name="diamond42" file="../SpaceGame/resources/animations/diamond/0043.png" />
+		<frame name="diamond43" file="../SpaceGame/resources/animations/diamond/0044.png" />
+		<frame name="diamond44" file="../SpaceGame/resources/animations/diamond/0045.png" />
+		<frame name="diamond45" file="../SpaceGame/resources/animations/diamond/0046.png" />
+		<frame name="diamond46" file="../SpaceGame/resources/animations/diamond/0047.png" />
+		<frame name="diamond47" file="../SpaceGame/resources/animations/diamond/0048.png" />
+		<frame name="diamond48" file="../SpaceGame/resources/animations/diamond/0049.png" />
+		<frame name="diamond49" file="../SpaceGame/resources/animations/diamond/0050.png" />
+		<frame name="diamond50" file="../SpaceGame/resources/animations/diamond/0051.png" />
+		<frame name="diamond51" file="../SpaceGame/resources/animations/diamond/0052.png" />
+		<frame name="diamond52" file="../SpaceGame/resources/animations/diamond/0053.png" />
+		<frame name="diamond53" file="../SpaceGame/resources/animations/diamond/0054.png" />
+		<frame name="diamond54" file="../SpaceGame/resources/animations/diamond/0055.png" />
+		<frame name="diamond55" file="../SpaceGame/resources/animations/diamond/0056.png" />
+		<frame name="diamond56" file="../SpaceGame/resources/animations/diamond/0057.png" />
+		<frame name="diamond57" file="../SpaceGame/resources/animations/diamond/0058.png" />
+		<frame name="diamond58" file="../SpaceGame/resources/animations/diamond/0059.png" />
+		<frame name="diamond59" file="../SpaceGame/resources/animations/diamond/0060.png" />
 	</frames>
 		
 	<!-- sequences declaration -->
@@ -271,6 +332,69 @@
 			<frame name="rock46"  time="40" /> 
 			<frame name="rock47"  time="40" /> 
 			<frame name="rock48"  time="40" />
+		</sequence>	
+		<!-- diamond -->
+		<sequence name="diamond">
+			<frame name="diamond0" time="50" />
+			<frame name="diamond1" time="50" />
+			<frame name="diamond2" time="50" />
+			<frame name="diamond3" time="50" />
+			<frame name="diamond4" time="50" />
+			<frame name="diamond5" time="50" />
+			<frame name="diamond6" time="50" />
+			<frame name="diamond7" time="50" />
+			<frame name="diamond8" time="50" />
+			<frame name="diamond9" time="50" />
+			<frame name="diamond10" time="50" />
+			<frame name="diamond11" time="50" />
+			<frame name="diamond12" time="50" />
+			<frame name="diamond13" time="50" />
+			<frame name="diamond14" time="50" />
+			<frame name="diamond15" time="50" />
+			<frame name="diamond16" time="50" />
+			<frame name="diamond17" time="50" />
+			<frame name="diamond18" time="50" />
+			<frame name="diamond19" time="50" />
+			<frame name="diamond20" time="50" />
+			<frame name="diamond21" time="50" />
+			<frame name="diamond22" time="50" />
+			<frame name="diamond23" time="50" />
+			<frame name="diamond24" time="50" />
+			<frame name="diamond25" time="50" />
+			<frame name="diamond26"  time="50" />
+			<frame name="diamond27"  time="50" /> 
+			<frame name="diamond28"  time="50" /> 
+			<frame name="diamond29"  time="50" /> 
+			<frame name="diamond30"  time="50" /> 
+			<frame name="diamond31"  time="50" /> 
+			<frame name="diamond32"  time="50" /> 
+			<frame name="diamond33"  time="50" /> 
+			<frame name="diamond34"  time="50" /> 
+			<frame name="diamond35"  time="50" /> 
+			<frame name="diamond36"  time="50" /> 
+			<frame name="diamond37"  time="50" /> 
+			<frame name="diamond38"  time="50" /> 
+			<frame name="diamond39"  time="50" /> 
+			<frame name="diamond40"  time="50" /> 
+			<frame name="diamond41"  time="50" /> 
+			<frame name="diamond42"  time="50" /> 
+			<frame name="diamond43"  time="50" /> 
+			<frame name="diamond44"  time="50" /> 
+			<frame name="diamond45"  time="50" /> 
+			<frame name="diamond46"  time="50" /> 
+			<frame name="diamond47"  time="50" /> 
+			<frame name="diamond48"  time="50" /> 
+			<frame name="diamond49"  time="50" /> 
+			<frame name="diamond50"  time="50" /> 
+			<frame name="diamond51"  time="50" /> 
+			<frame name="diamond52"  time="50" /> 
+			<frame name="diamond53"  time="50" /> 
+			<frame name="diamond54"  time="50" /> 
+			<frame name="diamond55"  time="50" /> 
+			<frame name="diamond56"  time="50" /> 
+			<frame name="diamond57"  time="50" /> 
+			<frame name="diamond58"  time="50" /> 
+			<frame name="diamond59"  time="50" /> 
 		</sequence>		
 	</sequences>
 </animation>

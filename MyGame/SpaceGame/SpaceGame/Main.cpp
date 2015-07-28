@@ -64,6 +64,11 @@ int IndieLib() // main
 	int randomX = rand() % windowMaxX;
 	int randomY = rand() % windowMaxY;
 	Thing *asteroid = new Thing(mI, ASTEROID, randomX, randomY, -20);	
+
+	 randomX = rand() % windowMaxX;
+	 randomY = rand() % windowMaxY;
+	Thing *diamond = new Thing(mI, DIAMOND, randomX, randomY, 20);
+	allObjects.push_back(diamond);
 	allObjects.push_back(asteroid);
 
 // old way	
@@ -153,40 +158,14 @@ int IndieLib() // main
 			}		
 			
 		// ------- Collisions -----------
-			/*
-			* old version of collision detect
-							if (mI->_entity2dManager->isCollision(ship->getColisionBorder(), "body", asteroid->getColisionBorder(), "thing"))
-			{
-				hud->showAlert(" Collision detected!");
-				if (gameTime > 2)
-				{
-					// initial all collisions are set true
-					ship->increaseHealth(asteroid->getHealth());
-					asteroid->destroy(mI);
-				}
-				
-			}
-				// asteroid collision
-
-				if (mI->_entity2dManager->isCollision(ship->getColisionBorder(), "body", health->getColisionBorder(), "thing"))
-				{
-					hud->showAlert(" Collision detected!");
-					if (gameTime > 2)
-					{
-						// initial all collisions are set true
-						ship->increaseHealth(health->getHealth());
-						health->destroy(mI);
-					}
-
-				}
-			*/
-
-			// check collisions with ship for all objects
+			
 			if (gameTime > 2)
 			{
 				// just to prevent initial collisions
-				for (int i = 0; i < allObjects.size(); i++)
+				
+				for (int i = 0; i < allObjects.size(); i++) 
 				{
+					// check collisions with ship for all objects
 					if (mI->_entity2dManager->isCollision(ship->getColisionBorder(), "body", allObjects[i]->getColisionBorder(), "thing"))
 					{
 						hud->showAlert(" Collision detected!"); // for tests only
@@ -195,6 +174,20 @@ int IndieLib() // main
 						allObjects.at(i)->destroy(mI); // destroy object
 						allObjects.erase((allObjects.begin() + i)); // remove pointer from vector
 					}
+					// test for bullet collisions
+					/*
+					for (int k = 0; k < MAX_BULLETS; k++)
+					{
+						if (mI->_entity2dManager->isCollision(ship->getBulletBorder(k), "bullet", allObjects[i]->getColisionBorder(), "thing"))
+						{
+							// collision detected
+							ship->increaseScore();
+						//	allObjects.at(i)->destroy(mI); // destroy object
+						//	allObjects.erase((allObjects.begin() + i)); // remove pointer from vector
+						}
+					}
+					*/
+					
 				}
 			}
 

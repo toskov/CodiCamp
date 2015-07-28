@@ -245,3 +245,15 @@ void Ship::increaseHealth(int h)
 {
 	*health = *health + h;
 }
+
+void Ship::increaseScore()
+{
+	*score +=1;
+}
+
+// Return bullet border
+IND_Entity2d* Ship::getBulletBorder(int number)
+{
+	if (number < 0 || number >MAX_BULLETS) return bullets_[0]->getColisionBorder(); // for error preventing 
+	return bullets_[number]->getColisionBorder();
+}

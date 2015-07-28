@@ -44,6 +44,11 @@ void Bullet::Set(float angle, float x, float y, double* delta)
 	*speedY_ = -std::cos(angle)* (*mDelta) * bulletSpeed;
 }
 
+IND_Entity2d* Bullet::getColisionBorder()
+{
+	return mBullet_;
+}
+
 Bullet::~Bullet()
 {
 	delete speedX_;

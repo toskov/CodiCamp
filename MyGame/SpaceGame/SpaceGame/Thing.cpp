@@ -53,6 +53,12 @@ void Thing::Construct(CIndieLib *mI, int type, int x, int y, int life)
 		border->setBoundingCircle("thing", x, y, 20);
 
 	}
+	if (type == DIAMOND)
+	{
+		//thing->setScale(0.7, 0.7);
+		border->setBoundingCircle("thing", x, y, 20);
+
+	}
 }
 
 

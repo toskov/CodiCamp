@@ -38,12 +38,14 @@ public:
 	void rotateLeft(float speed);
 	void rotateRight(float speed);
 	void ReadKeys(CIndieLib *mI);
+	void increaseScore(); // increase by 1 point
 	int getScore();
 	int getHealth();
 	int getShots();
 	int getX();
 	int getY();
 	int getAngleZ();
+	IND_Entity2d* getBulletBorder(int number); // get collision border for one of bullets
 	IND_Entity2d* getColisionBorder();
 	~Ship();
 };
