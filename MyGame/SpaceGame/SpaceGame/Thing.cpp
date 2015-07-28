@@ -7,7 +7,19 @@ Thing::Thing()
 // Create flying thing
 Thing::Thing(CIndieLib *mI, int type, int x, int y, int life)
 {
-	*posX = x;
+	Thing::Construct(mI, type, x, y, life);
+}
+
+Thing::Thing(CIndieLib *mI, int type, int x, int y, int life, int angle)
+{
+	Thing::Construct(mI, type, x, y, life);
+	//Rotation angle
+	thing->setAngleXYZ(0, 0, angle);
+}
+
+void Thing::Construct(CIndieLib *mI, int type, int x, int y, int life)
+{
+*posX = x;
 	*posY = y;
 	*health = life;
 	*this->type = type;
@@ -42,6 +54,7 @@ Thing::Thing(CIndieLib *mI, int type, int x, int y, int life)
 
 	}
 }
+
 
 Thing::~Thing()
 {

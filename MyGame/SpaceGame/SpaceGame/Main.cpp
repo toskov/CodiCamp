@@ -25,6 +25,9 @@ Main
 
 int IndieLib() // main
 {
+
+	// Vector Objects container
+	vector<Thing*> allObjects;
 	
 	// ----- Sound Library --------------
 
@@ -57,18 +60,40 @@ int IndieLib() // main
 	
 	
 	srand(time(NULL)); // random generfated possition
+
 	int randomX = rand() % windowMaxX;
-	int randomY = rand() % windowMaxY;	
-	Thing *health = new Thing(mI, HEALTH, randomX, randomY, 10); 
+	int randomY = rand() % windowMaxY;
+	Thing *asteroid = new Thing(mI, ASTEROID, randomX, randomY, -20);	
+	allObjects.push_back(asteroid);
 
-	 randomX = rand() % windowMaxX;
-	 randomY = rand() % windowMaxY;
-	 Thing *asteroid = new Thing(mI, ASTEROID, randomX, randomY, -20);
+// old way	
+//	randomX = rand() % windowMaxX;
+// randomY = rand() % windowMaxY;
+//	Thing *health = new Thing(mI, HEALTH, randomX, randomY, 10); 	
 
-	 randomX = rand() % windowMaxX;
-	 randomY = rand() % windowMaxY;
-	 Thing *rock = new Thing(mI, ROCK, randomX, randomY, -20);
+//	 randomX = rand() % windowMaxX;
+//	 randomY = rand() % windowMaxY;
+//	 Thing *rock = new Thing(mI, ROCK, randomX, randomY, -20);
+//	allObjects.push_back(health);
+//	allObjects.push_back(rock);
 
+	for (int i = 0; i < 5; i++)
+	{
+		// create 5 more rocks objects
+	randomX = rand() % windowMaxX;
+	randomY = rand() % windowMaxY;
+	int angle = rand() % 360;
+	allObjects.push_back(new Thing(mI, ROCK, randomX, randomY, -20, angle)); // create object anonymously
+	}
+	
+	for (int i = 0; i < 5; i++)
+	{
+		// create 5 more health objects
+		randomX = rand() % windowMaxX;
+		randomY = rand() % windowMaxY;
+		int angle = rand() % 360;
+		allObjects.push_back(new Thing(mI, HEALTH, randomX, randomY, 10)); // create object anonymously
+	}
 
 	menu->HideMenu();
 	hud->showAlert("Quit F12!");
@@ -89,7 +114,7 @@ int IndieLib() // main
 	IND_Timer *mTimer = new IND_Timer();
 	mTimer->start();
 
-	bool play = true;
+	bool play = false;
 	// ----- Main Loop -----
 	while (!mI->_input->onKeyPress(IND_F12) && !mI->_input->quit() && !menu->isExitSelected())
 	{
@@ -112,7 +137,7 @@ int IndieLib() // main
 				menu->ShowMenu();
 				play = !play;
 			}
-
+			// ---- Menu control --------
 			if (play)
 			{
 				menu->HideMenu();
@@ -128,8 +153,9 @@ int IndieLib() // main
 			}		
 			
 		// ------- Collisions -----------
-			
-				if (mI->_entity2dManager->isCollision(ship->getColisionBorder(), "body", asteroid->getColisionBorder(), "thing"))
+			/*
+			* old version of collision detect
+							if (mI->_entity2dManager->isCollision(ship->getColisionBorder(), "body", asteroid->getColisionBorder(), "thing"))
 			{
 				hud->showAlert(" Collision detected!");
 				if (gameTime > 2)
@@ -153,6 +179,25 @@ int IndieLib() // main
 					}
 
 				}
+			*/
+
+			// check collisions with ship for all objects
+			if (gameTime > 2)
+			{
+				// just to prevent initial collisions
+				for (int i = 0; i < allObjects.size(); i++)
+				{
+					if (mI->_entity2dManager->isCollision(ship->getColisionBorder(), "body", allObjects[i]->getColisionBorder(), "thing"))
+					{
+						hud->showAlert(" Collision detected!"); // for tests only
+						ship->increaseHealth(allObjects.at(i)->getHealth()); // corect ship health
+
+						allObjects.at(i)->destroy(mI); // destroy object
+						allObjects.erase((allObjects.begin() + i)); // remove pointer from vector
+					}
+				}
+			}
+
 		// -------- Render -------
 		mI->_render->clearViewPort(0, 0, 60);
 		mI->_render->beginScene();

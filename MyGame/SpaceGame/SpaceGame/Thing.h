@@ -19,6 +19,7 @@ private:
 	IND_Entity2d *border = IND_Entity2d::newEntity2d();
 	IND_Animation *thingAnimation = IND_Animation::newAnimation();
 	IND_Surface *collisionSurface = IND_Surface::newSurface();
+	void Construct(CIndieLib *mI, int type, int x, int y, int life); // for multy constructor initialise
 
 public:
 	int getHealth(void);
@@ -30,6 +31,7 @@ public:
 	IND_Entity2d* getColisionBorder();
 	Thing();
 	Thing(CIndieLib *mI, int type, int x, int y, int life);
+	Thing(CIndieLib *mI, int type, int x, int y, int life, int angle);
 	~Thing();
 };
 #endif

@@ -8,8 +8,8 @@ Ship::Ship()
  Ship::Ship(CIndieLib *mI, const char *str)
 {
 
-	*speedX_ = 100.0f; // initial speed
-	*speedY_ = 100.0f;
+	*speedX_ = 0.0f; // initial speed
+	*speedY_ = 0.0f;
 	// clear scores
 	*health = 100;
 	engine  = new Sprite(mI, "../SpaceGame/resources/sEngine.png", 0,0);
@@ -134,7 +134,7 @@ void Ship::ReadKeys(CIndieLib *mI)
 	// Rotate right
 	if (mI->_input->isKeyPressed(IND_KEYRIGHT) || mI->_input->isKeyPressed(IND_D))
 	{
-		this->rotateRight(300.0f * (*mDelta));
+		this->rotateRight(250.0f * (*mDelta));
 	}
 	else
 	{
@@ -143,7 +143,7 @@ void Ship::ReadKeys(CIndieLib *mI)
 	// Rotate left
 	if (mI->_input->isKeyPressed(IND_KEYLEFT) || mI->_input->isKeyPressed(IND_A))
 	{
-		this->rotateLeft(300.0f * (*mDelta));
+		this->rotateLeft(250.0f * (*mDelta));
 	}
 	else
 	{
