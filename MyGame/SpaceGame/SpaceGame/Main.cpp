@@ -43,6 +43,15 @@ int IndieLib() // main
 	if (!mI->_surfaceManager->add(mSurfaceBack, "../SpaceGame/resources/genesis/Background_Colorful_Galaxy-800x600.jpg", IND_OPAQUE, IND_32)) return 0;
 
 
+	// Planet surface for gravity game
+	IND_Surface *mPlanetSurface = IND_Surface::newSurface();
+	if (!mI->_surfaceManager->add(mPlanetSurface, "../SpaceGame/resources/planet_surface.png", IND_OPAQUE, IND_32)) return 0;
+	IND_Entity2d *mGround = IND_Entity2d::newEntity2d();
+	mI->_entity2dManager->add(mGround);					// Entity adding
+	mGround->setSurface(mPlanetSurface);				// Set the surface into the entity
+	mGround->setPosition(0, 150, 2);
+
+
 	// -------- Load Options ----------------
 	Options *gameOptions = new Options(); // read options from file
 	gameOptions->saveOptions(); // for tests
@@ -182,7 +191,7 @@ int IndieLib() // main
 						}
 						if (allObjects[i]->getType() == DIAMOND)
 						{
-							ship->increaseScore(DIAMOND_SCORE); // corect ship health
+							ship->changeScore(DIAMOND_SCORE); // corect ship health
 						}
 						if ((allObjects[i]->getType() == ROCK) || (allObjects[i]->getType() == ASTEROID))
 						{
@@ -201,11 +210,9 @@ int IndieLib() // main
 							if ((allObjects[i]->getType() == ROCK) || (allObjects[i]->getType() == ASTEROID))
 							{
 								// collision with rock detected
-								hud->showAlert(" Collision detected!"); // for tests only
-								// create new explosion in vector
-								//explosions.push_back(new Explosion(mI, allObjects[i]->getPositionX(), allObjects[i]->getPositionY()));
-								explosions.push_back(new Explosion(mI, allObjects[i]->getPositionX(), allObjects[i]->getPositionY()));
-								ship->increaseScore(); // increase game score
+								hud->showAlert(" Collision detected!"); // for tests only								
+								explosions.push_back(new Explosion(mI, allObjects[i]->getPositionX(), allObjects[i]->getPositionY()));// create new explosion in vector
+								ship->changeScore(5); // increase game score
 								allObjects.at(i)->destroy(mI); // destroy object
 								allObjects.erase((allObjects.begin() + i)); // remove pointer from vector
 								

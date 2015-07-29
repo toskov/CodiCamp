@@ -58,6 +58,7 @@ void Ship::Update(double* delta)
 	/*
 	Infinite ship movement in rectangle
 	*/
+	Ship::gravityUpdate(*delta);
 	this->mDelta = delta;
 	float tempX = ship_->getPosX() + (*mDelta)* (*speedX_);
 	if (tempX > 800) tempX = 0;
@@ -246,12 +247,12 @@ void Ship::changeHealth(int h)
 	*health = *health + h;
 }
 
-void Ship::increaseScore()
+void Ship::changeScore()
 {
 	*score +=1;
 }
 
-void Ship::increaseScore(int points)
+void Ship::changeScore(int points)
 {
 	*score += points;
 }
@@ -261,4 +262,9 @@ IND_Entity2d* Ship::getBulletBorder(int number)
 {
 	if (number < 0 || number >MAX_BULLETS) return bullets_[0]->getColisionBorder(); // for error preventing 
 	return bullets_[number]->getColisionBorder();
+}
+
+void Ship::gravityUpdate(double delta)
+{
+	*speedY_ = *speedY_ + GRAVITY*delta*10;
 }

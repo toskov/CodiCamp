@@ -6,6 +6,7 @@
 #define MAX_BULLETS 10u // max size of bullet buffer in ship
 
 #define DIAMOND_SCORE 10u // game score  
+#define GRAVITY 9.81f //gravity
 
 #define PI 3.14159 //the pi number
 
