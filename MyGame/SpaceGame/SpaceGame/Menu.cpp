@@ -10,7 +10,7 @@ Menu::Menu(CIndieLib  *myI)
 	isHidden = true;
 
 	// ---------- main menu ----------
-	itemPlay = new MenuItem(myI, 400, 150, false, "Play");
+	itemPlay = new MenuItem(myI, 400, 150, false, "Restart");
 	itemOptions = new MenuItem(myI, 400, 200, false, "Options");
 	itemQuit = new MenuItem(myI, 400, 250, false, "Quit");
 

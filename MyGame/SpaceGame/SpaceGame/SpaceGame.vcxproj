@@ -86,6 +86,7 @@
   <ItemGroup>
     <ClCompile Include="Bullet.cpp" />
     <ClCompile Include="ErrorHandler.cpp" />
+    <ClCompile Include="Explosion.cpp" />
     <ClCompile Include="HUD.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Menu.cpp" />
@@ -101,6 +102,7 @@
   <ItemGroup>
     <ClInclude Include="Bullet.h" />
     <ClInclude Include="ErrorHandler.h" />
+    <ClInclude Include="Explosion.h" />
     <ClInclude Include="GlobalHeader.h" />
     <ClInclude Include="GObject.h" />
     <ClInclude Include="HUD.h" />

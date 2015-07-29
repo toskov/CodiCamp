@@ -19,7 +19,7 @@ Thing::Thing(CIndieLib *mI, int type, int x, int y, int life, int angle)
 
 void Thing::Construct(CIndieLib *mI, int type, int x, int y, int life)
 {
-*posX = x;
+	*posX = x;
 	*posY = y;
 	*health = life;
 	*this->type = type;
@@ -73,20 +73,7 @@ Thing::~Thing()
 	delete health;
 }
 
-void Thing::hide()
-{
-	*posX = -100;
-	*posY = -100;
-	thing->setPosition(*posX, *posY, 0);
-	border->setPosition(0, 0, 0);
-}
 
-void Thing::show(int x,int y)
-{
-	*posX = x;
-	*posY = y;
-
-}
 IND_Entity2d* Thing::getColisionBorder()
 {
 	return border;
@@ -111,4 +98,14 @@ int Thing::getHealth(void)
 int Thing::getType()
 {
 	return *type;
+}
+
+int Thing::getPositionX()
+{
+	return thing->getPosX();
+}
+
+int Thing::getPositionY()
+{
+	return thing->getPosY();
 }

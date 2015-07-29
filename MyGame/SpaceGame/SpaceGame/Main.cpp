@@ -15,6 +15,7 @@
 #include <time.h>       /* time */
 #include "GlobalHeader.h"
 #include "Sprite.h"
+#include "Explosion.h"
 
 
 /*
@@ -28,6 +29,7 @@ int IndieLib() // main
 
 	// Vector Objects container
 	vector<Thing*> allObjects;
+	vector<Explosion*> explosions;
 	
 	// ----- Sound Library --------------
 
@@ -71,17 +73,6 @@ int IndieLib() // main
 	allObjects.push_back(diamond);
 	allObjects.push_back(asteroid);
 
-// old way	
-//	randomX = rand() % WINDOW_WIDTH;
-// randomY = rand() % WINDOW_HEIGH;
-//	Thing *health = new Thing(mI, HEALTH, randomX, randomY, 10); 	
-
-//	 randomX = rand() % WINDOW_WIDTH;
-//	 randomY = rand() % WINDOW_HEIGH;
-//	 Thing *rock = new Thing(mI, ROCK, randomX, randomY, -20);
-//	allObjects.push_back(health);
-//	allObjects.push_back(rock);
-
 	for (int i = 0; i < 5; i++)
 	{
 		// create 5 more rocks objects
@@ -103,6 +94,9 @@ int IndieLib() // main
 	menu->HideMenu();
 	hud->showAlert("Quit F12!");
 
+	// TEST
+	//Explosion *explode = new Explosion(mI, 200, 300);
+	//explosions.push_back(explode);
 
 	
 
@@ -110,7 +104,7 @@ int IndieLib() // main
 	double *mDelta = new double(0.1);
 	double *mDeltaAverage = new double(0.001);
 	double *mDeltaSum = new double(0.001);
-	double count = 0;
+	int count = 0;
 	
 	// time
 	int gameTime = 125;
@@ -124,6 +118,7 @@ int IndieLib() // main
 	while (!mI->_input->onKeyPress(IND_F12) && !mI->_input->quit() && !menu->isExitSelected())
 	{
 		gameTime = (int)(mTimer->getTicks() / 1000.0f); //time in seconds
+
 
 		// ------ Average delta time ---------
 			*mDelta = mI->_render->getFrameTime() / 1000.0f;
@@ -142,6 +137,18 @@ int IndieLib() // main
 				menu->ShowMenu();
 				play = !play;
 			}
+
+			// ---- Update explosions -----
+			// creating delay for animation
+			if (count == 0)
+			{
+				for (int i = 0; i < explosions.size(); i++)
+					{
+						if (!explosions[i]->Update(mI, *mDeltaAverage)) explosions.erase((explosions.begin() + i)); // remove explosion from vector
+					}
+			}
+			
+
 			// ---- Menu control --------
 			if (play)
 			{
@@ -187,7 +194,7 @@ int IndieLib() // main
 					}
 					// test for bullet collisions
 					/**/
-					for (int k = 0; k < 10; k++)
+					for (int k = 0; k < 10; k++) //k - bullet number
 					{
 						if (mI->_entity2dManager->isCollision(ship->getBulletBorder(k), "bullet", allObjects[i]->getColisionBorder(), "thing"))
 						{
@@ -195,9 +202,13 @@ int IndieLib() // main
 							{
 								// collision with rock detected
 								hud->showAlert(" Collision detected!"); // for tests only
+								// create new explosion in vector
+								//explosions.push_back(new Explosion(mI, allObjects[i]->getPositionX(), allObjects[i]->getPositionY()));
+								explosions.push_back(new Explosion(mI, allObjects[i]->getPositionX(), allObjects[i]->getPositionY()));
 								ship->increaseScore(); // increase game score
 								allObjects.at(i)->destroy(mI); // destroy object
 								allObjects.erase((allObjects.begin() + i)); // remove pointer from vector
+								
 							}
 							
 						}

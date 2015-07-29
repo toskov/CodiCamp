@@ -24,9 +24,10 @@ private:
 public:
 	int getHealth(void);
 	int getType();
-	void hide(void);
-	void show(int x, int y);
+	//void show(int x, int y);
 	void destroy(CIndieLib *mI);
+	int getPositionX();
+	int getPositionY();
 	//void getHealth(void);
 	IND_Entity2d* getColisionBorder();
 	Thing();
