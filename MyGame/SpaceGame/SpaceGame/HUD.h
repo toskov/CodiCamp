@@ -1,3 +1,6 @@
+#ifndef HUD_H
+#define HUD_H
+
 #include "CIndieLib.h"
 #include "IND_Surface.h"
 #include "IND_Entity2d.h"
@@ -31,3 +34,4 @@ public:
 	void hideMenu();
 	void updateHud(int points, int health, int shots, int time);  // refresh game info
 };
+#endif

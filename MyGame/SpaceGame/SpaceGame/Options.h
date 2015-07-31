@@ -1,4 +1,4 @@
-#ifndef OPTIONSMENU_H
+#ifndef OPTIONS_H
 #define	OPTIONS_H
 #include "CIndieLib.h"
 

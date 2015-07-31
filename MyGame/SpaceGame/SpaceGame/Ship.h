@@ -23,6 +23,8 @@ private:
 	IND_Surface *collisionSurface = IND_Surface::newSurface();
 	IND_Entity2d *border = IND_Entity2d::newEntity2d();
 	Sprite *engine = new Sprite();
+	float gravity = 0;
+	bool rotating = false;
 
 	
 public:

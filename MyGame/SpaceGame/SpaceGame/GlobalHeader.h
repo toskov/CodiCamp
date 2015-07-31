@@ -12,4 +12,5 @@
 
 enum objectType { HEALTH = 1, ASTEROID, ROCK, DIAMOND, ENEMY, BONUS }; // type of objects on scene
 
+
 #endif 

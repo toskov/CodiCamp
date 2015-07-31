@@ -26,10 +26,11 @@ Ship::Ship()
 	// Character rocket
 	mI->_entity2dManager->add(ship_);					// Entity adding
 	ship_->setAnimation(mAnimationRocket);				// Set the animation into the entity
-	ship_->setSequence(0);
-	ship_->setPosition(400,200, 5);
+	ship_->setSequence(1);
+	ship_->setPosition(174,482, 5);
 	ship_->setHotSpot(0.5f, 0.5f);
 	//ship_->setScale(0.3, 0.3);
+	
 
 	// Empty object for colisions!
 	mI->_entity2dManager->add(border);
@@ -137,10 +138,12 @@ Ship movement by keyboard
 void Ship::ReadKeys(CIndieLib *mI)
 {
 	engine->sprite->setShow(false);
+	//rotating = false;
 	// Rotate right
 	if (mI->_input->isKeyPressed(IND_KEYRIGHT) || mI->_input->isKeyPressed(IND_D))
 	{
 		this->rotateRight(250.0f * (*mDelta));
+		rotating = true;
 	}
 	else
 	{
@@ -150,6 +153,7 @@ void Ship::ReadKeys(CIndieLib *mI)
 	if (mI->_input->isKeyPressed(IND_KEYLEFT) || mI->_input->isKeyPressed(IND_A))
 	{
 		this->rotateLeft(250.0f * (*mDelta));
+		rotating = true;
 	}
 	else
 	{
@@ -271,5 +275,5 @@ IND_Entity2d* Ship::getBulletBorder(int number)
 
 void Ship::gravityUpdate(double delta)
 {
-	*speedY_ = *speedY_ + GRAVITY*delta*10;
+	*speedY_ = *speedY_ + gravity*delta*10;
 }

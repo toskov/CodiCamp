@@ -28,10 +28,6 @@ Main
 int IndieLib() // main
 {
 	char TempText[30];
-
-	// Vector Objects container
-	vector<Thing*> allObjects;
-	vector<Explosion*> explosions;
 	
 	// ----- Sound Library --------------
 
@@ -41,79 +37,9 @@ int IndieLib() // main
 	if (!mI->init()) return 0;
 
 	Controller controller = Controller(mI);
+	controller.gameInit();
+	controller.gameGenerator();
 		
-	// Creating surface for the background
-	IND_Surface *mSurfaceBack = IND_Surface::newSurface();
-	if (!mI->_surfaceManager->add(mSurfaceBack, "../SpaceGame/resources/genesis/Background_Colorful_Galaxy-800x600.jpg", IND_OPAQUE, IND_32)) return 0;
-
-
-	// Planet surface for gravity game
-	IND_Surface *planetSurface = IND_Surface::newSurface();
-	if (!mI->_surfaceManager->add(planetSurface, "../SpaceGame/resources/planet_surface.png", IND_OPAQUE, IND_32)) return 0;
-	IND_Entity2d *mGround = IND_Entity2d::newEntity2d();
-	mI->_entity2dManager->add(mGround);					// Entity adding
-	mGround->setSurface(planetSurface);				// Set the surface into the entity
-	mGround->setPosition(0, 150, 2);
-	mGround->setBoundingRectangle("ground", 0, 400, 800,200);
-	//mGround->setTransparency(50);
-
-
-	// -------- Load Options ----------------
-	Options *gameOptions = new Options(); // read options from file
-	gameOptions->saveOptions(); // for tests
-	gameOptions->loadGameObjects();
-
-
-	// Creating 2d entity for the background
-	IND_Entity2d *mBack = IND_Entity2d::newEntity2d();
-	mI->_entity2dManager->add(mBack);					// Entity adding
-	mBack->setSurface(mSurfaceBack);					// Set the surface into the entity
-
-	// ---- creating objects ---------------
-	Planet *sunPlanet = new Planet(mI, "../SpaceGame/resources/animations/smallSun.xml");
-	Ship *ship = new Ship(mI, "../SpaceGame/resources/animations/rocket.xml");
-	HUD *hud = new HUD(mI); // game info
-	Menu *menu = new Menu(mI);
-	
-	
-	srand(time(NULL)); // random generfated possition
-
-	int randomX = rand() % WINDOW_WIDTH;
-	int randomY = rand() % WINDOW_HEIGH;
-	Thing *asteroid = new Thing(mI, ASTEROID, randomX, randomY, -20);	
-
-	randomX = rand() % WINDOW_WIDTH;
-	randomY = rand() % WINDOW_HEIGH;
-	Thing *diamond = new Thing(mI, DIAMOND, randomX, randomY, 0);
-	allObjects.push_back(diamond);
-	allObjects.push_back(asteroid);
-
-	for (int i = 0; i < 5; i++)
-	{
-		// create 5 more rocks objects
-		randomX = rand() % WINDOW_WIDTH;
-		randomY = rand() % WINDOW_HEIGH;
-	int angle = rand() % 360;
-	allObjects.push_back(new Thing(mI, ROCK, randomX, randomY, -20, angle)); // create object anonymously
-	}
-	
-	for (int i = 0; i < 2; i++)
-	{
-		// create 2 more health objects
-		randomX = rand() % WINDOW_WIDTH;
-		randomY = rand() % WINDOW_HEIGH;
-		int angle = rand() % 360;
-		allObjects.push_back(new Thing(mI, HEALTH, randomX, randomY, 10)); // create object anonymously
-	}
-
-	
-	hud->showAlert("Quit F12!");
-
-	// TEST
-	//Explosion *explode = new Explosion(mI, 200, 300);
-	//explosions.push_back(explode);
-
-	
 
 	//<------ DELTA TIME ------>
 	double *delta = new double(0.1);
@@ -130,9 +56,17 @@ int IndieLib() // main
 
 	bool play = false;
 	// ----- Main Loop -----
-	while (!mI->_input->onKeyPress(IND_F12) && !mI->_input->quit() && !menu->isExitSelected())
+	while (!mI->_input->onKeyPress(IND_F12) && !mI->_input->quit() && !controller.menu->isExitSelected())
 	{
 		gameTime = (int)(mTimer->getTicks() / 1000.0f); //time in seconds
+
+		//stop game
+		if (controller.ship->getHealth() < 1){
+			controller.hud->updateHud(controller.ship->getScore(), controller.ship->getHealth(), controller.ship->getShots(), gameTime);
+			controller.hud->showAlert(" Game over! F12 to quit"); // for tests only	
+			play = false;
+
+		}
 
 
 		// ------ Average delta time ---------
@@ -149,7 +83,7 @@ int IndieLib() // main
 			mI->_input->update();
 			if (mI->_input->onKeyPress(IND_ESCAPE))
 			{
-				menu->ShowMenu();
+				controller.menu->ShowMenu();
 				play = !play;
 			}
 
@@ -158,9 +92,9 @@ int IndieLib() // main
 			if (count == 0)
 			{
 				//Update explosions 
-				for (int i = 0; i < explosions.size(); i++)
+				for (int i = 0; i < controller.explosions.size(); i++)
 					{
-						if (!explosions[i]->Update(mI, *deltaAverage)) explosions.erase((explosions.begin() + i)); // remove explosion from vector
+						if (!controller.explosions[i]->Update(mI, *deltaAverage)) controller.explosions.erase((controller.explosions.begin() + i)); // remove explosion from vector
 					}
 				
 			}
@@ -169,19 +103,30 @@ int IndieLib() // main
 			// ---- Menu control --------
 			if (play)
 			{
-				menu->HideMenu();
+				controller.menu->HideMenu();
 					// --------- Game control --------
-				ship->Update(mI,deltaAverage);
-					ship->ReadKeys(mI);
+				controller.ship->Update(mI, deltaAverage);
+				controller.ship->ReadKeys(mI);
 	
 					// -------- UI ------------
-					hud->updateHud(ship->getScore(), ship->getHealth(), ship->getShots(), gameTime);
-					//hud->showAlert("F12 to quit!");
-
-					//sprintf(TempText, "Particles: %d ", ship->getParticlesCount());
-					hud->showAlert(TempText);
+				controller.hud->updateHud(controller.ship->getScore(), controller.ship->getHealth(), controller.ship->getShots(), gameTime);
+				controller.hud->showAlert("F12 to quit!");
+					
 			}else{
-				if (menu->Update(mI)) play = true;
+				switch (controller.menu->Update(mI))
+				{
+					  case 0:
+							break;
+					case 1:
+						play = true;
+							break; 
+					case 3:
+						// button restart pressed
+						break;
+					default:
+						break;
+				}
+					
 			}		
 			
 		// ------- Collisions -----------
@@ -190,54 +135,55 @@ int IndieLib() // main
 			{
 				// just to prevent initial collisions
 				
-				for (int i = 0; i < allObjects.size(); i++) 
+				for (int i = 0; i < controller.allObjects.size(); i++)
 				{
 					// check collisions with ship for all objects
-					if (mI->_entity2dManager->isCollision(ship->getColisionBorder(), "body", allObjects[i]->getColisionBorder(), "thing"))
+					if (mI->_entity2dManager->isCollision(controller.ship->getColisionBorder(), "body", controller.allObjects[i]->getColisionBorder(), "thing"))
 					{
-						hud->showAlert(" Collision detected!"); // for tests only
-						if (allObjects[i]->getType() == HEALTH)
+						controller.hud->showAlert(" Collision detected!"); // for tests only
+						if (controller.allObjects[i]->getType() == HEALTH)
 						{
-							ship->changeHealth(allObjects.at(i)->getHealth()); // corect ship health
+							if (controller.ship->getHealth() < 100)
+							{
+								controller.ship->changeHealth(controller.allObjects.at(i)->getHealth()); // corect ship health
+							}
+							
 						}
-						if (allObjects[i]->getType() == DIAMOND)
+						if (controller.allObjects[i]->getType() == DIAMOND)
 						{
-							ship->changeScore(DIAMOND_SCORE); // corect ship health
+							controller.ship->changeScore(DIAMOND_SCORE); // corect ship health
 						}
-						if ((allObjects[i]->getType() == ROCK) || (allObjects[i]->getType() == ASTEROID))
+						if ((controller.allObjects[i]->getType() == ROCK) || (controller.allObjects[i]->getType() == ASTEROID))
 						{
-							ship->changeHealth(allObjects.at(i)->getHealth()); // corect ship health
+							controller.ship->changeHealth(controller.allObjects.at(i)->getHealth()); // corect ship health
 						}
 
-						allObjects.at(i)->destroy(mI); // destroy object
-						allObjects.erase((allObjects.begin() + i)); // remove pointer from vector
+						controller.allObjects.at(i)->destroy(mI); // destroy object
+						controller.allObjects.erase((controller.allObjects.begin() + i)); // remove pointer from vector
 					}
 
-					// check collisions with the ground
-					if (mI->_entity2dManager->isCollision(ship->getColisionBorder(), "body", mGround, "ground"))
-					{
-						controller.GameOver();
-					}
-
+					
 					// test for bullet collisions
 					/**/
 					for (int k = 0; k < 10; k++) //k - bullet number
 					{
-						if (mI->_entity2dManager->isCollision(ship->getBulletBorder(k), "bullet", allObjects[i]->getColisionBorder(), "thing"))
+						if (mI->_entity2dManager->isCollision(controller.ship->getBulletBorder(k), "bullet", controller.allObjects[i]->getColisionBorder(), "thing"))
 						{
-							if ((allObjects[i]->getType() == ROCK) || (allObjects[i]->getType() == ASTEROID))
+							if ((controller.allObjects[i]->getType() == ROCK) || (controller.allObjects[i]->getType() == ASTEROID))
 							{
 								// collision with rock detected
-								hud->showAlert(" Collision detected!"); // for tests only								
-								explosions.push_back(new Explosion(mI, allObjects[i]->getPositionX(), allObjects[i]->getPositionY()));// create new explosion in vector
-								ship->changeScore(5); // increase game score
-								allObjects.at(i)->destroy(mI); // destroy object
-								allObjects.erase((allObjects.begin() + i)); // remove pointer from vector
+															
+								controller.explosions.push_back(new Explosion(mI, controller.allObjects[i]->getPositionX(), controller.allObjects[i]->getPositionY()));// create new explosion in vector
+								controller.ship->changeScore(5); // increase game score
+								controller.allObjects.at(i)->destroy(mI); // destroy object
+								controller.allObjects.erase((controller.allObjects.begin() + i)); // remove pointer from vector								
 								
 							}
 							
 						}
 					}
+					// regenerate items
+					if (controller.allObjects.size() == 0) controller.refresh();
 					
 					
 				}
@@ -247,7 +193,7 @@ int IndieLib() // main
 		mI->_render->clearViewPort(0, 0, 60);
 		mI->_render->beginScene();
 		mI->_entity2dManager->renderEntities2d();
-		mI->_entity2dManager->renderCollisionAreas(255, 0, 0, 255); // for tests
+		//mI->_entity2dManager->renderCollisionAreas(255, 0, 0, 255); // for tests
 		mI->_render->endScene();
 		mI->_render->showFpsInWindowTitle(); //FPS
 		//mI->_entity2dManager->renderGridAreas(255, 255, 0, 255);
