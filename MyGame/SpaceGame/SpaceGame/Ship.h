@@ -20,16 +20,16 @@ private:
 	int bulletIndex = 0; // current bullet
 	double *mDelta; //speed synchronization
 	int *shots = new int(0), *health = new int(0), *score = new int(0);
-
 	IND_Surface *collisionSurface = IND_Surface::newSurface();
 	IND_Entity2d *border = IND_Entity2d::newEntity2d();
 	Sprite *engine = new Sprite();
+
 	
 public:
 	IND_Entity2d *ship_ = IND_Entity2d::newEntity2d();
 	Ship();
 	Ship(CIndieLib *mI, const char *str);
-	void Update(double* mDelta); // update ship position
+	void Update(CIndieLib* mI, double* delta); // update ship position
 	void Shoot(); 
 	void setSpeedX(float sX);
 	void setSpeedY(float sY);

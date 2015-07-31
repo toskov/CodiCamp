@@ -1,5 +1,5 @@
 ﻿/*****************************************************************************************
-* Desc: Tutorial a) 01 Installing
+* Desc: Space Game
 *****************************************************************************************/
 
 #include "CIndieLib.h"
@@ -16,6 +16,7 @@
 #include "GlobalHeader.h"
 #include "Sprite.h"
 #include "Explosion.h"
+#include "Controller.h"
 
 
 /*
@@ -26,6 +27,7 @@ Main
 
 int IndieLib() // main
 {
+	char TempText[30];
 
 	// Vector Objects container
 	vector<Thing*> allObjects;
@@ -37,6 +39,8 @@ int IndieLib() // main
 	// ----- new engine instance ------------
 	CIndieLib *mI = CIndieLib::instance(); // engine
 	if (!mI->init()) return 0;
+
+	Controller controller = Controller(mI);
 		
 	// Creating surface for the background
 	IND_Surface *mSurfaceBack = IND_Surface::newSurface();
@@ -44,12 +48,14 @@ int IndieLib() // main
 
 
 	// Planet surface for gravity game
-	IND_Surface *mPlanetSurface = IND_Surface::newSurface();
-	if (!mI->_surfaceManager->add(mPlanetSurface, "../SpaceGame/resources/planet_surface.png", IND_OPAQUE, IND_32)) return 0;
+	IND_Surface *planetSurface = IND_Surface::newSurface();
+	if (!mI->_surfaceManager->add(planetSurface, "../SpaceGame/resources/planet_surface.png", IND_OPAQUE, IND_32)) return 0;
 	IND_Entity2d *mGround = IND_Entity2d::newEntity2d();
 	mI->_entity2dManager->add(mGround);					// Entity adding
-	mGround->setSurface(mPlanetSurface);				// Set the surface into the entity
+	mGround->setSurface(planetSurface);				// Set the surface into the entity
 	mGround->setPosition(0, 150, 2);
+	mGround->setBoundingRectangle("ground", 0, 400, 800,200);
+	//mGround->setTransparency(50);
 
 
 	// -------- Load Options ----------------
@@ -63,10 +69,10 @@ int IndieLib() // main
 	mI->_entity2dManager->add(mBack);					// Entity adding
 	mBack->setSurface(mSurfaceBack);					// Set the surface into the entity
 
-	
+	// ---- creating objects ---------------
 	Planet *sunPlanet = new Planet(mI, "../SpaceGame/resources/animations/smallSun.xml");
 	Ship *ship = new Ship(mI, "../SpaceGame/resources/animations/rocket.xml");
-	HUD *hud = new HUD(mI);
+	HUD *hud = new HUD(mI); // game info
 	Menu *menu = new Menu(mI);
 	
 	
@@ -93,14 +99,14 @@ int IndieLib() // main
 	
 	for (int i = 0; i < 2; i++)
 	{
-		// create 5 more health objects
+		// create 2 more health objects
 		randomX = rand() % WINDOW_WIDTH;
 		randomY = rand() % WINDOW_HEIGH;
 		int angle = rand() % 360;
 		allObjects.push_back(new Thing(mI, HEALTH, randomX, randomY, 10)); // create object anonymously
 	}
 
-	menu->HideMenu();
+	
 	hud->showAlert("Quit F12!");
 
 	// TEST
@@ -110,8 +116,8 @@ int IndieLib() // main
 	
 
 	//<------ DELTA TIME ------>
-	double *mDelta = new double(0.1);
-	double *mDeltaAverage = new double(0.001);
+	double *delta = new double(0.1);
+	double *deltaAverage = new double(0.001);
 	double *mDeltaSum = new double(0.001);
 	int count = 0;
 	
@@ -130,13 +136,13 @@ int IndieLib() // main
 
 
 		// ------ Average delta time ---------
-			*mDelta = mI->_render->getFrameTime() / 1000.0f;
+		*delta = mI->_render->getFrameTime() / 1000.0f;
 			count++;
-			*mDeltaSum += *mDelta;
+			*mDeltaSum += *delta;
 
 			if (count == 100){			
 				count = 0;
-				*mDeltaAverage = *mDeltaSum / 100;
+				*deltaAverage = *mDeltaSum / 100;
 				*mDeltaSum = 0;
 			}
 			// ----- Input Update ----
@@ -147,14 +153,16 @@ int IndieLib() // main
 				play = !play;
 			}
 
-			// ---- Update explosions -----
+			// ---- Update rarely -----
 			// creating delay for animation
 			if (count == 0)
 			{
+				//Update explosions 
 				for (int i = 0; i < explosions.size(); i++)
 					{
-						if (!explosions[i]->Update(mI, *mDeltaAverage)) explosions.erase((explosions.begin() + i)); // remove explosion from vector
+						if (!explosions[i]->Update(mI, *deltaAverage)) explosions.erase((explosions.begin() + i)); // remove explosion from vector
 					}
+				
 			}
 			
 
@@ -163,12 +171,15 @@ int IndieLib() // main
 			{
 				menu->HideMenu();
 					// --------- Game control --------
-					ship->Update(mDeltaAverage);
+				ship->Update(mI,deltaAverage);
 					ship->ReadKeys(mI);
 	
 					// -------- UI ------------
 					hud->updateHud(ship->getScore(), ship->getHealth(), ship->getShots(), gameTime);
-					hud->showAlert("F12 to quit!");
+					//hud->showAlert("F12 to quit!");
+
+					//sprintf(TempText, "Particles: %d ", ship->getParticlesCount());
+					hud->showAlert(TempText);
 			}else{
 				if (menu->Update(mI)) play = true;
 			}		
@@ -201,6 +212,13 @@ int IndieLib() // main
 						allObjects.at(i)->destroy(mI); // destroy object
 						allObjects.erase((allObjects.begin() + i)); // remove pointer from vector
 					}
+
+					// check collisions with the ground
+					if (mI->_entity2dManager->isCollision(ship->getColisionBorder(), "body", mGround, "ground"))
+					{
+						controller.GameOver();
+					}
+
 					// test for bullet collisions
 					/**/
 					for (int k = 0; k < 10; k++) //k - bullet number
@@ -229,7 +247,7 @@ int IndieLib() // main
 		mI->_render->clearViewPort(0, 0, 60);
 		mI->_render->beginScene();
 		mI->_entity2dManager->renderEntities2d();
-		//mI->_entity2dManager->renderCollisionAreas(255, 0, 0, 255); // for tests
+		mI->_entity2dManager->renderCollisionAreas(255, 0, 0, 255); // for tests
 		mI->_render->endScene();
 		mI->_render->showFpsInWindowTitle(); //FPS
 		//mI->_entity2dManager->renderGridAreas(255, 255, 0, 255);

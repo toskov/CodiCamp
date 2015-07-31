@@ -87,11 +87,13 @@
     <ClCompile Include="Bullet.cpp" />
     <ClCompile Include="ErrorHandler.cpp" />
     <ClCompile Include="Explosion.cpp" />
+    <ClCompile Include="Controller.cpp" />
     <ClCompile Include="HUD.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Menu.cpp" />
     <ClCompile Include="MenuItem.cpp" />
     <ClCompile Include="Options.cpp" />
+    <ClCompile Include="Particle.cpp" />
     <ClCompile Include="Planet.cpp" />
     <ClCompile Include="Ship.cpp" />
     <ClCompile Include="GObject.cpp" />
@@ -103,11 +105,13 @@
     <ClInclude Include="Bullet.h" />
     <ClInclude Include="ErrorHandler.h" />
     <ClInclude Include="Explosion.h" />
+    <ClInclude Include="Controller.h" />
     <ClInclude Include="GlobalHeader.h" />
     <ClInclude Include="GObject.h" />
     <ClInclude Include="HUD.h" />
     <ClInclude Include="MenuItem.h" />
     <ClInclude Include="Options.h" />
+    <ClInclude Include="Particle.h" />
     <ClInclude Include="Planet.h" />
     <ClInclude Include="Ship.h" />
     <ClInclude Include="Menu.h" />

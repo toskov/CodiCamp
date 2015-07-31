@@ -16,7 +16,7 @@ MenuItem::MenuItem(CIndieLib *mI,int posX, int posY, bool selected, const char *
 	mI->_entity2dManager->add(mBackground);					       // Entity adding
 	mBackground->setPosition(posX, posY, 9);
 	mBackground->setHotSpot(0.5f, 0.5f);
-	mBackground->setBoundingRectangle("rect", 0, 0, 188, 42); // If it is necessary
+	mBackground->setBoundingRectangle("rect", 0, 0, 248, 42); // If it is necessary
 	
 	// ----- Text -----	
 	mI->_entity2dManager->add(item);

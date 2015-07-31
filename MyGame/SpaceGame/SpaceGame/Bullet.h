@@ -1,3 +1,6 @@
+#ifndef BULLET_H
+#define BULLET_H
+
 #include "CIndieLib.h"
 #include "IND_Surface.h"
 #include "IND_Entity2d.h"
@@ -19,3 +22,5 @@ public:
 	IND_Entity2d* getColisionBorder(); //return object for collision detection
 	~Bullet();
 };
+
+#endif

@@ -53,7 +53,7 @@ Ship::Ship()
 Update ship position
 ======================================
 */
-void Ship::Update(double* delta)
+ void Ship::Update(CIndieLib* mI, double* delta)
 {
 	/*
 	Infinite ship movement in rectangle
@@ -83,10 +83,15 @@ void Ship::Update(double* delta)
 	offsetX = ship_->getPosX() + std::sin(angle) * 40;
 	offsetY = ship_->getPosY() - std::cos(angle) * 40;
 
+	/*
+	Calculate ship engine flames position
+	*/
 	engine->sprite->setPosition(offsetX, offsetY, 0);
 	engine->sprite->setAngleXYZ(0, 0, ship_->getAngleZ());
 	engine->Update();
 }
+
+
 
 void Ship::setSpeedX(float sX)
 {

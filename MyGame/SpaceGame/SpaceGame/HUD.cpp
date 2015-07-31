@@ -20,7 +20,7 @@ HUD::HUD(CIndieLib *mI)
 	mAlert->setFont(mFontSmall);					// Set the font into the entity
 	mAlert->setLineSpacing(18);
 	mAlert->setCharSpacing(-8);
-	mAlert->setPosition(15, 580, 1);
+	mAlert->setPosition(15, 580, 100);
 	mAlert->setAlign(IND_LEFT);
 
 	// ----- Score -----	
@@ -28,7 +28,7 @@ HUD::HUD(CIndieLib *mI)
 	mPoints->setFont(mFontBig);					
 	mPoints->setLineSpacing(18);
 	mPoints->setCharSpacing(-8);
-	mPoints->setPosition(400, 5, 1);
+	mPoints->setPosition(400, 5, 100);
 	mPoints->setAlign(IND_CENTER);
 
 	// ----- Health -----	
@@ -36,7 +36,7 @@ HUD::HUD(CIndieLib *mI)
 	mHealth->setFont(mFontBig);
 	mHealth->setLineSpacing(18);
 	mHealth->setCharSpacing(-8);
-	mHealth->setPosition(800, 5, 1);
+	mHealth->setPosition(800, 5, 100);
 	mHealth->setAlign(IND_RIGHT);
 	
 	// ----- Shots -----	
@@ -44,7 +44,7 @@ HUD::HUD(CIndieLib *mI)
 	mShots->setFont(mFontBig);
 	mShots->setLineSpacing(18);
 	mShots->setCharSpacing(-8);
-	mShots->setPosition(5, 5, 1);
+	mShots->setPosition(5, 5, 100);
 	mShots->setAlign(IND_LEFT);
 
 };
