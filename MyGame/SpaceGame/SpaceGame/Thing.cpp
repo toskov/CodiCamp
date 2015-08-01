@@ -64,13 +64,7 @@ void Thing::Construct(CIndieLib *mI, int type, int x, int y, int life)
 
 Thing::~Thing()
 {
-	thing->destroy();
-	collisionSurface->destroy();
-	border->destroy();
-	thingAnimation->destroy();
-	delete posX;
-	delete posY;
-	delete health;
+
 }
 
 
@@ -88,6 +82,8 @@ void Thing::destroy(CIndieLib *mI)
 	border->deleteBoundingAreas("thing");
 	mI->_entity2dManager->remove(thing);
 	mI->_entity2dManager->remove(border);
+	mI->_surfaceManager->remove(collisionSurface);
+	mI->_animationManager->remove(thingAnimation);
 }
 
 int Thing::getHealth(void)

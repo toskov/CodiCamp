@@ -6,7 +6,7 @@
 #include "IND_Entity2d.h"
 #include "GlobalHeader.h"
 
-class Particle
+class Particle 
 {
 private:
 	IND_Surface *particleSurface = IND_Surface::newSurface();
