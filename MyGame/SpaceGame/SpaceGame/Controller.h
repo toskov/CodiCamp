@@ -21,6 +21,7 @@
 #include "Thing.h"
 #include "Options.h"
 #include "Controller.h"
+#include "Rock.h"
 
 //Creating game levels sould be there!
 
@@ -36,6 +37,7 @@ public:
 	// Vector Objects container
 	vector<Thing*> allObjects;
 	vector<Explosion*> explosions;
+	vector<Rock*> rocks;
 	Menu *menu;
 	Ship *ship;
 	HUD *hud;

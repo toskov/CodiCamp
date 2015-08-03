@@ -79,6 +79,7 @@ int IndieLib() // main
 				*deltaAverage = *mDeltaSum / 100;
 				*mDeltaSum = 0;
 			}
+
 			// ----- Input Update ----
 			mI->_input->update();
 			if (mI->_input->onKeyPress(IND_ESCAPE))
@@ -96,10 +97,13 @@ int IndieLib() // main
 					{
 						if (!controller.explosions[i]->Update(mI, *deltaAverage)) controller.explosions.erase((controller.explosions.begin() + i)); // remove explosion from vector
 					}
+				for (int i = 0; i < controller.rocks.size(); i++)
+					{
+						controller.rocks[i]->update(); // remove explosion from vector
+					}
 				
 			}
 			
-
 			// ---- Menu control --------
 			if (play)
 			{
@@ -193,7 +197,7 @@ int IndieLib() // main
 		mI->_render->clearViewPort(0, 0, 60);
 		mI->_render->beginScene();
 		mI->_entity2dManager->renderEntities2d();
-		//mI->_entity2dManager->renderCollisionAreas(255, 0, 0, 255); // for tests
+		mI->_entity2dManager->renderCollisionAreas(255, 0, 0, 255); // for tests
 		mI->_render->endScene();
 		mI->_render->showFpsInWindowTitle(); //FPS
 		//mI->_entity2dManager->renderGridAreas(255, 255, 0, 255);

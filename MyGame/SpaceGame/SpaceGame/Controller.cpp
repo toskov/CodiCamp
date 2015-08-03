@@ -49,7 +49,8 @@ void Controller::refresh()
 
 	int randomX = rand() % WINDOW_WIDTH;
 	int randomY = rand() % WINDOW_HEIGH;
-	for (int i = 0; i < 5; i++)
+	/*
+		for (int i = 0; i < 5; i++)
 	{
 		// create 5 more rocks objects
 		randomX = rand() % WINDOW_WIDTH;
@@ -66,6 +67,17 @@ void Controller::refresh()
 		int angle = rand() % 360;
 		allObjects.push_back(new Thing(mI, HEALTH, randomX, randomY, 10)); // create object anonymously
 	}
+	*/
+	for (int i = 0; i < 5; i++)
+	{
+		// create 5 more rocks objects
+		randomX = rand() % WINDOW_WIDTH;
+		randomY = rand() % (WINDOW_HEIGH - 100);
+		int angle = rand() % 360;
+		rocks.push_back(new Rock(mI, randomX, randomY)); // create object anonymously
+	}
+
+
 
 
 }
@@ -128,6 +140,8 @@ void Controller::gameGenerator()
 		int angle = rand() % 360;
 		allObjects.push_back(new Thing(mI, HEALTH, randomX, randomY, 10)); // create object anonymously
 	}
+
+
 
 	hud->showAlert("Quit F12!");
 }
