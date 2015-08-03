@@ -95,6 +95,7 @@
     <ClCompile Include="Options.cpp" />
     <ClCompile Include="Particle.cpp" />
     <ClCompile Include="Planet.cpp" />
+    <ClCompile Include="Rock.cpp" />
     <ClCompile Include="Ship.cpp" />
     <ClCompile Include="GObject.cpp" />
     <ClCompile Include="Sprite.cpp" />
@@ -113,6 +114,7 @@
     <ClInclude Include="Options.h" />
     <ClInclude Include="Particle.h" />
     <ClInclude Include="Planet.h" />
+    <ClInclude Include="Rock.h" />
     <ClInclude Include="Ship.h" />
     <ClInclude Include="Menu.h" />
     <ClInclude Include="Sprite.h" />

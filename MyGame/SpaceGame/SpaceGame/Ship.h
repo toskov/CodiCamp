@@ -25,6 +25,7 @@ private:
 	Sprite *engine = new Sprite();
 	float gravity = 0;
 	bool rotating = false;
+	int shootInterval = 1000;
 
 	
 public:

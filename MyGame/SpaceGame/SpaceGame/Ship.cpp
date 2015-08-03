@@ -171,7 +171,7 @@ void Ship::ReadKeys(CIndieLib *mI)
 		this->decreaseSpeed(500.0f * (*mDelta));
 	}
 
-	if (mI->_input->onKeyPress(IND_SPACE))
+	if (mI->_input->isKeyPressed(IND_SPACE))
 	{
 		Shoot();
 	}
@@ -184,6 +184,9 @@ Control bullets
 */
 void Ship::Shoot()
 	{
+		shootInterval--;
+		if (shootInterval > 1) return;
+		shootInterval = 2000000*(*mDelta); // speed of shooting. Can be increased in game levels
 		*shots+=1; 
 
 		//moving last to new position
