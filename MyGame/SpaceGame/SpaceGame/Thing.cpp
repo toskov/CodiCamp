@@ -5,28 +5,27 @@ Thing::Thing()
 }
 
 // Create flying thing
-Thing::Thing(CIndieLib *mI, int type, int x, int y, int life)
+Thing::Thing(CIndieLib *mI, IND_Surface *thingsPicture, int type, int x, int y, int life)
 {
-	Thing::Construct(mI, type, x, y, life);
+	Thing::Construct(mI, thingsPicture, type, x, y, life);
 }
 
-Thing::Thing(CIndieLib *mI, int type, int x, int y, int life, int angle)
+Thing::Thing(CIndieLib *mI, IND_Surface *thingsPicture, int type, int x, int y, int life, int angle)
 {
-	Thing::Construct(mI, type, x, y, life);
+	Thing::Construct(mI, thingsPicture, type, x, y, life);
 	//Rotation angle
 	thing->setAngleXYZ(0, 0, angle);
 }
 
-void Thing::Construct(CIndieLib *mI, int type, int x, int y, int life)
+void Thing::Construct(CIndieLib *mI, IND_Surface *thingsPicture, int type, int x, int y, int life)
 {
+	this->thingPictures = thingsPicture;
 	*posX = x;
 	*posY = y;
 	*health = life;
 	*this->type = type;
-	
-	!mI->_animationManager->addToSurface(thingAnimation, "../SpaceGame/resources/animations/thing.xml", IND_ALPHA, IND_32);	
+		
 	mI->_entity2dManager->add(thing);					// Entity adding
-	thing->setAnimation(thingAnimation);				// Set the animation into the entity
 	thing->setSequence(type-1); //animation file have to contain all animations for things. Sequence begins from 0
 	thing->setPosition(x, y, 1);
 	thing->setHotSpot(0.5f, 0.5f);
@@ -83,7 +82,6 @@ void Thing::destroy(CIndieLib *mI)
 	mI->_entity2dManager->remove(thing);
 	mI->_entity2dManager->remove(border);
 	mI->_surfaceManager->remove(collisionSurface);
-	mI->_animationManager->remove(thingAnimation);
 }
 
 int Thing::getHealth(void)
