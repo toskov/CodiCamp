@@ -73,14 +73,14 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>F:\Projects\CodiCamp\C-game-course\MyGame\SpaceGame\SpaceGame\tools\editor_tileless;F:\Projects\CodiCamp\C-game-course\MyGame\SpaceGame\SpaceGame\common\include;C:\Users\Steve\Desktop\Организации\Codi Camp\Cources\Intro Game Development C++\Lecture5_Indielib\MyGame\SpaceGame\SpaceGame\common\include;C:\Users\Steve\Desktop\Организации\Codi Camp\Cources\Intro Game Development C++\Lecture5_Indielib\MyGame\SpaceGame\SpaceGame\tools\editor_tileless;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>F:\Projects\CodiCamp\C-game-course\MyGame\SpaceGame\SpaceGame\irrKlang-64bit-1.5.0\include;F:\Projects\CodiCamp\C-game-course\MyGame\SpaceGame\SpaceGame\tools\editor_tileless;F:\Projects\CodiCamp\C-game-course\MyGame\SpaceGame\SpaceGame\common\include;C:\Users\Steve\Desktop\Организации\Codi Camp\Cources\Intro Game Development C++\Lecture5_Indielib\MyGame\SpaceGame\SpaceGame\common\include;C:\Users\Steve\Desktop\Организации\Codi Camp\Cources\Intro Game Development C++\Lecture5_Indielib\MyGame\SpaceGame\SpaceGame\tools\editor_tileless;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalLibraryDirectories>F:\Projects\CodiCamp\C-game-course\MyGame\SpaceGame\SpaceGame\bin\win;C:\Users\Steve\Desktop\Организации\Codi Camp\Cources\Intro Game Development C++\Lecture5_Indielib\MyGame\SpaceGame\SpaceGame\bin\win;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>F:\Projects\CodiCamp\C-game-course\MyGame\SpaceGame\SpaceGame\irrKlang-64bit-1.5.0\bin\winx64-visualStudio;F:\Projects\CodiCamp\C-game-course\MyGame\SpaceGame\SpaceGame\bin\win;C:\Users\Steve\Desktop\Организации\Codi Camp\Cources\Intro Game Development C++\Lecture5_Indielib\MyGame\SpaceGame\SpaceGame\bin\win;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>

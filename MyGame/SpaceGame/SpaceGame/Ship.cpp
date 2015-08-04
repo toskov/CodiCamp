@@ -173,7 +173,11 @@ void Ship::ReadKeys(CIndieLib *mI)
 
 	if (mI->_input->isKeyPressed(IND_SPACE))
 	{
-		Shoot();
+		Shoot(); //shooting
+	}
+	else
+	{
+		shootInterval = 0; // imediately shppting
 	}
 }
 
