@@ -17,7 +17,9 @@
 #include "Sprite.h"
 #include "Explosion.h"
 #include "GameControll.h"
+#include <irrKlang.h>
 
+#pragma comment(lib, "irrKlang.lib") // link with irrKlang.dll
 
 /*
 ==================
@@ -27,6 +29,12 @@ Main
 
 int IndieLib() // main
 {
+	// ------ Sound Tests --------
+	ISoundEngine* sound = createIrrKlangDevice();
+	if (!sound) return 0;
+	sound->play2D("../SpaceGame/resources/music_background.wav", true);
+
+
 	char TempText[30];
 	
 	// ----- Sound Library --------------
@@ -55,6 +63,9 @@ int IndieLib() // main
 	mTimer->start();
 
 	bool play = false;
+
+
+
 	// ----- Main Loop -----
 	while (!mI->_input->onKeyPress(IND_F12) && !mI->_input->quit() && !controller.isExitSelected())
 	{
