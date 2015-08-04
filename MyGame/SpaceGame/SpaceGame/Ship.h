@@ -10,6 +10,9 @@
 #include "Bullet.h"
 #include "Sprite.h"
 #include "GlobalHeader.h"
+#include "irrKlang.h"
+
+using namespace irrklang; // Sound engine
 
 class Ship : public ErrorHandler
 {
@@ -26,6 +29,7 @@ private:
 	float gravity = 0;
 	bool rotating = false;
 	int shootInterval = 1000;
+	ISoundEngine* soundEngine;
 
 	
 public:

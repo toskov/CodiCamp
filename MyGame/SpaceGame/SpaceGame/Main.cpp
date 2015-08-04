@@ -111,6 +111,7 @@ int IndieLib() // main
 
 	// ----- Indielib End -----
 	mI->end();
+	sound->drop();
 
 	return 0;
 }

@@ -8,11 +8,19 @@ Ship::Ship()
  Ship::Ship(CIndieLib *mI, const char *str)
 {
 
-	*speedX_ = 0.0f; // initial speed
-	*speedY_ = 0.0f;
+	*speedX_ = 0.01f; // initial speed
+	*speedY_ = 0.01f;
 	// clear scores
 	*health = 100;
 	engine  = new Sprite(mI, "../SpaceGame/resources/sEngine.png", 0,0);
+
+	// Sound init
+	soundEngine = irrklang::createIrrKlangDevice();
+	if (!soundEngine)
+	{
+		printf("Could not startup engine\n");
+		// error starting up the engine
+	}
 	
 
 	// Characters animations, we apply transparency
@@ -174,6 +182,7 @@ void Ship::ReadKeys(CIndieLib *mI)
 	if (mI->_input->isKeyPressed(IND_SPACE))
 	{
 		Shoot(); //shooting
+		
 	}
 	else
 	{
@@ -207,7 +216,7 @@ void Ship::Shoot()
 		float angle = ship_->getAngleZ()*3.14159265 / 180.f;
 		offsetX =ship_->getPosX() + std::sin(angle)*40;
 		offsetY =ship_->getPosY() - std::cos(angle)*40;
-		
+		soundEngine->play2D("../SpaceGame/resources/weapon_player.wav");
 		bullets_[bulletIndex]->Set(ship_->getAngleZ(), offsetX, offsetY, mDelta); // Move and rotate last bullet
 	}
 
@@ -241,6 +250,7 @@ Ship::~Ship()
 	delete health;
 	delete score;
 	ship_->destroy();
+	soundEngine->drop();
 }
 
 int Ship::getX()

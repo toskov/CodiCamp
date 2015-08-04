@@ -15,23 +15,23 @@ Indielib version: 0.5.1
 
 [Init time]: (Tuesday, 4 of August 2015)
 
-[23:39:12] [ BEGIN ] -- Creating Render --
+[23:57:34] [ BEGIN ] -- Creating Render --
                      {
-[23:39:12] [ BEGIN ]    -- Creating SDL window --
+[23:57:34] [ BEGIN ]    -- Creating SDL window --
                         {
            [  OK   ]       Window created
            [ INFO  ]       Mode: Window
                         }
-[23:39:12] [  END  ]    Window OK [Elapsed time = 0.007 seg]
-[23:39:12] [ BEGIN ]    -- Initializing Direct3D --
+[23:57:34] [  END  ]    Window OK [Elapsed time = 0.006 seg]
+[23:57:34] [ BEGIN ]    -- Initializing Direct3D --
                         {
            [  OK   ]       Creating D3D object
            [  OK   ]       Obtaining the adapter
            [  OK   ]       Creating the device (D3DCREATE_HARDWARE_VERTEXPROCESSING)
            [ INFO  ]       Video mode: 800 x 600 x 32
                         }
-[23:39:12] [  END  ]    Direct3D OK [Elapsed time = 0.445 seg]
-[23:39:12] [ BEGIN ]    -- Hardware information --
+[23:57:35] [  END  ]    Direct3D OK [Elapsed time = 0.445 seg]
+[23:57:35] [ BEGIN ]    -- Hardware information --
                         {
            [ INFO  ]       Direct3D version: DXSDK November 2007
            [ INFO  ]       Mark: Nvidia
@@ -41,39 +41,39 @@ Indielib version: 0.5.1
            [ INFO  ]       Vertex Shader: 3 . 0 
            [ INFO  ]       Pixel Shader: 3 . 0
                         }
-[23:39:12] [  END  ]    Hardware Ok [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Initializing ImageManager --
+[23:57:35] [  END  ]    Hardware Ok [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Initializing ImageManager --
                         {
            [  OK   ]       Preparing ImageManager
            [ INFO  ]       Using FreeImage version:  3.15.3
            [ INFO  ]       Copyright:  This program uses FreeImage, a free, open source image library supporting all common bitmap formats. See http://freeimage.sourceforge.net for details
                         }
-[23:39:12] [  END  ]    ImageManager Initialised [Elapsed time = 0.001 seg]
-[23:39:12] [ BEGIN ]    -- Initializing SurfaceManager --
+[23:57:35] [  END  ]    ImageManager Initialised [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Initializing SurfaceManager --
                         {
            [  OK   ]       Checking IND_Render
            [  OK   ]       Checking IND_ImageManager
                         }
-[23:39:12] [  END  ]    SurfaceManager OK [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Initializing AnimationManager --
+[23:57:35] [  END  ]    SurfaceManager OK [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Initializing AnimationManager --
                         {
            [  OK   ]       SurfaceManager Ok
            [  OK   ]       ImageManager Ok
                         }
-[23:39:12] [  END  ]    AnimationManager OK [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Initializing FontManager --
+[23:57:35] [  END  ]    AnimationManager OK [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Initializing FontManager --
                         {
            [  OK   ]       SurfaceManager Ok
            [  OK   ]       ImageManager Ok
                         }
-[23:39:12] [  END  ]    FontManager OK [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Initializing Entity2dManager --
+[23:57:35] [  END  ]    FontManager OK [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Initializing Entity2dManager --
                         {
            [  OK   ]       Preparing Entity2dManager
            [  OK   ]        Checking IND_Render
                         }
-[23:39:12] [  END  ]    Entity2dManager OK [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Loading Image --
+[23:57:35] [  END  ]    Entity2dManager OK [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Loading Image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/genesis/Background_Colorful_Galaxy-800x600.jpg
            [ INFO  ]       Extension: jpg
@@ -81,8 +81,8 @@ Indielib version: 0.5.1
            [ INFO  ]       Bpp: 3
            [ INFO  ]       Format: IND_RGB
                         }
-[23:39:12] [  END  ]    Image loaded [Elapsed time = 0.022 seg]
-[23:39:12] [ BEGIN ]    -- Creating surface --
+[23:57:35] [  END  ]    Image loaded [Elapsed time = 0.032 seg]
+[23:57:35] [ BEGIN ]    -- Creating surface --
                         {
            [ INFO  ]       From image: ../SpaceGame/resources/genesis/Background_Colorful_Galaxy-800x600.jpg
            [  OK   ]       Image type converted to 32-bit RGB implicitly.
@@ -93,18 +93,18 @@ Indielib version: 0.5.1
            [ INFO  ]       Number of blocks: 1 x 1
            [ INFO  ]       Spare (Right | Down): 224 x 424
                         }
-[23:39:12] [  END  ]    Surface created [Elapsed time = 0.005 seg]
-[23:39:12] [ BEGIN ]    -- Freeing image --
+[23:57:35] [  END  ]    Surface created [Elapsed time = 0.005 seg]
+[23:57:35] [ BEGIN ]    -- Freeing image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/genesis/Background_Colorful_Galaxy-800x600.jpg
                         }
-[23:39:12] [  END  ]    Ok [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Adding 2d entity --
+[23:57:35] [  END  ]    Ok [Elapsed time = 0.001 seg]
+[23:57:35] [ BEGIN ]    -- Adding 2d entity --
                         {
            [ INFO  ]       Name: 0
                         }
-[23:39:12] [  END  ]    2d entity added [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Loading Image --
+[23:57:35] [  END  ]    2d entity added [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Loading Image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/planet_surface.png
            [ INFO  ]       Extension: png
@@ -112,8 +112,8 @@ Indielib version: 0.5.1
            [ INFO  ]       Bpp: 4
            [ INFO  ]       Format: IND_RGBA
                         }
-[23:39:12] [  END  ]    Image loaded [Elapsed time = 0.007 seg]
-[23:39:12] [ BEGIN ]    -- Creating surface --
+[23:57:35] [  END  ]    Image loaded [Elapsed time = 0.006 seg]
+[23:57:35] [ BEGIN ]    -- Creating surface --
                         {
            [ INFO  ]       From image: ../SpaceGame/resources/planet_surface.png
            [ INFO  ]       Type: IND_ALPHA
@@ -123,18 +123,18 @@ Indielib version: 0.5.1
            [ INFO  ]       Number of blocks: 1 x 1
            [ INFO  ]       Spare (Right | Down): 224 x 62
                         }
-[23:39:12] [  END  ]    Surface created [Elapsed time = 0.001 seg]
-[23:39:12] [ BEGIN ]    -- Freeing image --
+[23:57:35] [  END  ]    Surface created [Elapsed time = 0.002 seg]
+[23:57:35] [ BEGIN ]    -- Freeing image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/planet_surface.png
                         }
-[23:39:12] [  END  ]    Ok [Elapsed time = 0.001 seg]
-[23:39:12] [ BEGIN ]    -- Adding 2d entity --
+[23:57:35] [  END  ]    Ok [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Adding 2d entity --
                         {
            [ INFO  ]       Name: 1
                         }
-[23:39:12] [  END  ]    2d entity added [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Loading Image --
+[23:57:35] [  END  ]    2d entity added [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Loading Image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/font_big.png
            [ INFO  ]       Extension: png
@@ -142,11 +142,11 @@ Indielib version: 0.5.1
            [ INFO  ]       Bpp: 4
            [ INFO  ]       Format: IND_RGBA
                         }
-[23:39:12] [  END  ]    Image loaded [Elapsed time = 0.006 seg]
-[23:39:12] [ BEGIN ]    -- Parsing and loading font --
+[23:57:35] [  END  ]    Image loaded [Elapsed time = 0.006 seg]
+[23:57:35] [ BEGIN ]    -- Parsing and loading font --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/font_big.xml
-[23:39:12] [ BEGIN ]       -- Creating surface --
+[23:57:35] [ BEGIN ]       -- Creating surface --
                            {
            [ INFO  ]          From image: ../SpaceGame/resources/font_big.png
            [ INFO  ]          Type: IND_ALPHA
@@ -156,15 +156,15 @@ Indielib version: 0.5.1
            [ INFO  ]          Number of blocks: 1 x 1
            [ INFO  ]          Spare (Right | Down): 0 x 0
                            }
-[23:39:12] [  END  ]       Surface created [Elapsed time = 0.001 seg]
+[23:57:35] [  END  ]       Surface created [Elapsed time = 0 seg]
                         }
-[23:39:12] [  END  ]    Font parsed and loaded [Elapsed time = 0.002 seg]
-[23:39:12] [ BEGIN ]    -- Freeing image --
+[23:57:35] [  END  ]    Font parsed and loaded [Elapsed time = 0.001 seg]
+[23:57:35] [ BEGIN ]    -- Freeing image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/font_big.png
                         }
-[23:39:12] [  END  ]    Ok [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Loading Image --
+[23:57:35] [  END  ]    Ok [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Loading Image --
                         {
            [ INFO  ]       File name: ..\SpaceGame\resources\buttonBg.png
            [ INFO  ]       Extension: png
@@ -172,8 +172,8 @@ Indielib version: 0.5.1
            [ INFO  ]       Bpp: 4
            [ INFO  ]       Format: IND_RGBA
                         }
-[23:39:12] [  END  ]    Image loaded [Elapsed time = 0.001 seg]
-[23:39:12] [ BEGIN ]    -- Creating surface --
+[23:57:35] [  END  ]    Image loaded [Elapsed time = 0.001 seg]
+[23:57:35] [ BEGIN ]    -- Creating surface --
                         {
            [ INFO  ]       From image: ..\SpaceGame\resources\buttonBg.png
            [ INFO  ]       Type: IND_ALPHA
@@ -183,23 +183,23 @@ Indielib version: 0.5.1
            [ INFO  ]       Number of blocks: 1 x 1
            [ INFO  ]       Spare (Right | Down): 6 x 22
                         }
-[23:39:12] [  END  ]    Surface created [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Freeing image --
+[23:57:35] [  END  ]    Surface created [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Freeing image --
                         {
            [ INFO  ]       File name: ..\SpaceGame\resources\buttonBg.png
                         }
-[23:39:12] [  END  ]    Ok [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Adding 2d entity --
+[23:57:35] [  END  ]    Ok [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Adding 2d entity --
                         {
            [ INFO  ]       Name: 2
                         }
-[23:39:12] [  END  ]    2d entity added [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Adding 2d entity --
+[23:57:35] [  END  ]    2d entity added [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Adding 2d entity --
                         {
            [ INFO  ]       Name: 3
                         }
-[23:39:12] [  END  ]    2d entity added [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Loading Image --
+[23:57:35] [  END  ]    2d entity added [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Loading Image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/font_big.png
            [ INFO  ]       Extension: png
@@ -207,11 +207,11 @@ Indielib version: 0.5.1
            [ INFO  ]       Bpp: 4
            [ INFO  ]       Format: IND_RGBA
                         }
-[23:39:12] [  END  ]    Image loaded [Elapsed time = 0.006 seg]
-[23:39:12] [ BEGIN ]    -- Parsing and loading font --
+[23:57:35] [  END  ]    Image loaded [Elapsed time = 0.006 seg]
+[23:57:35] [ BEGIN ]    -- Parsing and loading font --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/font_big.xml
-[23:39:12] [ BEGIN ]       -- Creating surface --
+[23:57:35] [ BEGIN ]       -- Creating surface --
                            {
            [ INFO  ]          From image: ../SpaceGame/resources/font_big.png
            [ INFO  ]          Type: IND_ALPHA
@@ -221,15 +221,15 @@ Indielib version: 0.5.1
            [ INFO  ]          Number of blocks: 1 x 1
            [ INFO  ]          Spare (Right | Down): 0 x 0
                            }
-[23:39:12] [  END  ]       Surface created [Elapsed time = 0.001 seg]
+[23:57:35] [  END  ]       Surface created [Elapsed time = 0 seg]
                         }
-[23:39:12] [  END  ]    Font parsed and loaded [Elapsed time = 0.001 seg]
-[23:39:12] [ BEGIN ]    -- Freeing image --
+[23:57:35] [  END  ]    Font parsed and loaded [Elapsed time = 0.001 seg]
+[23:57:35] [ BEGIN ]    -- Freeing image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/font_big.png
                         }
-[23:39:12] [  END  ]    Ok [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Loading Image --
+[23:57:35] [  END  ]    Ok [Elapsed time = 0.001 seg]
+[23:57:35] [ BEGIN ]    -- Loading Image --
                         {
            [ INFO  ]       File name: ..\SpaceGame\resources\buttonBg.png
            [ INFO  ]       Extension: png
@@ -237,8 +237,8 @@ Indielib version: 0.5.1
            [ INFO  ]       Bpp: 4
            [ INFO  ]       Format: IND_RGBA
                         }
-[23:39:12] [  END  ]    Image loaded [Elapsed time = 0.001 seg]
-[23:39:12] [ BEGIN ]    -- Creating surface --
+[23:57:35] [  END  ]    Image loaded [Elapsed time = 0.001 seg]
+[23:57:35] [ BEGIN ]    -- Creating surface --
                         {
            [ INFO  ]       From image: ..\SpaceGame\resources\buttonBg.png
            [ INFO  ]       Type: IND_ALPHA
@@ -248,23 +248,23 @@ Indielib version: 0.5.1
            [ INFO  ]       Number of blocks: 1 x 1
            [ INFO  ]       Spare (Right | Down): 6 x 22
                         }
-[23:39:12] [  END  ]    Surface created [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Freeing image --
+[23:57:35] [  END  ]    Surface created [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Freeing image --
                         {
            [ INFO  ]       File name: ..\SpaceGame\resources\buttonBg.png
                         }
-[23:39:12] [  END  ]    Ok [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Adding 2d entity --
+[23:57:35] [  END  ]    Ok [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Adding 2d entity --
                         {
            [ INFO  ]       Name: 4
                         }
-[23:39:12] [  END  ]    2d entity added [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Adding 2d entity --
+[23:57:35] [  END  ]    2d entity added [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Adding 2d entity --
                         {
            [ INFO  ]       Name: 5
                         }
-[23:39:12] [  END  ]    2d entity added [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Loading Image --
+[23:57:35] [  END  ]    2d entity added [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Loading Image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/font_big.png
            [ INFO  ]       Extension: png
@@ -272,11 +272,11 @@ Indielib version: 0.5.1
            [ INFO  ]       Bpp: 4
            [ INFO  ]       Format: IND_RGBA
                         }
-[23:39:12] [  END  ]    Image loaded [Elapsed time = 0.006 seg]
-[23:39:12] [ BEGIN ]    -- Parsing and loading font --
+[23:57:35] [  END  ]    Image loaded [Elapsed time = 0.006 seg]
+[23:57:35] [ BEGIN ]    -- Parsing and loading font --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/font_big.xml
-[23:39:12] [ BEGIN ]       -- Creating surface --
+[23:57:35] [ BEGIN ]       -- Creating surface --
                            {
            [ INFO  ]          From image: ../SpaceGame/resources/font_big.png
            [ INFO  ]          Type: IND_ALPHA
@@ -286,15 +286,15 @@ Indielib version: 0.5.1
            [ INFO  ]          Number of blocks: 1 x 1
            [ INFO  ]          Spare (Right | Down): 0 x 0
                            }
-[23:39:12] [  END  ]       Surface created [Elapsed time = 0.001 seg]
+[23:57:35] [  END  ]       Surface created [Elapsed time = 0 seg]
                         }
-[23:39:12] [  END  ]    Font parsed and loaded [Elapsed time = 0.002 seg]
-[23:39:12] [ BEGIN ]    -- Freeing image --
+[23:57:35] [  END  ]    Font parsed and loaded [Elapsed time = 0.001 seg]
+[23:57:35] [ BEGIN ]    -- Freeing image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/font_big.png
                         }
-[23:39:12] [  END  ]    Ok [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Loading Image --
+[23:57:35] [  END  ]    Ok [Elapsed time = 0.001 seg]
+[23:57:35] [ BEGIN ]    -- Loading Image --
                         {
            [ INFO  ]       File name: ..\SpaceGame\resources\buttonBg.png
            [ INFO  ]       Extension: png
@@ -302,8 +302,8 @@ Indielib version: 0.5.1
            [ INFO  ]       Bpp: 4
            [ INFO  ]       Format: IND_RGBA
                         }
-[23:39:12] [  END  ]    Image loaded [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Creating surface --
+[23:57:35] [  END  ]    Image loaded [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Creating surface --
                         {
            [ INFO  ]       From image: ..\SpaceGame\resources\buttonBg.png
            [ INFO  ]       Type: IND_ALPHA
@@ -313,23 +313,23 @@ Indielib version: 0.5.1
            [ INFO  ]       Number of blocks: 1 x 1
            [ INFO  ]       Spare (Right | Down): 6 x 22
                         }
-[23:39:12] [  END  ]    Surface created [Elapsed time = 0.001 seg]
-[23:39:12] [ BEGIN ]    -- Freeing image --
+[23:57:35] [  END  ]    Surface created [Elapsed time = 0.001 seg]
+[23:57:35] [ BEGIN ]    -- Freeing image --
                         {
            [ INFO  ]       File name: ..\SpaceGame\resources\buttonBg.png
                         }
-[23:39:12] [  END  ]    Ok [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Adding 2d entity --
+[23:57:35] [  END  ]    Ok [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Adding 2d entity --
                         {
            [ INFO  ]       Name: 6
                         }
-[23:39:12] [  END  ]    2d entity added [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Adding 2d entity --
+[23:57:35] [  END  ]    2d entity added [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Adding 2d entity --
                         {
            [ INFO  ]       Name: 7
                         }
-[23:39:12] [  END  ]    2d entity added [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Loading Image --
+[23:57:35] [  END  ]    2d entity added [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Loading Image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/font_big.png
            [ INFO  ]       Extension: png
@@ -337,11 +337,11 @@ Indielib version: 0.5.1
            [ INFO  ]       Bpp: 4
            [ INFO  ]       Format: IND_RGBA
                         }
-[23:39:12] [  END  ]    Image loaded [Elapsed time = 0.006 seg]
-[23:39:12] [ BEGIN ]    -- Parsing and loading font --
+[23:57:35] [  END  ]    Image loaded [Elapsed time = 0.006 seg]
+[23:57:35] [ BEGIN ]    -- Parsing and loading font --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/font_big.xml
-[23:39:12] [ BEGIN ]       -- Creating surface --
+[23:57:35] [ BEGIN ]       -- Creating surface --
                            {
            [ INFO  ]          From image: ../SpaceGame/resources/font_big.png
            [ INFO  ]          Type: IND_ALPHA
@@ -351,15 +351,15 @@ Indielib version: 0.5.1
            [ INFO  ]          Number of blocks: 1 x 1
            [ INFO  ]          Spare (Right | Down): 0 x 0
                            }
-[23:39:12] [  END  ]       Surface created [Elapsed time = 0.001 seg]
+[23:57:35] [  END  ]       Surface created [Elapsed time = 0.001 seg]
                         }
-[23:39:12] [  END  ]    Font parsed and loaded [Elapsed time = 0.001 seg]
-[23:39:12] [ BEGIN ]    -- Freeing image --
+[23:57:35] [  END  ]    Font parsed and loaded [Elapsed time = 0.002 seg]
+[23:57:35] [ BEGIN ]    -- Freeing image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/font_big.png
                         }
-[23:39:12] [  END  ]    Ok [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Loading Image --
+[23:57:35] [  END  ]    Ok [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Loading Image --
                         {
            [ INFO  ]       File name: ..\SpaceGame\resources\buttonBg.png
            [ INFO  ]       Extension: png
@@ -367,8 +367,8 @@ Indielib version: 0.5.1
            [ INFO  ]       Bpp: 4
            [ INFO  ]       Format: IND_RGBA
                         }
-[23:39:12] [  END  ]    Image loaded [Elapsed time = 0.001 seg]
-[23:39:12] [ BEGIN ]    -- Creating surface --
+[23:57:35] [  END  ]    Image loaded [Elapsed time = 0.001 seg]
+[23:57:35] [ BEGIN ]    -- Creating surface --
                         {
            [ INFO  ]       From image: ..\SpaceGame\resources\buttonBg.png
            [ INFO  ]       Type: IND_ALPHA
@@ -378,23 +378,23 @@ Indielib version: 0.5.1
            [ INFO  ]       Number of blocks: 1 x 1
            [ INFO  ]       Spare (Right | Down): 6 x 22
                         }
-[23:39:12] [  END  ]    Surface created [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Freeing image --
+[23:57:35] [  END  ]    Surface created [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Freeing image --
                         {
            [ INFO  ]       File name: ..\SpaceGame\resources\buttonBg.png
                         }
-[23:39:12] [  END  ]    Ok [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Adding 2d entity --
+[23:57:35] [  END  ]    Ok [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Adding 2d entity --
                         {
            [ INFO  ]       Name: 8
                         }
-[23:39:12] [  END  ]    2d entity added [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Adding 2d entity --
+[23:57:35] [  END  ]    2d entity added [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Adding 2d entity --
                         {
            [ INFO  ]       Name: 9
                         }
-[23:39:12] [  END  ]    2d entity added [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Loading Image --
+[23:57:35] [  END  ]    2d entity added [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Loading Image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/font_big.png
            [ INFO  ]       Extension: png
@@ -402,11 +402,11 @@ Indielib version: 0.5.1
            [ INFO  ]       Bpp: 4
            [ INFO  ]       Format: IND_RGBA
                         }
-[23:39:12] [  END  ]    Image loaded [Elapsed time = 0.006 seg]
-[23:39:12] [ BEGIN ]    -- Parsing and loading font --
+[23:57:35] [  END  ]    Image loaded [Elapsed time = 0.006 seg]
+[23:57:35] [ BEGIN ]    -- Parsing and loading font --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/font_big.xml
-[23:39:12] [ BEGIN ]       -- Creating surface --
+[23:57:35] [ BEGIN ]       -- Creating surface --
                            {
            [ INFO  ]          From image: ../SpaceGame/resources/font_big.png
            [ INFO  ]          Type: IND_ALPHA
@@ -416,15 +416,15 @@ Indielib version: 0.5.1
            [ INFO  ]          Number of blocks: 1 x 1
            [ INFO  ]          Spare (Right | Down): 0 x 0
                            }
-[23:39:12] [  END  ]       Surface created [Elapsed time = 0.001 seg]
+[23:57:35] [  END  ]       Surface created [Elapsed time = 0 seg]
                         }
-[23:39:12] [  END  ]    Font parsed and loaded [Elapsed time = 0.002 seg]
-[23:39:12] [ BEGIN ]    -- Freeing image --
+[23:57:35] [  END  ]    Font parsed and loaded [Elapsed time = 0.001 seg]
+[23:57:35] [ BEGIN ]    -- Freeing image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/font_big.png
                         }
-[23:39:12] [  END  ]    Ok [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Loading Image --
+[23:57:35] [  END  ]    Ok [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Loading Image --
                         {
            [ INFO  ]       File name: ..\SpaceGame\resources\buttonBg.png
            [ INFO  ]       Extension: png
@@ -432,8 +432,8 @@ Indielib version: 0.5.1
            [ INFO  ]       Bpp: 4
            [ INFO  ]       Format: IND_RGBA
                         }
-[23:39:12] [  END  ]    Image loaded [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Creating surface --
+[23:57:35] [  END  ]    Image loaded [Elapsed time = 0.001 seg]
+[23:57:35] [ BEGIN ]    -- Creating surface --
                         {
            [ INFO  ]       From image: ..\SpaceGame\resources\buttonBg.png
            [ INFO  ]       Type: IND_ALPHA
@@ -443,23 +443,23 @@ Indielib version: 0.5.1
            [ INFO  ]       Number of blocks: 1 x 1
            [ INFO  ]       Spare (Right | Down): 6 x 22
                         }
-[23:39:12] [  END  ]    Surface created [Elapsed time = 0.001 seg]
-[23:39:12] [ BEGIN ]    -- Freeing image --
+[23:57:35] [  END  ]    Surface created [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Freeing image --
                         {
            [ INFO  ]       File name: ..\SpaceGame\resources\buttonBg.png
                         }
-[23:39:12] [  END  ]    Ok [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Adding 2d entity --
+[23:57:35] [  END  ]    Ok [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Adding 2d entity --
                         {
            [ INFO  ]       Name: 10
                         }
-[23:39:12] [  END  ]    2d entity added [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Adding 2d entity --
+[23:57:35] [  END  ]    2d entity added [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Adding 2d entity --
                         {
            [ INFO  ]       Name: 11
                         }
-[23:39:12] [  END  ]    2d entity added [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Loading Image --
+[23:57:35] [  END  ]    2d entity added [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Loading Image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/font_big.png
            [ INFO  ]       Extension: png
@@ -467,11 +467,11 @@ Indielib version: 0.5.1
            [ INFO  ]       Bpp: 4
            [ INFO  ]       Format: IND_RGBA
                         }
-[23:39:12] [  END  ]    Image loaded [Elapsed time = 0.006 seg]
-[23:39:12] [ BEGIN ]    -- Parsing and loading font --
+[23:57:35] [  END  ]    Image loaded [Elapsed time = 0.006 seg]
+[23:57:35] [ BEGIN ]    -- Parsing and loading font --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/font_big.xml
-[23:39:12] [ BEGIN ]       -- Creating surface --
+[23:57:35] [ BEGIN ]       -- Creating surface --
                            {
            [ INFO  ]          From image: ../SpaceGame/resources/font_big.png
            [ INFO  ]          Type: IND_ALPHA
@@ -481,15 +481,15 @@ Indielib version: 0.5.1
            [ INFO  ]          Number of blocks: 1 x 1
            [ INFO  ]          Spare (Right | Down): 0 x 0
                            }
-[23:39:12] [  END  ]       Surface created [Elapsed time = 0.001 seg]
+[23:57:35] [  END  ]       Surface created [Elapsed time = 0 seg]
                         }
-[23:39:12] [  END  ]    Font parsed and loaded [Elapsed time = 0.001 seg]
-[23:39:12] [ BEGIN ]    -- Freeing image --
+[23:57:35] [  END  ]    Font parsed and loaded [Elapsed time = 0.001 seg]
+[23:57:35] [ BEGIN ]    -- Freeing image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/font_big.png
                         }
-[23:39:12] [  END  ]    Ok [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Loading Image --
+[23:57:35] [  END  ]    Ok [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Loading Image --
                         {
            [ INFO  ]       File name: ..\SpaceGame\resources\buttonBg.png
            [ INFO  ]       Extension: png
@@ -497,8 +497,8 @@ Indielib version: 0.5.1
            [ INFO  ]       Bpp: 4
            [ INFO  ]       Format: IND_RGBA
                         }
-[23:39:12] [  END  ]    Image loaded [Elapsed time = 0.001 seg]
-[23:39:12] [ BEGIN ]    -- Creating surface --
+[23:57:35] [  END  ]    Image loaded [Elapsed time = 0.001 seg]
+[23:57:35] [ BEGIN ]    -- Creating surface --
                         {
            [ INFO  ]       From image: ..\SpaceGame\resources\buttonBg.png
            [ INFO  ]       Type: IND_ALPHA
@@ -508,23 +508,23 @@ Indielib version: 0.5.1
            [ INFO  ]       Number of blocks: 1 x 1
            [ INFO  ]       Spare (Right | Down): 6 x 22
                         }
-[23:39:12] [  END  ]    Surface created [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Freeing image --
+[23:57:35] [  END  ]    Surface created [Elapsed time = 0.001 seg]
+[23:57:35] [ BEGIN ]    -- Freeing image --
                         {
            [ INFO  ]       File name: ..\SpaceGame\resources\buttonBg.png
                         }
-[23:39:12] [  END  ]    Ok [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Adding 2d entity --
+[23:57:35] [  END  ]    Ok [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Adding 2d entity --
                         {
            [ INFO  ]       Name: 12
                         }
-[23:39:12] [  END  ]    2d entity added [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Adding 2d entity --
+[23:57:35] [  END  ]    2d entity added [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Adding 2d entity --
                         {
            [ INFO  ]       Name: 13
                         }
-[23:39:12] [  END  ]    2d entity added [Elapsed time = 0.001 seg]
-[23:39:12] [ BEGIN ]    -- Loading Image --
+[23:57:35] [  END  ]    2d entity added [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Loading Image --
                         {
            [ INFO  ]       File name: ..\SpaceGame\resources\rocketCursor.png
            [ INFO  ]       Extension: png
@@ -532,8 +532,8 @@ Indielib version: 0.5.1
            [ INFO  ]       Bpp: 4
            [ INFO  ]       Format: IND_RGBA
                         }
-[23:39:12] [  END  ]    Image loaded [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Creating surface --
+[23:57:35] [  END  ]    Image loaded [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Creating surface --
                         {
            [ INFO  ]       From image: ..\SpaceGame\resources\rocketCursor.png
            [ INFO  ]       Type: IND_ALPHA
@@ -543,18 +543,18 @@ Indielib version: 0.5.1
            [ INFO  ]       Number of blocks: 1 x 1
            [ INFO  ]       Spare (Right | Down): 14 x 14
                         }
-[23:39:12] [  END  ]    Surface created [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Freeing image --
+[23:57:35] [  END  ]    Surface created [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Freeing image --
                         {
            [ INFO  ]       File name: ..\SpaceGame\resources\rocketCursor.png
                         }
-[23:39:12] [  END  ]    Ok [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Adding 2d entity --
+[23:57:35] [  END  ]    Ok [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Adding 2d entity --
                         {
            [ INFO  ]       Name: 14
                         }
-[23:39:12] [  END  ]    2d entity added [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Loading Image --
+[23:57:35] [  END  ]    2d entity added [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Loading Image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/sEngine.png
            [ INFO  ]       Extension: png
@@ -562,8 +562,8 @@ Indielib version: 0.5.1
            [ INFO  ]       Bpp: 4
            [ INFO  ]       Format: IND_RGBA
                         }
-[23:39:12] [  END  ]    Image loaded [Elapsed time = 0.001 seg]
-[23:39:12] [ BEGIN ]    -- Creating surface --
+[23:57:35] [  END  ]    Image loaded [Elapsed time = 0.001 seg]
+[23:57:35] [ BEGIN ]    -- Creating surface --
                         {
            [ INFO  ]       From image: ../SpaceGame/resources/sEngine.png
            [ INFO  ]       Type: IND_ALPHA
@@ -573,21 +573,21 @@ Indielib version: 0.5.1
            [ INFO  ]       Number of blocks: 1 x 1
            [ INFO  ]       Spare (Right | Down): 56 x 62
                         }
-[23:39:12] [  END  ]    Surface created [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Freeing image --
+[23:57:35] [  END  ]    Surface created [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Freeing image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/sEngine.png
                         }
-[23:39:12] [  END  ]    Ok [Elapsed time = 0.001 seg]
-[23:39:12] [ BEGIN ]    -- Adding 2d entity --
+[23:57:35] [  END  ]    Ok [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Adding 2d entity --
                         {
            [ INFO  ]       Name: 15
                         }
-[23:39:12] [  END  ]    2d entity added [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Parsing and loading animation --
+[23:57:35] [  END  ]    2d entity added [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Parsing and loading animation --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/animations/rocket.xml
-[23:39:12] [ BEGIN ]       -- Loading Image --
+[23:57:35] [ BEGIN ]       -- Loading Image --
                            {
            [ INFO  ]          File name: ../SpaceGame/resources/animations/rocket/0001.png
            [ INFO  ]          Extension: png
@@ -595,8 +595,8 @@ Indielib version: 0.5.1
            [ INFO  ]          Bpp: 4
            [ INFO  ]          Format: IND_RGBA
                            }
-[23:39:12] [  END  ]       Image loaded [Elapsed time = 0.001 seg]
-[23:39:12] [ BEGIN ]       -- Loading Image --
+[23:57:35] [  END  ]       Image loaded [Elapsed time = 0.001 seg]
+[23:57:35] [ BEGIN ]       -- Loading Image --
                            {
            [ INFO  ]          File name: ../SpaceGame/resources/animations/rocket/0002.png
            [ INFO  ]          Extension: png
@@ -604,8 +604,8 @@ Indielib version: 0.5.1
            [ INFO  ]          Bpp: 4
            [ INFO  ]          Format: IND_RGBA
                            }
-[23:39:12] [  END  ]       Image loaded [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]       -- Loading Image --
+[23:57:35] [  END  ]       Image loaded [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]       -- Loading Image --
                            {
            [ INFO  ]          File name: ../SpaceGame/resources/animations/rocket/0003.png
            [ INFO  ]          Extension: png
@@ -613,8 +613,8 @@ Indielib version: 0.5.1
            [ INFO  ]          Bpp: 4
            [ INFO  ]          Format: IND_RGBA
                            }
-[23:39:12] [  END  ]       Image loaded [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]       -- Loading Image --
+[23:57:35] [  END  ]       Image loaded [Elapsed time = 0.001 seg]
+[23:57:35] [ BEGIN ]       -- Loading Image --
                            {
            [ INFO  ]          File name: ../SpaceGame/resources/animations/rocket/0004.png
            [ INFO  ]          Extension: png
@@ -622,8 +622,8 @@ Indielib version: 0.5.1
            [ INFO  ]          Bpp: 4
            [ INFO  ]          Format: IND_RGBA
                            }
-[23:39:12] [  END  ]       Image loaded [Elapsed time = 0.001 seg]
-[23:39:12] [ BEGIN ]       -- Loading Image --
+[23:57:35] [  END  ]       Image loaded [Elapsed time = 0.001 seg]
+[23:57:35] [ BEGIN ]       -- Loading Image --
                            {
            [ INFO  ]          File name: ../SpaceGame/resources/animations/rocket/0005.png
            [ INFO  ]          Extension: png
@@ -631,8 +631,8 @@ Indielib version: 0.5.1
            [ INFO  ]          Bpp: 4
            [ INFO  ]          Format: IND_RGBA
                            }
-[23:39:12] [  END  ]       Image loaded [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]       -- Loading Image --
+[23:57:35] [  END  ]       Image loaded [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]       -- Loading Image --
                            {
            [ INFO  ]          File name: ../SpaceGame/resources/animations/rocket/0006.png
            [ INFO  ]          Extension: png
@@ -640,8 +640,8 @@ Indielib version: 0.5.1
            [ INFO  ]          Bpp: 4
            [ INFO  ]          Format: IND_RGBA
                            }
-[23:39:12] [  END  ]       Image loaded [Elapsed time = 0.001 seg]
-[23:39:12] [ BEGIN ]       -- Loading Image --
+[23:57:35] [  END  ]       Image loaded [Elapsed time = 0.001 seg]
+[23:57:35] [ BEGIN ]       -- Loading Image --
                            {
            [ INFO  ]          File name: ../SpaceGame/resources/animations/rocket/0007.png
            [ INFO  ]          Extension: png
@@ -649,8 +649,8 @@ Indielib version: 0.5.1
            [ INFO  ]          Bpp: 4
            [ INFO  ]          Format: IND_RGBA
                            }
-[23:39:12] [  END  ]       Image loaded [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]       -- Loading Image --
+[23:57:35] [  END  ]       Image loaded [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]       -- Loading Image --
                            {
            [ INFO  ]          File name: ../SpaceGame/resources/animations/rocket/0008.png
            [ INFO  ]          Extension: png
@@ -658,8 +658,8 @@ Indielib version: 0.5.1
            [ INFO  ]          Bpp: 4
            [ INFO  ]          Format: IND_RGBA
                            }
-[23:39:12] [  END  ]       Image loaded [Elapsed time = 0.001 seg]
-[23:39:12] [ BEGIN ]       -- Loading Image --
+[23:57:35] [  END  ]       Image loaded [Elapsed time = 0.001 seg]
+[23:57:35] [ BEGIN ]       -- Loading Image --
                            {
            [ INFO  ]          File name: ../SpaceGame/resources/animations/rocket/0009.png
            [ INFO  ]          Extension: png
@@ -667,8 +667,8 @@ Indielib version: 0.5.1
            [ INFO  ]          Bpp: 4
            [ INFO  ]          Format: IND_RGBA
                            }
-[23:39:12] [  END  ]       Image loaded [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]       -- Loading Image --
+[23:57:35] [  END  ]       Image loaded [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]       -- Loading Image --
                            {
            [ INFO  ]          File name: ../SpaceGame/resources/animations/rocket/0010.png
            [ INFO  ]          Extension: png
@@ -676,8 +676,8 @@ Indielib version: 0.5.1
            [ INFO  ]          Bpp: 4
            [ INFO  ]          Format: IND_RGBA
                            }
-[23:39:12] [  END  ]       Image loaded [Elapsed time = 0.001 seg]
-[23:39:12] [ BEGIN ]       -- Loading Image --
+[23:57:35] [  END  ]       Image loaded [Elapsed time = 0.001 seg]
+[23:57:35] [ BEGIN ]       -- Loading Image --
                            {
            [ INFO  ]          File name: ../SpaceGame/resources/animations/rocket/0011.png
            [ INFO  ]          Extension: png
@@ -685,8 +685,8 @@ Indielib version: 0.5.1
            [ INFO  ]          Bpp: 4
            [ INFO  ]          Format: IND_RGBA
                            }
-[23:39:12] [  END  ]       Image loaded [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]       -- Loading Image --
+[23:57:35] [  END  ]       Image loaded [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]       -- Loading Image --
                            {
            [ INFO  ]          File name: ../SpaceGame/resources/animations/rocket/0012.png
            [ INFO  ]          Extension: png
@@ -694,8 +694,8 @@ Indielib version: 0.5.1
            [ INFO  ]          Bpp: 4
            [ INFO  ]          Format: IND_RGBA
                            }
-[23:39:12] [  END  ]       Image loaded [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]       -- Loading Image --
+[23:57:35] [  END  ]       Image loaded [Elapsed time = 0.001 seg]
+[23:57:35] [ BEGIN ]       -- Loading Image --
                            {
            [ INFO  ]          File name: ../SpaceGame/resources/animations/rocket/0013.png
            [ INFO  ]          Extension: png
@@ -703,8 +703,8 @@ Indielib version: 0.5.1
            [ INFO  ]          Bpp: 4
            [ INFO  ]          Format: IND_RGBA
                            }
-[23:39:12] [  END  ]       Image loaded [Elapsed time = 0.001 seg]
-[23:39:12] [ BEGIN ]       -- Loading Image --
+[23:57:35] [  END  ]       Image loaded [Elapsed time = 0.001 seg]
+[23:57:35] [ BEGIN ]       -- Loading Image --
                            {
            [ INFO  ]          File name: ../SpaceGame/resources/animations/rocket/0014.png
            [ INFO  ]          Extension: png
@@ -712,8 +712,8 @@ Indielib version: 0.5.1
            [ INFO  ]          Bpp: 4
            [ INFO  ]          Format: IND_RGBA
                            }
-[23:39:12] [  END  ]       Image loaded [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]       -- Loading Image --
+[23:57:35] [  END  ]       Image loaded [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]       -- Loading Image --
                            {
            [ INFO  ]          File name: ../SpaceGame/resources/animations/rocket/0015.png
            [ INFO  ]          Extension: png
@@ -721,8 +721,8 @@ Indielib version: 0.5.1
            [ INFO  ]          Bpp: 4
            [ INFO  ]          Format: IND_RGBA
                            }
-[23:39:12] [  END  ]       Image loaded [Elapsed time = 0.001 seg]
-[23:39:12] [ BEGIN ]       -- Loading Image --
+[23:57:35] [  END  ]       Image loaded [Elapsed time = 0.001 seg]
+[23:57:35] [ BEGIN ]       -- Loading Image --
                            {
            [ INFO  ]          File name: ../SpaceGame/resources/animations/rocket/0016.png
            [ INFO  ]          Extension: png
@@ -730,8 +730,8 @@ Indielib version: 0.5.1
            [ INFO  ]          Bpp: 4
            [ INFO  ]          Format: IND_RGBA
                            }
-[23:39:12] [  END  ]       Image loaded [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]       -- Loading Image --
+[23:57:35] [  END  ]       Image loaded [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]       -- Loading Image --
                            {
            [ INFO  ]          File name: ../SpaceGame/resources/animations/rocket/0017.png
            [ INFO  ]          Extension: png
@@ -739,8 +739,8 @@ Indielib version: 0.5.1
            [ INFO  ]          Bpp: 4
            [ INFO  ]          Format: IND_RGBA
                            }
-[23:39:12] [  END  ]       Image loaded [Elapsed time = 0.001 seg]
-[23:39:12] [ BEGIN ]       -- Loading Image --
+[23:57:35] [  END  ]       Image loaded [Elapsed time = 0.001 seg]
+[23:57:35] [ BEGIN ]       -- Loading Image --
                            {
            [ INFO  ]          File name: ../SpaceGame/resources/animations/rocket/0018.png
            [ INFO  ]          Extension: png
@@ -748,8 +748,8 @@ Indielib version: 0.5.1
            [ INFO  ]          Bpp: 4
            [ INFO  ]          Format: IND_RGBA
                            }
-[23:39:12] [  END  ]       Image loaded [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]       -- Loading Image --
+[23:57:35] [  END  ]       Image loaded [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]       -- Loading Image --
                            {
            [ INFO  ]          File name: ../SpaceGame/resources/animations/rocket/0019.png
            [ INFO  ]          Extension: png
@@ -757,8 +757,8 @@ Indielib version: 0.5.1
            [ INFO  ]          Bpp: 4
            [ INFO  ]          Format: IND_RGBA
                            }
-[23:39:12] [  END  ]       Image loaded [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]       -- Loading Image --
+[23:57:35] [  END  ]       Image loaded [Elapsed time = 0.001 seg]
+[23:57:35] [ BEGIN ]       -- Loading Image --
                            {
            [ INFO  ]          File name: ../SpaceGame/resources/animations/rocket/0020.png
            [ INFO  ]          Extension: png
@@ -766,8 +766,8 @@ Indielib version: 0.5.1
            [ INFO  ]          Bpp: 4
            [ INFO  ]          Format: IND_RGBA
                            }
-[23:39:12] [  END  ]       Image loaded [Elapsed time = 0.001 seg]
-[23:39:12] [ BEGIN ]       -- Loading Image --
+[23:57:35] [  END  ]       Image loaded [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]       -- Loading Image --
                            {
            [ INFO  ]          File name: ../SpaceGame/resources/animations/rocket/0021.png
            [ INFO  ]          Extension: png
@@ -775,8 +775,8 @@ Indielib version: 0.5.1
            [ INFO  ]          Bpp: 4
            [ INFO  ]          Format: IND_RGBA
                            }
-[23:39:12] [  END  ]       Image loaded [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]       -- Loading Image --
+[23:57:35] [  END  ]       Image loaded [Elapsed time = 0.001 seg]
+[23:57:35] [ BEGIN ]       -- Loading Image --
                            {
            [ INFO  ]          File name: ../SpaceGame/resources/animations/rocket/0022.png
            [ INFO  ]          Extension: png
@@ -784,8 +784,8 @@ Indielib version: 0.5.1
            [ INFO  ]          Bpp: 4
            [ INFO  ]          Format: IND_RGBA
                            }
-[23:39:12] [  END  ]       Image loaded [Elapsed time = 0.001 seg]
-[23:39:12] [ BEGIN ]       -- Loading Image --
+[23:57:35] [  END  ]       Image loaded [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]       -- Loading Image --
                            {
            [ INFO  ]          File name: ../SpaceGame/resources/animations/rocket/0023.png
            [ INFO  ]          Extension: png
@@ -793,8 +793,8 @@ Indielib version: 0.5.1
            [ INFO  ]          Bpp: 4
            [ INFO  ]          Format: IND_RGBA
                            }
-[23:39:12] [  END  ]       Image loaded [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]       -- Loading Image --
+[23:57:35] [  END  ]       Image loaded [Elapsed time = 0.001 seg]
+[23:57:35] [ BEGIN ]       -- Loading Image --
                            {
            [ INFO  ]          File name: ../SpaceGame/resources/animations/rocket/0024.png
            [ INFO  ]          Extension: png
@@ -802,8 +802,8 @@ Indielib version: 0.5.1
            [ INFO  ]          Bpp: 4
            [ INFO  ]          Format: IND_RGBA
                            }
-[23:39:12] [  END  ]       Image loaded [Elapsed time = 0.001 seg]
-[23:39:12] [ BEGIN ]       -- Loading Image --
+[23:57:35] [  END  ]       Image loaded [Elapsed time = 0.001 seg]
+[23:57:35] [ BEGIN ]       -- Loading Image --
                            {
            [ INFO  ]          File name: ../SpaceGame/resources/animations/rocket/0025.png
            [ INFO  ]          Extension: png
@@ -811,8 +811,8 @@ Indielib version: 0.5.1
            [ INFO  ]          Bpp: 4
            [ INFO  ]          Format: IND_RGBA
                            }
-[23:39:12] [  END  ]       Image loaded [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]       -- Loading Image --
+[23:57:35] [  END  ]       Image loaded [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]       -- Loading Image --
                            {
            [ INFO  ]          File name: ../SpaceGame/resources/animations/rocket/0026.png
            [ INFO  ]          Extension: png
@@ -820,8 +820,8 @@ Indielib version: 0.5.1
            [ INFO  ]          Bpp: 4
            [ INFO  ]          Format: IND_RGBA
                            }
-[23:39:12] [  END  ]       Image loaded [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]       -- Loading Image --
+[23:57:35] [  END  ]       Image loaded [Elapsed time = 0.001 seg]
+[23:57:35] [ BEGIN ]       -- Loading Image --
                            {
            [ INFO  ]          File name: ../SpaceGame/resources/animations/rocket/0027.png
            [ INFO  ]          Extension: png
@@ -829,8 +829,8 @@ Indielib version: 0.5.1
            [ INFO  ]          Bpp: 4
            [ INFO  ]          Format: IND_RGBA
                            }
-[23:39:12] [  END  ]       Image loaded [Elapsed time = 0.001 seg]
-[23:39:12] [ BEGIN ]       -- Loading Image --
+[23:57:35] [  END  ]       Image loaded [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]       -- Loading Image --
                            {
            [ INFO  ]          File name: ../SpaceGame/resources/animations/rocket/0028.png
            [ INFO  ]          Extension: png
@@ -838,8 +838,8 @@ Indielib version: 0.5.1
            [ INFO  ]          Bpp: 4
            [ INFO  ]          Format: IND_RGBA
                            }
-[23:39:12] [  END  ]       Image loaded [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]       -- Loading Image --
+[23:57:35] [  END  ]       Image loaded [Elapsed time = 0.001 seg]
+[23:57:35] [ BEGIN ]       -- Loading Image --
                            {
            [ INFO  ]          File name: ../SpaceGame/resources/animations/rocket/0029.png
            [ INFO  ]          Extension: png
@@ -847,8 +847,8 @@ Indielib version: 0.5.1
            [ INFO  ]          Bpp: 4
            [ INFO  ]          Format: IND_RGBA
                            }
-[23:39:12] [  END  ]       Image loaded [Elapsed time = 0.001 seg]
-[23:39:12] [ BEGIN ]       -- Loading Image --
+[23:57:35] [  END  ]       Image loaded [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]       -- Loading Image --
                            {
            [ INFO  ]          File name: ../SpaceGame/resources/animations/rocket/0030.png
            [ INFO  ]          Extension: png
@@ -856,8 +856,8 @@ Indielib version: 0.5.1
            [ INFO  ]          Bpp: 4
            [ INFO  ]          Format: IND_RGBA
                            }
-[23:39:12] [  END  ]       Image loaded [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]       -- Loading Image --
+[23:57:35] [  END  ]       Image loaded [Elapsed time = 0.001 seg]
+[23:57:35] [ BEGIN ]       -- Loading Image --
                            {
            [ INFO  ]          File name: ../SpaceGame/resources/animations/rocket/0031.png
            [ INFO  ]          Extension: png
@@ -865,8 +865,8 @@ Indielib version: 0.5.1
            [ INFO  ]          Bpp: 4
            [ INFO  ]          Format: IND_RGBA
                            }
-[23:39:12] [  END  ]       Image loaded [Elapsed time = 0.001 seg]
-[23:39:12] [ BEGIN ]       -- Loading Image --
+[23:57:35] [  END  ]       Image loaded [Elapsed time = 0.001 seg]
+[23:57:35] [ BEGIN ]       -- Loading Image --
                            {
            [ INFO  ]          File name: ../SpaceGame/resources/animations/rocket/0032.png
            [ INFO  ]          Extension: png
@@ -874,8 +874,8 @@ Indielib version: 0.5.1
            [ INFO  ]          Bpp: 4
            [ INFO  ]          Format: IND_RGBA
                            }
-[23:39:12] [  END  ]       Image loaded [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]       -- Loading Image --
+[23:57:35] [  END  ]       Image loaded [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]       -- Loading Image --
                            {
            [ INFO  ]          File name: ../SpaceGame/resources/animations/rocket/0033.png
            [ INFO  ]          Extension: png
@@ -883,8 +883,8 @@ Indielib version: 0.5.1
            [ INFO  ]          Bpp: 4
            [ INFO  ]          Format: IND_RGBA
                            }
-[23:39:12] [  END  ]       Image loaded [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]       -- Loading Image --
+[23:57:35] [  END  ]       Image loaded [Elapsed time = 0.001 seg]
+[23:57:35] [ BEGIN ]       -- Loading Image --
                            {
            [ INFO  ]          File name: ../SpaceGame/resources/animations/rocket/0034.png
            [ INFO  ]          Extension: png
@@ -892,8 +892,8 @@ Indielib version: 0.5.1
            [ INFO  ]          Bpp: 4
            [ INFO  ]          Format: IND_RGBA
                            }
-[23:39:12] [  END  ]       Image loaded [Elapsed time = 0.001 seg]
-[23:39:12] [ BEGIN ]       -- Loading Image --
+[23:57:35] [  END  ]       Image loaded [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]       -- Loading Image --
                            {
            [ INFO  ]          File name: ../SpaceGame/resources/animations/rocket/0035.png
            [ INFO  ]          Extension: png
@@ -901,8 +901,8 @@ Indielib version: 0.5.1
            [ INFO  ]          Bpp: 4
            [ INFO  ]          Format: IND_RGBA
                            }
-[23:39:12] [  END  ]       Image loaded [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]       -- Loading Image --
+[23:57:35] [  END  ]       Image loaded [Elapsed time = 0.001 seg]
+[23:57:35] [ BEGIN ]       -- Loading Image --
                            {
            [ INFO  ]          File name: ../SpaceGame/resources/animations/rocket/0036.png
            [ INFO  ]          Extension: png
@@ -910,8 +910,8 @@ Indielib version: 0.5.1
            [ INFO  ]          Bpp: 4
            [ INFO  ]          Format: IND_RGBA
                            }
-[23:39:12] [  END  ]       Image loaded [Elapsed time = 0.001 seg]
-[23:39:12] [ BEGIN ]       -- Loading Image --
+[23:57:35] [  END  ]       Image loaded [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]       -- Loading Image --
                            {
            [ INFO  ]          File name: ../SpaceGame/resources/animations/rocket/0037.png
            [ INFO  ]          Extension: png
@@ -919,8 +919,8 @@ Indielib version: 0.5.1
            [ INFO  ]          Bpp: 4
            [ INFO  ]          Format: IND_RGBA
                            }
-[23:39:12] [  END  ]       Image loaded [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]       -- Loading Image --
+[23:57:35] [  END  ]       Image loaded [Elapsed time = 0.001 seg]
+[23:57:35] [ BEGIN ]       -- Loading Image --
                            {
            [ INFO  ]          File name: ../SpaceGame/resources/animations/rocket/0038.png
            [ INFO  ]          Extension: png
@@ -928,8 +928,8 @@ Indielib version: 0.5.1
            [ INFO  ]          Bpp: 4
            [ INFO  ]          Format: IND_RGBA
                            }
-[23:39:12] [  END  ]       Image loaded [Elapsed time = 0.001 seg]
-[23:39:12] [ BEGIN ]       -- Loading Image --
+[23:57:35] [  END  ]       Image loaded [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]       -- Loading Image --
                            {
            [ INFO  ]          File name: ../SpaceGame/resources/animations/rocket/0039.png
            [ INFO  ]          Extension: png
@@ -937,8 +937,8 @@ Indielib version: 0.5.1
            [ INFO  ]          Bpp: 4
            [ INFO  ]          Format: IND_RGBA
                            }
-[23:39:12] [  END  ]       Image loaded [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]       -- Loading Image --
+[23:57:35] [  END  ]       Image loaded [Elapsed time = 0.001 seg]
+[23:57:35] [ BEGIN ]       -- Loading Image --
                            {
            [ INFO  ]          File name: ../SpaceGame/resources/animations/rocket/0040.png
            [ INFO  ]          Extension: png
@@ -946,8 +946,8 @@ Indielib version: 0.5.1
            [ INFO  ]          Bpp: 4
            [ INFO  ]          Format: IND_RGBA
                            }
-[23:39:12] [  END  ]       Image loaded [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]       -- Loading Image --
+[23:57:35] [  END  ]       Image loaded [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]       -- Loading Image --
                            {
            [ INFO  ]          File name: ../SpaceGame/resources/animations/rocket/0041.png
            [ INFO  ]          Extension: png
@@ -955,8 +955,8 @@ Indielib version: 0.5.1
            [ INFO  ]          Bpp: 4
            [ INFO  ]          Format: IND_RGBA
                            }
-[23:39:12] [  END  ]       Image loaded [Elapsed time = 0.001 seg]
-[23:39:12] [ BEGIN ]       -- Loading Image --
+[23:57:35] [  END  ]       Image loaded [Elapsed time = 0.001 seg]
+[23:57:35] [ BEGIN ]       -- Loading Image --
                            {
            [ INFO  ]          File name: ../SpaceGame/resources/animations/rocket/0042.png
            [ INFO  ]          Extension: png
@@ -964,8 +964,8 @@ Indielib version: 0.5.1
            [ INFO  ]          Bpp: 4
            [ INFO  ]          Format: IND_RGBA
                            }
-[23:39:12] [  END  ]       Image loaded [Elapsed time = 0.001 seg]
-[23:39:12] [ BEGIN ]       -- Loading Image --
+[23:57:35] [  END  ]       Image loaded [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]       -- Loading Image --
                            {
            [ INFO  ]          File name: ../SpaceGame/resources/animations/rocket/0043.png
            [ INFO  ]          Extension: png
@@ -973,8 +973,8 @@ Indielib version: 0.5.1
            [ INFO  ]          Bpp: 4
            [ INFO  ]          Format: IND_RGBA
                            }
-[23:39:12] [  END  ]       Image loaded [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]       -- Loading Image --
+[23:57:35] [  END  ]       Image loaded [Elapsed time = 0.001 seg]
+[23:57:35] [ BEGIN ]       -- Loading Image --
                            {
            [ INFO  ]          File name: ../SpaceGame/resources/animations/rocket/0044.png
            [ INFO  ]          Extension: png
@@ -982,8 +982,8 @@ Indielib version: 0.5.1
            [ INFO  ]          Bpp: 4
            [ INFO  ]          Format: IND_RGBA
                            }
-[23:39:12] [  END  ]       Image loaded [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]       -- Loading Image --
+[23:57:35] [  END  ]       Image loaded [Elapsed time = 0.001 seg]
+[23:57:35] [ BEGIN ]       -- Loading Image --
                            {
            [ INFO  ]          File name: ../SpaceGame/resources/animations/rocket/0045.png
            [ INFO  ]          Extension: png
@@ -991,8 +991,8 @@ Indielib version: 0.5.1
            [ INFO  ]          Bpp: 4
            [ INFO  ]          Format: IND_RGBA
                            }
-[23:39:12] [  END  ]       Image loaded [Elapsed time = 0.001 seg]
-[23:39:12] [ BEGIN ]       -- Loading Image --
+[23:57:35] [  END  ]       Image loaded [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]       -- Loading Image --
                            {
            [ INFO  ]          File name: ../SpaceGame/resources/animations/rocket/0046.png
            [ INFO  ]          Extension: png
@@ -1000,8 +1000,8 @@ Indielib version: 0.5.1
            [ INFO  ]          Bpp: 4
            [ INFO  ]          Format: IND_RGBA
                            }
-[23:39:12] [  END  ]       Image loaded [Elapsed time = 0.001 seg]
-[23:39:12] [ BEGIN ]       -- Loading Image --
+[23:57:35] [  END  ]       Image loaded [Elapsed time = 0.001 seg]
+[23:57:35] [ BEGIN ]       -- Loading Image --
                            {
            [ INFO  ]          File name: ../SpaceGame/resources/animations/rocket/0047.png
            [ INFO  ]          Extension: png
@@ -1009,8 +1009,8 @@ Indielib version: 0.5.1
            [ INFO  ]          Bpp: 4
            [ INFO  ]          Format: IND_RGBA
                            }
-[23:39:12] [  END  ]       Image loaded [Elapsed time = 0.001 seg]
-[23:39:12] [ BEGIN ]       -- Loading Image --
+[23:57:35] [  END  ]       Image loaded [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]       -- Loading Image --
                            {
            [ INFO  ]          File name: ../SpaceGame/resources/animations/rocket/0048.png
            [ INFO  ]          Extension: png
@@ -1018,8 +1018,8 @@ Indielib version: 0.5.1
            [ INFO  ]          Bpp: 4
            [ INFO  ]          Format: IND_RGBA
                            }
-[23:39:12] [  END  ]       Image loaded [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]       -- Loading Image --
+[23:57:35] [  END  ]       Image loaded [Elapsed time = 0.001 seg]
+[23:57:35] [ BEGIN ]       -- Loading Image --
                            {
            [ INFO  ]          File name: ../SpaceGame/resources/animations/rocket/0049.png
            [ INFO  ]          Extension: png
@@ -1027,8 +1027,8 @@ Indielib version: 0.5.1
            [ INFO  ]          Bpp: 4
            [ INFO  ]          Format: IND_RGBA
                            }
-[23:39:12] [  END  ]       Image loaded [Elapsed time = 0.001 seg]
-[23:39:12] [ BEGIN ]       -- Loading Image --
+[23:57:35] [  END  ]       Image loaded [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]       -- Loading Image --
                            {
            [ INFO  ]          File name: ../SpaceGame/resources/animations/rocket/0050.png
            [ INFO  ]          Extension: png
@@ -1036,8 +1036,8 @@ Indielib version: 0.5.1
            [ INFO  ]          Bpp: 4
            [ INFO  ]          Format: IND_RGBA
                            }
-[23:39:12] [  END  ]       Image loaded [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]       -- Loading Image --
+[23:57:35] [  END  ]       Image loaded [Elapsed time = 0.001 seg]
+[23:57:35] [ BEGIN ]       -- Loading Image --
                            {
            [ INFO  ]          File name: ../SpaceGame/resources/animations/rocket/0051.png
            [ INFO  ]          Extension: png
@@ -1045,8 +1045,8 @@ Indielib version: 0.5.1
            [ INFO  ]          Bpp: 4
            [ INFO  ]          Format: IND_RGBA
                            }
-[23:39:12] [  END  ]       Image loaded [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]       -- Loading Image --
+[23:57:35] [  END  ]       Image loaded [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]       -- Loading Image --
                            {
            [ INFO  ]          File name: ../SpaceGame/resources/animations/rocket/0052.png
            [ INFO  ]          Extension: png
@@ -1054,8 +1054,8 @@ Indielib version: 0.5.1
            [ INFO  ]          Bpp: 4
            [ INFO  ]          Format: IND_RGBA
                            }
-[23:39:12] [  END  ]       Image loaded [Elapsed time = 0.001 seg]
-[23:39:12] [ BEGIN ]       -- Loading Image --
+[23:57:35] [  END  ]       Image loaded [Elapsed time = 0.001 seg]
+[23:57:35] [ BEGIN ]       -- Loading Image --
                            {
            [ INFO  ]          File name: ../SpaceGame/resources/animations/rocket/0053.png
            [ INFO  ]          Extension: png
@@ -1063,8 +1063,8 @@ Indielib version: 0.5.1
            [ INFO  ]          Bpp: 4
            [ INFO  ]          Format: IND_RGBA
                            }
-[23:39:12] [  END  ]       Image loaded [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]       -- Loading Image --
+[23:57:35] [  END  ]       Image loaded [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]       -- Loading Image --
                            {
            [ INFO  ]          File name: ../SpaceGame/resources/animations/rocket/0054.png
            [ INFO  ]          Extension: png
@@ -1072,8 +1072,8 @@ Indielib version: 0.5.1
            [ INFO  ]          Bpp: 4
            [ INFO  ]          Format: IND_RGBA
                            }
-[23:39:12] [  END  ]       Image loaded [Elapsed time = 0.001 seg]
-[23:39:12] [ BEGIN ]       -- Loading Image --
+[23:57:35] [  END  ]       Image loaded [Elapsed time = 0.001 seg]
+[23:57:35] [ BEGIN ]       -- Loading Image --
                            {
            [ INFO  ]          File name: ../SpaceGame/resources/animations/rocket/0055.png
            [ INFO  ]          Extension: png
@@ -1081,8 +1081,8 @@ Indielib version: 0.5.1
            [ INFO  ]          Bpp: 4
            [ INFO  ]          Format: IND_RGBA
                            }
-[23:39:12] [  END  ]       Image loaded [Elapsed time = 0.001 seg]
-[23:39:12] [ BEGIN ]       -- Loading Image --
+[23:57:35] [  END  ]       Image loaded [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]       -- Loading Image --
                            {
            [ INFO  ]          File name: ../SpaceGame/resources/animations/rocket/0056.png
            [ INFO  ]          Extension: png
@@ -1090,8 +1090,8 @@ Indielib version: 0.5.1
            [ INFO  ]          Bpp: 4
            [ INFO  ]          Format: IND_RGBA
                            }
-[23:39:12] [  END  ]       Image loaded [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]       -- Loading Image --
+[23:57:35] [  END  ]       Image loaded [Elapsed time = 0.001 seg]
+[23:57:35] [ BEGIN ]       -- Loading Image --
                            {
            [ INFO  ]          File name: ../SpaceGame/resources/animations/rocket/0057.png
            [ INFO  ]          Extension: png
@@ -1099,8 +1099,8 @@ Indielib version: 0.5.1
            [ INFO  ]          Bpp: 4
            [ INFO  ]          Format: IND_RGBA
                            }
-[23:39:12] [  END  ]       Image loaded [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]       -- Loading Image --
+[23:57:35] [  END  ]       Image loaded [Elapsed time = 0.001 seg]
+[23:57:35] [ BEGIN ]       -- Loading Image --
                            {
            [ INFO  ]          File name: ../SpaceGame/resources/animations/rocket/0058.png
            [ INFO  ]          Extension: png
@@ -1108,8 +1108,8 @@ Indielib version: 0.5.1
            [ INFO  ]          Bpp: 4
            [ INFO  ]          Format: IND_RGBA
                            }
-[23:39:12] [  END  ]       Image loaded [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]       -- Loading Image --
+[23:57:35] [  END  ]       Image loaded [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]       -- Loading Image --
                            {
            [ INFO  ]          File name: ../SpaceGame/resources/animations/rocket/0059.png
            [ INFO  ]          Extension: png
@@ -1117,8 +1117,8 @@ Indielib version: 0.5.1
            [ INFO  ]          Bpp: 4
            [ INFO  ]          Format: IND_RGBA
                            }
-[23:39:12] [  END  ]       Image loaded [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]       -- Loading Image --
+[23:57:35] [  END  ]       Image loaded [Elapsed time = 0.001 seg]
+[23:57:35] [ BEGIN ]       -- Loading Image --
                            {
            [ INFO  ]          File name: ../SpaceGame/resources/animations/rocket/0060.png
            [ INFO  ]          Extension: png
@@ -1126,10 +1126,10 @@ Indielib version: 0.5.1
            [ INFO  ]          Bpp: 4
            [ INFO  ]          Format: IND_RGBA
                            }
-[23:39:12] [  END  ]       Image loaded [Elapsed time = 0.001 seg]
+[23:57:35] [  END  ]       Image loaded [Elapsed time = 0 seg]
                         }
-[23:39:12] [  END  ]    Animation parsed and loaded [Elapsed time = 0.028 seg]
-[23:39:12] [ BEGIN ]    -- Creating surface --
+[23:57:35] [  END  ]    Animation parsed and loaded [Elapsed time = 0.034 seg]
+[23:57:35] [ BEGIN ]    -- Creating surface --
                         {
            [ INFO  ]       From image: ../SpaceGame/resources/animations/rocket/0001.png
            [ INFO  ]       Type: IND_ALPHA
@@ -1139,13 +1139,13 @@ Indielib version: 0.5.1
            [ INFO  ]       Number of blocks: 1 x 1
            [ INFO  ]       Spare (Right | Down): 9 x 45
                         }
-[23:39:12] [  END  ]    Surface created [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Freeing image --
+[23:57:35] [  END  ]    Surface created [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Freeing image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/animations/rocket/0001.png
                         }
-[23:39:12] [  END  ]    Ok [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Creating surface --
+[23:57:35] [  END  ]    Ok [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Creating surface --
                         {
            [ INFO  ]       From image: ../SpaceGame/resources/animations/rocket/0002.png
            [ INFO  ]       Type: IND_ALPHA
@@ -1155,13 +1155,13 @@ Indielib version: 0.5.1
            [ INFO  ]       Number of blocks: 1 x 1
            [ INFO  ]       Spare (Right | Down): 9 x 45
                         }
-[23:39:12] [  END  ]    Surface created [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Freeing image --
+[23:57:35] [  END  ]    Surface created [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Freeing image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/animations/rocket/0002.png
                         }
-[23:39:12] [  END  ]    Ok [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Creating surface --
+[23:57:35] [  END  ]    Ok [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Creating surface --
                         {
            [ INFO  ]       From image: ../SpaceGame/resources/animations/rocket/0003.png
            [ INFO  ]       Type: IND_ALPHA
@@ -1171,13 +1171,13 @@ Indielib version: 0.5.1
            [ INFO  ]       Number of blocks: 1 x 1
            [ INFO  ]       Spare (Right | Down): 9 x 45
                         }
-[23:39:12] [  END  ]    Surface created [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Freeing image --
+[23:57:35] [  END  ]    Surface created [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Freeing image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/animations/rocket/0003.png
                         }
-[23:39:12] [  END  ]    Ok [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Creating surface --
+[23:57:35] [  END  ]    Ok [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Creating surface --
                         {
            [ INFO  ]       From image: ../SpaceGame/resources/animations/rocket/0004.png
            [ INFO  ]       Type: IND_ALPHA
@@ -1187,13 +1187,13 @@ Indielib version: 0.5.1
            [ INFO  ]       Number of blocks: 1 x 1
            [ INFO  ]       Spare (Right | Down): 9 x 45
                         }
-[23:39:12] [  END  ]    Surface created [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Freeing image --
+[23:57:35] [  END  ]    Surface created [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Freeing image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/animations/rocket/0004.png
                         }
-[23:39:12] [  END  ]    Ok [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Creating surface --
+[23:57:35] [  END  ]    Ok [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Creating surface --
                         {
            [ INFO  ]       From image: ../SpaceGame/resources/animations/rocket/0005.png
            [ INFO  ]       Type: IND_ALPHA
@@ -1203,13 +1203,13 @@ Indielib version: 0.5.1
            [ INFO  ]       Number of blocks: 1 x 1
            [ INFO  ]       Spare (Right | Down): 9 x 45
                         }
-[23:39:12] [  END  ]    Surface created [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Freeing image --
+[23:57:35] [  END  ]    Surface created [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Freeing image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/animations/rocket/0005.png
                         }
-[23:39:12] [  END  ]    Ok [Elapsed time = 0.001 seg]
-[23:39:12] [ BEGIN ]    -- Creating surface --
+[23:57:35] [  END  ]    Ok [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Creating surface --
                         {
            [ INFO  ]       From image: ../SpaceGame/resources/animations/rocket/0006.png
            [ INFO  ]       Type: IND_ALPHA
@@ -1219,13 +1219,13 @@ Indielib version: 0.5.1
            [ INFO  ]       Number of blocks: 1 x 1
            [ INFO  ]       Spare (Right | Down): 9 x 45
                         }
-[23:39:12] [  END  ]    Surface created [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Freeing image --
+[23:57:35] [  END  ]    Surface created [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Freeing image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/animations/rocket/0006.png
                         }
-[23:39:12] [  END  ]    Ok [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Creating surface --
+[23:57:35] [  END  ]    Ok [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Creating surface --
                         {
            [ INFO  ]       From image: ../SpaceGame/resources/animations/rocket/0007.png
            [ INFO  ]       Type: IND_ALPHA
@@ -1235,13 +1235,13 @@ Indielib version: 0.5.1
            [ INFO  ]       Number of blocks: 1 x 1
            [ INFO  ]       Spare (Right | Down): 9 x 45
                         }
-[23:39:12] [  END  ]    Surface created [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Freeing image --
+[23:57:35] [  END  ]    Surface created [Elapsed time = 0.001 seg]
+[23:57:35] [ BEGIN ]    -- Freeing image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/animations/rocket/0007.png
                         }
-[23:39:12] [  END  ]    Ok [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Creating surface --
+[23:57:35] [  END  ]    Ok [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Creating surface --
                         {
            [ INFO  ]       From image: ../SpaceGame/resources/animations/rocket/0008.png
            [ INFO  ]       Type: IND_ALPHA
@@ -1251,13 +1251,13 @@ Indielib version: 0.5.1
            [ INFO  ]       Number of blocks: 1 x 1
            [ INFO  ]       Spare (Right | Down): 9 x 45
                         }
-[23:39:12] [  END  ]    Surface created [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Freeing image --
+[23:57:35] [  END  ]    Surface created [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Freeing image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/animations/rocket/0008.png
                         }
-[23:39:12] [  END  ]    Ok [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Creating surface --
+[23:57:35] [  END  ]    Ok [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Creating surface --
                         {
            [ INFO  ]       From image: ../SpaceGame/resources/animations/rocket/0009.png
            [ INFO  ]       Type: IND_ALPHA
@@ -1267,13 +1267,13 @@ Indielib version: 0.5.1
            [ INFO  ]       Number of blocks: 1 x 1
            [ INFO  ]       Spare (Right | Down): 9 x 45
                         }
-[23:39:12] [  END  ]    Surface created [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Freeing image --
+[23:57:35] [  END  ]    Surface created [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Freeing image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/animations/rocket/0009.png
                         }
-[23:39:12] [  END  ]    Ok [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Creating surface --
+[23:57:35] [  END  ]    Ok [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Creating surface --
                         {
            [ INFO  ]       From image: ../SpaceGame/resources/animations/rocket/0010.png
            [ INFO  ]       Type: IND_ALPHA
@@ -1283,13 +1283,13 @@ Indielib version: 0.5.1
            [ INFO  ]       Number of blocks: 1 x 1
            [ INFO  ]       Spare (Right | Down): 9 x 45
                         }
-[23:39:12] [  END  ]    Surface created [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Freeing image --
+[23:57:35] [  END  ]    Surface created [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Freeing image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/animations/rocket/0010.png
                         }
-[23:39:12] [  END  ]    Ok [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Creating surface --
+[23:57:35] [  END  ]    Ok [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Creating surface --
                         {
            [ INFO  ]       From image: ../SpaceGame/resources/animations/rocket/0011.png
            [ INFO  ]       Type: IND_ALPHA
@@ -1299,13 +1299,13 @@ Indielib version: 0.5.1
            [ INFO  ]       Number of blocks: 1 x 1
            [ INFO  ]       Spare (Right | Down): 9 x 45
                         }
-[23:39:12] [  END  ]    Surface created [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Freeing image --
+[23:57:35] [  END  ]    Surface created [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Freeing image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/animations/rocket/0011.png
                         }
-[23:39:12] [  END  ]    Ok [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Creating surface --
+[23:57:35] [  END  ]    Ok [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Creating surface --
                         {
            [ INFO  ]       From image: ../SpaceGame/resources/animations/rocket/0012.png
            [ INFO  ]       Type: IND_ALPHA
@@ -1315,13 +1315,13 @@ Indielib version: 0.5.1
            [ INFO  ]       Number of blocks: 1 x 1
            [ INFO  ]       Spare (Right | Down): 9 x 45
                         }
-[23:39:12] [  END  ]    Surface created [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Freeing image --
+[23:57:35] [  END  ]    Surface created [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Freeing image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/animations/rocket/0012.png
                         }
-[23:39:12] [  END  ]    Ok [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Creating surface --
+[23:57:35] [  END  ]    Ok [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Creating surface --
                         {
            [ INFO  ]       From image: ../SpaceGame/resources/animations/rocket/0013.png
            [ INFO  ]       Type: IND_ALPHA
@@ -1331,13 +1331,13 @@ Indielib version: 0.5.1
            [ INFO  ]       Number of blocks: 1 x 1
            [ INFO  ]       Spare (Right | Down): 9 x 45
                         }
-[23:39:12] [  END  ]    Surface created [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Freeing image --
+[23:57:35] [  END  ]    Surface created [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Freeing image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/animations/rocket/0013.png
                         }
-[23:39:12] [  END  ]    Ok [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Creating surface --
+[23:57:35] [  END  ]    Ok [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Creating surface --
                         {
            [ INFO  ]       From image: ../SpaceGame/resources/animations/rocket/0014.png
            [ INFO  ]       Type: IND_ALPHA
@@ -1347,13 +1347,13 @@ Indielib version: 0.5.1
            [ INFO  ]       Number of blocks: 1 x 1
            [ INFO  ]       Spare (Right | Down): 9 x 45
                         }
-[23:39:12] [  END  ]    Surface created [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Freeing image --
+[23:57:35] [  END  ]    Surface created [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Freeing image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/animations/rocket/0014.png
                         }
-[23:39:12] [  END  ]    Ok [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Creating surface --
+[23:57:35] [  END  ]    Ok [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Creating surface --
                         {
            [ INFO  ]       From image: ../SpaceGame/resources/animations/rocket/0015.png
            [ INFO  ]       Type: IND_ALPHA
@@ -1363,13 +1363,13 @@ Indielib version: 0.5.1
            [ INFO  ]       Number of blocks: 1 x 1
            [ INFO  ]       Spare (Right | Down): 9 x 45
                         }
-[23:39:12] [  END  ]    Surface created [Elapsed time = 0.001 seg]
-[23:39:12] [ BEGIN ]    -- Freeing image --
+[23:57:35] [  END  ]    Surface created [Elapsed time = 0.001 seg]
+[23:57:35] [ BEGIN ]    -- Freeing image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/animations/rocket/0015.png
                         }
-[23:39:12] [  END  ]    Ok [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Creating surface --
+[23:57:35] [  END  ]    Ok [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Creating surface --
                         {
            [ INFO  ]       From image: ../SpaceGame/resources/animations/rocket/0016.png
            [ INFO  ]       Type: IND_ALPHA
@@ -1379,13 +1379,13 @@ Indielib version: 0.5.1
            [ INFO  ]       Number of blocks: 1 x 1
            [ INFO  ]       Spare (Right | Down): 9 x 45
                         }
-[23:39:12] [  END  ]    Surface created [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Freeing image --
+[23:57:35] [  END  ]    Surface created [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Freeing image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/animations/rocket/0016.png
                         }
-[23:39:12] [  END  ]    Ok [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Creating surface --
+[23:57:35] [  END  ]    Ok [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Creating surface --
                         {
            [ INFO  ]       From image: ../SpaceGame/resources/animations/rocket/0017.png
            [ INFO  ]       Type: IND_ALPHA
@@ -1395,13 +1395,13 @@ Indielib version: 0.5.1
            [ INFO  ]       Number of blocks: 1 x 1
            [ INFO  ]       Spare (Right | Down): 9 x 45
                         }
-[23:39:12] [  END  ]    Surface created [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Freeing image --
+[23:57:35] [  END  ]    Surface created [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Freeing image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/animations/rocket/0017.png
                         }
-[23:39:12] [  END  ]    Ok [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Creating surface --
+[23:57:35] [  END  ]    Ok [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Creating surface --
                         {
            [ INFO  ]       From image: ../SpaceGame/resources/animations/rocket/0018.png
            [ INFO  ]       Type: IND_ALPHA
@@ -1411,13 +1411,13 @@ Indielib version: 0.5.1
            [ INFO  ]       Number of blocks: 1 x 1
            [ INFO  ]       Spare (Right | Down): 9 x 45
                         }
-[23:39:12] [  END  ]    Surface created [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Freeing image --
+[23:57:35] [  END  ]    Surface created [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Freeing image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/animations/rocket/0018.png
                         }
-[23:39:12] [  END  ]    Ok [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Creating surface --
+[23:57:35] [  END  ]    Ok [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Creating surface --
                         {
            [ INFO  ]       From image: ../SpaceGame/resources/animations/rocket/0019.png
            [ INFO  ]       Type: IND_ALPHA
@@ -1427,13 +1427,13 @@ Indielib version: 0.5.1
            [ INFO  ]       Number of blocks: 1 x 1
            [ INFO  ]       Spare (Right | Down): 9 x 45
                         }
-[23:39:12] [  END  ]    Surface created [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Freeing image --
+[23:57:35] [  END  ]    Surface created [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Freeing image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/animations/rocket/0019.png
                         }
-[23:39:12] [  END  ]    Ok [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Creating surface --
+[23:57:35] [  END  ]    Ok [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Creating surface --
                         {
            [ INFO  ]       From image: ../SpaceGame/resources/animations/rocket/0020.png
            [ INFO  ]       Type: IND_ALPHA
@@ -1443,13 +1443,13 @@ Indielib version: 0.5.1
            [ INFO  ]       Number of blocks: 1 x 1
            [ INFO  ]       Spare (Right | Down): 9 x 45
                         }
-[23:39:12] [  END  ]    Surface created [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Freeing image --
+[23:57:35] [  END  ]    Surface created [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Freeing image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/animations/rocket/0020.png
                         }
-[23:39:12] [  END  ]    Ok [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Creating surface --
+[23:57:35] [  END  ]    Ok [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Creating surface --
                         {
            [ INFO  ]       From image: ../SpaceGame/resources/animations/rocket/0021.png
            [ INFO  ]       Type: IND_ALPHA
@@ -1459,13 +1459,13 @@ Indielib version: 0.5.1
            [ INFO  ]       Number of blocks: 1 x 1
            [ INFO  ]       Spare (Right | Down): 9 x 45
                         }
-[23:39:12] [  END  ]    Surface created [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Freeing image --
+[23:57:35] [  END  ]    Surface created [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Freeing image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/animations/rocket/0021.png
                         }
-[23:39:12] [  END  ]    Ok [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Creating surface --
+[23:57:35] [  END  ]    Ok [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Creating surface --
                         {
            [ INFO  ]       From image: ../SpaceGame/resources/animations/rocket/0022.png
            [ INFO  ]       Type: IND_ALPHA
@@ -1475,13 +1475,13 @@ Indielib version: 0.5.1
            [ INFO  ]       Number of blocks: 1 x 1
            [ INFO  ]       Spare (Right | Down): 9 x 45
                         }
-[23:39:12] [  END  ]    Surface created [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Freeing image --
+[23:57:35] [  END  ]    Surface created [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Freeing image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/animations/rocket/0022.png
                         }
-[23:39:12] [  END  ]    Ok [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Creating surface --
+[23:57:35] [  END  ]    Ok [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Creating surface --
                         {
            [ INFO  ]       From image: ../SpaceGame/resources/animations/rocket/0023.png
            [ INFO  ]       Type: IND_ALPHA
@@ -1491,13 +1491,13 @@ Indielib version: 0.5.1
            [ INFO  ]       Number of blocks: 1 x 1
            [ INFO  ]       Spare (Right | Down): 9 x 45
                         }
-[23:39:12] [  END  ]    Surface created [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Freeing image --
+[23:57:35] [  END  ]    Surface created [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Freeing image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/animations/rocket/0023.png
                         }
-[23:39:12] [  END  ]    Ok [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Creating surface --
+[23:57:35] [  END  ]    Ok [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Creating surface --
                         {
            [ INFO  ]       From image: ../SpaceGame/resources/animations/rocket/0024.png
            [ INFO  ]       Type: IND_ALPHA
@@ -1507,13 +1507,13 @@ Indielib version: 0.5.1
            [ INFO  ]       Number of blocks: 1 x 1
            [ INFO  ]       Spare (Right | Down): 9 x 45
                         }
-[23:39:12] [  END  ]    Surface created [Elapsed time = 0.001 seg]
-[23:39:12] [ BEGIN ]    -- Freeing image --
+[23:57:35] [  END  ]    Surface created [Elapsed time = 0.001 seg]
+[23:57:35] [ BEGIN ]    -- Freeing image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/animations/rocket/0024.png
                         }
-[23:39:12] [  END  ]    Ok [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Creating surface --
+[23:57:35] [  END  ]    Ok [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Creating surface --
                         {
            [ INFO  ]       From image: ../SpaceGame/resources/animations/rocket/0025.png
            [ INFO  ]       Type: IND_ALPHA
@@ -1523,13 +1523,13 @@ Indielib version: 0.5.1
            [ INFO  ]       Number of blocks: 1 x 1
            [ INFO  ]       Spare (Right | Down): 9 x 45
                         }
-[23:39:12] [  END  ]    Surface created [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Freeing image --
+[23:57:35] [  END  ]    Surface created [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Freeing image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/animations/rocket/0025.png
                         }
-[23:39:12] [  END  ]    Ok [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Creating surface --
+[23:57:35] [  END  ]    Ok [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Creating surface --
                         {
            [ INFO  ]       From image: ../SpaceGame/resources/animations/rocket/0026.png
            [ INFO  ]       Type: IND_ALPHA
@@ -1539,13 +1539,13 @@ Indielib version: 0.5.1
            [ INFO  ]       Number of blocks: 1 x 1
            [ INFO  ]       Spare (Right | Down): 9 x 45
                         }
-[23:39:12] [  END  ]    Surface created [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Freeing image --
+[23:57:35] [  END  ]    Surface created [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Freeing image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/animations/rocket/0026.png
                         }
-[23:39:12] [  END  ]    Ok [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Creating surface --
+[23:57:35] [  END  ]    Ok [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Creating surface --
                         {
            [ INFO  ]       From image: ../SpaceGame/resources/animations/rocket/0027.png
            [ INFO  ]       Type: IND_ALPHA
@@ -1555,13 +1555,13 @@ Indielib version: 0.5.1
            [ INFO  ]       Number of blocks: 1 x 1
            [ INFO  ]       Spare (Right | Down): 9 x 45
                         }
-[23:39:12] [  END  ]    Surface created [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Freeing image --
+[23:57:35] [  END  ]    Surface created [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Freeing image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/animations/rocket/0027.png
                         }
-[23:39:12] [  END  ]    Ok [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Creating surface --
+[23:57:35] [  END  ]    Ok [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Creating surface --
                         {
            [ INFO  ]       From image: ../SpaceGame/resources/animations/rocket/0028.png
            [ INFO  ]       Type: IND_ALPHA
@@ -1571,13 +1571,13 @@ Indielib version: 0.5.1
            [ INFO  ]       Number of blocks: 1 x 1
            [ INFO  ]       Spare (Right | Down): 9 x 45
                         }
-[23:39:12] [  END  ]    Surface created [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Freeing image --
+[23:57:35] [  END  ]    Surface created [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Freeing image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/animations/rocket/0028.png
                         }
-[23:39:12] [  END  ]    Ok [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Creating surface --
+[23:57:35] [  END  ]    Ok [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Creating surface --
                         {
            [ INFO  ]       From image: ../SpaceGame/resources/animations/rocket/0029.png
            [ INFO  ]       Type: IND_ALPHA
@@ -1587,13 +1587,13 @@ Indielib version: 0.5.1
            [ INFO  ]       Number of blocks: 1 x 1
            [ INFO  ]       Spare (Right | Down): 9 x 45
                         }
-[23:39:12] [  END  ]    Surface created [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Freeing image --
+[23:57:35] [  END  ]    Surface created [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Freeing image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/animations/rocket/0029.png
                         }
-[23:39:12] [  END  ]    Ok [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Creating surface --
+[23:57:35] [  END  ]    Ok [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Creating surface --
                         {
            [ INFO  ]       From image: ../SpaceGame/resources/animations/rocket/0030.png
            [ INFO  ]       Type: IND_ALPHA
@@ -1603,13 +1603,13 @@ Indielib version: 0.5.1
            [ INFO  ]       Number of blocks: 1 x 1
            [ INFO  ]       Spare (Right | Down): 9 x 45
                         }
-[23:39:12] [  END  ]    Surface created [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Freeing image --
+[23:57:35] [  END  ]    Surface created [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Freeing image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/animations/rocket/0030.png
                         }
-[23:39:12] [  END  ]    Ok [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Creating surface --
+[23:57:35] [  END  ]    Ok [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Creating surface --
                         {
            [ INFO  ]       From image: ../SpaceGame/resources/animations/rocket/0031.png
            [ INFO  ]       Type: IND_ALPHA
@@ -1619,13 +1619,13 @@ Indielib version: 0.5.1
            [ INFO  ]       Number of blocks: 1 x 1
            [ INFO  ]       Spare (Right | Down): 9 x 45
                         }
-[23:39:12] [  END  ]    Surface created [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Freeing image --
+[23:57:35] [  END  ]    Surface created [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Freeing image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/animations/rocket/0031.png
                         }
-[23:39:12] [  END  ]    Ok [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Creating surface --
+[23:57:35] [  END  ]    Ok [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Creating surface --
                         {
            [ INFO  ]       From image: ../SpaceGame/resources/animations/rocket/0032.png
            [ INFO  ]       Type: IND_ALPHA
@@ -1635,13 +1635,13 @@ Indielib version: 0.5.1
            [ INFO  ]       Number of blocks: 1 x 1
            [ INFO  ]       Spare (Right | Down): 9 x 45
                         }
-[23:39:12] [  END  ]    Surface created [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Freeing image --
+[23:57:35] [  END  ]    Surface created [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Freeing image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/animations/rocket/0032.png
                         }
-[23:39:12] [  END  ]    Ok [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Creating surface --
+[23:57:35] [  END  ]    Ok [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Creating surface --
                         {
            [ INFO  ]       From image: ../SpaceGame/resources/animations/rocket/0033.png
            [ INFO  ]       Type: IND_ALPHA
@@ -1651,13 +1651,13 @@ Indielib version: 0.5.1
            [ INFO  ]       Number of blocks: 1 x 1
            [ INFO  ]       Spare (Right | Down): 9 x 45
                         }
-[23:39:12] [  END  ]    Surface created [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Freeing image --
+[23:57:35] [  END  ]    Surface created [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Freeing image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/animations/rocket/0033.png
                         }
-[23:39:12] [  END  ]    Ok [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Creating surface --
+[23:57:35] [  END  ]    Ok [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Creating surface --
                         {
            [ INFO  ]       From image: ../SpaceGame/resources/animations/rocket/0034.png
            [ INFO  ]       Type: IND_ALPHA
@@ -1667,13 +1667,13 @@ Indielib version: 0.5.1
            [ INFO  ]       Number of blocks: 1 x 1
            [ INFO  ]       Spare (Right | Down): 9 x 45
                         }
-[23:39:12] [  END  ]    Surface created [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Freeing image --
+[23:57:35] [  END  ]    Surface created [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Freeing image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/animations/rocket/0034.png
                         }
-[23:39:12] [  END  ]    Ok [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Creating surface --
+[23:57:35] [  END  ]    Ok [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Creating surface --
                         {
            [ INFO  ]       From image: ../SpaceGame/resources/animations/rocket/0035.png
            [ INFO  ]       Type: IND_ALPHA
@@ -1683,13 +1683,13 @@ Indielib version: 0.5.1
            [ INFO  ]       Number of blocks: 1 x 1
            [ INFO  ]       Spare (Right | Down): 9 x 45
                         }
-[23:39:12] [  END  ]    Surface created [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Freeing image --
+[23:57:35] [  END  ]    Surface created [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Freeing image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/animations/rocket/0035.png
                         }
-[23:39:12] [  END  ]    Ok [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Creating surface --
+[23:57:35] [  END  ]    Ok [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Creating surface --
                         {
            [ INFO  ]       From image: ../SpaceGame/resources/animations/rocket/0036.png
            [ INFO  ]       Type: IND_ALPHA
@@ -1699,13 +1699,13 @@ Indielib version: 0.5.1
            [ INFO  ]       Number of blocks: 1 x 1
            [ INFO  ]       Spare (Right | Down): 9 x 45
                         }
-[23:39:12] [  END  ]    Surface created [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Freeing image --
+[23:57:35] [  END  ]    Surface created [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Freeing image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/animations/rocket/0036.png
                         }
-[23:39:12] [  END  ]    Ok [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Creating surface --
+[23:57:35] [  END  ]    Ok [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Creating surface --
                         {
            [ INFO  ]       From image: ../SpaceGame/resources/animations/rocket/0037.png
            [ INFO  ]       Type: IND_ALPHA
@@ -1715,13 +1715,13 @@ Indielib version: 0.5.1
            [ INFO  ]       Number of blocks: 1 x 1
            [ INFO  ]       Spare (Right | Down): 9 x 45
                         }
-[23:39:12] [  END  ]    Surface created [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Freeing image --
+[23:57:35] [  END  ]    Surface created [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Freeing image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/animations/rocket/0037.png
                         }
-[23:39:12] [  END  ]    Ok [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Creating surface --
+[23:57:35] [  END  ]    Ok [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Creating surface --
                         {
            [ INFO  ]       From image: ../SpaceGame/resources/animations/rocket/0038.png
            [ INFO  ]       Type: IND_ALPHA
@@ -1731,13 +1731,13 @@ Indielib version: 0.5.1
            [ INFO  ]       Number of blocks: 1 x 1
            [ INFO  ]       Spare (Right | Down): 9 x 45
                         }
-[23:39:12] [  END  ]    Surface created [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Freeing image --
+[23:57:35] [  END  ]    Surface created [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Freeing image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/animations/rocket/0038.png
                         }
-[23:39:12] [  END  ]    Ok [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Creating surface --
+[23:57:35] [  END  ]    Ok [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Creating surface --
                         {
            [ INFO  ]       From image: ../SpaceGame/resources/animations/rocket/0039.png
            [ INFO  ]       Type: IND_ALPHA
@@ -1747,13 +1747,13 @@ Indielib version: 0.5.1
            [ INFO  ]       Number of blocks: 1 x 1
            [ INFO  ]       Spare (Right | Down): 9 x 45
                         }
-[23:39:12] [  END  ]    Surface created [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Freeing image --
+[23:57:35] [  END  ]    Surface created [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Freeing image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/animations/rocket/0039.png
                         }
-[23:39:12] [  END  ]    Ok [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Creating surface --
+[23:57:35] [  END  ]    Ok [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Creating surface --
                         {
            [ INFO  ]       From image: ../SpaceGame/resources/animations/rocket/0040.png
            [ INFO  ]       Type: IND_ALPHA
@@ -1763,13 +1763,13 @@ Indielib version: 0.5.1
            [ INFO  ]       Number of blocks: 1 x 1
            [ INFO  ]       Spare (Right | Down): 9 x 45
                         }
-[23:39:12] [  END  ]    Surface created [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Freeing image --
+[23:57:35] [  END  ]    Surface created [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Freeing image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/animations/rocket/0040.png
                         }
-[23:39:12] [  END  ]    Ok [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Creating surface --
+[23:57:35] [  END  ]    Ok [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Creating surface --
                         {
            [ INFO  ]       From image: ../SpaceGame/resources/animations/rocket/0041.png
            [ INFO  ]       Type: IND_ALPHA
@@ -1779,13 +1779,13 @@ Indielib version: 0.5.1
            [ INFO  ]       Number of blocks: 1 x 1
            [ INFO  ]       Spare (Right | Down): 9 x 45
                         }
-[23:39:12] [  END  ]    Surface created [Elapsed time = 0.001 seg]
-[23:39:12] [ BEGIN ]    -- Freeing image --
+[23:57:35] [  END  ]    Surface created [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Freeing image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/animations/rocket/0041.png
                         }
-[23:39:12] [  END  ]    Ok [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Creating surface --
+[23:57:35] [  END  ]    Ok [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Creating surface --
                         {
            [ INFO  ]       From image: ../SpaceGame/resources/animations/rocket/0042.png
            [ INFO  ]       Type: IND_ALPHA
@@ -1795,13 +1795,13 @@ Indielib version: 0.5.1
            [ INFO  ]       Number of blocks: 1 x 1
            [ INFO  ]       Spare (Right | Down): 9 x 45
                         }
-[23:39:12] [  END  ]    Surface created [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Freeing image --
+[23:57:35] [  END  ]    Surface created [Elapsed time = 0.001 seg]
+[23:57:35] [ BEGIN ]    -- Freeing image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/animations/rocket/0042.png
                         }
-[23:39:12] [  END  ]    Ok [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Creating surface --
+[23:57:35] [  END  ]    Ok [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Creating surface --
                         {
            [ INFO  ]       From image: ../SpaceGame/resources/animations/rocket/0043.png
            [ INFO  ]       Type: IND_ALPHA
@@ -1811,13 +1811,13 @@ Indielib version: 0.5.1
            [ INFO  ]       Number of blocks: 1 x 1
            [ INFO  ]       Spare (Right | Down): 9 x 45
                         }
-[23:39:12] [  END  ]    Surface created [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Freeing image --
+[23:57:35] [  END  ]    Surface created [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Freeing image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/animations/rocket/0043.png
                         }
-[23:39:12] [  END  ]    Ok [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Creating surface --
+[23:57:35] [  END  ]    Ok [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Creating surface --
                         {
            [ INFO  ]       From image: ../SpaceGame/resources/animations/rocket/0044.png
            [ INFO  ]       Type: IND_ALPHA
@@ -1827,13 +1827,13 @@ Indielib version: 0.5.1
            [ INFO  ]       Number of blocks: 1 x 1
            [ INFO  ]       Spare (Right | Down): 9 x 45
                         }
-[23:39:12] [  END  ]    Surface created [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Freeing image --
+[23:57:35] [  END  ]    Surface created [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Freeing image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/animations/rocket/0044.png
                         }
-[23:39:12] [  END  ]    Ok [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Creating surface --
+[23:57:35] [  END  ]    Ok [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Creating surface --
                         {
            [ INFO  ]       From image: ../SpaceGame/resources/animations/rocket/0045.png
            [ INFO  ]       Type: IND_ALPHA
@@ -1843,13 +1843,13 @@ Indielib version: 0.5.1
            [ INFO  ]       Number of blocks: 1 x 1
            [ INFO  ]       Spare (Right | Down): 9 x 45
                         }
-[23:39:12] [  END  ]    Surface created [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Freeing image --
+[23:57:35] [  END  ]    Surface created [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Freeing image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/animations/rocket/0045.png
                         }
-[23:39:12] [  END  ]    Ok [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Creating surface --
+[23:57:35] [  END  ]    Ok [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Creating surface --
                         {
            [ INFO  ]       From image: ../SpaceGame/resources/animations/rocket/0046.png
            [ INFO  ]       Type: IND_ALPHA
@@ -1859,13 +1859,13 @@ Indielib version: 0.5.1
            [ INFO  ]       Number of blocks: 1 x 1
            [ INFO  ]       Spare (Right | Down): 9 x 45
                         }
-[23:39:12] [  END  ]    Surface created [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Freeing image --
+[23:57:35] [  END  ]    Surface created [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Freeing image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/animations/rocket/0046.png
                         }
-[23:39:12] [  END  ]    Ok [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Creating surface --
+[23:57:35] [  END  ]    Ok [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Creating surface --
                         {
            [ INFO  ]       From image: ../SpaceGame/resources/animations/rocket/0047.png
            [ INFO  ]       Type: IND_ALPHA
@@ -1875,13 +1875,13 @@ Indielib version: 0.5.1
            [ INFO  ]       Number of blocks: 1 x 1
            [ INFO  ]       Spare (Right | Down): 9 x 45
                         }
-[23:39:12] [  END  ]    Surface created [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Freeing image --
+[23:57:35] [  END  ]    Surface created [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Freeing image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/animations/rocket/0047.png
                         }
-[23:39:12] [  END  ]    Ok [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Creating surface --
+[23:57:35] [  END  ]    Ok [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Creating surface --
                         {
            [ INFO  ]       From image: ../SpaceGame/resources/animations/rocket/0048.png
            [ INFO  ]       Type: IND_ALPHA
@@ -1891,13 +1891,13 @@ Indielib version: 0.5.1
            [ INFO  ]       Number of blocks: 1 x 1
            [ INFO  ]       Spare (Right | Down): 9 x 45
                         }
-[23:39:12] [  END  ]    Surface created [Elapsed time = 0.001 seg]
-[23:39:12] [ BEGIN ]    -- Freeing image --
+[23:57:35] [  END  ]    Surface created [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Freeing image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/animations/rocket/0048.png
                         }
-[23:39:12] [  END  ]    Ok [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Creating surface --
+[23:57:35] [  END  ]    Ok [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Creating surface --
                         {
            [ INFO  ]       From image: ../SpaceGame/resources/animations/rocket/0049.png
            [ INFO  ]       Type: IND_ALPHA
@@ -1907,13 +1907,13 @@ Indielib version: 0.5.1
            [ INFO  ]       Number of blocks: 1 x 1
            [ INFO  ]       Spare (Right | Down): 9 x 45
                         }
-[23:39:12] [  END  ]    Surface created [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Freeing image --
+[23:57:35] [  END  ]    Surface created [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Freeing image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/animations/rocket/0049.png
                         }
-[23:39:12] [  END  ]    Ok [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Creating surface --
+[23:57:35] [  END  ]    Ok [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Creating surface --
                         {
            [ INFO  ]       From image: ../SpaceGame/resources/animations/rocket/0050.png
            [ INFO  ]       Type: IND_ALPHA
@@ -1923,13 +1923,13 @@ Indielib version: 0.5.1
            [ INFO  ]       Number of blocks: 1 x 1
            [ INFO  ]       Spare (Right | Down): 9 x 45
                         }
-[23:39:12] [  END  ]    Surface created [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Freeing image --
+[23:57:35] [  END  ]    Surface created [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Freeing image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/animations/rocket/0050.png
                         }
-[23:39:12] [  END  ]    Ok [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Creating surface --
+[23:57:35] [  END  ]    Ok [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Creating surface --
                         {
            [ INFO  ]       From image: ../SpaceGame/resources/animations/rocket/0051.png
            [ INFO  ]       Type: IND_ALPHA
@@ -1939,13 +1939,13 @@ Indielib version: 0.5.1
            [ INFO  ]       Number of blocks: 1 x 1
            [ INFO  ]       Spare (Right | Down): 9 x 45
                         }
-[23:39:12] [  END  ]    Surface created [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Freeing image --
+[23:57:35] [  END  ]    Surface created [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Freeing image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/animations/rocket/0051.png
                         }
-[23:39:12] [  END  ]    Ok [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Creating surface --
+[23:57:35] [  END  ]    Ok [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Creating surface --
                         {
            [ INFO  ]       From image: ../SpaceGame/resources/animations/rocket/0052.png
            [ INFO  ]       Type: IND_ALPHA
@@ -1955,13 +1955,13 @@ Indielib version: 0.5.1
            [ INFO  ]       Number of blocks: 1 x 1
            [ INFO  ]       Spare (Right | Down): 9 x 45
                         }
-[23:39:12] [  END  ]    Surface created [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Freeing image --
+[23:57:35] [  END  ]    Surface created [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Freeing image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/animations/rocket/0052.png
                         }
-[23:39:12] [  END  ]    Ok [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Creating surface --
+[23:57:35] [  END  ]    Ok [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Creating surface --
                         {
            [ INFO  ]       From image: ../SpaceGame/resources/animations/rocket/0053.png
            [ INFO  ]       Type: IND_ALPHA
@@ -1971,13 +1971,13 @@ Indielib version: 0.5.1
            [ INFO  ]       Number of blocks: 1 x 1
            [ INFO  ]       Spare (Right | Down): 9 x 45
                         }
-[23:39:12] [  END  ]    Surface created [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Freeing image --
+[23:57:35] [  END  ]    Surface created [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Freeing image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/animations/rocket/0053.png
                         }
-[23:39:12] [  END  ]    Ok [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Creating surface --
+[23:57:35] [  END  ]    Ok [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Creating surface --
                         {
            [ INFO  ]       From image: ../SpaceGame/resources/animations/rocket/0054.png
            [ INFO  ]       Type: IND_ALPHA
@@ -1987,13 +1987,13 @@ Indielib version: 0.5.1
            [ INFO  ]       Number of blocks: 1 x 1
            [ INFO  ]       Spare (Right | Down): 9 x 45
                         }
-[23:39:12] [  END  ]    Surface created [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Freeing image --
+[23:57:35] [  END  ]    Surface created [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Freeing image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/animations/rocket/0054.png
                         }
-[23:39:12] [  END  ]    Ok [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Creating surface --
+[23:57:35] [  END  ]    Ok [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Creating surface --
                         {
            [ INFO  ]       From image: ../SpaceGame/resources/animations/rocket/0055.png
            [ INFO  ]       Type: IND_ALPHA
@@ -2003,13 +2003,13 @@ Indielib version: 0.5.1
            [ INFO  ]       Number of blocks: 1 x 1
            [ INFO  ]       Spare (Right | Down): 9 x 45
                         }
-[23:39:12] [  END  ]    Surface created [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Freeing image --
+[23:57:35] [  END  ]    Surface created [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Freeing image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/animations/rocket/0055.png
                         }
-[23:39:12] [  END  ]    Ok [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Creating surface --
+[23:57:35] [  END  ]    Ok [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Creating surface --
                         {
            [ INFO  ]       From image: ../SpaceGame/resources/animations/rocket/0056.png
            [ INFO  ]       Type: IND_ALPHA
@@ -2019,13 +2019,13 @@ Indielib version: 0.5.1
            [ INFO  ]       Number of blocks: 1 x 1
            [ INFO  ]       Spare (Right | Down): 9 x 45
                         }
-[23:39:12] [  END  ]    Surface created [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Freeing image --
+[23:57:35] [  END  ]    Surface created [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Freeing image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/animations/rocket/0056.png
                         }
-[23:39:12] [  END  ]    Ok [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Creating surface --
+[23:57:35] [  END  ]    Ok [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Creating surface --
                         {
            [ INFO  ]       From image: ../SpaceGame/resources/animations/rocket/0057.png
            [ INFO  ]       Type: IND_ALPHA
@@ -2035,13 +2035,13 @@ Indielib version: 0.5.1
            [ INFO  ]       Number of blocks: 1 x 1
            [ INFO  ]       Spare (Right | Down): 9 x 45
                         }
-[23:39:12] [  END  ]    Surface created [Elapsed time = 0.001 seg]
-[23:39:12] [ BEGIN ]    -- Freeing image --
+[23:57:35] [  END  ]    Surface created [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Freeing image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/animations/rocket/0057.png
                         }
-[23:39:12] [  END  ]    Ok [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Creating surface --
+[23:57:35] [  END  ]    Ok [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Creating surface --
                         {
            [ INFO  ]       From image: ../SpaceGame/resources/animations/rocket/0058.png
            [ INFO  ]       Type: IND_ALPHA
@@ -2051,13 +2051,13 @@ Indielib version: 0.5.1
            [ INFO  ]       Number of blocks: 1 x 1
            [ INFO  ]       Spare (Right | Down): 9 x 45
                         }
-[23:39:12] [  END  ]    Surface created [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Freeing image --
+[23:57:35] [  END  ]    Surface created [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Freeing image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/animations/rocket/0058.png
                         }
-[23:39:12] [  END  ]    Ok [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Creating surface --
+[23:57:35] [  END  ]    Ok [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Creating surface --
                         {
            [ INFO  ]       From image: ../SpaceGame/resources/animations/rocket/0059.png
            [ INFO  ]       Type: IND_ALPHA
@@ -2067,13 +2067,13 @@ Indielib version: 0.5.1
            [ INFO  ]       Number of blocks: 1 x 1
            [ INFO  ]       Spare (Right | Down): 9 x 45
                         }
-[23:39:12] [  END  ]    Surface created [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Freeing image --
+[23:57:35] [  END  ]    Surface created [Elapsed time = 0.001 seg]
+[23:57:35] [ BEGIN ]    -- Freeing image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/animations/rocket/0059.png
                         }
-[23:39:12] [  END  ]    Ok [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Creating surface --
+[23:57:35] [  END  ]    Ok [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Creating surface --
                         {
            [ INFO  ]       From image: ../SpaceGame/resources/animations/rocket/0060.png
            [ INFO  ]       Type: IND_ALPHA
@@ -2083,28 +2083,28 @@ Indielib version: 0.5.1
            [ INFO  ]       Number of blocks: 1 x 1
            [ INFO  ]       Spare (Right | Down): 9 x 45
                         }
-[23:39:12] [  END  ]    Surface created [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Freeing image --
+[23:57:35] [  END  ]    Surface created [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Freeing image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/animations/rocket/0060.png
                         }
-[23:39:12] [  END  ]    Ok [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Adding 2d entity --
+[23:57:35] [  END  ]    Ok [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Adding 2d entity --
                         {
            [ INFO  ]       Name: 16
                         }
-[23:39:12] [  END  ]    2d entity added [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Adding 2d entity --
+[23:57:35] [  END  ]    2d entity added [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Adding 2d entity --
                         {
            [ INFO  ]       Name: 17
                         }
-[23:39:12] [  END  ]    2d entity added [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Parsing collision file --
+[23:57:35] [  END  ]    2d entity added [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Parsing collision file --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/shipBound.xml
                         }
-[23:39:12] [  END  ]    Collision file loaded [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Loading Image --
+[23:57:35] [  END  ]    Collision file loaded [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Loading Image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/fx_lazer_orange_dff.png
            [ INFO  ]       Extension: png
@@ -2112,8 +2112,8 @@ Indielib version: 0.5.1
            [ INFO  ]       Bpp: 4
            [ INFO  ]       Format: IND_RGBA
                         }
-[23:39:12] [  END  ]    Image loaded [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Creating surface --
+[23:57:35] [  END  ]    Image loaded [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Creating surface --
                         {
            [ INFO  ]       From image: ../SpaceGame/resources/fx_lazer_orange_dff.png
            [ INFO  ]       Type: IND_ALPHA
@@ -2123,18 +2123,18 @@ Indielib version: 0.5.1
            [ INFO  ]       Number of blocks: 1 x 1
            [ INFO  ]       Spare (Right | Down): 0 x 30
                         }
-[23:39:12] [  END  ]    Surface created [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Freeing image --
+[23:57:35] [  END  ]    Surface created [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Freeing image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/fx_lazer_orange_dff.png
                         }
-[23:39:12] [  END  ]    Ok [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Adding 2d entity --
+[23:57:35] [  END  ]    Ok [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Adding 2d entity --
                         {
            [ INFO  ]       Name: 18
                         }
-[23:39:12] [  END  ]    2d entity added [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Loading Image --
+[23:57:35] [  END  ]    2d entity added [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Loading Image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/fx_lazer_orange_dff.png
            [ INFO  ]       Extension: png
@@ -2142,8 +2142,8 @@ Indielib version: 0.5.1
            [ INFO  ]       Bpp: 4
            [ INFO  ]       Format: IND_RGBA
                         }
-[23:39:12] [  END  ]    Image loaded [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Creating surface --
+[23:57:35] [  END  ]    Image loaded [Elapsed time = 0.001 seg]
+[23:57:35] [ BEGIN ]    -- Creating surface --
                         {
            [ INFO  ]       From image: ../SpaceGame/resources/fx_lazer_orange_dff.png
            [ INFO  ]       Type: IND_ALPHA
@@ -2153,18 +2153,18 @@ Indielib version: 0.5.1
            [ INFO  ]       Number of blocks: 1 x 1
            [ INFO  ]       Spare (Right | Down): 0 x 30
                         }
-[23:39:12] [  END  ]    Surface created [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Freeing image --
+[23:57:35] [  END  ]    Surface created [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Freeing image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/fx_lazer_orange_dff.png
                         }
-[23:39:12] [  END  ]    Ok [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Adding 2d entity --
+[23:57:35] [  END  ]    Ok [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Adding 2d entity --
                         {
            [ INFO  ]       Name: 19
                         }
-[23:39:12] [  END  ]    2d entity added [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Loading Image --
+[23:57:35] [  END  ]    2d entity added [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Loading Image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/fx_lazer_orange_dff.png
            [ INFO  ]       Extension: png
@@ -2172,8 +2172,8 @@ Indielib version: 0.5.1
            [ INFO  ]       Bpp: 4
            [ INFO  ]       Format: IND_RGBA
                         }
-[23:39:12] [  END  ]    Image loaded [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Creating surface --
+[23:57:35] [  END  ]    Image loaded [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Creating surface --
                         {
            [ INFO  ]       From image: ../SpaceGame/resources/fx_lazer_orange_dff.png
            [ INFO  ]       Type: IND_ALPHA
@@ -2183,18 +2183,18 @@ Indielib version: 0.5.1
            [ INFO  ]       Number of blocks: 1 x 1
            [ INFO  ]       Spare (Right | Down): 0 x 30
                         }
-[23:39:12] [  END  ]    Surface created [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Freeing image --
+[23:57:35] [  END  ]    Surface created [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Freeing image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/fx_lazer_orange_dff.png
                         }
-[23:39:12] [  END  ]    Ok [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Adding 2d entity --
+[23:57:35] [  END  ]    Ok [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Adding 2d entity --
                         {
            [ INFO  ]       Name: 20
                         }
-[23:39:12] [  END  ]    2d entity added [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Loading Image --
+[23:57:35] [  END  ]    2d entity added [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Loading Image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/fx_lazer_orange_dff.png
            [ INFO  ]       Extension: png
@@ -2202,8 +2202,8 @@ Indielib version: 0.5.1
            [ INFO  ]       Bpp: 4
            [ INFO  ]       Format: IND_RGBA
                         }
-[23:39:12] [  END  ]    Image loaded [Elapsed time = 0.001 seg]
-[23:39:12] [ BEGIN ]    -- Creating surface --
+[23:57:35] [  END  ]    Image loaded [Elapsed time = 0.001 seg]
+[23:57:35] [ BEGIN ]    -- Creating surface --
                         {
            [ INFO  ]       From image: ../SpaceGame/resources/fx_lazer_orange_dff.png
            [ INFO  ]       Type: IND_ALPHA
@@ -2213,18 +2213,18 @@ Indielib version: 0.5.1
            [ INFO  ]       Number of blocks: 1 x 1
            [ INFO  ]       Spare (Right | Down): 0 x 30
                         }
-[23:39:12] [  END  ]    Surface created [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Freeing image --
+[23:57:35] [  END  ]    Surface created [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Freeing image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/fx_lazer_orange_dff.png
                         }
-[23:39:12] [  END  ]    Ok [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Adding 2d entity --
+[23:57:35] [  END  ]    Ok [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Adding 2d entity --
                         {
            [ INFO  ]       Name: 21
                         }
-[23:39:12] [  END  ]    2d entity added [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Loading Image --
+[23:57:35] [  END  ]    2d entity added [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Loading Image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/fx_lazer_orange_dff.png
            [ INFO  ]       Extension: png
@@ -2232,8 +2232,8 @@ Indielib version: 0.5.1
            [ INFO  ]       Bpp: 4
            [ INFO  ]       Format: IND_RGBA
                         }
-[23:39:12] [  END  ]    Image loaded [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Creating surface --
+[23:57:35] [  END  ]    Image loaded [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Creating surface --
                         {
            [ INFO  ]       From image: ../SpaceGame/resources/fx_lazer_orange_dff.png
            [ INFO  ]       Type: IND_ALPHA
@@ -2243,18 +2243,18 @@ Indielib version: 0.5.1
            [ INFO  ]       Number of blocks: 1 x 1
            [ INFO  ]       Spare (Right | Down): 0 x 30
                         }
-[23:39:12] [  END  ]    Surface created [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Freeing image --
+[23:57:35] [  END  ]    Surface created [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Freeing image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/fx_lazer_orange_dff.png
                         }
-[23:39:12] [  END  ]    Ok [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Adding 2d entity --
+[23:57:35] [  END  ]    Ok [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Adding 2d entity --
                         {
            [ INFO  ]       Name: 22
                         }
-[23:39:12] [  END  ]    2d entity added [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Loading Image --
+[23:57:35] [  END  ]    2d entity added [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Loading Image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/fx_lazer_orange_dff.png
            [ INFO  ]       Extension: png
@@ -2262,8 +2262,8 @@ Indielib version: 0.5.1
            [ INFO  ]       Bpp: 4
            [ INFO  ]       Format: IND_RGBA
                         }
-[23:39:12] [  END  ]    Image loaded [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Creating surface --
+[23:57:35] [  END  ]    Image loaded [Elapsed time = 0.001 seg]
+[23:57:35] [ BEGIN ]    -- Creating surface --
                         {
            [ INFO  ]       From image: ../SpaceGame/resources/fx_lazer_orange_dff.png
            [ INFO  ]       Type: IND_ALPHA
@@ -2273,18 +2273,18 @@ Indielib version: 0.5.1
            [ INFO  ]       Number of blocks: 1 x 1
            [ INFO  ]       Spare (Right | Down): 0 x 30
                         }
-[23:39:12] [  END  ]    Surface created [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Freeing image --
+[23:57:35] [  END  ]    Surface created [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Freeing image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/fx_lazer_orange_dff.png
                         }
-[23:39:12] [  END  ]    Ok [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Adding 2d entity --
+[23:57:35] [  END  ]    Ok [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Adding 2d entity --
                         {
            [ INFO  ]       Name: 23
                         }
-[23:39:12] [  END  ]    2d entity added [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Loading Image --
+[23:57:35] [  END  ]    2d entity added [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Loading Image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/fx_lazer_orange_dff.png
            [ INFO  ]       Extension: png
@@ -2292,8 +2292,8 @@ Indielib version: 0.5.1
            [ INFO  ]       Bpp: 4
            [ INFO  ]       Format: IND_RGBA
                         }
-[23:39:12] [  END  ]    Image loaded [Elapsed time = 0.001 seg]
-[23:39:12] [ BEGIN ]    -- Creating surface --
+[23:57:35] [  END  ]    Image loaded [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Creating surface --
                         {
            [ INFO  ]       From image: ../SpaceGame/resources/fx_lazer_orange_dff.png
            [ INFO  ]       Type: IND_ALPHA
@@ -2303,18 +2303,18 @@ Indielib version: 0.5.1
            [ INFO  ]       Number of blocks: 1 x 1
            [ INFO  ]       Spare (Right | Down): 0 x 30
                         }
-[23:39:12] [  END  ]    Surface created [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Freeing image --
+[23:57:35] [  END  ]    Surface created [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Freeing image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/fx_lazer_orange_dff.png
                         }
-[23:39:12] [  END  ]    Ok [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Adding 2d entity --
+[23:57:35] [  END  ]    Ok [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Adding 2d entity --
                         {
            [ INFO  ]       Name: 24
                         }
-[23:39:12] [  END  ]    2d entity added [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Loading Image --
+[23:57:35] [  END  ]    2d entity added [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Loading Image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/fx_lazer_orange_dff.png
            [ INFO  ]       Extension: png
@@ -2322,8 +2322,8 @@ Indielib version: 0.5.1
            [ INFO  ]       Bpp: 4
            [ INFO  ]       Format: IND_RGBA
                         }
-[23:39:12] [  END  ]    Image loaded [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Creating surface --
+[23:57:35] [  END  ]    Image loaded [Elapsed time = 0.001 seg]
+[23:57:35] [ BEGIN ]    -- Creating surface --
                         {
            [ INFO  ]       From image: ../SpaceGame/resources/fx_lazer_orange_dff.png
            [ INFO  ]       Type: IND_ALPHA
@@ -2333,18 +2333,18 @@ Indielib version: 0.5.1
            [ INFO  ]       Number of blocks: 1 x 1
            [ INFO  ]       Spare (Right | Down): 0 x 30
                         }
-[23:39:12] [  END  ]    Surface created [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Freeing image --
+[23:57:35] [  END  ]    Surface created [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Freeing image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/fx_lazer_orange_dff.png
                         }
-[23:39:12] [  END  ]    Ok [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Adding 2d entity --
+[23:57:35] [  END  ]    Ok [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Adding 2d entity --
                         {
            [ INFO  ]       Name: 25
                         }
-[23:39:12] [  END  ]    2d entity added [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Loading Image --
+[23:57:35] [  END  ]    2d entity added [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Loading Image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/fx_lazer_orange_dff.png
            [ INFO  ]       Extension: png
@@ -2352,8 +2352,8 @@ Indielib version: 0.5.1
            [ INFO  ]       Bpp: 4
            [ INFO  ]       Format: IND_RGBA
                         }
-[23:39:12] [  END  ]    Image loaded [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Creating surface --
+[23:57:35] [  END  ]    Image loaded [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Creating surface --
                         {
            [ INFO  ]       From image: ../SpaceGame/resources/fx_lazer_orange_dff.png
            [ INFO  ]       Type: IND_ALPHA
@@ -2363,18 +2363,18 @@ Indielib version: 0.5.1
            [ INFO  ]       Number of blocks: 1 x 1
            [ INFO  ]       Spare (Right | Down): 0 x 30
                         }
-[23:39:12] [  END  ]    Surface created [Elapsed time = 0.001 seg]
-[23:39:12] [ BEGIN ]    -- Freeing image --
+[23:57:35] [  END  ]    Surface created [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Freeing image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/fx_lazer_orange_dff.png
                         }
-[23:39:12] [  END  ]    Ok [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Adding 2d entity --
+[23:57:35] [  END  ]    Ok [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Adding 2d entity --
                         {
            [ INFO  ]       Name: 26
                         }
-[23:39:12] [  END  ]    2d entity added [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Loading Image --
+[23:57:35] [  END  ]    2d entity added [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Loading Image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/fx_lazer_orange_dff.png
            [ INFO  ]       Extension: png
@@ -2382,8 +2382,8 @@ Indielib version: 0.5.1
            [ INFO  ]       Bpp: 4
            [ INFO  ]       Format: IND_RGBA
                         }
-[23:39:12] [  END  ]    Image loaded [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Creating surface --
+[23:57:35] [  END  ]    Image loaded [Elapsed time = 0.001 seg]
+[23:57:35] [ BEGIN ]    -- Creating surface --
                         {
            [ INFO  ]       From image: ../SpaceGame/resources/fx_lazer_orange_dff.png
            [ INFO  ]       Type: IND_ALPHA
@@ -2393,18 +2393,18 @@ Indielib version: 0.5.1
            [ INFO  ]       Number of blocks: 1 x 1
            [ INFO  ]       Spare (Right | Down): 0 x 30
                         }
-[23:39:12] [  END  ]    Surface created [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Freeing image --
+[23:57:35] [  END  ]    Surface created [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Freeing image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/fx_lazer_orange_dff.png
                         }
-[23:39:12] [  END  ]    Ok [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Adding 2d entity --
+[23:57:35] [  END  ]    Ok [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Adding 2d entity --
                         {
            [ INFO  ]       Name: 27
                         }
-[23:39:12] [  END  ]    2d entity added [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Loading Image --
+[23:57:35] [  END  ]    2d entity added [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Loading Image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/font_small.png
            [ INFO  ]       Extension: png
@@ -2412,11 +2412,11 @@ Indielib version: 0.5.1
            [ INFO  ]       Bpp: 4
            [ INFO  ]       Format: IND_RGBA
                         }
-[23:39:12] [  END  ]    Image loaded [Elapsed time = 0.001 seg]
-[23:39:12] [ BEGIN ]    -- Parsing and loading font --
+[23:57:35] [  END  ]    Image loaded [Elapsed time = 0.001 seg]
+[23:57:35] [ BEGIN ]    -- Parsing and loading font --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/font_small.xml
-[23:39:12] [ BEGIN ]       -- Creating surface --
+[23:57:35] [ BEGIN ]       -- Creating surface --
                            {
            [ INFO  ]          From image: ../SpaceGame/resources/font_small.png
            [ INFO  ]          Type: IND_ALPHA
@@ -2426,15 +2426,15 @@ Indielib version: 0.5.1
            [ INFO  ]          Number of blocks: 1 x 1
            [ INFO  ]          Spare (Right | Down): 0 x 0
                            }
-[23:39:12] [  END  ]       Surface created [Elapsed time = 0 seg]
+[23:57:35] [  END  ]       Surface created [Elapsed time = 0 seg]
                         }
-[23:39:12] [  END  ]    Font parsed and loaded [Elapsed time = 0.001 seg]
-[23:39:12] [ BEGIN ]    -- Freeing image --
+[23:57:35] [  END  ]    Font parsed and loaded [Elapsed time = 0.001 seg]
+[23:57:35] [ BEGIN ]    -- Freeing image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/font_small.png
                         }
-[23:39:12] [  END  ]    Ok [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Loading Image --
+[23:57:35] [  END  ]    Ok [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Loading Image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/font_big.png
            [ INFO  ]       Extension: png
@@ -2442,11 +2442,11 @@ Indielib version: 0.5.1
            [ INFO  ]       Bpp: 4
            [ INFO  ]       Format: IND_RGBA
                         }
-[23:39:12] [  END  ]    Image loaded [Elapsed time = 0.006 seg]
-[23:39:12] [ BEGIN ]    -- Parsing and loading font --
+[23:57:35] [  END  ]    Image loaded [Elapsed time = 0.006 seg]
+[23:57:35] [ BEGIN ]    -- Parsing and loading font --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/font_big.xml
-[23:39:12] [ BEGIN ]       -- Creating surface --
+[23:57:35] [ BEGIN ]       -- Creating surface --
                            {
            [ INFO  ]          From image: ../SpaceGame/resources/font_big.png
            [ INFO  ]          Type: IND_ALPHA
@@ -2456,35 +2456,35 @@ Indielib version: 0.5.1
            [ INFO  ]          Number of blocks: 1 x 1
            [ INFO  ]          Spare (Right | Down): 0 x 0
                            }
-[23:39:12] [  END  ]       Surface created [Elapsed time = 0.001 seg]
+[23:57:35] [  END  ]       Surface created [Elapsed time = 0.001 seg]
                         }
-[23:39:12] [  END  ]    Font parsed and loaded [Elapsed time = 0.002 seg]
-[23:39:12] [ BEGIN ]    -- Freeing image --
+[23:57:35] [  END  ]    Font parsed and loaded [Elapsed time = 0.001 seg]
+[23:57:35] [ BEGIN ]    -- Freeing image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/font_big.png
                         }
-[23:39:12] [  END  ]    Ok [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Adding 2d entity --
+[23:57:35] [  END  ]    Ok [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Adding 2d entity --
                         {
            [ INFO  ]       Name: 28
                         }
-[23:39:12] [  END  ]    2d entity added [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Adding 2d entity --
+[23:57:35] [  END  ]    2d entity added [Elapsed time = 0.001 seg]
+[23:57:35] [ BEGIN ]    -- Adding 2d entity --
                         {
            [ INFO  ]       Name: 29
                         }
-[23:39:12] [  END  ]    2d entity added [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Adding 2d entity --
+[23:57:35] [  END  ]    2d entity added [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Adding 2d entity --
                         {
            [ INFO  ]       Name: 30
                         }
-[23:39:12] [  END  ]    2d entity added [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Adding 2d entity --
+[23:57:35] [  END  ]    2d entity added [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Adding 2d entity --
                         {
            [ INFO  ]       Name: 31
                         }
-[23:39:12] [  END  ]    2d entity added [Elapsed time = 0 seg]
-[23:39:12] [ BEGIN ]    -- Loading Image --
+[23:57:35] [  END  ]    2d entity added [Elapsed time = 0 seg]
+[23:57:35] [ BEGIN ]    -- Loading Image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/things.png
            [ INFO  ]       Extension: png
@@ -2492,8 +2492,8 @@ Indielib version: 0.5.1
            [ INFO  ]       Bpp: 4
            [ INFO  ]       Format: IND_RGBA
                         }
-[23:39:12] [  END  ]    Image loaded [Elapsed time = 0.026 seg]
-[23:39:12] [ BEGIN ]    -- Creating surface --
+[23:57:35] [  END  ]    Image loaded [Elapsed time = 0.026 seg]
+[23:57:35] [ BEGIN ]    -- Creating surface --
                         {
            [ INFO  ]       From image: ../SpaceGame/resources/things.png
            [ INFO  ]       Type: IND_ALPHA
@@ -2503,15 +2503,15 @@ Indielib version: 0.5.1
            [ INFO  ]       Number of blocks: 1 x 1
            [ INFO  ]       Spare (Right | Down): 818 x 818
                         }
-[23:39:12] [  END  ]    Surface created [Elapsed time = 0.014 seg]
-[23:39:12] [ BEGIN ]    -- Freeing image --
+[23:57:35] [  END  ]    Surface created [Elapsed time = 0.016 seg]
+[23:57:35] [ BEGIN ]    -- Freeing image --
                         {
            [ INFO  ]       File name: ../SpaceGame/resources/things.png
                         }
-[23:39:12] [  END  ]    Ok [Elapsed time = 0.001 seg]
-[23:39:41] [ BEGIN ]    -- Finalizing Entity2dManager --
+[23:57:35] [  END  ]    Ok [Elapsed time = 0.001 seg]
+[23:58:33] [ BEGIN ]    -- Finalizing Entity2dManager --
                         {
-[23:39:41] [ BEGIN ]       -- Freeing 2d entities --
+[23:58:33] [ BEGIN ]       -- Freeing 2d entities --
                            {
            [ INFO  ]          Freeing 2d entity: 0
            [ INFO  ]          Freeing 2d entity: 15
@@ -2546,333 +2546,333 @@ Indielib version: 0.5.1
            [ INFO  ]          Freeing 2d entity: 0
            [ INFO  ]          Freeing 2d entity: 0
                            }
-[23:39:41] [  END  ]       Entities freed [Elapsed time = 0 seg]
+[23:58:33] [  END  ]       Entities freed [Elapsed time = 0 seg]
                         }
-[23:39:41] [  END  ]    IND_Entity2dManager finalized [Elapsed time = 0 seg]
-[23:39:41] [ BEGIN ]    -- Finalizing FontManager --
+[23:58:33] [  END  ]    IND_Entity2dManager finalized [Elapsed time = 0 seg]
+[23:58:33] [ BEGIN ]    -- Finalizing FontManager --
                         {
-[23:39:41] [ BEGIN ]       -- Freeing fonts --
+[23:58:33] [ BEGIN ]       -- Freeing fonts --
                            {
            [ INFO  ]          Freeing font: ../SpaceGame/resources/font_big.xml
-[23:39:41] [ BEGIN ]          -- Freeing surface --
+[23:58:33] [ BEGIN ]          -- Freeing surface --
                               {
                               }
-[23:39:41] [  END  ]          Ok [Elapsed time = 0 seg]
+[23:58:33] [  END  ]          Ok [Elapsed time = 0.001 seg]
            [ INFO  ]          Freeing font: ../SpaceGame/resources/font_big.xml
-[23:39:41] [ BEGIN ]          -- Freeing surface --
+[23:58:33] [ BEGIN ]          -- Freeing surface --
                               {
                               }
-[23:39:41] [  END  ]          Ok [Elapsed time = 0 seg]
+[23:58:33] [  END  ]          Ok [Elapsed time = 0 seg]
            [ INFO  ]          Freeing font: ../SpaceGame/resources/font_big.xml
-[23:39:41] [ BEGIN ]          -- Freeing surface --
+[23:58:33] [ BEGIN ]          -- Freeing surface --
                               {
                               }
-[23:39:41] [  END  ]          Ok [Elapsed time = 0.001 seg]
+[23:58:33] [  END  ]          Ok [Elapsed time = 0 seg]
            [ INFO  ]          Freeing font: ../SpaceGame/resources/font_big.xml
-[23:39:41] [ BEGIN ]          -- Freeing surface --
+[23:58:33] [ BEGIN ]          -- Freeing surface --
                               {
                               }
-[23:39:41] [  END  ]          Ok [Elapsed time = 0 seg]
+[23:58:33] [  END  ]          Ok [Elapsed time = 0 seg]
            [ INFO  ]          Freeing font: ../SpaceGame/resources/font_big.xml
-[23:39:41] [ BEGIN ]          -- Freeing surface --
+[23:58:33] [ BEGIN ]          -- Freeing surface --
                               {
                               }
-[23:39:41] [  END  ]          Ok [Elapsed time = 0 seg]
+[23:58:33] [  END  ]          Ok [Elapsed time = 0 seg]
            [ INFO  ]          Freeing font: ../SpaceGame/resources/font_big.xml
-[23:39:41] [ BEGIN ]          -- Freeing surface --
+[23:58:33] [ BEGIN ]          -- Freeing surface --
                               {
                               }
-[23:39:41] [  END  ]          Ok [Elapsed time = 0 seg]
+[23:58:33] [  END  ]          Ok [Elapsed time = 0 seg]
            [ INFO  ]          Freeing font: ../SpaceGame/resources/font_small.xml
-[23:39:41] [ BEGIN ]          -- Freeing surface --
+[23:58:33] [ BEGIN ]          -- Freeing surface --
                               {
                               }
-[23:39:41] [  END  ]          Ok [Elapsed time = 0 seg]
+[23:58:33] [  END  ]          Ok [Elapsed time = 0 seg]
            [ INFO  ]          Freeing font: ../SpaceGame/resources/font_big.xml
-[23:39:41] [ BEGIN ]          -- Freeing surface --
+[23:58:33] [ BEGIN ]          -- Freeing surface --
                               {
                               }
-[23:39:41] [  END  ]          Ok [Elapsed time = 0 seg]
+[23:58:33] [  END  ]          Ok [Elapsed time = 0 seg]
                            }
-[23:39:41] [  END  ]       Fonts freed [Elapsed time = 0.001 seg]
+[23:58:33] [  END  ]       Fonts freed [Elapsed time = 0.001 seg]
                         }
-[23:39:41] [  END  ]    FontManager finalized [Elapsed time = 0.001 seg]
-[23:39:41] [ BEGIN ]    -- Finalizing AnimationManager --
+[23:58:33] [  END  ]    FontManager finalized [Elapsed time = 0.001 seg]
+[23:58:33] [ BEGIN ]    -- Finalizing AnimationManager --
                         {
-[23:39:41] [ BEGIN ]       -- Freeing animations --
+[23:58:33] [ BEGIN ]       -- Freeing animations --
                            {
-[23:39:41] [ BEGIN ]          -- Freeing animation --
+[23:58:33] [ BEGIN ]          -- Freeing animation --
                               {
            [ INFO  ]             Name: ../SpaceGame/resources/animations/rocket.xml
-[23:39:41] [ BEGIN ]             -- Freeing surface --
+[23:58:33] [ BEGIN ]             -- Freeing surface --
                                  {
                                  }
-[23:39:41] [  END  ]             Ok [Elapsed time = 0 seg]
-[23:39:41] [ BEGIN ]             -- Freeing surface --
+[23:58:33] [  END  ]             Ok [Elapsed time = 0 seg]
+[23:58:33] [ BEGIN ]             -- Freeing surface --
                                  {
                                  }
-[23:39:41] [  END  ]             Ok [Elapsed time = 0 seg]
-[23:39:41] [ BEGIN ]             -- Freeing surface --
+[23:58:33] [  END  ]             Ok [Elapsed time = 0 seg]
+[23:58:33] [ BEGIN ]             -- Freeing surface --
                                  {
                                  }
-[23:39:41] [  END  ]             Ok [Elapsed time = 0 seg]
-[23:39:41] [ BEGIN ]             -- Freeing surface --
+[23:58:33] [  END  ]             Ok [Elapsed time = 0 seg]
+[23:58:33] [ BEGIN ]             -- Freeing surface --
                                  {
                                  }
-[23:39:41] [  END  ]             Ok [Elapsed time = 0 seg]
-[23:39:41] [ BEGIN ]             -- Freeing surface --
+[23:58:33] [  END  ]             Ok [Elapsed time = 0 seg]
+[23:58:33] [ BEGIN ]             -- Freeing surface --
                                  {
                                  }
-[23:39:41] [  END  ]             Ok [Elapsed time = 0 seg]
-[23:39:41] [ BEGIN ]             -- Freeing surface --
+[23:58:33] [  END  ]             Ok [Elapsed time = 0 seg]
+[23:58:33] [ BEGIN ]             -- Freeing surface --
                                  {
                                  }
-[23:39:41] [  END  ]             Ok [Elapsed time = 0 seg]
-[23:39:41] [ BEGIN ]             -- Freeing surface --
+[23:58:33] [  END  ]             Ok [Elapsed time = 0 seg]
+[23:58:33] [ BEGIN ]             -- Freeing surface --
                                  {
                                  }
-[23:39:41] [  END  ]             Ok [Elapsed time = 0 seg]
-[23:39:41] [ BEGIN ]             -- Freeing surface --
+[23:58:33] [  END  ]             Ok [Elapsed time = 0 seg]
+[23:58:33] [ BEGIN ]             -- Freeing surface --
                                  {
                                  }
-[23:39:41] [  END  ]             Ok [Elapsed time = 0 seg]
-[23:39:41] [ BEGIN ]             -- Freeing surface --
+[23:58:33] [  END  ]             Ok [Elapsed time = 0 seg]
+[23:58:33] [ BEGIN ]             -- Freeing surface --
                                  {
                                  }
-[23:39:41] [  END  ]             Ok [Elapsed time = 0 seg]
-[23:39:41] [ BEGIN ]             -- Freeing surface --
+[23:58:33] [  END  ]             Ok [Elapsed time = 0 seg]
+[23:58:33] [ BEGIN ]             -- Freeing surface --
                                  {
                                  }
-[23:39:41] [  END  ]             Ok [Elapsed time = 0 seg]
-[23:39:41] [ BEGIN ]             -- Freeing surface --
+[23:58:33] [  END  ]             Ok [Elapsed time = 0 seg]
+[23:58:33] [ BEGIN ]             -- Freeing surface --
                                  {
                                  }
-[23:39:41] [  END  ]             Ok [Elapsed time = 0 seg]
-[23:39:41] [ BEGIN ]             -- Freeing surface --
+[23:58:33] [  END  ]             Ok [Elapsed time = 0 seg]
+[23:58:33] [ BEGIN ]             -- Freeing surface --
                                  {
                                  }
-[23:39:41] [  END  ]             Ok [Elapsed time = 0 seg]
-[23:39:41] [ BEGIN ]             -- Freeing surface --
+[23:58:33] [  END  ]             Ok [Elapsed time = 0 seg]
+[23:58:33] [ BEGIN ]             -- Freeing surface --
                                  {
                                  }
-[23:39:41] [  END  ]             Ok [Elapsed time = 0 seg]
-[23:39:41] [ BEGIN ]             -- Freeing surface --
+[23:58:33] [  END  ]             Ok [Elapsed time = 0 seg]
+[23:58:33] [ BEGIN ]             -- Freeing surface --
                                  {
                                  }
-[23:39:41] [  END  ]             Ok [Elapsed time = 0 seg]
-[23:39:41] [ BEGIN ]             -- Freeing surface --
+[23:58:33] [  END  ]             Ok [Elapsed time = 0 seg]
+[23:58:33] [ BEGIN ]             -- Freeing surface --
                                  {
                                  }
-[23:39:41] [  END  ]             Ok [Elapsed time = 0 seg]
-[23:39:41] [ BEGIN ]             -- Freeing surface --
+[23:58:33] [  END  ]             Ok [Elapsed time = 0 seg]
+[23:58:33] [ BEGIN ]             -- Freeing surface --
                                  {
                                  }
-[23:39:41] [  END  ]             Ok [Elapsed time = 0 seg]
-[23:39:41] [ BEGIN ]             -- Freeing surface --
+[23:58:33] [  END  ]             Ok [Elapsed time = 0 seg]
+[23:58:33] [ BEGIN ]             -- Freeing surface --
                                  {
                                  }
-[23:39:41] [  END  ]             Ok [Elapsed time = 0.001 seg]
-[23:39:41] [ BEGIN ]             -- Freeing surface --
+[23:58:33] [  END  ]             Ok [Elapsed time = 0 seg]
+[23:58:33] [ BEGIN ]             -- Freeing surface --
                                  {
                                  }
-[23:39:41] [  END  ]             Ok [Elapsed time = 0 seg]
-[23:39:41] [ BEGIN ]             -- Freeing surface --
+[23:58:33] [  END  ]             Ok [Elapsed time = 0 seg]
+[23:58:33] [ BEGIN ]             -- Freeing surface --
                                  {
                                  }
-[23:39:41] [  END  ]             Ok [Elapsed time = 0 seg]
-[23:39:41] [ BEGIN ]             -- Freeing surface --
+[23:58:33] [  END  ]             Ok [Elapsed time = 0 seg]
+[23:58:33] [ BEGIN ]             -- Freeing surface --
                                  {
                                  }
-[23:39:41] [  END  ]             Ok [Elapsed time = 0 seg]
-[23:39:41] [ BEGIN ]             -- Freeing surface --
+[23:58:33] [  END  ]             Ok [Elapsed time = 0 seg]
+[23:58:33] [ BEGIN ]             -- Freeing surface --
                                  {
                                  }
-[23:39:41] [  END  ]             Ok [Elapsed time = 0 seg]
-[23:39:41] [ BEGIN ]             -- Freeing surface --
+[23:58:33] [  END  ]             Ok [Elapsed time = 0 seg]
+[23:58:33] [ BEGIN ]             -- Freeing surface --
                                  {
                                  }
-[23:39:41] [  END  ]             Ok [Elapsed time = 0 seg]
-[23:39:41] [ BEGIN ]             -- Freeing surface --
+[23:58:33] [  END  ]             Ok [Elapsed time = 0 seg]
+[23:58:33] [ BEGIN ]             -- Freeing surface --
                                  {
                                  }
-[23:39:41] [  END  ]             Ok [Elapsed time = 0 seg]
-[23:39:41] [ BEGIN ]             -- Freeing surface --
+[23:58:33] [  END  ]             Ok [Elapsed time = 0 seg]
+[23:58:33] [ BEGIN ]             -- Freeing surface --
                                  {
                                  }
-[23:39:41] [  END  ]             Ok [Elapsed time = 0 seg]
-[23:39:41] [ BEGIN ]             -- Freeing surface --
+[23:58:33] [  END  ]             Ok [Elapsed time = 0 seg]
+[23:58:33] [ BEGIN ]             -- Freeing surface --
                                  {
                                  }
-[23:39:41] [  END  ]             Ok [Elapsed time = 0 seg]
-[23:39:41] [ BEGIN ]             -- Freeing surface --
+[23:58:33] [  END  ]             Ok [Elapsed time = 0 seg]
+[23:58:33] [ BEGIN ]             -- Freeing surface --
                                  {
                                  }
-[23:39:41] [  END  ]             Ok [Elapsed time = 0 seg]
-[23:39:41] [ BEGIN ]             -- Freeing surface --
+[23:58:33] [  END  ]             Ok [Elapsed time = 0 seg]
+[23:58:33] [ BEGIN ]             -- Freeing surface --
                                  {
                                  }
-[23:39:41] [  END  ]             Ok [Elapsed time = 0 seg]
-[23:39:41] [ BEGIN ]             -- Freeing surface --
+[23:58:33] [  END  ]             Ok [Elapsed time = 0 seg]
+[23:58:33] [ BEGIN ]             -- Freeing surface --
                                  {
                                  }
-[23:39:41] [  END  ]             Ok [Elapsed time = 0 seg]
-[23:39:41] [ BEGIN ]             -- Freeing surface --
+[23:58:33] [  END  ]             Ok [Elapsed time = 0 seg]
+[23:58:33] [ BEGIN ]             -- Freeing surface --
                                  {
                                  }
-[23:39:41] [  END  ]             Ok [Elapsed time = 0 seg]
-[23:39:41] [ BEGIN ]             -- Freeing surface --
+[23:58:33] [  END  ]             Ok [Elapsed time = 0 seg]
+[23:58:33] [ BEGIN ]             -- Freeing surface --
                                  {
                                  }
-[23:39:41] [  END  ]             Ok [Elapsed time = 0 seg]
-[23:39:41] [ BEGIN ]             -- Freeing surface --
+[23:58:33] [  END  ]             Ok [Elapsed time = 0 seg]
+[23:58:33] [ BEGIN ]             -- Freeing surface --
                                  {
                                  }
-[23:39:41] [  END  ]             Ok [Elapsed time = 0 seg]
-[23:39:41] [ BEGIN ]             -- Freeing surface --
+[23:58:33] [  END  ]             Ok [Elapsed time = 0 seg]
+[23:58:33] [ BEGIN ]             -- Freeing surface --
                                  {
                                  }
-[23:39:41] [  END  ]             Ok [Elapsed time = 0 seg]
-[23:39:41] [ BEGIN ]             -- Freeing surface --
+[23:58:33] [  END  ]             Ok [Elapsed time = 0 seg]
+[23:58:33] [ BEGIN ]             -- Freeing surface --
                                  {
                                  }
-[23:39:41] [  END  ]             Ok [Elapsed time = 0 seg]
-[23:39:41] [ BEGIN ]             -- Freeing surface --
+[23:58:33] [  END  ]             Ok [Elapsed time = 0.001 seg]
+[23:58:33] [ BEGIN ]             -- Freeing surface --
                                  {
                                  }
-[23:39:41] [  END  ]             Ok [Elapsed time = 0 seg]
-[23:39:41] [ BEGIN ]             -- Freeing surface --
+[23:58:33] [  END  ]             Ok [Elapsed time = 0 seg]
+[23:58:33] [ BEGIN ]             -- Freeing surface --
                                  {
                                  }
-[23:39:41] [  END  ]             Ok [Elapsed time = 0 seg]
-[23:39:41] [ BEGIN ]             -- Freeing surface --
+[23:58:33] [  END  ]             Ok [Elapsed time = 0 seg]
+[23:58:33] [ BEGIN ]             -- Freeing surface --
                                  {
                                  }
-[23:39:41] [  END  ]             Ok [Elapsed time = 0 seg]
-[23:39:41] [ BEGIN ]             -- Freeing surface --
+[23:58:33] [  END  ]             Ok [Elapsed time = 0 seg]
+[23:58:33] [ BEGIN ]             -- Freeing surface --
                                  {
                                  }
-[23:39:41] [  END  ]             Ok [Elapsed time = 0 seg]
-[23:39:41] [ BEGIN ]             -- Freeing surface --
+[23:58:33] [  END  ]             Ok [Elapsed time = 0 seg]
+[23:58:33] [ BEGIN ]             -- Freeing surface --
                                  {
                                  }
-[23:39:41] [  END  ]             Ok [Elapsed time = 0 seg]
-[23:39:41] [ BEGIN ]             -- Freeing surface --
+[23:58:33] [  END  ]             Ok [Elapsed time = 0 seg]
+[23:58:33] [ BEGIN ]             -- Freeing surface --
                                  {
                                  }
-[23:39:41] [  END  ]             Ok [Elapsed time = 0 seg]
-[23:39:41] [ BEGIN ]             -- Freeing surface --
+[23:58:33] [  END  ]             Ok [Elapsed time = 0 seg]
+[23:58:33] [ BEGIN ]             -- Freeing surface --
                                  {
                                  }
-[23:39:41] [  END  ]             Ok [Elapsed time = 0 seg]
-[23:39:41] [ BEGIN ]             -- Freeing surface --
+[23:58:33] [  END  ]             Ok [Elapsed time = 0 seg]
+[23:58:33] [ BEGIN ]             -- Freeing surface --
                                  {
                                  }
-[23:39:41] [  END  ]             Ok [Elapsed time = 0 seg]
-[23:39:41] [ BEGIN ]             -- Freeing surface --
+[23:58:33] [  END  ]             Ok [Elapsed time = 0 seg]
+[23:58:33] [ BEGIN ]             -- Freeing surface --
                                  {
                                  }
-[23:39:41] [  END  ]             Ok [Elapsed time = 0 seg]
-[23:39:41] [ BEGIN ]             -- Freeing surface --
+[23:58:33] [  END  ]             Ok [Elapsed time = 0 seg]
+[23:58:33] [ BEGIN ]             -- Freeing surface --
                                  {
                                  }
-[23:39:41] [  END  ]             Ok [Elapsed time = 0 seg]
-[23:39:41] [ BEGIN ]             -- Freeing surface --
+[23:58:33] [  END  ]             Ok [Elapsed time = 0 seg]
+[23:58:33] [ BEGIN ]             -- Freeing surface --
                                  {
                                  }
-[23:39:41] [  END  ]             Ok [Elapsed time = 0 seg]
-[23:39:41] [ BEGIN ]             -- Freeing surface --
+[23:58:33] [  END  ]             Ok [Elapsed time = 0 seg]
+[23:58:33] [ BEGIN ]             -- Freeing surface --
                                  {
                                  }
-[23:39:41] [  END  ]             Ok [Elapsed time = 0 seg]
-[23:39:41] [ BEGIN ]             -- Freeing surface --
+[23:58:33] [  END  ]             Ok [Elapsed time = 0 seg]
+[23:58:33] [ BEGIN ]             -- Freeing surface --
                                  {
                                  }
-[23:39:41] [  END  ]             Ok [Elapsed time = 0 seg]
-[23:39:41] [ BEGIN ]             -- Freeing surface --
+[23:58:33] [  END  ]             Ok [Elapsed time = 0 seg]
+[23:58:33] [ BEGIN ]             -- Freeing surface --
                                  {
                                  }
-[23:39:41] [  END  ]             Ok [Elapsed time = 0 seg]
-[23:39:41] [ BEGIN ]             -- Freeing surface --
+[23:58:33] [  END  ]             Ok [Elapsed time = 0 seg]
+[23:58:33] [ BEGIN ]             -- Freeing surface --
                                  {
                                  }
-[23:39:41] [  END  ]             Ok [Elapsed time = 0 seg]
-[23:39:41] [ BEGIN ]             -- Freeing surface --
+[23:58:33] [  END  ]             Ok [Elapsed time = 0 seg]
+[23:58:33] [ BEGIN ]             -- Freeing surface --
                                  {
                                  }
-[23:39:41] [  END  ]             Ok [Elapsed time = 0 seg]
-[23:39:41] [ BEGIN ]             -- Freeing surface --
+[23:58:33] [  END  ]             Ok [Elapsed time = 0 seg]
+[23:58:33] [ BEGIN ]             -- Freeing surface --
                                  {
                                  }
-[23:39:41] [  END  ]             Ok [Elapsed time = 0 seg]
-[23:39:41] [ BEGIN ]             -- Freeing surface --
+[23:58:33] [  END  ]             Ok [Elapsed time = 0 seg]
+[23:58:33] [ BEGIN ]             -- Freeing surface --
                                  {
                                  }
-[23:39:41] [  END  ]             Ok [Elapsed time = 0 seg]
-[23:39:41] [ BEGIN ]             -- Freeing surface --
+[23:58:33] [  END  ]             Ok [Elapsed time = 0 seg]
+[23:58:33] [ BEGIN ]             -- Freeing surface --
                                  {
                                  }
-[23:39:41] [  END  ]             Ok [Elapsed time = 0 seg]
-[23:39:41] [ BEGIN ]             -- Freeing surface --
+[23:58:33] [  END  ]             Ok [Elapsed time = 0 seg]
+[23:58:33] [ BEGIN ]             -- Freeing surface --
                                  {
                                  }
-[23:39:41] [  END  ]             Ok [Elapsed time = 0 seg]
-[23:39:41] [ BEGIN ]             -- Freeing surface --
+[23:58:33] [  END  ]             Ok [Elapsed time = 0 seg]
+[23:58:33] [ BEGIN ]             -- Freeing surface --
                                  {
                                  }
-[23:39:41] [  END  ]             Ok [Elapsed time = 0 seg]
-[23:39:41] [ BEGIN ]             -- Freeing surface --
+[23:58:33] [  END  ]             Ok [Elapsed time = 0 seg]
+[23:58:33] [ BEGIN ]             -- Freeing surface --
                                  {
                                  }
-[23:39:41] [  END  ]             Ok [Elapsed time = 0 seg]
-[23:39:41] [ BEGIN ]             -- Freeing surface --
+[23:58:33] [  END  ]             Ok [Elapsed time = 0 seg]
+[23:58:33] [ BEGIN ]             -- Freeing surface --
                                  {
                                  }
-[23:39:41] [  END  ]             Ok [Elapsed time = 0 seg]
-[23:39:41] [ BEGIN ]             -- Freeing surface --
+[23:58:33] [  END  ]             Ok [Elapsed time = 0 seg]
+[23:58:33] [ BEGIN ]             -- Freeing surface --
                                  {
                                  }
-[23:39:41] [  END  ]             Ok [Elapsed time = 0 seg]
-[23:39:41] [ BEGIN ]             -- Freeing surface --
+[23:58:33] [  END  ]             Ok [Elapsed time = 0 seg]
+[23:58:33] [ BEGIN ]             -- Freeing surface --
                                  {
                                  }
-[23:39:41] [  END  ]             Ok [Elapsed time = 0 seg]
-[23:39:41] [ BEGIN ]             -- Freeing surface --
+[23:58:33] [  END  ]             Ok [Elapsed time = 0 seg]
+[23:58:33] [ BEGIN ]             -- Freeing surface --
                                  {
                                  }
-[23:39:41] [  END  ]             Ok [Elapsed time = 0 seg]
-[23:39:41] [ BEGIN ]             -- Freeing surface --
+[23:58:33] [  END  ]             Ok [Elapsed time = 0 seg]
+[23:58:33] [ BEGIN ]             -- Freeing surface --
                                  {
                                  }
-[23:39:41] [  END  ]             Ok [Elapsed time = 0 seg]
+[23:58:33] [  END  ]             Ok [Elapsed time = 0 seg]
                               }
-[23:39:41] [  END  ]          Ok [Elapsed time = 0.002 seg]
+[23:58:33] [  END  ]          Ok [Elapsed time = 0.002 seg]
                            }
-[23:39:41] [  END  ]       Animations freed [Elapsed time = 0.002 seg]
+[23:58:33] [  END  ]       Animations freed [Elapsed time = 0.002 seg]
                         }
-[23:39:41] [  END  ]    AnimationManager finalized [Elapsed time = 0.002 seg]
-[23:39:41] [ BEGIN ]    -- Finalizing SurfaceManager --
+[23:58:33] [  END  ]    AnimationManager finalized [Elapsed time = 0.002 seg]
+[23:58:33] [ BEGIN ]    -- Finalizing SurfaceManager --
                         {
-[23:39:41] [ BEGIN ]       -- Freeing surfaces --
+[23:58:33] [ BEGIN ]       -- Freeing surfaces --
                            {
            [ INFO  ]          Freeing surface:           [ INFO  ]          Freeing surface:           [ INFO  ]          Freeing surface:           [ INFO  ]          Freeing surface:           [ INFO  ]          Freeing surface:           [ INFO  ]          Freeing surface:           [ INFO  ]          Freeing surface:           [ INFO  ]          Freeing surface:           [ INFO  ]          Freeing surface:           [ INFO  ]          Freeing surface:           [ INFO  ]          Freeing surface:           [ INFO  ]          Freeing surface:           [ INFO  ]          Freeing surface:           [ INFO  ]          Freeing surface:           [ INFO  ]          Freeing surface:           [ INFO  ]          Freeing surface:           [ INFO  ]          Freeing surface:           [ INFO  ]          Freeing surface:           [ INFO  ]          Freeing surface:           [ INFO  ]          Freeing surface:           [ INFO  ]          Freeing surface:                           }
-[23:39:41] [  END  ]       Surfaces freed [Elapsed time = 0.003 seg]
+[23:58:33] [  END  ]       Surfaces freed [Elapsed time = 0.003 seg]
                         }
-[23:39:41] [  END  ]    IND_SurfaceManager finalized [Elapsed time = 0.003 seg]
-[23:39:41] [ BEGIN ]    -- Finalizing ImageManager --
+[23:58:33] [  END  ]    IND_SurfaceManager finalized [Elapsed time = 0.003 seg]
+[23:58:33] [ BEGIN ]    -- Finalizing ImageManager --
                         {
-[23:39:41] [ BEGIN ]       -- Freeing images --
+[23:58:33] [ BEGIN ]       -- Freeing images --
                            {
                            }
-[23:39:41] [  END  ]       Images freed [Elapsed time = 0 seg]
+[23:58:33] [  END  ]       Images freed [Elapsed time = 0 seg]
                         }
-[23:39:41] [  END  ]    ImageManager finalized [Elapsed time = 0 seg]
-[23:39:41] [ BEGIN ]    -- Finalizing Direct3D --
+[23:58:33] [  END  ]    ImageManager finalized [Elapsed time = 0 seg]
+[23:58:33] [ BEGIN ]    -- Finalizing Direct3D --
                         {
            [  OK   ]       Finalizing the Device
            [  OK   ]       Finalizing D3D object
-[23:39:41] [ BEGIN ]       -- Finalizing the window --
+[23:58:33] [ BEGIN ]       -- Finalizing the window --
                            {
                            }
-[23:39:41] [  END  ]       Window finalized [Elapsed time = 0.001 seg]
+[23:58:33] [  END  ]       Window finalized [Elapsed time = 0.002 seg]
                         }
-[23:39:41] [  END  ]    Direct3D finalized  [Elapsed time = 0.025 seg]
+[23:58:33] [  END  ]    Direct3D finalized  [Elapsed time = 0.026 seg]
