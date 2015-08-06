@@ -5,6 +5,9 @@
 #include "IND_Animation.h"
 #include "IND_Surface.h"
 #include "GlobalHeader.h"
+#include "Frame.h"
+#include <vector>
+#include "Errorhandler.h"
 
 class Thing
 {
@@ -20,6 +23,7 @@ private:
 	IND_Surface *thingPictures;
 	IND_Surface *collisionSurface = IND_Surface::newSurface();
 	void Construct(CIndieLib *mI, IND_Surface *thingsPicture, int type, int x, int y, int life); // for multy constructor initialise
+	vector<Frame*> frames;
 
 public:
 	int getHealth(void);
@@ -31,8 +35,7 @@ public:
 	//void getHealth(void);
 	IND_Entity2d* getColisionBorder();
 	Thing();
-	Thing(CIndieLib *mI, IND_Surface *thingsPicture, int type, int x, int y, int life);
-	Thing(CIndieLib *mI, IND_Surface *thingsPicture, int type, int x, int y, int life, int angle);
+	Thing(CIndieLib *mI, IND_Surface *thingsPicture, int type, int x, int y, int life, int angle, vector<Frame*> frms);
 	~Thing();
 };
 #endif

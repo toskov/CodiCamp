@@ -87,7 +87,7 @@ int Menu::Update(CIndieLib  *mI)
 			 //On left mouse button click
 			 HideMenu();
 			 exitSelected = true;
-			 return 1;
+			 return 4;
 		 }
 	 }
 	 else

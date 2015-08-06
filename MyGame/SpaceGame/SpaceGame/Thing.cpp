@@ -4,60 +4,89 @@ Thing::Thing()
 {
 }
 
-// Create flying thing
-Thing::Thing(CIndieLib *mI, IND_Surface *thingsPicture, int type, int x, int y, int life)
-{
-	Thing::Construct(mI, thingsPicture, type, x, y, life);
-}
-
-Thing::Thing(CIndieLib *mI, IND_Surface *thingsPicture, int type, int x, int y, int life, int angle)
-{
-	Thing::Construct(mI, thingsPicture, type, x, y, life);
-	//Rotation angle
-	thing->setAngleXYZ(0, 0, angle);
-}
-
-void Thing::Construct(CIndieLib *mI, IND_Surface *thingsPicture, int type, int x, int y, int life)
+Thing::Thing(CIndieLib *mI, IND_Surface *thingsPicture, int type, int x, int y, int life, int angle, vector<Frame*> frms)
 {
 	this->thingPictures = thingsPicture;
+	this->frames = frms;
 	*posX = x;
 	*posY = y;
 	*health = life;
 	*this->type = type;
 		
-	mI->_entity2dManager->add(thing);					// Entity adding
-	thing->setSequence(type-1); //animation file have to contain all animations for things. Sequence begins from 0
+	/*
+	mI->_surfaceManager->add(picture, "../SpaceGame/resources/rock.png", IND_ALPHA, IND_32); // background?
+	rock->setSurface(picture);
+	mI->_entity2dManager->add(rock);					// Entity adding	
+	rock->setPosition(x, y, 3);
+	rock->setRegion(0, 0, *frameWidth, *frameHeight); // must be set outside
+	// Empty object for colisions!
+	mI->_entity2dManager->add(border);
+	border->setSurface(collisionSurface);
+	border->setBoundingCircle("rock", x + (*frameWidth) / 2, y + (*frameHeight)/2, 20);
+	HEALTH = 1, ASTEROID, ROCK, DIAMOND, ENEMY, UFO 
+	*/
+
+	thing->setSurface(thingsPicture);
+	mI->_entity2dManager->add(thing);
+
+	int radius = 0;
+	string typ = "";
+
+	switch (type){
+	case HEALTH:
+		typ = "health";
+		radius = 20;
+		break;
+	case ASTEROID:
+		typ = "asteroid";
+		radius = 40;
+		thing->setScale(0.7, 0.7);
+		break;
+	case ROCK:
+		typ = "rock";
+		radius = 20;
+		break;
+	case DIAMOND:
+		typ = "diamond";
+		radius = 20;
+		break;
+	case UFO:
+		typ = "ufo";
+		radius = 15;
+		break;
+	}
+
+	// Search first picture for type;
+	int width, height,offsetX,offsetY;	
+	for (int i = 0; i < frms.size(); i++)
+	{
+		if (frms.at(i)->name.compare(typ) && (frms.at(i)->frameNumber == 2))
+		{
+			width = frms.at(i)->width;
+			height = frms.at(i)->height;
+			offsetX = frms.at(i)->offsetX;
+			offsetY = frms.at(i)->offsetY;			
+			break;
+		}
+	}
+	ErrorHandler::trace(frms.at(200)->name);
+
+	width = frms.at(190)->width;
+	height = frms.at(190)->height;
+	offsetX = frms.at(190)->offsetX;
+	offsetY = frms.at(190)->offsetY;
+	
+	// Entity adding
 	thing->setPosition(x, y, 1);
-	thing->setHotSpot(0.5f, 0.5f);
+	//health (1) = 360 1180 50 50
+	//thing->setRegion(360, 1180, 50, 50);
+	thing->setRegion(offsetX, offsetY, width, height); // shows first picture from sprite
 
 	// Empty object for colisions!
 	mI->_entity2dManager->add(border);
 	border->setSurface(collisionSurface);
 
-	// diferent Objects
-	
-	if (type == HEALTH)
-	{
-		border->setBoundingCircle("thing", x, y, 20);
-	}
-	if (type == ASTEROID)
-	{
-		thing->setScale(0.7, 0.7);
-		border->setBoundingCircle("thing", x, y, 40);
-		
-	}
-	if (type == ROCK)
-	{
-		//thing->setScale(0.7, 0.7);
-		border->setBoundingCircle("thing", x, y, 20);
-
-	}
-	if (type == DIAMOND)
-	{
-		//thing->setScale(0.7, 0.7);
-		border->setBoundingCircle("thing", x, y, 20);
-
-	}
+	border->setBoundingCircle("thing", x + width /5, y + height / 5, radius);	
 }
 
 

@@ -14,7 +14,8 @@
 
 using namespace irrklang; // Sound engine
 
-class Ship : public ErrorHandler
+//class Ship : public ErrorHandler
+class Ship
 {
 
 private:
@@ -36,7 +37,7 @@ public:
 	IND_Entity2d *ship_ = IND_Entity2d::newEntity2d();
 	Ship();
 	Ship(CIndieLib *mI, const char *str);
-	void Update(CIndieLib* mI, double* delta); // update ship position
+	void Update(CIndieLib* mI, double *delta); // update ship position
 	void Shoot(); 
 	void setSpeedX(float sX);
 	void setSpeedY(float sY);

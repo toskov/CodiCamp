@@ -29,11 +29,7 @@ Main
 
 int IndieLib() // main
 {
-	// ------ Sound Tests --------
-	ISoundEngine* sound = createIrrKlangDevice();
-	if (!sound) return 0;
-	sound->play2D("../SpaceGame/resources/music_background.wav", true);
-
+	
 
 	char TempText[30];
 	
@@ -44,9 +40,8 @@ int IndieLib() // main
 	CIndieLib *mI = CIndieLib::instance(); // engine
 	if (!mI->init()) return 0;
 
-	GameControll controller = GameControll(); // createing a game controller and initialize
-	controller.gameInit(mI);
-	controller.sceneGenerator(mI);
+	GameControll controller = GameControll(mI); // createing a game controller and initialize
+	controller.sceneGenerator();
 		
 
 	//<------ DELTA TIME ------>
@@ -72,8 +67,7 @@ int IndieLib() // main
 		gameTime = (int)(mTimer->getTicks() / 1000.0f); //time in seconds
 
 		
-		controller.Update(mI,gameTime);
-
+		
 
 		// ------ Average delta time ---------
 		*delta = mI->_render->getFrameTime() / 1000.0f;
@@ -89,12 +83,14 @@ int IndieLib() // main
 			// ----- Input Update ----
 			mI->_input->update();
 
+			// ------ Game controller update ---------------
+			controller.Update(gameTime, deltaAverage);
 
 			// ---- Update rarely -----
 			// creating delay for animation
 			if (count == 0)
 			{
-				controller.AnimationsUpdate(mI, *deltaAverage);
+				controller.AnimationsUpdate();
 			}
 		
 			
@@ -111,7 +107,7 @@ int IndieLib() // main
 
 	// ----- Indielib End -----
 	mI->end();
-	sound->drop();
+
 
 	return 0;
 }

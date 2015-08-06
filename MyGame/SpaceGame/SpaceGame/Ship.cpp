@@ -28,7 +28,7 @@ Ship::Ship()
 
 	if (!mI->_animationManager->addToSurface(mAnimationRocket, (const char*)str, IND_ALPHA, IND_32))
 	{
-		CatchError("Cannot find animation resources!"); // TODO 
+		ErrorHandler::trace("Cannot find animation resources!"); // TODO 
 	}
 	
 	// Character rocket
@@ -217,6 +217,7 @@ void Ship::Shoot()
 		offsetX =ship_->getPosX() + std::sin(angle)*40;
 		offsetY =ship_->getPosY() - std::cos(angle)*40;
 		soundEngine->play2D("../SpaceGame/resources/weapon_player.wav");
+		soundEngine->setSoundVolume(0.2); // have to be set by FX volume from controller
 		bullets_[bulletIndex]->Set(ship_->getAngleZ(), offsetX, offsetY, mDelta); // Move and rotate last bullet
 	}
 

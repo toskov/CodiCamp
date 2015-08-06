@@ -10,7 +10,7 @@
 
 #define PI 3.14159 //the pi number
 
-enum objectType { HEALTH = 1, ASTEROID, ROCK, DIAMOND, ENEMY, BONUS }; // type of objects on scene
+enum objectType { HEALTH = 1, ASTEROID, ROCK, DIAMOND, UFO, BONUS }; // type of objects on scene
 
 
 #endif 
