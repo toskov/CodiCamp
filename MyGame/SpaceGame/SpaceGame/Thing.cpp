@@ -12,19 +12,6 @@ Thing::Thing(CIndieLib *mI, IND_Surface *thingsPicture, int type, int x, int y, 
 	*posY = y;
 	*health = life;
 	*this->type = type;
-		
-	/*
-	mI->_surfaceManager->add(picture, "../SpaceGame/resources/rock.png", IND_ALPHA, IND_32); // background?
-	rock->setSurface(picture);
-	mI->_entity2dManager->add(rock);					// Entity adding	
-	rock->setPosition(x, y, 3);
-	rock->setRegion(0, 0, *frameWidth, *frameHeight); // must be set outside
-	// Empty object for colisions!
-	mI->_entity2dManager->add(border);
-	border->setSurface(collisionSurface);
-	border->setBoundingCircle("rock", x + (*frameWidth) / 2, y + (*frameHeight)/2, 20);
-	HEALTH = 1, ASTEROID, ROCK, DIAMOND, ENEMY, UFO 
-	*/
 
 	thing->setSurface(thingsPicture);
 	mI->_entity2dManager->add(thing);
@@ -56,26 +43,26 @@ Thing::Thing(CIndieLib *mI, IND_Surface *thingsPicture, int type, int x, int y, 
 		break;
 	}
 
+	name = typ;
+
 	// Search first picture for type;
+	frameCount = 0; // clear number of frames
 	int width, height,offsetX,offsetY;	
 	for (int i = 0; i < frms.size(); i++)
 	{
-		if (frms.at(i)->name.compare(typ) && (frms.at(i)->frameNumber == 2))
+		
+		if (typ == frms.at(i)->name)
 		{
+			frameCount++;
 			width = frms.at(i)->width;
 			height = frms.at(i)->height;
 			offsetX = frms.at(i)->offsetX;
 			offsetY = frms.at(i)->offsetY;			
-			break;
+			// break;
+			currentFrame = i;// last frame 
 		}
 	}
-	ErrorHandler::trace(frms.at(200)->name);
 
-	width = frms.at(190)->width;
-	height = frms.at(190)->height;
-	offsetX = frms.at(190)->offsetX;
-	offsetY = frms.at(190)->offsetY;
-	
 	// Entity adding
 	thing->setPosition(x, y, 1);
 	//health (1) = 360 1180 50 50
@@ -85,8 +72,10 @@ Thing::Thing(CIndieLib *mI, IND_Surface *thingsPicture, int type, int x, int y, 
 	// Empty object for colisions!
 	mI->_entity2dManager->add(border);
 	border->setSurface(collisionSurface);
-
-	border->setBoundingCircle("thing", x + width /5, y + height / 5, radius);	
+	border->setBoundingCircle("thing", x + width /2, y + height / 2, radius);	
+	// prepare positions for explosion
+	collisionsX = x + width / 2;
+	collisionsY = y + height / 2;
 }
 
 
@@ -123,12 +112,36 @@ int Thing::getType()
 	return *type;
 }
 
-int Thing::getPositionX()
+int Thing::getCollisionPositionX()
 {
-	return thing->getPosX();
+		return collisionsX;
 }
 
-int Thing::getPositionY()
+int Thing::getCollisionPositionY()
 {
-	return thing->getPosY();
+	return collisionsY;
+}
+
+void Thing::animationUpdate()
+{
+	// get current frame from sprite
+	int width, height, offsetX, offsetY;
+
+	currentFrame++;
+	if (currentFrame > frameCount) currentFrame = 1;
+
+	for (int i = 0; i < frames.size(); i++)
+	{
+
+		if ((name == frames.at(i)->name) && (frames.at(i)->frameNumber == currentFrame))
+		{			
+			width = frames.at(i)->width;
+			height = frames.at(i)->height;
+			offsetX = frames.at(i)->offsetX;
+			offsetY = frames.at(i)->offsetY;
+			break;
+		}
+	}
+
+	thing->setRegion(offsetX, offsetY, width, height); // shows region
 }

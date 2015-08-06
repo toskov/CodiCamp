@@ -23,9 +23,9 @@ void GameControll::GameOver()
 
 void GameControll::gameInit()
 {
-	readThingsFile();
+	
 	ErrorHandler::trace(" ******  New trace ***********");
-
+	readThingsFile();
 	// Sound init
 	soundEngine = createIrrKlangDevice();
 	if (!soundEngine)
@@ -80,7 +80,6 @@ void GameControll::readThingsFile()
 	ifstream myfile("../SpaceGame/resources/things.txt");
 	if (myfile.is_open())
 	{
-		vector<string> tokens; // Create vector to hold our words
 		string name;
 		int framenum ;
 		int offsetX;
@@ -89,12 +88,13 @@ void GameControll::readThingsFile()
 		int hight;
 		string buf; // Have a buffer string
 		int count = 0;
+
 		while (getline(myfile, line))
-		{
+		{		
 			// parse sprite file
 			count++;
-			stringstream ss(line); // Insert the string into a stream			
-
+			stringstream ss(line); // Insert the string into a stream					
+			vector<string> tokens; // Create vector to hold our words
 			while (ss >> buf) tokens.push_back(buf);
 
 			 name = tokens.at(0);
@@ -106,92 +106,43 @@ void GameControll::readThingsFile()
 			 width = stoi(tokens[5]);
 			 hight = stoi(tokens[6]);
 			// create simple frame
+
 			Frame *newframe = new Frame(name, framenum, offsetX, offsetY, width, hight);
 			frames.push_back(newframe);					
 		}
 		myfile.close();
-		ErrorHandler::trace(count);
+		// vector frames contains
 	}
 }
 
-void GameControll::refresh()
-{
-	srand(time(NULL)); // random generfated possition
-
-	int randomX = rand() % WINDOW_WIDTH;
-	int randomY = rand() % WINDOW_HEIGH;
-	/*
-		for (int i = 0; i < 5; i++)
-	{
-		// create 5 more rocks objects
-		randomX = rand() % WINDOW_WIDTH;
-		randomY = rand() % (WINDOW_HEIGH - 100);
-		int angle = rand() % 360;
-		allObjects.push_back(new Thing(mI, ROCK, randomX, randomY, -20, angle)); // create object anonymously
-	}
-
-	for (int i = 0; i < 1; i++)
-	{
-		// create 2 more health objects
-		randomX = rand() % WINDOW_WIDTH;
-		randomY = rand() % (WINDOW_HEIGH - 100);
-		int angle = rand() % 360;
-		allObjects.push_back(new Thing(mI, HEALTH, randomX, randomY, 10)); // create object anonymously
-	}
-	*/
-	for (int i = 0; i < 5; i++)
-	{
-		// create 5 more rocks objects
-		randomX = rand() % WINDOW_WIDTH;
-		randomY = rand() % (WINDOW_HEIGH - 100);
-		int angle = rand() % 360;
-		rocks.push_back(new Rock(mI, randomX, randomY)); // create object anonymously
-	}
-
-}
 void GameControll::sceneGenerator()
-{
-
-	
+{	
 	srand(time(NULL)); // random generfated possition
 
-	
 	int randomX = rand() % WINDOW_WIDTH;
 	int randomY  = rand() % (WINDOW_HEIGH -100);
-	/*
-	Thing *diamond = new Thing(mI, DIAMOND, randomX, randomY, 0);
-	allObjects.push_back(diamond);
-
 	for (int i = 0; i < 5; i++)
 	{
-		// create 5 more rocks objects
 		randomX = rand() % WINDOW_WIDTH;
 		randomY = rand() % (WINDOW_HEIGH - 100);
-		int angle = rand() % 360;
-		allObjects.push_back(new Thing(mI, ROCK, randomX, randomY, -20, angle)); // create object anonymously
+		gameObjects.push_back(new Thing(mI, thingsPicture, ROCK, randomX, randomY, -10, 0, frames));
 	}
 
-	for (int i = 0; i < 1; i++)
+	for (int i = 0; i < 3; i++)
 	{
-		// create 2 more health objects
 		randomX = rand() % WINDOW_WIDTH;
 		randomY = rand() % (WINDOW_HEIGH - 100);
-		int angle = rand() % 360;
-		allObjects.push_back(new Thing(mI, HEALTH, randomX, randomY, 10)); // create object anonymously
-	}
-	*/
-	for (int i = 0; i < 5; i++)
-	{
-		// create 5 more rocks objects
-		randomX = rand() % WINDOW_WIDTH;
-		randomY = rand() % (WINDOW_HEIGH - 100);
-		int angle = rand() % 90;
-		rocks.push_back(new Rock(mI, randomX, randomY, angle)); // create object anonymously
+		//Thing *ufo = new Thing(mI, thingsPicture, UFO, randomX, randomY, 10,0,frames);
+	gameObjects.push_back(new Thing(mI, thingsPicture, UFO, randomX, randomY, -10, 0, frames));
 	}
 
 	randomX = rand() % WINDOW_WIDTH;
 	randomY = rand() % (WINDOW_HEIGH - 100);
-	Thing *ufo = new Thing(mI, thingsPicture, UFO, randomX, randomY, 10,0,frames);
+	gameObjects.push_back(new Thing(mI, thingsPicture, HEALTH, randomX, randomY, 10, 0, frames));
+
+	randomX = rand() % WINDOW_WIDTH;
+	randomY = rand() % (WINDOW_HEIGH - 100);
+	gameObjects.push_back(new Thing(mI, thingsPicture, DIAMOND, randomX, randomY, 10, 0, frames));
 	
 	hud->showAlert("Quit F12!");
 }
@@ -275,10 +226,13 @@ void GameControll::Update(int gameTime,double *delta)
 				if (gameObjects[i]->getType() == DIAMOND)
 				{
 					ship->changeScore(DIAMOND_SCORE); // corect ship health
+					
 				}
-				if ((gameObjects[i]->getType() == ROCK) || (gameObjects[i]->getType() == ASTEROID))
+				if ((gameObjects[i]->getType() == ROCK) || (gameObjects[i]->getType() == ASTEROID) || (gameObjects[i]->getType() == UFO))
 				{
 					ship->changeHealth(gameObjects.at(i)->getHealth()); // corect ship health
+					explosions.push_back(new Explosion(mI, gameObjects[i]->getCollisionPositionX(), gameObjects[i]->getCollisionPositionY()));// create new explosion in vector
+					soundEngine->play2D("../SpaceGame/resources/explosion_player.wav");
 				}
 
 				gameObjects.at(i)->destroy(mI); // destroy object
@@ -292,23 +246,22 @@ void GameControll::Update(int gameTime,double *delta)
 			{
 				if (mI->_entity2dManager->isCollision(ship->getBulletBorder(k), "bullet", gameObjects[i]->getColisionBorder(), "thing"))
 				{
-					if ((gameObjects[i]->getType() == ROCK) || (gameObjects[i]->getType() == ASTEROID))
+					if ((gameObjects[i]->getType() == ROCK) || (gameObjects[i]->getType() == ASTEROID) || (gameObjects[i]->getType() == UFO))
 					{
 						// collision with rock detected
 
-						explosions.push_back(new Explosion(mI, gameObjects[i]->getPositionX(), gameObjects[i]->getPositionY()));// create new explosion in vector
+						explosions.push_back(new Explosion(mI, gameObjects[i]->getCollisionPositionX(), gameObjects[i]->getCollisionPositionY()));// create new explosion in vector
 						ship->changeScore(5); // increase game score
 						gameObjects.at(i)->destroy(mI); // destroy object
-						gameObjects.erase((gameObjects.begin() + i)); // remove pointer from vector								
+						gameObjects.erase((gameObjects.begin() + i)); // remove pointer from vector		
+						soundEngine->play2D("../SpaceGame/resources/explosion_asteroid.wav");
 
 					}
 
 				}
 			}
 			// regenerate items
-			if (gameObjects.size() == 0) refresh();
-
-
+			if (gameObjects.size() == 0) sceneGenerator();
 		}
 	}
 }
@@ -323,9 +276,9 @@ void GameControll::AnimationsUpdate( )
 	{
 		if (!explosions[i]->Update(mI, *delta)) explosions.erase((explosions.begin() + i)); // remove explosion from vector
 	}
-	for (int i = 0; i < rocks.size(); i++)
+	for (int i = 0; i < gameObjects.size(); i++)
 	{
-		rocks[i]->update(); //update or remove explosion from vector
+		gameObjects[i]->animationUpdate(); //update objects animation
 	}
 }
 GameControll::~GameControll()

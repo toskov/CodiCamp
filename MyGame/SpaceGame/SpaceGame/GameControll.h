@@ -70,7 +70,6 @@ private:
 public:
 	GameControll(CIndieLib* mI);
 
-	void refresh();
 	void Update(int gtime, double *delta); // Update for inpt controls and collisions
 	void AnimationsUpdate(); // Update rarely for animation
 	void sceneGenerator(); // generate random objects

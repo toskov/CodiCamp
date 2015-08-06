@@ -19,14 +19,5 @@ Frame::Frame()
 
 Frame::~Frame()
 {
-	/*
-	delete name;
-	delete frameNumber;
-	delete offsetX;
-	delete offsetY;
-	delete width;
-	delete height;
-	*/
-
 }
 
