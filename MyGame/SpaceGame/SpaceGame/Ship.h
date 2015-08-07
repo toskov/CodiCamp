@@ -31,6 +31,7 @@ private:
 	bool rotating = false;
 	int shootInterval = 1000;
 	ISoundEngine* soundEngine;
+	float soundVolume = 0.5f;;
 
 	
 public:
@@ -56,6 +57,7 @@ public:
 	int getY();
 	int getAngleZ();
 	void gravityUpdate(double gravity);
+	void setSoundVolume(float volume);
 	IND_Entity2d* getBulletBorder(int number); // get collision border for one of bullets
 	IND_Entity2d* getColisionBorder();
 	~Ship();

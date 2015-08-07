@@ -35,7 +35,7 @@ void GameControll::gameInit()
 	}
 	//soundEngine->play2D("../SpaceGame/resources/explosion_player.wav"); // on collision
 	soundEngine->play2D("../SpaceGame/resources/music_background.wav", true);
-	soundEngine->setSoundVolume(0.2);
+	soundEngine->setSoundVolume(soundVolume);
 
 	// Creating surface for the background
 	IND_Surface *mSurfaceBack = IND_Surface::newSurface();
@@ -62,6 +62,8 @@ void GameControll::gameInit()
 	gameOptions->loadGameObjects();
 	menu = new Menu(mI);
 	ship = new Ship(mI, "../SpaceGame/resources/animations/rocket.xml");
+	ship->setSoundVolume(0.5);
+
 	hud = new HUD(mI); // game info
 
 	// ---- creating objects ---------------

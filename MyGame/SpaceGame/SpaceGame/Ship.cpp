@@ -70,11 +70,13 @@ Update ship position
 	Ship::gravityUpdate(*delta);
 	this->mDelta = delta;
 	float tempX = ship_->getPosX() + (*mDelta)* (*speedX_);
-	if (tempX > 800) tempX = 0;
-	if (tempX < 0) tempX = 800;
+	//if (tempX > 800) tempX = 0;
+	//if (tempX < 0) tempX = 800;
+	if ((tempX > 800)||(tempX < 0)) *speedX_ = -*speedX_;
 	float tempY = ship_->getPosY() + (*mDelta)* (*speedY_);
-	if (tempY > 600) tempY = 0;
-	if (tempY < 0) tempY = 600;
+	//if (tempY > 600) tempY = 0;
+	//if (tempY < 0) tempY = 600;
+	if ((tempY > 600) || (tempY < 0)) *speedY_ = -*speedY_;
 	ship_->setPosition(tempX, tempY, 0);
 	border->setPosition(tempX, tempY, 1);
 	border->setAngleXYZ(0, 0, ship_->getAngleZ());
@@ -217,7 +219,7 @@ void Ship::Shoot()
 		offsetX =ship_->getPosX() + std::sin(angle)*40;
 		offsetY =ship_->getPosY() - std::cos(angle)*40;
 		soundEngine->play2D("../SpaceGame/resources/weapon_player.wav");
-		soundEngine->setSoundVolume(0.2); // have to be set by FX volume from controller
+		soundEngine->setSoundVolume(soundVolume); // have to be set by FX volume from controller
 		bullets_[bulletIndex]->Set(ship_->getAngleZ(), offsetX, offsetY, mDelta); // Move and rotate last bullet
 	}
 
@@ -294,4 +296,9 @@ IND_Entity2d* Ship::getBulletBorder(int number)
 void Ship::gravityUpdate(double delta)
 {
 	*speedY_ = *speedY_ + gravity*delta*10;
+}
+
+void Ship::setSoundVolume(float volume)
+{
+	soundVolume = volume;
 }
