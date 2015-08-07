@@ -59,7 +59,7 @@ int IndieLib() // main
 
 	bool play = false;
 
-
+	float animationDelay = 30; // 30 fps animation refresh
 
 	// ----- Main Loop -----
 	while (!mI->_input->onKeyPress(IND_F12) && !mI->_input->quit() && !controller.isExitSelected())
@@ -88,8 +88,11 @@ int IndieLib() // main
 
 			// ---- Update rarely -----
 			// creating delay for animation
-			if (count == 0)
+			//animationDelay -= 1000 * (*deltaAverage);
+			animationDelay -= mI->_render->getFrameTime();
+			if (animationDelay < 0) 
 			{
+				animationDelay = 30;
 				controller.AnimationsUpdate();
 			}
 		

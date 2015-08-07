@@ -62,7 +62,7 @@ void GameControll::gameInit()
 	gameOptions->loadGameObjects();
 	menu = new Menu(mI);
 	ship = new Ship(mI, "../SpaceGame/resources/animations/rocket.xml");
-	ship->setSoundVolume(0.5);
+	ship->setSoundVolume(0.3);
 
 	hud = new HUD(mI); // game info
 
