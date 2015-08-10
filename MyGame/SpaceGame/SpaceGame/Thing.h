@@ -13,12 +13,14 @@ class Thing
 {
 private:
 	int *health = new int(10); // increase or decrease players health etc. 
-	int *posX = new int(0);
-	int *posY = new int(0);
+	double *posX = new double(0);
+	double *posY = new double(0);
 	int *type = new int(0);
 	string name = "";
-	int collisionsX = 0;
-	int collisionsY = 0;
+	double *collisionsX = new double(0);
+	double *collisionsY = new double(0);
+	double *velosityX = new double(), *velosityY = new double();
+	double relativeX, relativeY;
 	
 	
 	IND_Entity2d *thing = IND_Entity2d::newEntity2d();
@@ -31,6 +33,7 @@ private:
 	int currentFrame = 0; // current frame in animation
 
 public:
+	void setVelosity(int vX,int vY);
 	int getHealth(void);
 	int getType();
 	//void show(int x, int y);
@@ -39,6 +42,7 @@ public:
 	int getCollisionPositionY();
 	//void getHealth(void);
 	void animationUpdate(); // Update animation
+	void Update(double *delta);
 	IND_Entity2d* getColisionBorder();
 	Thing();
 	Thing(CIndieLib *mI, IND_Surface *thingsPicture, int type, int x, int y, int life, int angle, vector<Frame*> frms);

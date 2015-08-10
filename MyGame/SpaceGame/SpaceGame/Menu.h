@@ -10,6 +10,7 @@
 class Menu 
 {
 private:
+	CIndieLib *mI;
 	int *posX, *posY;
 	bool isHidden = true,exitSelected = false;
 	MenuItem *itemPlay, *itemQuit, *itemOptions, *itemControls, *itemSound, *itemBack;

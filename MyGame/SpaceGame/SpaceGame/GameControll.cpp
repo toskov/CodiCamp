@@ -53,7 +53,7 @@ void GameControll::gameInit()
 	mI->_entity2dManager->add(mGround);					// Entity adding
 	mGround->setSurface(planetSurface);				// Set the surface into the entity
 	mGround->setPosition(0, 150, 3);
-	mGround->setBoundingRectangle("ground", 0, 400, 800, 200);
+	mGround->setBoundingRectangle("ground", 0, 400, 800, 0);
 	//mGround->setTransparency(50);
 
 	// -------- Load Options ----------------
@@ -121,29 +121,29 @@ void GameControll::sceneGenerator()
 {	
 	srand(time(NULL)); // random generfated possition
 
-	int randomX = rand() % (WINDOW_WIDTH-30);
-	int randomY  = rand() % (WINDOW_HEIGH -100);
+	int randomX = rand() % (WINDOW_WIDTH-50);
+	int randomY  = rand() % (WINDOW_HEIGHT -100);
 	for (int i = 0; i < 5; i++)
 	{
-		randomX =15 + rand() % (WINDOW_WIDTH - 30);
-		randomY =15 + rand() % (WINDOW_HEIGH - 100);
+		randomX =15 + rand() % (WINDOW_WIDTH - 50);
+		randomY =15 + rand() % (WINDOW_HEIGHT - 100);
 		gameObjects.push_back(new Thing(mI, thingsPicture, ROCK, randomX, randomY, -10, 0, frames));
 	}
 
 	for (int i = 0; i < 3; i++)
 	{
-		randomX = 15 + rand() % (WINDOW_WIDTH - 30);
-		randomY = 15 + rand() % (WINDOW_HEIGH - 100);
+		randomX = 15 + rand() % (WINDOW_WIDTH - 50);
+		randomY = 15 + rand() % (WINDOW_HEIGHT - 100);
 		//Thing *ufo = new Thing(mI, thingsPicture, UFO, randomX, randomY, 10,0,frames);
 	gameObjects.push_back(new Thing(mI, thingsPicture, UFO, randomX, randomY, -10, 0, frames));
 	}
 
-	randomX = 15 + rand() % (WINDOW_WIDTH - 30);
-	randomY = 15 + rand() % (WINDOW_HEIGH - 100);
+	randomX = 15 + rand() % (WINDOW_WIDTH - 50);
+	randomY = 15 + rand() % (WINDOW_HEIGHT - 100);
 	gameObjects.push_back(new Thing(mI, thingsPicture, HEALTH, randomX, randomY, 10, 0, frames));
 
-	randomX = 15 + rand() % (WINDOW_WIDTH - 30);
-	randomY = 15 + rand() % (WINDOW_HEIGH - 100);
+	randomX = 15 + rand() % (WINDOW_WIDTH - 50);
+	randomY = 15 + rand() % (WINDOW_HEIGHT - 100);
 	gameObjects.push_back(new Thing(mI, thingsPicture, DIAMOND, randomX, randomY, 10, 0, frames));
 	
 	hud->showAlert("Quit F12!");
@@ -154,7 +154,9 @@ void GameControll::Update(int gameTime,double *delta)
 {
 	this->delta = delta;
 
+	enemmy->Update(gameObjects, ship, delta); // Enemy movement
 	//stop game
+
 	if (ship->getHealth() < 1){
 		hud->updateHud(ship->getScore(), ship->getHealth(), ship->getShots(), gameTime);
 		hud->showAlert(" Game over! F12 to quit"); // for tests only	
@@ -285,5 +287,12 @@ void GameControll::AnimationsUpdate( )
 }
 GameControll::~GameControll()
 {
+	delete menu;
+	delete ship;
+	delete hud;
+	delete enemmy;
+	delete delta;
+	
+	
 
 }

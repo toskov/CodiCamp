@@ -6,6 +6,9 @@ Thing::Thing()
 
 Thing::Thing(CIndieLib *mI, IND_Surface *thingsPicture, int type, int x, int y, int life, int angle, vector<Frame*> frms)
 {
+	*velosityX = 100;
+	*velosityY = 100;
+
 	this->thingPictures = thingsPicture;
 	this->frames = frms;
 	*posX = x;
@@ -72,35 +75,20 @@ Thing::Thing(CIndieLib *mI, IND_Surface *thingsPicture, int type, int x, int y, 
 	// Empty object for colisions!
 	mI->_entity2dManager->add(border);
 	border->setSurface(collisionSurface);
+	//border->setPosition(x,y,COLLISIONS);
 	border->setBoundingCircle("thing", x + width /2, y + height / 2, radius);	
 	// prepare positions for explosion
-	collisionsX = x + width / 2;
-	collisionsY = y + height / 2;
+	*collisionsX = border->getPosX();//x + width / 2;	
+	*collisionsY = border->getPosY();//y + height / 2;
+	relativeX =  width / 2;
+	relativeY =  height / 2;
 }
-
-
-Thing::~Thing()
-{
-
-}
-
 
 IND_Entity2d* Thing::getColisionBorder()
 {
 	return border;
 }
 
-void Thing::destroy(CIndieLib *mI)
-{
-	delete health;
-	delete type;
-	delete posX;
-	delete posY;
-	border->deleteBoundingAreas("thing");
-	mI->_entity2dManager->remove(thing);
-	mI->_entity2dManager->remove(border);
-	mI->_surfaceManager->remove(collisionSurface);
-}
 
 int Thing::getHealth(void)
 {
@@ -114,12 +102,12 @@ int Thing::getType()
 
 int Thing::getCollisionPositionX()
 {
-		return collisionsX;
+		return *posX+relativeX;
 }
 
 int Thing::getCollisionPositionY()
 {
-	return collisionsY;
+		return *posY+relativeY;
 }
 
 void Thing::animationUpdate()
@@ -144,4 +132,50 @@ void Thing::animationUpdate()
 	}
 
 	thing->setRegion(offsetX, offsetY, width, height); // shows region
+}
+
+//Used for moving objects
+void Thing::setVelosity(int vx, int vy) 
+{
+	*velosityX = vx;
+	*velosityY = vy;
+
+}
+
+//Update moving objects
+void Thing::Update(double *delta)
+{
+	
+	*posX = *posX + *velosityX*(*delta);
+	*posY = *posY + *velosityY*(*delta);
+	thing->setPosition(*posX,*posY, 2);
+	*collisionsX = border->getPosX() + *velosityX*(*delta);
+	*collisionsY = border->getPosY() + *velosityY*(*delta);
+
+	border->setPosition(*collisionsX, *collisionsY, ENEMY);
+	if ((*posX > WINDOW_WIDTH) || (*posX <1)) *velosityX = -*velosityX;
+	if ((*posY > WINDOW_HEIGHT) || (*posY <1)) *velosityY = -*velosityY;
+
+}
+
+void Thing::destroy(CIndieLib *mI)
+{
+	delete health;
+	delete type;
+	delete posX;
+	delete posY;
+	border->deleteBoundingAreas("thing");
+	mI->_entity2dManager->remove(thing);
+	mI->_entity2dManager->remove(border);
+	mI->_surfaceManager->remove(collisionSurface);
+}
+
+Thing::~Thing()
+{
+	delete velosityX;
+	delete velosityY;
+	delete health;
+	delete posX;
+	delete posY;
+	delete type;
 }

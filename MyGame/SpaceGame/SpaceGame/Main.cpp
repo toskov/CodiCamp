@@ -111,7 +111,6 @@ int IndieLib() // main
 	// ----- Indielib End -----
 	mI->end();
 
-
 	return 0;
 }
 

@@ -8,6 +8,7 @@ Menu::Menu()
 Menu::Menu(CIndieLib  *myI)
 {
 	isHidden = true;
+	mI = myI;
 
 	// ---------- main menu ----------
 	itemPlay = new MenuItem(myI, 400, 150, false, "Play");
@@ -119,8 +120,8 @@ void Menu::HideMenu()
 }
 Menu::~Menu()
 {
-	mSurfaceCursor->destroy();
-	mCursor->destroy();
+	mI->_surfaceManager->remove(mSurfaceCursor);
+	mI->_entity2dManager->remove(mCursor);
 	delete itemPlay;
 	delete itemQuit;
 	delete itemOptions;

@@ -19,9 +19,11 @@
 #include "Rock.h"
 #include "Frame.h"
 #include "irrKlang.h"
+#include "Ai.h"
 #include <vector>
 #include <string>
 #include <sstream>
+
 
 using namespace irrklang; // Sound engine
 
@@ -39,12 +41,15 @@ private:
 	Menu *menu;
 	Ship *ship;
 	HUD *hud;
+	Ai *enemmy = new Ai();
+
 	bool gameExit = false;
 	bool play = true;
-	double *delta = new double(0);
+	double *delta;
 
 	float soundVolume = 0.5f;
 	float fxVolume = 0.5f;
+	
 
 	/*
 	// works on stack only?
