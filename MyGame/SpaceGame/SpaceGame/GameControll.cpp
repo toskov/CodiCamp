@@ -34,7 +34,7 @@ void GameControll::gameInit()
 		// error starting up the engine
 	}
 	//soundEngine->play2D("../SpaceGame/resources/explosion_player.wav"); // on collision
-	soundEngine->play2D("../SpaceGame/resources/music_background.wav", true);
+	soundEngine->play2D("../SpaceGame/resources/getout.ogg", true);
 	soundEngine->setSoundVolume(soundVolume);
 
 	// Creating surface for the background
