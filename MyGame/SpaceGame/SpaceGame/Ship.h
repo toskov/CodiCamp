@@ -27,11 +27,11 @@ private:
 	IND_Surface *collisionSurface = IND_Surface::newSurface();
 	IND_Entity2d *border = IND_Entity2d::newEntity2d();
 	Sprite *engine = new Sprite();
-	float gravity = 0;
+	float gravity = 0;  // GRAVITY;
 	bool rotating = false;
 	int shootInterval = 300;
 	ISoundEngine* soundEngine;
-	float soundVolume = 0.5f;;
+	float soundVolume = 0.5f;
 
 	
 public:
@@ -56,7 +56,7 @@ public:
 	int getX();
 	int getY();
 	int getAngleZ();
-	void gravityUpdate(double gravity);
+	void gravityUpdate(double delta);
 	void setSoundVolume(float volume);
 	IND_Entity2d* getBulletBorder(int number); // get collision border for one of bullets
 	IND_Entity2d* getColisionBorder();

@@ -65,7 +65,8 @@ Thing::Thing(CIndieLib *mI, IND_Surface *thingsPicture, int type, int x, int y, 
 			currentFrame = i;// last frame 
 		}
 	}
-
+	//srand(time(NULL)); // random generfated possition
+	currentFrame = rand() % (frameCount-1);
 	// Entity adding
 	thing->setPosition(x, y, 1);
 	//health (1) = 360 1180 50 50

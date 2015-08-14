@@ -153,7 +153,7 @@ void GameControll::sceneGenerator()
 void GameControll::Update(int gameTime,double *delta)
 {
 	this->delta = delta;
-
+	//ship->gravityUpdate(GRAVITY);
 	enemmy->Update(gameObjects, ship, delta); // Enemy movement
 	//stop game
 
