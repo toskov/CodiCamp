@@ -6,6 +6,7 @@ Thing::Thing()
 
 Thing::Thing(CIndieLib *mI, IND_Surface *thingsPicture, int type, int x, int y, int life, int angle, vector<Frame*> frms)
 {
+<<<<<<< HEAD
 	// random speed and direction (rand() % 2 - 1)
 	//srand(time(NULL));
 	*velosityX = rand() % 100;
@@ -14,6 +15,32 @@ Thing::Thing(CIndieLib *mI, IND_Surface *thingsPicture, int type, int x, int y, 
 	this->thingPictures = thingsPicture;
 	this->frames = frms;
 	*posX = x;
+=======
+<<<<<<< remotes/git_Toskov/master
+	Thing::Construct(mI, type, x, y, life);
+}
+
+Thing::Thing(CIndieLib *mI, int type, int x, int y, int life, int angle)
+{
+	Thing::Construct(mI, type, x, y, life);
+	//Rotation angle
+	thing->setAngleXYZ(0, 0, angle);
+}
+
+void Thing::Construct(CIndieLib *mI, int type, int x, int y, int life)
+{
+*posX = x;
+=======
+	// random speed and direction (rand() % 2 - 1)
+	//srand(time(NULL));
+	*velosityX = rand() % 100;
+	*velosityY = rand() % 100;
+	this->mI = mI;
+	this->thingPictures = thingsPicture;
+	this->frames = frms;
+	*posX = x;
+>>>>>>> local
+>>>>>>> Main
 	*posY = y;
 	*health = life;
 	*this->type = type;
@@ -161,7 +188,7 @@ void Thing::Update(double *delta)
 
 }
 
-void Thing::destroy(CIndieLib *mI)
+void Thing::destroy()
 {
 	delete health;
 	delete type;

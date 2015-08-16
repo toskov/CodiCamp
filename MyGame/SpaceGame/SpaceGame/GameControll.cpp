@@ -23,7 +23,11 @@ void GameControll::GameOver()
 
 void GameControll::gameInit()
 {
+<<<<<<< HEAD
 	
+=======
+	srand(time(NULL)); // random generator
+>>>>>>> Main
 	ErrorHandler::trace(" ******  New trace ***********");
 	readThingsFile();
 	// Sound init
@@ -59,7 +63,11 @@ void GameControll::gameInit()
 	// -------- Load Options ----------------
 	Options *gameOptions = new Options(); // read options from file
 	gameOptions->saveOptions(); // for tests
+<<<<<<< HEAD
 	gameOptions->loadGameObjects();
+=======
+	gameOptions->loadGameObjects();// not ready yet
+>>>>>>> Main
 	menu = new Menu(mI);
 	ship = new Ship(mI, "../SpaceGame/resources/animations/rocket.xml");
 	ship->setSoundVolume(0.3);
@@ -119,7 +127,11 @@ void GameControll::readThingsFile()
 
 void GameControll::sceneGenerator()
 {	
+<<<<<<< HEAD
 	srand(time(NULL)); // random generfated possition
+=======
+	
+>>>>>>> Main
 
 	int randomX;
 	int randomY;
@@ -194,6 +206,7 @@ void GameControll::Update(int gameTime,double *delta)
 		{
 		case 0: // hide menu
 			break;
+<<<<<<< HEAD
 		case 1:
 			play = true;
 			break;
@@ -204,6 +217,26 @@ void GameControll::Update(int gameTime,double *delta)
 		case 4: // quit selected
 			gameExit = true;
 			break;
+=======
+		case BACK:
+			play = true;
+			break;
+		case NEWGAME:
+			// button restart pressed
+			ship->setHealth(100);
+			ship->setScore(0);
+			ship->setSpeedX(0);
+			ship->setSpeedY(0);
+			ship->resetShots();
+			ClearScene();
+			sceneGenerator();
+			play = true;
+			break;
+		case QUIT: // quit selected
+			gameExit = true;
+			break;
+
+>>>>>>> Main
 		default:
 			break;
 		}
@@ -243,7 +276,11 @@ void GameControll::Update(int gameTime,double *delta)
 					soundEngine->play2D("../SpaceGame/resources/explosion_player.wav");
 				}
 
+<<<<<<< HEAD
 				gameObjects.at(i)->destroy(mI); // destroy object
+=======
+				gameObjects.at(i)->destroy(); // destroy object
+>>>>>>> Main
 				gameObjects.erase((gameObjects.begin() + i)); // remove pointer from vector
 			}
 
@@ -260,7 +297,11 @@ void GameControll::Update(int gameTime,double *delta)
 
 						explosions.push_back(new Explosion(mI, gameObjects[i]->getCollisionPositionX(), gameObjects[i]->getCollisionPositionY()));// create new explosion in vector
 						ship->changeScore(5); // increase game score
+<<<<<<< HEAD
 						gameObjects.at(i)->destroy(mI); // destroy object
+=======
+						gameObjects.at(i)->destroy(); // destroy object
+>>>>>>> Main
 						gameObjects.erase((gameObjects.begin() + i)); // remove pointer from vector		
 						soundEngine->play2D("../SpaceGame/resources/explosion_asteroid.wav");
 
@@ -292,7 +333,27 @@ void GameControll::AnimationsUpdate( )
 
 void GameControll::ClearScene()
 {
+<<<<<<< HEAD
 
+=======
+		
+	for (int i = 0; i < gameObjects.size(); i++)
+	{
+		gameObjects[i]->destroy(); //delete objects
+	//	gameObjects.erase((gameObjects.begin() + i)); // remove pointer from vector	
+	}
+	
+	gameObjects.clear();
+/*	
+	for (auto it = std::begin(gameObjects); it != std::end(gameObjects); ++it)
+	{
+		next(gameObjects)->destroy(); //delete objects
+
+		gameObjects.at(it)->destroy(); //delete objects
+		gameObjects.erase((gameObjects.begin() + i)); // remove pointer from vector	
+	}
+*/	
+>>>>>>> Main
 }
 GameControll::~GameControll()
 {

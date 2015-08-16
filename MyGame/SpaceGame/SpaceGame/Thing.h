@@ -22,7 +22,7 @@ private:
 	double *velosityX = new double(), *velosityY = new double(); // for moving objects
 	double relativeX, relativeY;
 	
-	
+	CIndieLib *mI;
 	IND_Entity2d *thing = IND_Entity2d::newEntity2d();
 	IND_Entity2d *border = IND_Entity2d::newEntity2d(); // collision border
 	IND_Surface *thingPictures;
@@ -36,10 +36,23 @@ public:
 	void setVelosity(int vX,int vY);
 	int getHealth(void);
 	int getType();
+<<<<<<< HEAD
 	//void show(int x, int y);
 	void destroy(CIndieLib *mI);
 	int getCollisionPositionX();
 	int getCollisionPositionY();
+=======
+<<<<<<< remotes/git_Toskov/master
+	void hide(void);
+	void show(int x, int y);
+	void destroy(CIndieLib *mI);
+=======
+	//void show(int x, int y);
+	void destroy();
+	int getCollisionPositionX();
+	int getCollisionPositionY();
+>>>>>>> local
+>>>>>>> Main
 	//void getHealth(void);
 	void animationUpdate(); // Update animation
 	void Update(double *delta);
