@@ -53,7 +53,7 @@ private:
 	// Vector Objects container
 	vector<Thing*> gameObjects;
 	vector<Explosion*> explosions;
-	vector<Rock*> rocks;
+	//vector<Rock*> rocks;
 	vector<Frame*> frames;	
 	void gameInit(); // initialize game
 
@@ -68,6 +68,7 @@ public:
 	void GameOver(); // Final screen
 	void readThingsFile(); // reading info for pictures in spritesheet
 	bool isExitSelected();
+	void ClearScene();
 	~GameControll();
 };
 

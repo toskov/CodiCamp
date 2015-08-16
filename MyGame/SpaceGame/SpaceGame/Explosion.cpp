@@ -11,7 +11,7 @@ Explosion::Explosion(CIndieLib *mI, int x, int y)
 	*posX = x-*frameWidth/2;   
 	*posY = y-*frameHeight/2;
 
-	mI->_surfaceManager->add(picture, "../SpaceGame/resources/expl-composite.png", IND_ALPHA, IND_32); // background?
+	mI->_surfaceManager->add(picture, "../SpaceGame/resources/explosionFull.png", IND_ALPHA, IND_32); // background?
 	explosion->setSurface(picture);
 	mI->_entity2dManager->add(explosion);					// Entity adding	
 	explosion->setPosition(*posX, *posY, 30);

@@ -121,29 +121,29 @@ void GameControll::sceneGenerator()
 {	
 	srand(time(NULL)); // random generfated possition
 
-	int randomX = rand() % (WINDOW_WIDTH-50);
-	int randomY  = rand() % (WINDOW_HEIGHT -100);
+	int randomX;
+	int randomY;
 	for (int i = 0; i < 5; i++)
 	{
 		randomX =15 + rand() % (WINDOW_WIDTH - 50);
-		randomY =15 + rand() % (WINDOW_HEIGHT - 100);
+		randomY = 15 + rand() % (WINDOW_HEIGHT - 150);
 		gameObjects.push_back(new Thing(mI, thingsPicture, ROCK, randomX, randomY, -10, 0, frames));
 	}
 
 	for (int i = 0; i < 6; i++)
 	{
 		randomX = 15 + rand() % (WINDOW_WIDTH - 50);
-		randomY = 15 + rand() % (WINDOW_HEIGHT - 100);
+		randomY = 15 + rand() % (WINDOW_HEIGHT - 150);
 		//Thing *ufo = new Thing(mI, thingsPicture, UFO, randomX, randomY, 10,0,frames);
 	gameObjects.push_back(new Thing(mI, thingsPicture, UFO, randomX, randomY, -10, 0, frames));
 	}
 
 	randomX = 15 + rand() % (WINDOW_WIDTH - 50);
-	randomY = 15 + rand() % (WINDOW_HEIGHT - 100);
+	randomY = 15 + rand() % (WINDOW_HEIGHT - 150);
 	gameObjects.push_back(new Thing(mI, thingsPicture, HEALTH, randomX, randomY, 10, 0, frames));
 
 	randomX = 15 + rand() % (WINDOW_WIDTH - 50);
-	randomY = 15 + rand() % (WINDOW_HEIGHT - 100);
+	randomY = 15 + rand() % (WINDOW_HEIGHT - 150);
 	gameObjects.push_back(new Thing(mI, thingsPicture, DIAMOND, randomX, randomY, 10, 0, frames));
 	
 	hud->showAlert("Quit F12!");
@@ -288,6 +288,11 @@ void GameControll::AnimationsUpdate( )
 	{
 		gameObjects[i]->animationUpdate(); //update objects animation
 	}
+}
+
+void GameControll::ClearScene()
+{
+
 }
 GameControll::~GameControll()
 {
