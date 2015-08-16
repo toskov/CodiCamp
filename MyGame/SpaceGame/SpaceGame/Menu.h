@@ -13,19 +13,7 @@ class Menu
 private:
 	CIndieLib *mI;
 	int *posX, *posY;
-<<<<<<< HEAD
-	bool hidden = true,exitSelected = false;
-	MenuItem *itemPlay, *itemQuit, *itemOptions, *itemControls, *itemSound, *itemBack, *itemNewGame;
-=======
-<<<<<<< remotes/git_Toskov/master
-	bool isHidden = true,exitSelected = false;
-	MenuItem *itemPlay, *itemQuit, *itemOptions, *itemControls, *itemSound, *itemBack;
->>>>>>> Main
-	enum currentMenu { MAIN = 1, OPTIONS, CONTROLS, SOUND, DIFFICULTY };
-=======
-	bool hidden = true,exitSelected = false;
-	MenuItem *itemPlay, *itemQuit, *itemOptions, *itemControls, *itemSound, *itemBack, *itemNewGame;
->>>>>>> local
+
 	enum difficulty { EASY = 1, NORMAL, HARD, EXPERT, UNDEFINED };
 	difficulty gameDifficulty = EASY;
 	currentMenu gameCurrentMenu = MAIN;

@@ -10,20 +10,11 @@
 
 #define PI 3.14159 //the pi number
 
-<<<<<<< HEAD
-enum objectType { HEALTH = 1, ASTEROID, ROCK, DIAMOND, UFO, BONUS }; // type of objects on scene
 
-enum layer {BACKGROUND = 1, ENEMY, ROCKS, SHIP, MENU, CURSOR,COLLISIONS };
-
-=======
-<<<<<<< remotes/git_Toskov/master
-enum objectType { HEALTH = 1, ASTEROID, ROCK, DIAMOND, ENEMY, BONUS }; // type of objects on scene
-=======
 enum objectType { HEALTH = 1, ASTEROID, ROCK, DIAMOND, UFO, BONUS }; // type of objects on scene
 enum layer {BACKGROUND = 1, ENEMY, ROCKS, SHIP, MENU, CURSOR, COLLISIONS }; // named layers
 enum currentMenu { MAIN = 1, NEWGAME, OPTIONS, CONTROLS, QUIT, SOUND, DIFFICULTY, BACK };
 
->>>>>>> local
->>>>>>> Main
+
 
 #endif 
