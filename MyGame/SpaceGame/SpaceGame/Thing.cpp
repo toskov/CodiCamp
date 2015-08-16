@@ -7,6 +7,7 @@ Thing::Thing()
 // Create flying thing
 Thing::Thing(CIndieLib *mI, int type, int x, int y, int life)
 {
+<<<<<<< remotes/git_Toskov/master
 	Thing::Construct(mI, type, x, y, life);
 }
 
@@ -20,6 +21,16 @@ Thing::Thing(CIndieLib *mI, int type, int x, int y, int life, int angle)
 void Thing::Construct(CIndieLib *mI, int type, int x, int y, int life)
 {
 *posX = x;
+=======
+	// random speed and direction (rand() % 2 - 1)
+	//srand(time(NULL));
+	*velosityX = rand() % 100;
+	*velosityY = rand() % 100;
+	this->mI = mI;
+	this->thingPictures = thingsPicture;
+	this->frames = frms;
+	*posX = x;
+>>>>>>> local
 	*posY = y;
 	*health = life;
 	*this->type = type;
@@ -92,7 +103,7 @@ IND_Entity2d* Thing::getColisionBorder()
 	return border;
 }
 
-void Thing::destroy(CIndieLib *mI)
+void Thing::destroy()
 {
 	delete health;
 	delete type;

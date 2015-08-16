@@ -256,4 +256,29 @@ IND_Entity2d* Ship::getBulletBorder(int number)
 {
 	if (number < 0 || number >MAX_BULLETS) return bullets_[0]->getColisionBorder(); // for error preventing 
 	return bullets_[number]->getColisionBorder();
+<<<<<<< remotes/git_Toskov/master
+=======
+}
+
+void Ship::gravityUpdate(double delta)
+{
+	*speedY_ = *speedY_ + gravity*delta*10;
+}
+
+void Ship::setSoundVolume(float volume)
+{
+	soundVolume = volume;
+}
+void Ship::setScore(int i)
+{
+	*score = i;
+}
+void Ship::setHealth(int i)
+{
+	*health = i;
+}
+void Ship::resetShots()
+{
+	*shots = 0;
+>>>>>>> local
 }

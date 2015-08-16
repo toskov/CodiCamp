@@ -30,6 +30,9 @@ public:
 	Ship(CIndieLib *mI, const char *str);
 	void Update(double* mDelta); // update ship position
 	void Shoot(); 
+	void resetShots();
+	void setScore(int i);
+	void setHealth(int i);
 	void setSpeedX(float sX);
 	void setSpeedY(float sY);
 	void increaseSpeed(float step);

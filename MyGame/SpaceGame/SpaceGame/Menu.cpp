@@ -38,12 +38,36 @@ bool Menu::Update(CIndieLib  *mI)
 	{
 		HideMenu();
 		mCursor->setPosition(-100,-100,100);
+<<<<<<< remotes/git_Toskov/master
 		return true;
+=======
+		return MAIN;
+>>>>>>> local
 	}
 	positionX = mI->_input->getMouseX();
 	positionY = mI->_input->getMouseY();
 	mCursor->setPosition(positionX, positionY, 20);
 
+<<<<<<< remotes/git_Toskov/master
+=======
+	// check button NEW GAME
+	if (mI->_entity2dManager->isCollision(itemNewGame->getBound(), "rect", mCursor, "pointer"))
+	{
+		// mouse over
+		itemNewGame->selectedItem();
+		if (mI->_input->isMouseButtonPressed(IND_MBUTTON_LEFT))
+		{
+			//On left mouse button click
+			HideMenu();
+			return NEWGAME; // refresh game
+		}
+	}
+	else
+	{
+		itemNewGame->delesectedItem();
+	}
+
+>>>>>>> local
 	// check button PLAY
 	if (mI->_entity2dManager->isCollision(itemPlay->getBound(), "rect", mCursor, "pointer"))
 	{
@@ -53,7 +77,11 @@ bool Menu::Update(CIndieLib  *mI)
 		{
 			//On left mouse button click
 			HideMenu();
+<<<<<<< remotes/git_Toskov/master
 			return true;
+=======
+			return BACK; // refresh game
+>>>>>>> local
 		}
 	} else 
 	{
@@ -69,7 +97,11 @@ bool Menu::Update(CIndieLib  *mI)
 		{
 			//On left mouse button click
 	//TODO enter in submenu
+<<<<<<< remotes/git_Toskov/master
 			return true;
+=======
+			return OPTIONS;
+>>>>>>> local
 		}
 	}
 	else
@@ -87,7 +119,11 @@ bool Menu::Update(CIndieLib  *mI)
 			 //On left mouse button click
 			 HideMenu();
 			 exitSelected = true;
+<<<<<<< remotes/git_Toskov/master
 			 return true;
+=======
+			 return QUIT;
+>>>>>>> local
 		 }
 	 }
 	 else

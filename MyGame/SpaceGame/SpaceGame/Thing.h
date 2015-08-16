@@ -14,7 +14,7 @@ private:
 	int *posY = new int(0);
 	int *type = new int(0);
 	
-	
+	CIndieLib *mI;
 	IND_Entity2d *thing = IND_Entity2d::newEntity2d();
 	IND_Entity2d *border = IND_Entity2d::newEntity2d();
 	IND_Animation *thingAnimation = IND_Animation::newAnimation();
@@ -24,9 +24,16 @@ private:
 public:
 	int getHealth(void);
 	int getType();
+<<<<<<< remotes/git_Toskov/master
 	void hide(void);
 	void show(int x, int y);
 	void destroy(CIndieLib *mI);
+=======
+	//void show(int x, int y);
+	void destroy();
+	int getCollisionPositionX();
+	int getCollisionPositionY();
+>>>>>>> local
 	//void getHealth(void);
 	IND_Entity2d* getColisionBorder();
 	Thing();
