@@ -6,8 +6,10 @@ Thing::Thing()
 
 Thing::Thing(CIndieLib *mI, IND_Surface *thingsPicture, int type, int x, int y, int life, int angle, vector<Frame*> frms)
 {
-	*velosityX = 100;
-	*velosityY = 100;
+	// random speed and direction (rand() % 2 - 1)
+	//srand(time(NULL));
+	*velosityX = rand() % 100;
+	*velosityY = rand() % 100;
 
 	this->thingPictures = thingsPicture;
 	this->frames = frms;

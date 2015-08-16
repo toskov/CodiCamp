@@ -18,7 +18,7 @@ bool GameControll::isExitSelected()
 
 void GameControll::GameOver()
 {
-	
+	menu->ShowMenu();
 }
 
 void GameControll::gameInit()
@@ -130,7 +130,7 @@ void GameControll::sceneGenerator()
 		gameObjects.push_back(new Thing(mI, thingsPicture, ROCK, randomX, randomY, -10, 0, frames));
 	}
 
-	for (int i = 0; i < 3; i++)
+	for (int i = 0; i < 6; i++)
 	{
 		randomX = 15 + rand() % (WINDOW_WIDTH - 50);
 		randomY = 15 + rand() % (WINDOW_HEIGHT - 100);
@@ -161,7 +161,7 @@ void GameControll::Update(int gameTime,double *delta)
 		hud->updateHud(ship->getScore(), ship->getHealth(), ship->getShots(), gameTime);
 		hud->showAlert(" Game over! F12 to quit"); // for tests only	
 		play = false;
-
+		GameOver();
 	}
 
 	// show menu

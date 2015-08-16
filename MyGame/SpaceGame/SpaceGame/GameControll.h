@@ -50,20 +50,6 @@ private:
 	float soundVolume = 0.5f;
 	float fxVolume = 0.5f;
 	
-
-	/*
-	// works on stack only?
-		struct frame {
-		string name; // frame name
-		int frameNumber = 0; //frame number
-		int offsetX = 0; //X offset
-		int offsetY = 0; //Y offset
-		int width = 0; // width
-		int height = 0; // height
-	};
-	*/
-
-
 	// Vector Objects container
 	vector<Thing*> gameObjects;
 	vector<Explosion*> explosions;
