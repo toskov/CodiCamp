@@ -1,12 +1,11 @@
-﻿Build started 16.8.2015 г. 21:55:30.
+﻿Build started 17.8.2015 г. 1:24:20.
      1>Project "F:\Projects\CodiCamp\C-game-course\MyGame\SpaceGame\SpaceGame\SpaceGame.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         F:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"F:\Projects\CodiCamp\C-game-course\MyGame\SpaceGame\SpaceGame\irrKlang-1.5.0\include" /I"F:\Projects\CodiCamp\C-game-course\MyGame\SpaceGame\SpaceGame\tools\editor_tileless" /I"F:\Projects\CodiCamp\C-game-course\MyGame\SpaceGame\SpaceGame\common\include" /I..\..\..\..\common\include /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Explosion.cpp GameControll.cpp Main.cpp
-         Explosion.cpp
+         F:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"F:\Projects\CodiCamp\C-game-course\MyGame\SpaceGame\SpaceGame\irrKlang-1.5.0\include" /I"F:\Projects\CodiCamp\C-game-course\MyGame\SpaceGame\SpaceGame\tools\editor_tileless" /I"F:\Projects\CodiCamp\C-game-course\MyGame\SpaceGame\SpaceGame\common\include" /I..\..\..\..\common\include /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Ai.cpp GameControll.cpp Main.cpp Ship.cpp Thing.cpp
+         Ai.cpp
      1>f:\projects\codicamp\c-game-course\mygame\spacegame\spacegame\GlobalHeader.h(11): warning C4005: 'PI' : macro redefinition
                  f:\projects\codicamp\c-game-course\mygame\spacegame\spacegame\common\include\Defines.h(249) : see previous definition of 'PI'
-     1>Explosion.cpp(17): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>Explosion.cpp(23): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+     1>Ai.cpp(6): warning C4018: '<' : signed/unsigned mismatch
          GameControll.cpp
      1>f:\projects\codicamp\c-game-course\mygame\spacegame\spacegame\GlobalHeader.h(11): warning C4005: 'PI' : macro redefinition
                  f:\projects\codicamp\c-game-course\mygame\spacegame\spacegame\common\include\Defines.h(249) : see previous definition of 'PI'
@@ -21,6 +20,38 @@
      1>f:\projects\codicamp\c-game-course\mygame\spacegame\spacegame\GlobalHeader.h(11): warning C4005: 'PI' : macro redefinition
                  f:\projects\codicamp\c-game-course\mygame\spacegame\spacegame\common\include\Defines.h(249) : see previous definition of 'PI'
      1>Main.cpp(34): warning C4101: 'TempText' : unreferenced local variable
+         Ship.cpp
+     1>f:\projects\codicamp\c-game-course\mygame\spacegame\spacegame\GlobalHeader.h(11): warning C4005: 'PI' : macro redefinition
+                 f:\projects\codicamp\c-game-course\mygame\spacegame\spacegame\common\include\Defines.h(249) : see previous definition of 'PI'
+     1>Ship.cpp(72): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>Ship.cpp(76): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>Ship.cpp(93): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>Ship.cpp(119): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>Ship.cpp(126): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>Ship.cpp(155): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>Ship.cpp(165): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>Ship.cpp(175): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>Ship.cpp(181): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>Ship.cpp(202): warning C4244: '-=' : conversion from 'double' to 'int', possible loss of data
+     1>Ship.cpp(218): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>Ship.cpp(251): warning C4154: deletion of an array expression; conversion to pointer supplied
+     1>Ship.cpp(261): warning C4244: 'return' : conversion from 'float' to 'int', possible loss of data
+     1>Ship.cpp(266): warning C4244: 'return' : conversion from 'float' to 'int', possible loss of data
+     1>Ship.cpp(271): warning C4244: 'return' : conversion from 'float' to 'int', possible loss of data
+     1>Ship.cpp(298): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+         Thing.cpp
+     1>f:\projects\codicamp\c-game-course\mygame\spacegame\spacegame\GlobalHeader.h(11): warning C4005: 'PI' : macro redefinition
+                 f:\projects\codicamp\c-game-course\mygame\spacegame\spacegame\common\include\Defines.h(249) : see previous definition of 'PI'
+     1>Thing.cpp(35): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>Thing.cpp(56): warning C4018: '<' : signed/unsigned mismatch
+     1>Thing.cpp(73): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>Thing.cpp(108): warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
+     1>Thing.cpp(113): warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
+     1>Thing.cpp(124): warning C4018: '<' : signed/unsigned mismatch
+     1>Thing.cpp(154): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>Thing.cpp(158): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+       ResourceCompile:
+         C:\Program Files (x86)\Windows Kits\8.1\bin\x86\rc.exe /D _UNICODE /D UNICODE /l"0x0409" /nologo /fo"Release\SpaceGame.res" SpaceGame.rc 
        Link:
          F:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"F:\Projects\CodiCamp\C-game-course\MyGame\SpaceGame\Release\SpaceGame.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:"F:\Projects\CodiCamp\C-game-course\MyGame\SpaceGame\SpaceGame\irrKlang-1.5.0\lib\Win32-visualStudio" /LIBPATH:"F:\Projects\CodiCamp\C-game-course\MyGame\SpaceGame\SpaceGame\bin\win" IndieLib.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"F:\Projects\CodiCamp\C-game-course\MyGame\SpaceGame\Release\SpaceGame.pdb" /SUBSYSTEM:WINDOWS /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"F:\Projects\CodiCamp\C-game-course\MyGame\SpaceGame\Release\SpaceGame.lib" /MACHINE:X86 /SAFESEH Release\SpaceGame.res
          Release\Ai.obj
@@ -50,4 +81,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:03.63
+Time Elapsed 00:00:05.48
