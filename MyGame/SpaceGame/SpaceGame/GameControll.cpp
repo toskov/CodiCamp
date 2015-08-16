@@ -154,7 +154,11 @@ void GameControll::Update(int gameTime,double *delta)
 {
 	this->delta = delta;
 	//ship->gravityUpdate(GRAVITY);
-	enemmy->Update(gameObjects, ship, delta); // Enemy movement
+	if (menu->isHidden())
+	{
+		enemmy->Update(gameObjects, ship, delta); // Enemy movement only if menu is hidden
+	}
+	
 	//stop game
 
 	if (ship->getHealth() < 1){

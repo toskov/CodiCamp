@@ -12,8 +12,8 @@ class Menu
 private:
 	CIndieLib *mI;
 	int *posX, *posY;
-	bool isHidden = true,exitSelected = false;
-	MenuItem *itemPlay, *itemQuit, *itemOptions, *itemControls, *itemSound, *itemBack;
+	bool hidden = true,exitSelected = false;
+	MenuItem *itemPlay, *itemQuit, *itemOptions, *itemControls, *itemSound, *itemBack, *itemNewGame;
 	enum currentMenu { MAIN = 1, OPTIONS, CONTROLS, SOUND, DIFFICULTY };
 	enum difficulty { EASY = 1, NORMAL, HARD, EXPERT, UNDEFINED };
 	difficulty gameDifficulty = EASY;
@@ -36,6 +36,7 @@ public:
 	void HideSoundOptions(void);
 	void ShowControls(void);
 	void HideControls(void);
+	bool isHidden(void);
 	bool isExitSelected(); // for game exit
 };
 

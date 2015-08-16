@@ -7,13 +7,14 @@ Menu::Menu()
 
 Menu::Menu(CIndieLib  *myI)
 {
-	isHidden = true;
+	hidden = true;
 	mI = myI;
 
 	// ---------- main menu ----------
-	itemPlay = new MenuItem(myI, 400, 150, false, "Play");
-	itemOptions = new MenuItem(myI, 400, 200, false, "Options");
-	itemQuit = new MenuItem(myI, 400, 250, false, "Quit");
+	itemPlay = new MenuItem(myI, 400, 150, false, "Back");
+	itemNewGame = new MenuItem(myI, 400, 200, false, "New game");
+	itemOptions = new MenuItem(myI, 400, 250, false, "Options");
+	itemQuit = new MenuItem(myI, 400, 300, false, "Quit");
 
 	// ---------- Options menu ---------
 	itemControls = new MenuItem(myI, 400, 150, false, "Controls");
@@ -35,7 +36,7 @@ int Menu::Update(CIndieLib  *mI)
 {
 	// return true if menu is hidden
 	float positionX, positionY; // mouse position
-	if (isHidden)
+	if (hidden)
 	{
 		HideMenu();
 		mCursor->setPosition(-100,-100,100);
@@ -44,6 +45,23 @@ int Menu::Update(CIndieLib  *mI)
 	positionX = mI->_input->getMouseX();
 	positionY = mI->_input->getMouseY();
 	mCursor->setPosition(positionX, positionY, 20);
+
+	// check button NEW GAME
+	if (mI->_entity2dManager->isCollision(itemNewGame->getBound(), "rect", mCursor, "pointer"))
+	{
+		// mouse over
+		itemNewGame->selectedItem();
+		if (mI->_input->isMouseButtonPressed(IND_MBUTTON_LEFT))
+		{
+			//On left mouse button click
+			HideMenu();
+			return 3; // refresh game
+		}
+	}
+	else
+	{
+		itemNewGame->delesectedItem();
+	}
 
 	// check button PLAY
 	if (mI->_entity2dManager->isCollision(itemPlay->getBound(), "rect", mCursor, "pointer"))
@@ -101,8 +119,9 @@ int Menu::Update(CIndieLib  *mI)
 }
 void Menu::ShowMenu()
 {
-	isHidden = false;
+	hidden = false;
 	itemPlay->show();
+	itemNewGame->show();
 	itemQuit->show();
 	itemOptions->show();
 }
@@ -110,18 +129,20 @@ void Menu::ShowMenu()
 void Menu::HideMenu()
 {
 	mCursor->setPosition(-100, -100, 20);
-	isHidden = true;
+	hidden = true;
 	itemPlay->hide();
 	itemQuit->hide();
 	itemOptions->hide();
 	itemControls->hide();
 	itemSound->hide();
 	itemBack->hide();
+	itemNewGame->hide();
 }
 Menu::~Menu()
 {
 	mI->_surfaceManager->remove(mSurfaceCursor);
 	mI->_entity2dManager->remove(mCursor);
+	delete itemNewGame;
 	delete itemPlay;
 	delete itemQuit;
 	delete itemOptions;
@@ -162,4 +183,9 @@ void Menu::HideControls(void)
 bool Menu::isExitSelected()
 {
 	return exitSelected;
+}
+
+bool Menu::isHidden()
+{
+	return hidden;
 }

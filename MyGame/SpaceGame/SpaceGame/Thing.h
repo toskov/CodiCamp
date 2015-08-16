@@ -18,13 +18,13 @@ private:
 	int *type = new int(0);
 	string name = "";
 	double *collisionsX = new double(0);
-	double *collisionsY = new double(0);
-	double *velosityX = new double(), *velosityY = new double();
+	double *collisionsY = new double(0); 
+	double *velosityX = new double(), *velosityY = new double(); // for moving objects
 	double relativeX, relativeY;
 	
 	
 	IND_Entity2d *thing = IND_Entity2d::newEntity2d();
-	IND_Entity2d *border = IND_Entity2d::newEntity2d();
+	IND_Entity2d *border = IND_Entity2d::newEntity2d(); // collision border
 	IND_Surface *thingPictures;
 	IND_Surface *collisionSurface = IND_Surface::newSurface();
 	void Construct(CIndieLib *mI, IND_Surface *thingsPicture, int type, int x, int y, int life); // for multy constructor initialise
