@@ -5,6 +5,10 @@
       <Configuration>Debug</Configuration>
       <Platform>Win32</Platform>
     </ProjectConfiguration>
+    <ProjectConfiguration Include="Game|Win32">
+      <Configuration>Game</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
     <ProjectConfiguration Include="Release|Win32">
       <Configuration>Release</Configuration>
       <Platform>Win32</Platform>
@@ -29,6 +33,13 @@
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Game|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
   </ImportGroup>
@@ -40,11 +51,18 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
     <Import Project="..\IndieLib_release.props" />
   </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Game|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\IndieLib_release.props" />
+  </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Game|Win32'">
     <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -73,45 +91,86 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>F:\Projects\CodiCamp\C-game-course\MyGame\SpaceGame\SpaceGame\tools\editor_tileless;F:\Projects\CodiCamp\C-game-course\MyGame\SpaceGame\SpaceGame\common\include;C:\Users\Steve\Desktop\Организации\Codi Camp\Cources\Intro Game Development C++\Lecture5_Indielib\MyGame\SpaceGame\SpaceGame\common\include;C:\Users\Steve\Desktop\Организации\Codi Camp\Cources\Intro Game Development C++\Lecture5_Indielib\MyGame\SpaceGame\SpaceGame\tools\editor_tileless;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>F:\Projects\CodiCamp\C-game-course\MyGame\SpaceGame\SpaceGame\irrKlang-1.5.0\include;F:\Projects\CodiCamp\C-game-course\MyGame\SpaceGame\SpaceGame\tools\editor_tileless;F:\Projects\CodiCamp\C-game-course\MyGame\SpaceGame\SpaceGame\common\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalLibraryDirectories>F:\Projects\CodiCamp\C-game-course\MyGame\SpaceGame\SpaceGame\bin\win;C:\Users\Steve\Desktop\Организации\Codi Camp\Cources\Intro Game Development C++\Lecture5_Indielib\MyGame\SpaceGame\SpaceGame\bin\win;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>F:\Projects\CodiCamp\C-game-course\MyGame\SpaceGame\SpaceGame\irrKlang-1.5.0\lib\Win32-visualStudio;F:\Projects\CodiCamp\C-game-course\MyGame\SpaceGame\SpaceGame\bin\win</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Game|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>F:\Projects\CodiCamp\C-game-course\MyGame\SpaceGame\SpaceGame\irrKlang-1.5.0\include;F:\Projects\CodiCamp\C-game-course\MyGame\SpaceGame\SpaceGame\tools\editor_tileless;F:\Projects\CodiCamp\C-game-course\MyGame\SpaceGame\SpaceGame\common\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>F:\Projects\CodiCamp\C-game-course\MyGame\SpaceGame\SpaceGame\irrKlang-1.5.0\lib\Win32-visualStudio;F:\Projects\CodiCamp\C-game-course\MyGame\SpaceGame\SpaceGame\bin\win</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Ai.cpp" />
     <ClCompile Include="Bullet.cpp" />
     <ClCompile Include="ErrorHandler.cpp" />
+    <ClCompile Include="Explosion.cpp" />
+    <ClCompile Include="GameControll.cpp" />
+    <ClCompile Include="Frame.cpp" />
     <ClCompile Include="HUD.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Menu.cpp" />
     <ClCompile Include="MenuItem.cpp" />
     <ClCompile Include="Options.cpp" />
+    <ClCompile Include="Particle.cpp" />
     <ClCompile Include="Planet.cpp" />
+    <ClCompile Include="Rock.cpp" />
     <ClCompile Include="Ship.cpp" />
     <ClCompile Include="GObject.cpp" />
     <ClCompile Include="Sprite.cpp" />
     <ClCompile Include="Thing.cpp" />
     <ClCompile Include="tools\editor_tileless\CIndieLib.cpp" />
+    <ClCompile Include="Utils.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Ai.h" />
     <ClInclude Include="Bullet.h" />
     <ClInclude Include="ErrorHandler.h" />
+    <ClInclude Include="Explosion.h" />
+    <ClInclude Include="GameControll.h" />
+    <ClInclude Include="Frame.h" />
     <ClInclude Include="GlobalHeader.h" />
     <ClInclude Include="GObject.h" />
     <ClInclude Include="HUD.h" />
     <ClInclude Include="MenuItem.h" />
     <ClInclude Include="Options.h" />
+    <ClInclude Include="Particle.h" />
     <ClInclude Include="Planet.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="Rock.h" />
     <ClInclude Include="Ship.h" />
     <ClInclude Include="Menu.h" />
     <ClInclude Include="Sprite.h" />
     <ClInclude Include="Thing.h" />
     <ClInclude Include="tools\editor_tileless\CIndieLib.h" />
+    <ClInclude Include="Utils.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="SpaceGame.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="resources\icon.ico" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -4,92 +4,161 @@ Thing::Thing()
 {
 }
 
-// Create flying thing
-Thing::Thing(CIndieLib *mI, int type, int x, int y, int life)
+Thing::Thing(CIndieLib *mI, IND_Surface *thingsPicture, int type, int x, int y, int life, int angle, vector<Frame*> frms)
 {
-	Thing::Construct(mI, type, x, y, life);
-}
+	// random speed and direction (rand() % 2 - 1)
+	//srand(time(NULL));
+	*velosityX = rand() % 100;
+	*velosityY = rand() % 100;
 
-Thing::Thing(CIndieLib *mI, int type, int x, int y, int life, int angle)
-{
-	Thing::Construct(mI, type, x, y, life);
-	//Rotation angle
-	thing->setAngleXYZ(0, 0, angle);
-}
-
-void Thing::Construct(CIndieLib *mI, int type, int x, int y, int life)
-{
-*posX = x;
+	this->thingPictures = thingsPicture;
+	this->frames = frms;
+	*posX = x;
 	*posY = y;
 	*health = life;
 	*this->type = type;
-	
-	!mI->_animationManager->addToSurface(thingAnimation, "../SpaceGame/resources/animations/thing.xml", IND_ALPHA, IND_32);	
-	mI->_entity2dManager->add(thing);					// Entity adding
-	thing->setAnimation(thingAnimation);				// Set the animation into the entity
-	thing->setSequence(type-1); //animation file have to contain all animations for things. Sequence begins from 0
+
+	thing->setSurface(thingsPicture);
+	mI->_entity2dManager->add(thing);
+
+	int radius = 0;
+	string typ = "";
+
+	switch (type){
+	case HEALTH:
+		typ = "health";
+		radius = 20;
+		break;
+	case ASTEROID:
+		typ = "asteroid";
+		radius = 40;
+		thing->setScale(0.7, 0.7);
+		break;
+	case ROCK:
+		typ = "rock";
+		radius = 20;
+		break;
+	case DIAMOND:
+		typ = "diamond";
+		radius = 20;
+		break;
+	case UFO:
+		typ = "ufo";
+		radius = 15;
+		break;
+	}
+
+	name = typ;
+
+	// Search first picture for type;
+	frameCount = 0; // clear number of frames
+	int width, height,offsetX,offsetY;	
+	for (int i = 0; i < frms.size(); i++)
+	{
+		
+		if (typ == frms.at(i)->name)
+		{
+			frameCount++;
+			width = frms.at(i)->width;
+			height = frms.at(i)->height;
+			offsetX = frms.at(i)->offsetX;
+			offsetY = frms.at(i)->offsetY;			
+			// break;
+			currentFrame = i;// last frame 
+		}
+	}
+	//srand(time(NULL)); // random generfated possition
+	currentFrame = rand() % (frameCount-1);
+	// Entity adding
 	thing->setPosition(x, y, 1);
-	thing->setHotSpot(0.5f, 0.5f);
+	//health (1) = 360 1180 50 50
+	//thing->setRegion(360, 1180, 50, 50);
+	thing->setRegion(offsetX, offsetY, width, height); // shows first picture from sprite
 
 	// Empty object for colisions!
 	mI->_entity2dManager->add(border);
 	border->setSurface(collisionSurface);
-
-	// diferent Objects
-	
-	if (type == HEALTH)
-	{
-		border->setBoundingCircle("thing", x, y, 20);
-	}
-	if (type == ASTEROID)
-	{
-		thing->setScale(0.7, 0.7);
-		border->setBoundingCircle("thing", x, y, 40);
-		
-	}
-	if (type == ROCK)
-	{
-		//thing->setScale(0.7, 0.7);
-		border->setBoundingCircle("thing", x, y, 20);
-
-	}
-	if (type == DIAMOND)
-	{
-		//thing->setScale(0.7, 0.7);
-		border->setBoundingCircle("thing", x, y, 20);
-
-	}
+	//border->setPosition(x,y,COLLISIONS);
+	border->setBoundingCircle("thing", x + width /2, y + height / 2, radius);	
+	// prepare positions for explosion
+	*collisionsX = border->getPosX();//x + width / 2;	
+	*collisionsY = border->getPosY();//y + height / 2;
+	relativeX =  width / 2;
+	relativeY =  height / 2;
 }
 
-
-Thing::~Thing()
-{
-	thing->destroy();
-	collisionSurface->destroy();
-	border->destroy();
-	thingAnimation->destroy();
-	delete posX;
-	delete posY;
-	delete health;
-}
-
-void Thing::hide()
-{
-	*posX = -100;
-	*posY = -100;
-	thing->setPosition(*posX, *posY, 0);
-	border->setPosition(0, 0, 0);
-}
-
-void Thing::show(int x,int y)
-{
-	*posX = x;
-	*posY = y;
-
-}
 IND_Entity2d* Thing::getColisionBorder()
 {
 	return border;
+}
+
+
+int Thing::getHealth(void)
+{
+	return *health;
+}
+
+int Thing::getType()
+{
+	return *type;
+}
+
+int Thing::getCollisionPositionX()
+{
+		return *posX+relativeX;
+}
+
+int Thing::getCollisionPositionY()
+{
+		return *posY+relativeY;
+}
+
+void Thing::animationUpdate()
+{
+	// get current frame from sprite
+	int width, height, offsetX, offsetY;
+
+	currentFrame++;
+	if (currentFrame > frameCount) currentFrame = 1;
+
+	for (int i = 0; i < frames.size(); i++)
+	{
+
+		if ((name == frames.at(i)->name) && (frames.at(i)->frameNumber == currentFrame))
+		{			
+			width = frames.at(i)->width;
+			height = frames.at(i)->height;
+			offsetX = frames.at(i)->offsetX;
+			offsetY = frames.at(i)->offsetY;
+			break;
+		}
+	}
+
+	thing->setRegion(offsetX, offsetY, width, height); // shows region
+}
+
+//Used for moving objects
+void Thing::setVelosity(int vx, int vy) 
+{
+	*velosityX = vx;
+	*velosityY = vy;
+
+}
+
+//Update moving objects
+void Thing::Update(double *delta)
+{
+	
+	*posX = *posX + *velosityX*(*delta);
+	*posY = *posY + *velosityY*(*delta);
+	thing->setPosition(*posX,*posY, 2);
+	*collisionsX = border->getPosX() + *velosityX*(*delta);
+	*collisionsY = border->getPosY() + *velosityY*(*delta);
+
+	border->setPosition(*collisionsX, *collisionsY, ENEMY);
+	if ((*posX > WINDOW_WIDTH) || (*posX <1)) *velosityX = -*velosityX;
+	if ((*posY > WINDOW_HEIGHT) || (*posY <1)) *velosityY = -*velosityY;
+
 }
 
 void Thing::destroy(CIndieLib *mI)
@@ -101,14 +170,15 @@ void Thing::destroy(CIndieLib *mI)
 	border->deleteBoundingAreas("thing");
 	mI->_entity2dManager->remove(thing);
 	mI->_entity2dManager->remove(border);
+	mI->_surfaceManager->remove(collisionSurface);
 }
 
-int Thing::getHealth(void)
+Thing::~Thing()
 {
-	return *health;
-}
-
-int Thing::getType()
-{
-	return *type;
+	delete velosityX;
+	delete velosityY;
+	delete health;
+	delete posX;
+	delete posY;
+	delete type;
 }

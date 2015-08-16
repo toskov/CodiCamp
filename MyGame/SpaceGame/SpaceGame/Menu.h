@@ -10,6 +10,7 @@
 class Menu 
 {
 private:
+	CIndieLib *mI;
 	int *posX, *posY;
 	bool isHidden = true,exitSelected = false;
 	MenuItem *itemPlay, *itemQuit, *itemOptions, *itemControls, *itemSound, *itemBack;
@@ -26,7 +27,7 @@ public:
 	Menu();
 	Menu(CIndieLib *mI);
 	~Menu();
-	bool Update(CIndieLib  *myI); // return true if menu is hidden
+	int Update(CIndieLib  *myI); // return result and hide menu
 	void ShowMenu(void);
 	void HideMenu(void);
 	void ShowOptions(void);

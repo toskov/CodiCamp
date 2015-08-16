@@ -11,12 +11,12 @@ MenuItem::MenuItem(CIndieLib *mI,int posX, int posY, bool selected, const char *
 	}
 	// ----- Background ------
 	mI->_surfaceManager->add(mBgSurface, "..\\SpaceGame\\resources\\buttonBg.png", IND_ALPHA, IND_32); // background?
-	mI->_surfaceManager->add(mBgSurfaceSelected, "..\\SpaceGame\\resources\\buttonBgSel.png", IND_ALPHA, IND_32); // background?
+	//mI->_surfaceManager->add(mBgSurfaceSelected, "..\\SpaceGame\\resources\\buttonBgSel.png", IND_ALPHA, IND_32); // background?
 	mBackground->setSurface(mBgSurface);					   // Set the surface into the entity
 	mI->_entity2dManager->add(mBackground);					       // Entity adding
 	mBackground->setPosition(posX, posY, 9);
 	mBackground->setHotSpot(0.5f, 0.5f);
-	mBackground->setBoundingRectangle("rect", 0, 0, 188, 42); // If it is necessary
+	mBackground->setBoundingRectangle("rect", 0, 0, 248, 42); // If it is necessary
 	
 	// ----- Text -----	
 	mI->_entity2dManager->add(item);
@@ -47,7 +47,7 @@ MenuItem::~MenuItem()
 	mFontBig->destroy();
 	mBgSurface->destroy();
 	mBackground->destroy();
-	mBgSurfaceSelected->destroy();
+//	mBgSurfaceSelected->destroy();
 }
 void MenuItem::hide()
 {

@@ -68,7 +68,11 @@
 	<!-- sequences declaration -->
 	<sequences>
 		<!-- rocket -->
-		<sequence name="rocket">
+		<sequence name="stop">
+				<frame name="rocket0" time="50" />
+		</sequence>
+		<!-- rocket -->
+		<sequence name="rotate">
 			<frame name="rocket0" time="50" />
 			<frame name="rocket1" time="50" />
 			<frame name="rocket2" time="50" />

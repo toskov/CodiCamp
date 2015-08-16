@@ -1,5 +1,5 @@
 ﻿/*****************************************************************************************
-* Desc: Tutorial a) 01 Installing
+* Desc: Space Game
 *****************************************************************************************/
 
 #include "CIndieLib.h"
@@ -15,7 +15,11 @@
 #include <time.h>       /* time */
 #include "GlobalHeader.h"
 #include "Sprite.h"
+#include "Explosion.h"
+#include "GameControll.h"
+#include <irrKlang.h>
 
+#pragma comment(lib, "irrKlang.lib") // link with irrKlang.dll
 
 /*
 ==================
@@ -25,9 +29,9 @@ Main
 
 int IndieLib() // main
 {
+	
 
-	// Vector Objects container
-	vector<Thing*> allObjects;
+	char TempText[30];
 	
 	// ----- Sound Library --------------
 
@@ -35,82 +39,16 @@ int IndieLib() // main
 	// ----- new engine instance ------------
 	CIndieLib *mI = CIndieLib::instance(); // engine
 	if (!mI->init()) return 0;
+
+	GameControll controller = GameControll(mI); // createing a game controller and initialize
+	controller.sceneGenerator();
 		
-	// Creating surface for the background
-	IND_Surface *mSurfaceBack = IND_Surface::newSurface();
-	if (!mI->_surfaceManager->add(mSurfaceBack, "../SpaceGame/resources/genesis/Background_Colorful_Galaxy-800x600.jpg", IND_OPAQUE, IND_32)) return 0;
-
-
-	// -------- Load Options ----------------
-	Options *gameOptions = new Options(); // read options from file
-	gameOptions->saveOptions(); // for tests
-	gameOptions->loadGameObjects();
-
-
-	// Creating 2d entity for the background
-	IND_Entity2d *mBack = IND_Entity2d::newEntity2d();
-	mI->_entity2dManager->add(mBack);					// Entity adding
-	mBack->setSurface(mSurfaceBack);					// Set the surface into the entity
-
-	
-	Planet *sunPlanet = new Planet(mI, "../SpaceGame/resources/animations/smallSun.xml");
-	Ship *ship = new Ship(mI, "../SpaceGame/resources/animations/rocket.xml");
-	HUD *hud = new HUD(mI);
-	Menu *menu = new Menu(mI);
-	
-	
-	srand(time(NULL)); // random generfated possition
-
-	int randomX = rand() % WINDOW_WIDTH;
-	int randomY = rand() % WINDOW_HEIGH;
-	Thing *asteroid = new Thing(mI, ASTEROID, randomX, randomY, -20);	
-
-	randomX = rand() % WINDOW_WIDTH;
-	randomY = rand() % WINDOW_HEIGH;
-	Thing *diamond = new Thing(mI, DIAMOND, randomX, randomY, 0);
-	allObjects.push_back(diamond);
-	allObjects.push_back(asteroid);
-
-// old way	
-//	randomX = rand() % WINDOW_WIDTH;
-// randomY = rand() % WINDOW_HEIGH;
-//	Thing *health = new Thing(mI, HEALTH, randomX, randomY, 10); 	
-
-//	 randomX = rand() % WINDOW_WIDTH;
-//	 randomY = rand() % WINDOW_HEIGH;
-//	 Thing *rock = new Thing(mI, ROCK, randomX, randomY, -20);
-//	allObjects.push_back(health);
-//	allObjects.push_back(rock);
-
-	for (int i = 0; i < 5; i++)
-	{
-		// create 5 more rocks objects
-		randomX = rand() % WINDOW_WIDTH;
-		randomY = rand() % WINDOW_HEIGH;
-	int angle = rand() % 360;
-	allObjects.push_back(new Thing(mI, ROCK, randomX, randomY, -20, angle)); // create object anonymously
-	}
-	
-	for (int i = 0; i < 2; i++)
-	{
-		// create 5 more health objects
-		randomX = rand() % WINDOW_WIDTH;
-		randomY = rand() % WINDOW_HEIGH;
-		int angle = rand() % 360;
-		allObjects.push_back(new Thing(mI, HEALTH, randomX, randomY, 10)); // create object anonymously
-	}
-
-	menu->HideMenu();
-	hud->showAlert("Quit F12!");
-
-
-	
 
 	//<------ DELTA TIME ------>
-	double *mDelta = new double(0.1);
-	double *mDeltaAverage = new double(0.001);
+	double *delta = new double(0.1);
+	double *deltaAverage = new double(0.001);
 	double *mDeltaSum = new double(0.001);
-	double count = 0;
+	int count = 0;
 	
 	// time
 	int gameTime = 125;
@@ -120,92 +58,45 @@ int IndieLib() // main
 	mTimer->start();
 
 	bool play = false;
+
+	float animationDelay = 30; // 30 fps animation refresh
+
 	// ----- Main Loop -----
-	while (!mI->_input->onKeyPress(IND_F12) && !mI->_input->quit() && !menu->isExitSelected())
+	while (!mI->_input->onKeyPress(IND_F12) && !mI->_input->quit() && !controller.isExitSelected())
 	{
 		gameTime = (int)(mTimer->getTicks() / 1000.0f); //time in seconds
 
+		
+		
+
 		// ------ Average delta time ---------
-			*mDelta = mI->_render->getFrameTime() / 1000.0f;
+		*delta = mI->_render->getFrameTime() / 1000.0f;
 			count++;
-			*mDeltaSum += *mDelta;
+			*mDeltaSum += *delta;
 
 			if (count == 100){			
 				count = 0;
-				*mDeltaAverage = *mDeltaSum / 100;
+				*deltaAverage = *mDeltaSum / 100;
 				*mDeltaSum = 0;
 			}
+
 			// ----- Input Update ----
 			mI->_input->update();
-			if (mI->_input->onKeyPress(IND_ESCAPE))
-			{
-				menu->ShowMenu();
-				play = !play;
-			}
-			// ---- Menu control --------
-			if (play)
-			{
-				menu->HideMenu();
-					// --------- Game control --------
-					ship->Update(mDeltaAverage);
-					ship->ReadKeys(mI);
-	
-					// -------- UI ------------
-					hud->updateHud(ship->getScore(), ship->getHealth(), ship->getShots(), gameTime);
-					hud->showAlert("F12 to quit!");
-			}else{
-				if (menu->Update(mI)) play = true;
-			}		
-			
-		// ------- Collisions -----------
-			
-			if (gameTime > 2)
-			{
-				// just to prevent initial collisions
-				
-				for (int i = 0; i < allObjects.size(); i++) 
-				{
-					// check collisions with ship for all objects
-					if (mI->_entity2dManager->isCollision(ship->getColisionBorder(), "body", allObjects[i]->getColisionBorder(), "thing"))
-					{
-						hud->showAlert(" Collision detected!"); // for tests only
-						if (allObjects[i]->getType() == HEALTH)
-						{
-							ship->changeHealth(allObjects.at(i)->getHealth()); // corect ship health
-						}
-						if (allObjects[i]->getType() == DIAMOND)
-						{
-							ship->increaseScore(DIAMOND_SCORE); // corect ship health
-						}
-						if ((allObjects[i]->getType() == ROCK) || (allObjects[i]->getType() == ASTEROID))
-						{
-							ship->changeHealth(allObjects.at(i)->getHealth()); // corect ship health
-						}
 
-						allObjects.at(i)->destroy(mI); // destroy object
-						allObjects.erase((allObjects.begin() + i)); // remove pointer from vector
-					}
-					// test for bullet collisions
-					/**/
-					for (int k = 0; k < 10; k++)
-					{
-						if (mI->_entity2dManager->isCollision(ship->getBulletBorder(k), "bullet", allObjects[i]->getColisionBorder(), "thing"))
-						{
-							if ((allObjects[i]->getType() == ROCK) || (allObjects[i]->getType() == ASTEROID))
-							{
-								// collision with rock detected
-								hud->showAlert(" Collision detected!"); // for tests only
-								ship->increaseScore(); // increase game score
-								allObjects.at(i)->destroy(mI); // destroy object
-								allObjects.erase((allObjects.begin() + i)); // remove pointer from vector
-							}
-							
-						}
-					}
-					
-					
-				}
+			// ------ Game controller update ---------------
+			controller.Update(gameTime, deltaAverage);
+
+			// ---- Update rarely -----
+			// creating delay for animation
+			//animationDelay -= 1000 * (*deltaAverage);
+			animationDelay -= mI->_render->getFrameTime();
+			if (animationDelay < 0) 
+			{
+				animationDelay = 30;
+				controller.AnimationsUpdate();
 			}
+		
+			
 
 		// -------- Render -------
 		mI->_render->clearViewPort(0, 0, 60);

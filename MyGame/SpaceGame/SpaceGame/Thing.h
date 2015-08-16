@@ -5,33 +5,47 @@
 #include "IND_Animation.h"
 #include "IND_Surface.h"
 #include "GlobalHeader.h"
+#include "Frame.h"
+#include <vector>
+#include "Errorhandler.h"
 
 class Thing
 {
 private:
 	int *health = new int(10); // increase or decrease players health etc. 
-	int *posX = new int(0);
-	int *posY = new int(0);
+	double *posX = new double(0);
+	double *posY = new double(0);
 	int *type = new int(0);
+	string name = "";
+	double *collisionsX = new double(0);
+	double *collisionsY = new double(0);
+	double *velosityX = new double(), *velosityY = new double();
+	double relativeX, relativeY;
 	
 	
 	IND_Entity2d *thing = IND_Entity2d::newEntity2d();
 	IND_Entity2d *border = IND_Entity2d::newEntity2d();
-	IND_Animation *thingAnimation = IND_Animation::newAnimation();
+	IND_Surface *thingPictures;
 	IND_Surface *collisionSurface = IND_Surface::newSurface();
-	void Construct(CIndieLib *mI, int type, int x, int y, int life); // for multy constructor initialise
+	void Construct(CIndieLib *mI, IND_Surface *thingsPicture, int type, int x, int y, int life); // for multy constructor initialise
+	vector<Frame*> frames;
+	int frameCount = 0; // number of frames
+	int currentFrame = 0; // current frame in animation
 
 public:
+	void setVelosity(int vX,int vY);
 	int getHealth(void);
 	int getType();
-	void hide(void);
-	void show(int x, int y);
+	//void show(int x, int y);
 	void destroy(CIndieLib *mI);
+	int getCollisionPositionX();
+	int getCollisionPositionY();
 	//void getHealth(void);
+	void animationUpdate(); // Update animation
+	void Update(double *delta);
 	IND_Entity2d* getColisionBorder();
 	Thing();
-	Thing(CIndieLib *mI, int type, int x, int y, int life);
-	Thing(CIndieLib *mI, int type, int x, int y, int life, int angle);
+	Thing(CIndieLib *mI, IND_Surface *thingsPicture, int type, int x, int y, int life, int angle, vector<Frame*> frms);
 	~Thing();
 };
 #endif

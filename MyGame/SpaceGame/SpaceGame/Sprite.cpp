@@ -33,9 +33,7 @@ Sprite::~Sprite()
 	delete currentFrame;
 	delete posX;
 	delete posY;
-	
-	IND_Entity2d *sprite = IND_Entity2d::newEntity2d();
-	IND_Surface *picture = IND_Surface::newSurface();
+
 }
 
 void Sprite::Update()

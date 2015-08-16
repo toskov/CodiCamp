@@ -8,6 +8,7 @@ Menu::Menu()
 Menu::Menu(CIndieLib  *myI)
 {
 	isHidden = true;
+	mI = myI;
 
 	// ---------- main menu ----------
 	itemPlay = new MenuItem(myI, 400, 150, false, "Play");
@@ -30,7 +31,7 @@ Menu::Menu(CIndieLib  *myI)
 }
 
 
-bool Menu::Update(CIndieLib  *mI)
+int Menu::Update(CIndieLib  *mI)
 {
 	// return true if menu is hidden
 	float positionX, positionY; // mouse position
@@ -38,7 +39,7 @@ bool Menu::Update(CIndieLib  *mI)
 	{
 		HideMenu();
 		mCursor->setPosition(-100,-100,100);
-		return true;
+		return 1;
 	}
 	positionX = mI->_input->getMouseX();
 	positionY = mI->_input->getMouseY();
@@ -53,7 +54,7 @@ bool Menu::Update(CIndieLib  *mI)
 		{
 			//On left mouse button click
 			HideMenu();
-			return true;
+			return 3; // refresh game
 		}
 	} else 
 	{
@@ -69,7 +70,7 @@ bool Menu::Update(CIndieLib  *mI)
 		{
 			//On left mouse button click
 	//TODO enter in submenu
-			return true;
+			return 1;
 		}
 	}
 	else
@@ -87,7 +88,7 @@ bool Menu::Update(CIndieLib  *mI)
 			 //On left mouse button click
 			 HideMenu();
 			 exitSelected = true;
-			 return true;
+			 return 4;
 		 }
 	 }
 	 else
@@ -119,8 +120,8 @@ void Menu::HideMenu()
 }
 Menu::~Menu()
 {
-	mSurfaceCursor->destroy();
-	mCursor->destroy();
+	mI->_surfaceManager->remove(mSurfaceCursor);
+	mI->_entity2dManager->remove(mCursor);
 	delete itemPlay;
 	delete itemQuit;
 	delete itemOptions;
