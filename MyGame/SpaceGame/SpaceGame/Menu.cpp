@@ -14,7 +14,9 @@ Menu::Menu(CIndieLib  *myI)
 	itemPlay = new MenuItem(myI, 400, 150, false, "Back");
 	itemNewGame = new MenuItem(myI, 400, 200, false, "New game");
 	itemOptions = new MenuItem(myI, 400, 250, false, "Options");
-	itemQuit = new MenuItem(myI, 400, 300, false, "Quit");
+	itemSaveGame = new MenuItem(myI, 400, 300, false, "Save Game");
+	itemLoadGame = new MenuItem(myI, 400, 350, false, "Load Game");
+	itemQuit = new MenuItem(myI, 400, 400, false, "Quit");
 
 	// ---------- Options menu ---------
 	itemControls = new MenuItem(myI, 400, 150, false, "Controls");
@@ -113,6 +115,41 @@ int Menu::Update(CIndieLib  *mI)
 	 {
 		 itemQuit->delesectedItem();
 	 }
+
+	 // check button SAVE GAME
+	 if (mI->_entity2dManager->isCollision(itemSaveGame->getBound(), "rect", mCursor, "pointer"))
+	 {
+		 // mouse over
+		 itemSaveGame->selectedItem();
+		 if (mI->_input->isMouseButtonPressed(IND_MBUTTON_LEFT))
+		 {
+			 //On left mouse button click
+			 HideMenu();
+			 return SAVEGAME; // refresh game
+		 }
+	 }
+	 else
+	 {
+		 itemSaveGame->delesectedItem();
+	 }
+
+	 // check button LOAD GAME
+	 if (mI->_entity2dManager->isCollision(itemLoadGame->getBound(), "rect", mCursor, "pointer"))
+	 {
+		 // mouse over
+		 itemLoadGame->selectedItem();
+		 if (mI->_input->isMouseButtonPressed(IND_MBUTTON_LEFT))
+		 {
+			 //On left mouse button click
+			 HideMenu();
+			 return LOADGAME; // refresh game
+		 }
+	 }
+	 else
+	 {
+		 itemLoadGame->delesectedItem();
+	 }
+
 	 ShowMenu();
 	return false;
 	
@@ -124,6 +161,8 @@ void Menu::ShowMenu()
 	itemNewGame->show();
 	itemQuit->show();
 	itemOptions->show();
+	itemSaveGame->show();
+	itemLoadGame->show();
 }
 
 void Menu::HideMenu()
@@ -137,6 +176,8 @@ void Menu::HideMenu()
 	itemSound->hide();
 	itemBack->hide();
 	itemNewGame->hide();
+	itemSaveGame->hide();
+	itemLoadGame->hide();
 }
 Menu::~Menu()
 {
@@ -149,6 +190,8 @@ Menu::~Menu()
 	delete itemControls;
 	delete itemSound;
 	delete itemBack;
+	delete itemSaveGame;
+	delete itemLoadGame;
 	delete posX;
 	delete posY;
 }

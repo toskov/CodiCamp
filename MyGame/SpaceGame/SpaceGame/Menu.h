@@ -14,7 +14,7 @@ private:
 	CIndieLib *mI;
 	int *posX, *posY;
 	bool hidden = true,exitSelected = false;
-	MenuItem *itemPlay, *itemQuit, *itemOptions, *itemControls, *itemSound, *itemBack, *itemNewGame;
+	MenuItem *itemPlay, *itemQuit, *itemOptions, *itemControls, *itemSound, *itemBack, *itemNewGame,*itemSaveGame, *itemLoadGame;
 
 	enum difficulty { EASY = 1, NORMAL, HARD, EXPERT, UNDEFINED };
 	difficulty gameDifficulty = EASY;
