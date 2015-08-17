@@ -14,5 +14,6 @@ enum objectType { HEALTH = 1, ASTEROID, ROCK, DIAMOND, UFO, BONUS }; // type of 
 
 enum layer {BACKGROUND = 1, ENEMY, ROCKS, SHIP, MENU, CURSOR,COLLISIONS };
 
+enum currentMenu { PLAY = 1, NEWGAME, QUIT, OPTIONS, CONTROLS, SOUND, DIFFICULTY };
 
 #endif 

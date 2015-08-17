@@ -64,6 +64,7 @@ public:
 	void Update(int gtime, double *delta); // Update for inpt controls and collisions
 	void AnimationsUpdate(); // Update rarely for animation
 	void sceneGenerator(); // generate random objects
+	void killObjects(); // remove all objects from screen
 	void gameLogic();
 	void GameOver(); // Final screen
 	void readThingsFile(); // reading info for pictures in spritesheet

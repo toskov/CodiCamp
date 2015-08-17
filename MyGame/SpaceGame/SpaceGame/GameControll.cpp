@@ -121,29 +121,29 @@ void GameControll::sceneGenerator()
 {	
 	srand(time(NULL)); // random generfated possition
 
-	int randomX = rand() % (WINDOW_WIDTH-50);
-	int randomY  = rand() % (WINDOW_HEIGHT -100);
+	int randomX ;
+	int randomY ;
 	for (int i = 0; i < 5; i++)
 	{
 		randomX =15 + rand() % (WINDOW_WIDTH - 50);
-		randomY =15 + rand() % (WINDOW_HEIGHT - 100);
+		randomY =15 + rand() % (WINDOW_HEIGHT - 150);
 		gameObjects.push_back(new Thing(mI, thingsPicture, ROCK, randomX, randomY, -10, 0, frames));
 	}
 
 	for (int i = 0; i < 6; i++)
 	{
 		randomX = 15 + rand() % (WINDOW_WIDTH - 50);
-		randomY = 15 + rand() % (WINDOW_HEIGHT - 100);
+		randomY = 15 + rand() % (WINDOW_HEIGHT - 150);
 		//Thing *ufo = new Thing(mI, thingsPicture, UFO, randomX, randomY, 10,0,frames);
 	gameObjects.push_back(new Thing(mI, thingsPicture, UFO, randomX, randomY, -10, 0, frames));
 	}
 
 	randomX = 15 + rand() % (WINDOW_WIDTH - 50);
-	randomY = 15 + rand() % (WINDOW_HEIGHT - 100);
+	randomY = 15 + rand() % (WINDOW_HEIGHT - 150);
 	gameObjects.push_back(new Thing(mI, thingsPicture, HEALTH, randomX, randomY, 10, 0, frames));
 
 	randomX = 15 + rand() % (WINDOW_WIDTH - 50);
-	randomY = 15 + rand() % (WINDOW_HEIGHT - 100);
+	randomY = 15 + rand() % (WINDOW_HEIGHT - 150);
 	gameObjects.push_back(new Thing(mI, thingsPicture, DIAMOND, randomX, randomY, 10, 0, frames));
 	
 	hud->showAlert("Quit F12!");
@@ -194,16 +194,25 @@ void GameControll::Update(int gameTime,double *delta)
 		{
 		case 0: // hide menu
 			break;
-		case 1:
+		case PLAY:
 			play = true;
 			break;
-		case 3:
+		case NEWGAME:
 			// button restart pressed
+			killObjects();
+			sceneGenerator();
+			ship->maxHealth();
+			ship->clearScore();
+			ship->clearShots();
+			ship->setSpeedX(0);
+			ship->setSpeedY(0);
+			play = true;
 			break;
 
-		case 4: // quit selected
+		case QUIT: // quit selected
 			gameExit = true;
 			break;
+
 		default:
 			break;
 		}
@@ -243,7 +252,7 @@ void GameControll::Update(int gameTime,double *delta)
 					soundEngine->play2D("../SpaceGame/resources/explosion_player.wav");
 				}
 
-				gameObjects.at(i)->destroy(mI); // destroy object
+				gameObjects.at(i)->destroy(); // destroy object
 				gameObjects.erase((gameObjects.begin() + i)); // remove pointer from vector
 			}
 
@@ -260,7 +269,7 @@ void GameControll::Update(int gameTime,double *delta)
 
 						explosions.push_back(new Explosion(mI, gameObjects[i]->getCollisionPositionX(), gameObjects[i]->getCollisionPositionY()));// create new explosion in vector
 						ship->changeScore(5); // increase game score
-						gameObjects.at(i)->destroy(mI); // destroy object
+						gameObjects.at(i)->destroy(); // destroy object
 						gameObjects.erase((gameObjects.begin() + i)); // remove pointer from vector		
 						soundEngine->play2D("../SpaceGame/resources/explosion_asteroid.wav");
 
@@ -289,6 +298,17 @@ void GameControll::AnimationsUpdate( )
 		gameObjects[i]->animationUpdate(); //update objects animation
 	}
 }
+
+void GameControll::killObjects()
+{
+	for (int i = 0; i < gameObjects.size(); i++)
+	{
+		gameObjects[i]->destroy(); //delete objects
+	}
+
+	gameObjects.clear();	// remove all pointers from vector
+}
+
 GameControll::~GameControll()
 {
 	delete menu;

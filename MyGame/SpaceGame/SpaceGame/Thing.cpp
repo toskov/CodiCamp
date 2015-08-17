@@ -6,6 +6,7 @@ Thing::Thing()
 
 Thing::Thing(CIndieLib *mI, IND_Surface *thingsPicture, int type, int x, int y, int life, int angle, vector<Frame*> frms)
 {
+	this->mI = mI;
 	// random speed and direction (rand() % 2 - 1)
 	//srand(time(NULL));
 	*velosityX = rand() % 100;
@@ -161,7 +162,7 @@ void Thing::Update(double *delta)
 
 }
 
-void Thing::destroy(CIndieLib *mI)
+void Thing::destroy()
 {
 	delete health;
 	delete type;

@@ -55,7 +55,7 @@ int Menu::Update(CIndieLib  *mI)
 		{
 			//On left mouse button click
 			HideMenu();
-			return 3; // refresh game
+			return NEWGAME; // refresh game
 		}
 	}
 	else
@@ -72,7 +72,7 @@ int Menu::Update(CIndieLib  *mI)
 		{
 			//On left mouse button click
 			HideMenu();
-			return 3; // refresh game
+			return PLAY; // refresh game
 		}
 	} else 
 	{
@@ -87,8 +87,8 @@ int Menu::Update(CIndieLib  *mI)
 		if (mI->_input->isMouseButtonPressed(IND_MBUTTON_LEFT))
 		{
 			//On left mouse button click
-	//TODO enter in submenu
-			return 1;
+	    //TODO enter in submenu
+			return OPTIONS;
 		}
 	}
 	else
@@ -106,7 +106,7 @@ int Menu::Update(CIndieLib  *mI)
 			 //On left mouse button click
 			 HideMenu();
 			 exitSelected = true;
-			 return 4;
+			 return QUIT;
 		 }
 	 }
 	 else

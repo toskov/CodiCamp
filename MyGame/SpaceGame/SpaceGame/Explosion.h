@@ -9,10 +9,10 @@
 class Explosion
 {
 private:
-	int *frames = new int(16);  // must be set outside
-	int *frameWidth = new int(64); // frame width - must be set outside
-	int *frameHeight = new int(64); // frame hight - must be set outside
-	int *frameColumns = new int(4);  // must be set outside to be universal
+	int *frames = new int(32);  // must be set outside
+	int *frameWidth = new int(100); // frame width - must be set outside
+	int *frameHeight = new int(100); // frame hight - must be set outside
+	int *frameColumns = new int(8);  // must be set outside to be universal
 	int *frameRows = new int(4); //  must be set outside to be universal
 	int *currentFrame = new int(0); // current frame
 	int *time = new int(10); // animation delay time - depends on frame rate animation

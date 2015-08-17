@@ -6,6 +6,7 @@
 #include "IND_Entity2d.h"
 #include "IND_Font.h"
 #include "MenuItem.h"
+#include "GlobalHeader.h"
 
 class Menu 
 {
@@ -14,10 +15,10 @@ private:
 	int *posX, *posY;
 	bool hidden = true,exitSelected = false;
 	MenuItem *itemPlay, *itemQuit, *itemOptions, *itemControls, *itemSound, *itemBack, *itemNewGame;
-	enum currentMenu { MAIN = 1, OPTIONS, CONTROLS, SOUND, DIFFICULTY };
+
 	enum difficulty { EASY = 1, NORMAL, HARD, EXPERT, UNDEFINED };
 	difficulty gameDifficulty = EASY;
-	currentMenu gameCurrentMenu = MAIN;
+	currentMenu gameCurrentMenu = PLAY;
 	IND_Surface *mSurfaceCursor = IND_Surface::newSurface();
 	IND_Entity2d *mCursor = IND_Entity2d::newEntity2d();
 	

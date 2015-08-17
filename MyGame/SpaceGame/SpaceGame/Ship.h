@@ -35,9 +35,14 @@ private:
 
 	
 public:
-	IND_Entity2d *ship_ = IND_Entity2d::newEntity2d();
+	IND_Entity2d *ship_ = IND_Entity2d::newEntity2d();	
+	IND_Entity2d* getBulletBorder(int number); // get collision border for one of bullets
+	IND_Entity2d* getColisionBorder();
 	Ship();
 	Ship(CIndieLib *mI, const char *str);
+	void maxHealth();
+	void clearScore();
+	void clearShots();
 	void Update(CIndieLib* mI, double *delta); // update ship position
 	void Shoot(); 
 	void setSpeedX(float sX);
@@ -58,8 +63,7 @@ public:
 	int getAngleZ();
 	void gravityUpdate(double delta);
 	void setSoundVolume(float volume);
-	IND_Entity2d* getBulletBorder(int number); // get collision border for one of bullets
-	IND_Entity2d* getColisionBorder();
+
 	~Ship();
 };
 #endif

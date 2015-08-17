@@ -302,3 +302,16 @@ void Ship::setSoundVolume(float volume)
 {
 	soundVolume = volume;
 }
+
+void Ship::maxHealth()
+{
+	*health = 100;
+}
+void Ship::clearScore()
+{
+	*score = 0;
+}
+void Ship::clearShots()
+{
+	*shots = 0;
+}
