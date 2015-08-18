@@ -20,6 +20,7 @@ public:
 	void Update(double *delta);
 	void Set(float angle, float x, float y, double* delta);
 	IND_Entity2d* getColisionBorder(); //return object for collision detection
+	void destroy();
 	~Bullet();
 };
 

@@ -49,6 +49,11 @@ IND_Entity2d* Bullet::getColisionBorder()
 	return mBullet_;
 }
 
+void Bullet::destroy()
+{
+
+}
+
 Bullet::~Bullet()
 {
 	delete speedX_;

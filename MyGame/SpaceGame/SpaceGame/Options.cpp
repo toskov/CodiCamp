@@ -34,9 +34,27 @@ bool Options::saveOptions()
 	}
 }
 
-void Options::loadGameObjects()
+void Options::loadGameOptions()
 {
+	//TODO parsing game options
+	FILE *file;
+	file = fopen("options.txt", "r");
 
+	if (file == NULL) {
+		//printf("Error occurred while file creation!");
+	}
+	else {
+		// READ
+		IND_Key buffer[6];
+		fread(buffer, sizeof(int), 6, file); //Read options
+		*this->keyUp = buffer[0];
+		*this->keyDown = buffer[1];
+		*this->keyLeft = buffer[2];
+		*this->keyRight = buffer[3];
+		*this->keyShoot = buffer[4];
+		*this->soundValue = buffer[5];
+		fclose(file);
+	}
 }
 
 Options::~Options()

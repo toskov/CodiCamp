@@ -20,6 +20,7 @@
 #include "Frame.h"
 #include "irrKlang.h"
 #include "Ai.h"
+#include "Bullet.h"
 #include <vector>
 #include <string>
 #include <sstream>
@@ -42,12 +43,13 @@ private:
 	Ship *ship;
 	HUD *hud;
 	Ai *enemmy = new Ai();
+	Options *gameOptions = new Options();
 
 	bool gameExit = false;
 	bool play = true;
 	double *delta;
 
-	float soundVolume = 0.5f;
+	double soundVolume = 0.1f;
 	float fxVolume = 0.5f;
 	
 	// Vector Objects container
@@ -55,7 +57,9 @@ private:
 	vector<Explosion*> explosions;
 	vector<Rock*> rocks;
 	vector<Frame*> frames;	
+	vector<Bullet*> bullets;
 	void gameInit(); // initialize game
+	
 
 	
 public:

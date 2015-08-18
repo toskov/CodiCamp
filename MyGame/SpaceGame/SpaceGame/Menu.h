@@ -15,6 +15,8 @@ private:
 	int *posX, *posY;
 	bool hidden = true,exitSelected = false;
 	MenuItem *itemPlay, *itemQuit, *itemOptions, *itemControls, *itemSound, *itemBack, *itemNewGame,*itemSaveGame, *itemLoadGame;
+	MenuItem *itemSaveOptions, *itemIncrease, *itemDecrease;
+
 
 	enum difficulty { EASY = 1, NORMAL, HARD, EXPERT, UNDEFINED };
 	difficulty gameDifficulty = EASY;
@@ -28,8 +30,7 @@ public:
 	Menu();
 	Menu(CIndieLib *mI);
 	~Menu();
-	int Update(CIndieLib  *myI); // return result and hide menu
-	void ShowMenu(void);
+	int Update(); // return result and hide menu
 	void HideMenu(void);
 	void ShowOptions(void);
 	void HideOptions(void);
@@ -39,6 +40,9 @@ public:
 	void HideControls(void);
 	bool isHidden(void);
 	bool isExitSelected(); // for game exit
+	void ShowPauseMenu(void);
+	void ShowGameOverMenu(void);
+	void clearMenu();
 };
 
 #endif

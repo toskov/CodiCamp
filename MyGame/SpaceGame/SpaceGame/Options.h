@@ -11,9 +11,9 @@ public:
 	IND_Key *keyLeft = new IND_Key(IND_KEYLEFT);
 	IND_Key *keyRight = new IND_Key(IND_KEYRIGHT);
 	IND_Key *keyShoot = new IND_Key(IND_SPACE);
-	IND_Key *soundValue = new int(50u); // 0-100
+	int *soundValue = new int(50u); // 0-100
 	Options(); // read file
-	void loadGameObjects(void); // read objects from file
+	void loadGameOptions(void); // read objects from file
 	bool saveOptions(void);
 	~Options();
 };

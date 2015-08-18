@@ -21,6 +21,7 @@ public:
 	bool isMouseOver(int x,int y);
 	void hide(void);
 	void show(void);
+	void show(int x, int y);
 	IND_Entity2d* getBound(void);
 	~MenuItem();
 };

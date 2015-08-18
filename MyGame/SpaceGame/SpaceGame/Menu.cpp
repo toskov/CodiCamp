@@ -16,7 +16,10 @@ Menu::Menu(CIndieLib  *myI)
 	itemOptions = new MenuItem(myI, 400, 250, false, "Options");
 	itemSaveGame = new MenuItem(myI, 400, 300, false, "Save Game");
 	itemLoadGame = new MenuItem(myI, 400, 350, false, "Load Game");
-	itemQuit = new MenuItem(myI, 400, 400, false, "Quit");
+	itemQuit = new MenuItem(myI, 400, 390, false, "Quit");
+	itemSaveOptions = new MenuItem(myI, 400, 400, false, "Back"); 
+	itemIncrease = new MenuItem(myI, 400, 450, false, "Sound +");
+	itemDecrease = new MenuItem(myI, 400, 500, false, "Sound -");
 
 	// ---------- Options menu ---------
 	itemControls = new MenuItem(myI, 400, 150, false, "Controls");
@@ -34,7 +37,7 @@ Menu::Menu(CIndieLib  *myI)
 }
 
 
-int Menu::Update(CIndieLib  *mI)
+int Menu::Update()
 {
 	// return true if menu is hidden
 	float positionX, positionY; // mouse position
@@ -88,8 +91,9 @@ int Menu::Update(CIndieLib  *mI)
 		itemOptions->selectedItem();
 		if (mI->_input->isMouseButtonPressed(IND_MBUTTON_LEFT))
 		{
-			//On left mouse button click
+		//On left mouse button click
 	    //TODO enter in submenu
+			ShowOptions();
 			return OPTIONS;
 		}
 	}
@@ -124,7 +128,7 @@ int Menu::Update(CIndieLib  *mI)
 		 if (mI->_input->isMouseButtonPressed(IND_MBUTTON_LEFT))
 		 {
 			 //On left mouse button click
-			 HideMenu();
+			// HideMenu();
 			 return SAVEGAME; // refresh game
 		 }
 	 }
@@ -150,25 +154,101 @@ int Menu::Update(CIndieLib  *mI)
 		 itemLoadGame->delesectedItem();
 	 }
 
-	 ShowMenu();
-	return false;
+	 // check button BACK OPTIONS
+	 if (mI->_entity2dManager->isCollision(itemSaveOptions->getBound(), "rect", mCursor, "pointer"))
+	 {
+		 // mouse over
+		 itemSaveOptions->selectedItem();
+		 if (mI->_input->isMouseButtonPressed(IND_MBUTTON_LEFT))
+		 {
+			 //On left mouse button click
+			 //HideMenu();
+			 // SAVE TODO
+			 ShowPauseMenu();
+			 return SAVEOPTIONS; // refresh game
+		 }
+	 }
+	 else
+	 {
+		 itemSaveOptions->delesectedItem();
+	 }
 	
-}
-void Menu::ShowMenu()
-{
-	hidden = false;
-	itemPlay->show();
-	itemNewGame->show();
-	itemQuit->show();
-	itemOptions->show();
-	itemSaveGame->show();
-	itemLoadGame->show();
+
+	// check button INCREASE
+	if (mI->_entity2dManager->isCollision(itemIncrease->getBound(), "rect", mCursor, "pointer"))
+	{
+		// mouse over
+		itemIncrease->selectedItem();
+		if (mI->_input->isMouseButtonPressed(IND_MBUTTON_LEFT))
+		{
+			//On left mouse button click
+			return INCREASE; // refresh game
+		}
+	}
+	else
+	{
+		itemIncrease->delesectedItem();
+	}
+
+	
+	// check button DECREASE
+	if (mI->_entity2dManager->isCollision(itemDecrease->getBound(), "rect", mCursor, "pointer"))
+	{
+		// mouse over
+		itemDecrease->selectedItem();
+		if (mI->_input->isMouseButtonPressed(IND_MBUTTON_LEFT))
+		{
+			//On left mouse button click
+			return DECREASE; // refresh game
+		}
+	}
+	else
+	{
+		itemDecrease->delesectedItem();
+	}
+
+	return false;
 }
 
+
+void Menu::ShowPauseMenu()
+{
+	hidden = false;
+	itemPlay->show(400, 150);
+	itemSaveGame->show(400, 200);
+	itemLoadGame->show(400, 250);
+	itemOptions->show(400, 300);
+	itemQuit->show(400, 350);
+
+
+}
+
+void Menu::ShowGameOverMenu(void)
+{
+	hidden = false;
+	itemNewGame->show(400, 150);
+	itemLoadGame->show(400, 200);
+	itemQuit->show(400, 250);
+}
+
+void Menu::ShowOptions(void)
+{
+	hidden = false;
+	clearMenu();
+	
+	itemSaveOptions->show(400, 150);
+	itemIncrease->show(400, 200);
+	itemDecrease->show(400, 250);
+}
 void Menu::HideMenu()
 {
 	mCursor->setPosition(-100, -100, 20);
 	hidden = true;
+	clearMenu();
+}
+
+void Menu::clearMenu()
+{
 	itemPlay->hide();
 	itemQuit->hide();
 	itemOptions->hide();
@@ -178,6 +258,9 @@ void Menu::HideMenu()
 	itemNewGame->hide();
 	itemSaveGame->hide();
 	itemLoadGame->hide();
+	itemDecrease->hide();
+	itemIncrease->hide();
+	itemSaveOptions->hide();
 }
 Menu::~Menu()
 {
@@ -192,14 +275,14 @@ Menu::~Menu()
 	delete itemBack;
 	delete itemSaveGame;
 	delete itemLoadGame;
+	delete itemSaveOptions;
+	delete itemIncrease;
+	delete itemDecrease;
 	delete posX;
 	delete posY;
 }
 
-void Menu::ShowOptions(void)
-{
 
-}
 
 void Menu::HideOptions(void)
 {

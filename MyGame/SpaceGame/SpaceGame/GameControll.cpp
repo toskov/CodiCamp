@@ -18,7 +18,7 @@ bool GameControll::isExitSelected()
 
 void GameControll::GameOver()
 {
-	menu->ShowMenu();
+	menu->ShowGameOverMenu();
 }
 
 void GameControll::gameInit()
@@ -57,9 +57,9 @@ void GameControll::gameInit()
 	//mGround->setTransparency(50);
 
 	// -------- Load Options ----------------
-	Options *gameOptions = new Options(); // read options from file
-	gameOptions->saveOptions(); // for tests
-	gameOptions->loadGameObjects();
+	gameOptions->loadGameOptions();
+	this->soundVolume = *gameOptions->soundValue;  
+
 	menu = new Menu(mI);
 	ship = new Ship(mI, "../SpaceGame/resources/animations/rocket.xml");
 	ship->setSoundVolume(0.3);
@@ -171,7 +171,7 @@ void GameControll::Update(int gameTime,double *delta)
 	// show menu
 	if (mI->_input->onKeyPress(IND_ESCAPE))
 	{
-		menu->ShowMenu();
+		menu->ShowPauseMenu();
 		play = !play;
 	}
 
@@ -190,12 +190,15 @@ void GameControll::Update(int gameTime,double *delta)
 
 	}
 	else{
-		switch (menu->Update(mI))
+		switch (menu->Update())
 		{
 		case 0: // hide menu
 			break;
 		case PLAY:
 			play = true;
+			break;
+		case OPTIONS:
+		//	menu->ShowOptions();
 			break;
 		case NEWGAME:
 			// button restart pressed
@@ -211,6 +214,25 @@ void GameControll::Update(int gameTime,double *delta)
 
 		case QUIT: // quit selected
 			gameExit = true;
+			break;
+
+		case SAVEOPTIONS:
+			gameOptions->saveOptions(); 
+			menu->ShowPauseMenu();			
+			break;
+
+		case DECREASE:
+			soundVolume -= 0.01;// 5 * (*delta);
+			ship->setSoundVolume(soundVolume);
+			if (soundVolume < 0) soundVolume = 0;
+			soundEngine->setSoundVolume(soundVolume);
+			break;
+
+		case INCREASE:
+			soundVolume += 0.01;// 5 * (*delta);
+			ship->setSoundVolume(soundVolume);
+			if (soundVolume > 100) soundVolume = 100;
+			soundEngine->setSoundVolume(soundVolume);
 			break;
 
 		default:
@@ -311,12 +333,19 @@ void GameControll::killObjects()
 
 GameControll::~GameControll()
 {
+
 	delete menu;
 	delete ship;
 	delete hud;
 	delete enemmy;
 	delete delta;
-	
+
+	bullets.clear();
+	gameObjects.clear();
+	explosions.clear();
+	rocks.clear();
+	frames.clear();
+	bullets.clear();
 	
 
 }

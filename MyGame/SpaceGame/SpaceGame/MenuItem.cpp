@@ -59,7 +59,11 @@ void MenuItem::show()
 	item->setPosition(this->posX, this->posY, 10);
 	mBackground->setPosition(this->posX, this->posY+27, 9); // some offset
 }
-
+void MenuItem::show(int x, int y)
+{
+	item->setPosition(x, y, 10);
+	mBackground->setPosition(x, y + 27, 9); // some offset
+}
 bool  MenuItem::isMouseOver(int x, int y)
 {
 	// Return true if mouse over

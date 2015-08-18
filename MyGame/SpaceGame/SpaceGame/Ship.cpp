@@ -301,6 +301,8 @@ void Ship::gravityUpdate(double delta)
 void Ship::setSoundVolume(float volume)
 {
 	soundVolume = volume;
+	soundEngine->setSoundVolume(soundVolume);
+
 }
 
 void Ship::maxHealth()
