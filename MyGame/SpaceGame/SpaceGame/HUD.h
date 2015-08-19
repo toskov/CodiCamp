@@ -31,6 +31,7 @@ public:
 	~HUD();
 	void showMenu();
 	void showAlert(const char *str);
+	void showAlert(double value);
 	void hideMenu();
 	void updateHud(int points, int health, int shots, int time);  // refresh game info
 };

@@ -1,16 +1,33 @@
 #include "Ai.h"
 
-void Ai::Update(vector<Thing*> gameObjects, Ship *ship, double *delta)
+void Ai::Update( )
 {
-	this->delta = delta;
-	for (int i = 0; i < gameObjects.size(); i++)
+	
+
+}
+
+// sensors
+void Ai::Perception()
+{
+
+}
+
+void Ai::Think()
+{
+
+}
+
+void Ai::React()
+{
+	shootInterval -= 1;
+	if (shootInterval < 0)
 	{
-		if (gameObjects[i]->getType() == UFO)
-		{
-			gameObjects[i]->Update(delta); //update objects animation
-		}
-		
+//		shooting();
 	}
+}
+
+void Memorize()
+{
 
 }
 

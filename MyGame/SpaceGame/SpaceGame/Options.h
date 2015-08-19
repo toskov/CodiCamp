@@ -11,7 +11,7 @@ public:
 	IND_Key *keyLeft = new IND_Key(IND_KEYLEFT);
 	IND_Key *keyRight = new IND_Key(IND_KEYRIGHT);
 	IND_Key *keyShoot = new IND_Key(IND_SPACE);
-	int *soundValue = new int(50u); // 0-100
+	float *soundValue = new float(0.50f); // 0-100
 	Options(); // read file
 	void loadGameOptions(void); // read objects from file
 	bool saveOptions(void);

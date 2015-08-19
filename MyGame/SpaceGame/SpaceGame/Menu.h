@@ -23,6 +23,7 @@ private:
 	currentMenu gameCurrentMenu = PLAY;
 	IND_Surface *mSurfaceCursor = IND_Surface::newSurface();
 	IND_Entity2d *mCursor = IND_Entity2d::newEntity2d();
+	bool mouseButtonReleased = true;
 	
 
 
@@ -39,10 +40,10 @@ public:
 	void ShowControls(void);
 	void HideControls(void);
 	bool isHidden(void);
-	bool isExitSelected(); // for game exit
+	bool isExitSelected(void); // for game exit
 	void ShowPauseMenu(void);
 	void ShowGameOverMenu(void);
-	void clearMenu();
+	void clearMenu(void);
 };
 
 #endif

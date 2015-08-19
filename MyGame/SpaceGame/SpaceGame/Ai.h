@@ -3,8 +3,7 @@
 
 #include "CIndieLib.h"
 #include <vector>
-#include "Thing.h"
-#include "Ship.h"
+#include "Bullet.h"
 
 class Ai
 {
@@ -15,7 +14,11 @@ private:
 	const int enemyShootInterval = 15;
 public:
 	Ai();
-	void Update(vector<Thing*> gameObjects, Ship *ship, double *delta);
+	void Update();
+	void Perception();
+	void Think();
+	void React();
+	void Memorize();
 	~Ai();
 };
 

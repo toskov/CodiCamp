@@ -57,6 +57,13 @@ void HUD::showAlert(const char *str)
 	mAlert->setText(mText);
 }
 
+void HUD::showAlert(double value)
+{
+	char mText[2048];
+	sprintf(mText, "%f", value);
+	mAlert->setText(mText);
+}
+
 HUD::~HUD()
 {
 	hud_->destroy();

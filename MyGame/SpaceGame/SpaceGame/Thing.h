@@ -8,6 +8,7 @@
 #include "Frame.h"
 #include <vector>
 #include "Errorhandler.h"
+#include "Ai.h"
 
 class Thing
 {
@@ -31,6 +32,7 @@ private:
 	vector<Frame*> frames;
 	int frameCount = 0; // number of frames
 	int currentFrame = 0; // current frame in animation
+	//Ai *brain = new Ai();
 
 public:
 	void setVelosity(int vX,int vY);

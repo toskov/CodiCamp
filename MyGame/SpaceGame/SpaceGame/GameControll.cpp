@@ -52,13 +52,13 @@ void GameControll::gameInit()
 	IND_Entity2d *mGround = IND_Entity2d::newEntity2d();
 	mI->_entity2dManager->add(mGround);					// Entity adding
 	mGround->setSurface(planetSurface);				// Set the surface into the entity
-	mGround->setPosition(0, 150, 3);
+	mGround->setPosition(0, 150, 0);
 	mGround->setBoundingRectangle("ground", 0, 400, 800, 0);
 	//mGround->setTransparency(50);
 
 	// -------- Load Options ----------------
 	gameOptions->loadGameOptions();
-	this->soundVolume = *gameOptions->soundValue;  
+	//this->soundVolume =  *gameOptions->soundValue; TODO
 
 	menu = new Menu(mI);
 	ship = new Ship(mI, "../SpaceGame/resources/animations/rocket.xml");
@@ -146,17 +146,20 @@ void GameControll::sceneGenerator()
 	randomY = 15 + rand() % (WINDOW_HEIGHT - 150);
 	gameObjects.push_back(new Thing(mI, thingsPicture, DIAMOND, randomX, randomY, 10, 0, frames));
 	
-	hud->showAlert("Quit F12!");
+//	hud->showAlert("Quit F12!");
+	
 }
 
 // --------------------Game Update ---------------------------
 void GameControll::Update(int gameTime,double *delta)
 {
+	char mText[10];
+
 	this->delta = delta;
 	//ship->gravityUpdate(GRAVITY);
 	if (menu->isHidden())
 	{
-		enemmy->Update(gameObjects, ship, delta); // Enemy movement only if menu is hidden
+//enemmy->Update(gameObjects, ship, delta); // Enemy movement only if menu is hidden
 	}
 	
 	//stop game
@@ -187,9 +190,15 @@ void GameControll::Update(int gameTime,double *delta)
 		// -------- UI ------------
 		hud->updateHud(ship->getScore(), ship->getHealth(), ship->getShots(), gameTime);
 		hud->showAlert("F12 to quit!");
+		
 
 	}
 	else{
+		// display volume
+		
+		sprintf(mText, "sound: %f ", soundVolume);
+		hud->showAlert(mText);
+
 		switch (menu->Update())
 		{
 		case 0: // hide menu
@@ -222,16 +231,16 @@ void GameControll::Update(int gameTime,double *delta)
 			break;
 
 		case DECREASE:
-			soundVolume -= 0.01;// 5 * (*delta);
-			ship->setSoundVolume(soundVolume);
+			soundVolume -= 0.1;
 			if (soundVolume < 0) soundVolume = 0;
+			ship->setSoundVolume(soundVolume);			
 			soundEngine->setSoundVolume(soundVolume);
 			break;
 
 		case INCREASE:
-			soundVolume += 0.01;// 5 * (*delta);
+			soundVolume += 0.1;// on single click			
+			if (soundVolume > 1) soundVolume = 1;
 			ship->setSoundVolume(soundVolume);
-			if (soundVolume > 100) soundVolume = 100;
 			soundEngine->setSoundVolume(soundVolume);
 			break;
 
@@ -250,6 +259,12 @@ void GameControll::Update(int gameTime,double *delta)
 
 		for (int i = 0; i < gameObjects.size(); i++)
 		{
+			// Ai update world info for UFOs
+			if ((gameObjects[i]->getType() == UFO) && play)
+			{
+				gameObjects[i]->Update(delta);
+			}
+
 			// check collisions with ship for all objects
 			if (mI->_entity2dManager->isCollision(ship->getColisionBorder(), "body", gameObjects[i]->getColisionBorder(), "thing"))
 			{
@@ -330,14 +345,22 @@ void GameControll::killObjects()
 
 	gameObjects.clear();	// remove all pointers from vector
 }
+void GameControll::saveGameState(void)
+{
+	//TODO
+}
 
+void GameControll::loadGameState(void)
+{
+	//TODO
+}
 GameControll::~GameControll()
 {
 
 	delete menu;
 	delete ship;
 	delete hud;
-	delete enemmy;
+//	delete enemmy;
 	delete delta;
 
 	bullets.clear();

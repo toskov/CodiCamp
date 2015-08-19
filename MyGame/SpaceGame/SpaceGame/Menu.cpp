@@ -179,11 +179,13 @@ int Menu::Update()
 	{
 		// mouse over
 		itemIncrease->selectedItem();
-		if (mI->_input->isMouseButtonPressed(IND_MBUTTON_LEFT))
+		if (mI->_input->isMouseButtonPressed(IND_MBUTTON_LEFT) && mouseButtonReleased)
 		{
+			mouseButtonReleased = false;
 			//On left mouse button click
 			return INCREASE; // refresh game
 		}
+		if (!mI->_input->isMouseButtonPressed(IND_MBUTTON_LEFT)) mouseButtonReleased = true; //counting only once
 	}
 	else
 	{
@@ -196,11 +198,14 @@ int Menu::Update()
 	{
 		// mouse over
 		itemDecrease->selectedItem();
-		if (mI->_input->isMouseButtonPressed(IND_MBUTTON_LEFT))
+		if (mI->_input->isMouseButtonPressed(IND_MBUTTON_LEFT) && mouseButtonReleased)
 		{
+			mouseButtonReleased = false;
 			//On left mouse button click
 			return DECREASE; // refresh game
 		}
+		if (!mI->_input->isMouseButtonPressed(IND_MBUTTON_LEFT)) mouseButtonReleased = true; //counting only once
+
 	}
 	else
 	{

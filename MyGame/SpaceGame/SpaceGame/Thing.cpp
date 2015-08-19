@@ -158,7 +158,7 @@ void Thing::Update(double *delta)
 
 	border->setPosition(*collisionsX, *collisionsY, ENEMY);
 	if ((*posX > WINDOW_WIDTH) || (*posX <1)) *velosityX = -*velosityX;
-	if ((*posY > WINDOW_HEIGHT) || (*posY <1)) *velosityY = -*velosityY;
+	if ((*posY > WINDOW_HEIGHT-30) || (*posY <1)) *velosityY = -*velosityY;
 
 }
 

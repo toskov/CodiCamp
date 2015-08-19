@@ -39,7 +39,7 @@ void Options::loadGameOptions()
 	//TODO parsing game options
 	FILE *file;
 	file = fopen("options.txt", "r");
-
+	 
 	if (file == NULL) {
 		//printf("Error occurred while file creation!");
 	}

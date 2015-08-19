@@ -21,6 +21,7 @@
 #include "irrKlang.h"
 #include "Ai.h"
 #include "Bullet.h"
+#include "World.h"
 #include <vector>
 #include <string>
 #include <sstream>
@@ -42,14 +43,14 @@ private:
 	Menu *menu;
 	Ship *ship;
 	HUD *hud;
-	Ai *enemmy = new Ai();
+	World *world;
 	Options *gameOptions = new Options();
 
 	bool gameExit = false;
 	bool play = true;
 	double *delta;
 
-	double soundVolume = 0.1f;
+	double soundVolume = 0.3f;
 	float fxVolume = 0.5f;
 	
 	// Vector Objects container
@@ -73,6 +74,8 @@ public:
 	void GameOver(); // Final screen
 	void readThingsFile(); // reading info for pictures in spritesheet
 	bool isExitSelected();
+	void saveGameState(void);
+	void loadGameState(void);
 	~GameControll();
 };
 

@@ -142,6 +142,7 @@
     <ClCompile Include="Thing.cpp" />
     <ClCompile Include="tools\editor_tileless\CIndieLib.cpp" />
     <ClCompile Include="Utils.cpp" />
+    <ClCompile Include="World.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Ai.h" />
@@ -165,6 +166,7 @@
     <ClInclude Include="Thing.h" />
     <ClInclude Include="tools\editor_tileless\CIndieLib.h" />
     <ClInclude Include="Utils.h" />
+    <ClInclude Include="World.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="SpaceGame.rc" />
