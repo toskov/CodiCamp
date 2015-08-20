@@ -1,4 +1,4 @@
-﻿Build started 20.8.2015 г. 18:18:09.
+﻿Build started 20.8.2015 г. 19:18:09.
      1>Project "F:\Projects\CodiCamp\C-game-course\MyGame\SpaceGame\SpaceGame\SpaceGame.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
          F:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"F:\Projects\CodiCamp\C-game-course\MyGame\SpaceGame\SpaceGame\irrKlang-1.5.0\include" /I"F:\Projects\CodiCamp\C-game-course\MyGame\SpaceGame\SpaceGame\tools\editor_tileless" /I"F:\Projects\CodiCamp\C-game-course\MyGame\SpaceGame\SpaceGame\common\include" /I..\..\..\..\common\include /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Bullet.cpp
@@ -38,4 +38,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:01.96
+Time Elapsed 00:00:01.98
