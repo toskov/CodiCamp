@@ -128,7 +128,7 @@ void GameControll::sceneGenerator()
 	{
 		randomX =15 + rand() % (WINDOW_WIDTH - 50);
 		randomY =15 + rand() % (WINDOW_HEIGHT - 150);
-		world->gameObjects.push_back(new Thing(mI, thingsPicture, ROCK, randomX, randomY, -10, 0, frames));
+		world->gameObjects.push_back(new Thing(mI, thingsPicture, ROCK, randomX, randomY, -10, 0, frames,delta));
 	}
 
 	for (int i = 0; i < 6; i++)
@@ -136,16 +136,16 @@ void GameControll::sceneGenerator()
 		randomX = 15 + rand() % (WINDOW_WIDTH - 50);
 		randomY = 15 + rand() % (WINDOW_HEIGHT - 150);
 		//Thing *ufo = new Thing(mI, thingsPicture, UFO, randomX, randomY, 10,0,frames);
-		world->gameObjects.push_back(new Thing(mI, thingsPicture, UFO, randomX, randomY, -10, 0, frames));
+		world->gameObjects.push_back(new Thing(mI, thingsPicture, UFO, randomX, randomY, -10, 0, frames, delta));
 	}
 
 	randomX = 15 + rand() % (WINDOW_WIDTH - 50);
 	randomY = 15 + rand() % (WINDOW_HEIGHT - 150);
-	world->gameObjects.push_back(new Thing(mI, thingsPicture, HEALTH, randomX, randomY, 10, 0, frames));
+	world->gameObjects.push_back(new Thing(mI, thingsPicture, HEALTH, randomX, randomY, 10, 0, frames, delta));
 
 	randomX = 15 + rand() % (WINDOW_WIDTH - 50);
 	randomY = 15 + rand() % (WINDOW_HEIGHT - 150);
-	world->gameObjects.push_back(new Thing(mI, thingsPicture, DIAMOND, randomX, randomY, 10, 0, frames));
+	world->gameObjects.push_back(new Thing(mI, thingsPicture, DIAMOND, randomX, randomY, 10, 0, frames, delta));
 	
 //	hud->showAlert("Quit F12!");
 	
@@ -160,7 +160,7 @@ void GameControll::Update(int gameTime,double *delta)
 	//ship->gravityUpdate(GRAVITY);
 	if (menu->isHidden())
 	{
-//enemmy->Update(gameObjects, ship, delta); // Enemy movement only if menu is hidden
+		//enemmy->Update(gameObjects, ship, delta); // Enemy movement only if menu is hidden
 	}
 	
 	//stop game
@@ -191,7 +191,6 @@ void GameControll::Update(int gameTime,double *delta)
 		// -------- UI ------------
 		hud->updateHud(ship->getScore(), ship->getHealth(), ship->getShots(), gameTime);
 		hud->showAlert("F12 to quit!");
-		
 
 	}
 	else{
@@ -259,20 +258,18 @@ void GameControll::Update(int gameTime,double *delta)
 		
 		for (int i = 0; i < (int)(world->bullets.size()); i++)
 		{
-		/*	world->bullets[i]->Update(delta);
+			world->bullets[i]->Update(delta);
 
-			// bullet collector
+		// bullet collector
 			if (world->bullets[i]->outOfRange(WINDOW_WIDTH, WINDOW_HEIGHT))
 			{
-			//	world->bullets.at(i)->destroy(); // destroy object
-			//	world->bullets.erase((world->bullets.begin() + i)); // remove pointer from vector	
+				world->bullets.at(i)->destroy(); // destroy object //TODO must free memory
+				world->bullets.erase((world->bullets.begin() + i)); // remove pointer from vector	
 			}
-			*/
+		/*		*/
 		}
 		
 		
-		
-
 		for (int i = 0; i < (int)(world->gameObjects.size()); i++)
 		{
 			// Ai update world info for UFOs
@@ -310,9 +307,12 @@ void GameControll::Update(int gameTime,double *delta)
 
 			if (mI->_entity2dManager->isCollision(ship->getColisionBorder(), "body", world->gameObjects[i]->getColisionBorder(), "radar"))
 			{				
-				if (world->gameObjects[i]->readyToShoot()) world->bullets.push_back(world->gameObjects[i]->shoot()); // UFO shooting
+				if (world->gameObjects[i]->readyToShoot(*delta)) world->bullets.push_back(world->gameObjects[i]->shoot()); // UFO shooting
+			} 
+			else
+			{
+				world->gameObjects[i]->setShootInnterval(0);
 			}
-
 
 			// test for bullet collisions
 			/**/

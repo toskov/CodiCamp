@@ -4,9 +4,10 @@ Thing::Thing()
 {
 }
 
-Thing::Thing(CIndieLib *mI, IND_Surface *thingsPicture, int type, int x, int y, int life, int angle, vector<Frame*> frms)
+Thing::Thing(CIndieLib *mI, IND_Surface *thingsPicture, int type, int x, int y, int life, int angle, vector<Frame*> frms, double *delta)
 {
 	this->mI = mI;
+	this->delta = delta;
 
 	*rotation = rand()%360;
 	// random speed and direction (rand() % 2 - 1)
@@ -164,6 +165,7 @@ void Thing::setVelosity(int vx, int vy)
 void Thing::Update(double *delta)
 {
 	double angle; // rotate radar to velosity vector
+	this->delta = delta;
 
 	*posX = *posX + *velosityX*(*delta);
 	*posY = *posY + *velosityY*(*delta);
@@ -199,16 +201,25 @@ double Thing::getAngle()
 	return *rotation;
 }
 
-boolean Thing::readyToShoot()
+boolean Thing::readyToShoot(double delta)
 {
-	//return ready;
+	shootInterval -= 10 * delta;
+	if (shootInterval > 0) return false;
+	shootInterval = 3; // speed of shooting. Can be increased in game levels
 	return true;
+}
+
+void Thing::setShootInnterval(double d)
+{
+	shootInterval = d;
 }
 
 Bullet* Thing::shoot()
 {
+		
 	Bullet *bullet;
-	bullet = new Bullet(mI, *rotation, *posX + relativeX, *posY + relativeY);
+	bullet = new Bullet(mI, *rotation+95, *posX + relativeX, *posY + relativeY);
+	bullet->Set(*rotation+95, *posX + relativeX, *posY + relativeY, delta); // corected angle
 	ready = false;
 	return bullet;
 }
@@ -221,4 +232,5 @@ Thing::~Thing()
 	delete posX;
 	delete posY;
 	delete type;
+	delete delta;
 }

@@ -24,7 +24,7 @@ private:
 	double *velosityX = new double(), *velosityY = new double(); // for moving objects
 	double *rotation = new double(0);
 	double relativeX, relativeY;
-	
+	double *delta;
 	CIndieLib *mI;
 	IND_Entity2d *thing = IND_Entity2d::newEntity2d();
 	IND_Entity2d *border = IND_Entity2d::newEntity2d(); // collision border
@@ -35,10 +35,12 @@ private:
 	int frameCount = 0; // number of frames
 	int currentFrame = 0; // current frame in animation
 	boolean ready = true; // ready for shooting once
+	double shootInterval = 3;
 	//Ai *brain = new Ai();
 
 public:
-	boolean readyToShoot(void);
+	void setShootInnterval(double d);
+	boolean readyToShoot(double del);
 	void setVelosity(int vX,int vY);
 	double getAngle(); // get rotation angle
 	Bullet* shoot();
@@ -53,7 +55,7 @@ public:
 	void Update(double *delta);
 	IND_Entity2d* getColisionBorder();
 	Thing();
-	Thing(CIndieLib *mI, IND_Surface *thingsPicture, int type, int x, int y, int life, int angle, vector<Frame*> frms);
+	Thing(CIndieLib *mI, IND_Surface *thingsPicture, int type, int x, int y, int life, int angle, vector<Frame*> frms,double *delta);
 	~Thing();
 };
 #endif

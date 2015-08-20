@@ -9,7 +9,7 @@
 class Bullet
 {
 private:
-	//CIndieLib *mI;
+	CIndieLib *mI;
 	float *speedX_ = new float(0.1f), *speedY_ = new float(0.1f);
 	IND_Entity2d *mBullet_ = IND_Entity2d::newEntity2d();
 	IND_Surface *mSurfaceBullet_ = IND_Surface::newSurface();

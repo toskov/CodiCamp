@@ -48,26 +48,34 @@ IND_Entity2d* Bullet::getColisionBorder()
 {
 	return mBullet_;
 }
-bool outOfRange(int x, int y)
+
+
+bool Bullet::outOfRange(int maxX, int maxY)
 {
+	int x = mBullet_->getPosX();
+	int y = mBullet_->getPosY();
+
+	if (x < 0 || y < 0 || x > maxX || y > maxY) return true;
+
 	return false;// The bullet is ready to be destroyed if it is out of window 
 }
 
 void Bullet::destroy()
 {
-	/*
-	
+	/**/
+	return; // TODO !!!!!!!!
+
 	delete speedX_;
 	delete speedY_;
-	mI->_entity2dManager->remove(mBullet_);
+	delete mDelta;
+	
 	mI->_surfaceManager->remove(mSurfaceBullet_);
-	delete mDelta;*/
+	mI->_entity2dManager->remove(mBullet_);
 }
 
 Bullet::~Bullet()
 {
 	delete speedX_;
 	delete speedY_;
-	mBullet_->destroy();
-	mSurfaceBullet_->destroy();
+	delete mDelta;
 }
