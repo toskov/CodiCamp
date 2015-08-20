@@ -54,11 +54,9 @@ private:
 	float fxVolume = 0.5f;
 	
 	// Vector Objects container
-	vector<Thing*> gameObjects;
 	vector<Explosion*> explosions;
 	vector<Rock*> rocks;
 	vector<Frame*> frames;	
-	vector<Bullet*> bullets;
 	void gameInit(); // initialize game
 	
 

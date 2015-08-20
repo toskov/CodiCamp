@@ -18,6 +18,7 @@
 #include "Explosion.h"
 #include "GameControll.h"
 #include <irrKlang.h>
+//#include "../../WorkingPath.h"
 
 #pragma comment(lib, "irrKlang.lib") // link with irrKlang.dll
 
@@ -30,7 +31,6 @@ Main
 int IndieLib() // main
 {
 	
-
 	char TempText[30];
 	
 	// ----- Sound Library --------------

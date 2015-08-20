@@ -1,5 +1,6 @@
 #ifndef THING_H
 #define	THING_H
+
 #include "CIndieLib.h"
 #include "IND_Entity2d.h"
 #include "IND_Animation.h"
@@ -21,6 +22,7 @@ private:
 	double *collisionsX = new double(0);
 	double *collisionsY = new double(0); 
 	double *velosityX = new double(), *velosityY = new double(); // for moving objects
+	double *rotation = new double(0);
 	double relativeX, relativeY;
 	
 	CIndieLib *mI;

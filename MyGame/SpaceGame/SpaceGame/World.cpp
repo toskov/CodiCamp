@@ -1,11 +1,13 @@
 #include "World.h"
 
-World::World(CIndieLib* mI)
+World::World(CIndieLib* myI)
 {
-	this->mI = mI;
+	this->mI = myI;
 }
 
 World::~World()
 {
+	bullets.clear();
+	gameObjects.clear();
 
 }

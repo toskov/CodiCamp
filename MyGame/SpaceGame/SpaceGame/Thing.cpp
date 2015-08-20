@@ -7,6 +7,8 @@ Thing::Thing()
 Thing::Thing(CIndieLib *mI, IND_Surface *thingsPicture, int type, int x, int y, int life, int angle, vector<Frame*> frms)
 {
 	this->mI = mI;
+
+	*rotation = rand()%360;
 	// random speed and direction (rand() % 2 - 1)
 	//srand(time(NULL));
 	*velosityX = rand() % 100;
@@ -33,7 +35,7 @@ Thing::Thing(CIndieLib *mI, IND_Surface *thingsPicture, int type, int x, int y, 
 	case ASTEROID:
 		typ = "asteroid";
 		radius = 40;
-		thing->setScale(0.7, 0.7);
+		thing->setScale(0.7f, 0.7f);
 		break;
 	case ROCK:
 		typ = "rock";
@@ -77,10 +79,18 @@ Thing::Thing(CIndieLib *mI, IND_Surface *thingsPicture, int type, int x, int y, 
 	thing->setRegion(offsetX, offsetY, width, height); // shows first picture from sprite
 
 	// Empty object for colisions!
+
 	mI->_entity2dManager->add(border);
 	border->setSurface(collisionSurface);
-	//border->setPosition(x,y,COLLISIONS);
-	border->setBoundingCircle("thing", x + width /2, y + height / 2, radius);	
+	border->setPosition(x + width / 2, y + height / 2, COLLISIONS);
+	border->setBoundingCircle("thing", 0, 0, radius);	
+	
+	// Cone colision
+	if (type == UFO)
+	{
+		mI->_surfaceManager->add(collisionSurface, "../SpaceGame/resources/radar.png", IND_OPAQUE, IND_32);
+		border->setBoundingTriangle("radar", 0,0,300,0 , 280 ,80 );
+	}
 	// prepare positions for explosion
 	*collisionsX = border->getPosX();//x + width / 2;	
 	*collisionsY = border->getPosY();//y + height / 2;
@@ -134,8 +144,12 @@ void Thing::animationUpdate()
 			break;
 		}
 	}
+	*rotation = *rotation+0.8;
+	if (*rotation == 360.0) *rotation = 0;
+	border->setAngleXYZ(0, 0, *rotation);
 
 	thing->setRegion(offsetX, offsetY, width, height); // shows region
+	//thing->get
 }
 
 //Used for moving objects
@@ -149,17 +163,23 @@ void Thing::setVelosity(int vx, int vy)
 //Update moving objects
 void Thing::Update(double *delta)
 {
-	
+	double angle; // rotate radar to velosity vector
+
 	*posX = *posX + *velosityX*(*delta);
 	*posY = *posY + *velosityY*(*delta);
-	thing->setPosition(*posX,*posY, 2);
-	*collisionsX = border->getPosX() + *velosityX*(*delta);
-	*collisionsY = border->getPosY() + *velosityY*(*delta);
+	thing->setPosition(*posX, *posY, ENEMY);
+	border->setPosition(*posX+relativeX, *posY+relativeY, ENEMY);
+	
+	//*collisionsX = border->getPosX() + *velosityX*(*delta);
+	//*collisionsY = border->getPosY() + *velosityY*(*delta);
+	//*collisionsX = *collisionsX + *velosityX*(*delta);
+	//*collisionsY = *collisionsY + *velosityY*(*delta);
 
-	border->setPosition(*collisionsX, *collisionsY, ENEMY);
+
+	//border->setPosition(*collisionsX, *collisionsY, ENEMY);
+	
 	if ((*posX > WINDOW_WIDTH) || (*posX <1)) *velosityX = -*velosityX;
 	if ((*posY > WINDOW_HEIGHT-30) || (*posY <1)) *velosityY = -*velosityY;
-
 }
 
 void Thing::destroy()

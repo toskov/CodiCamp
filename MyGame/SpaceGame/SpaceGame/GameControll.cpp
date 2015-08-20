@@ -4,6 +4,7 @@ GameControll::GameControll(CIndieLib* mI)
 {
 	this->mI = mI;
 	gameInit();
+	world = new World(mI);
 }
 
 void GameControll::gameLogic()
@@ -39,7 +40,7 @@ void GameControll::gameInit()
 
 	// Creating surface for the background
 	IND_Surface *mSurfaceBack = IND_Surface::newSurface();
-	!mI->_surfaceManager->add(mSurfaceBack, "../SpaceGame/resources/genesis/Background_Colorful_Galaxy-800x600.jpg", IND_OPAQUE, IND_32);
+	mI->_surfaceManager->add(mSurfaceBack, "../SpaceGame/resources/genesis/Background_Colorful_Galaxy-800x600.jpg", IND_OPAQUE, IND_32);
 
 	// Creating 2d entity for the background
 	IND_Entity2d *mBack = IND_Entity2d::newEntity2d();
@@ -48,7 +49,7 @@ void GameControll::gameInit()
 
 	// Planet surface for gravity game
 	IND_Surface *planetSurface = IND_Surface::newSurface();
-	!mI->_surfaceManager->add(planetSurface, "../SpaceGame/resources/planet_surface.png", IND_OPAQUE, IND_32);
+	mI->_surfaceManager->add(planetSurface, "../SpaceGame/resources/planet_surface.png", IND_OPAQUE, IND_32);
 	IND_Entity2d *mGround = IND_Entity2d::newEntity2d();
 	mI->_entity2dManager->add(mGround);					// Entity adding
 	mGround->setSurface(planetSurface);				// Set the surface into the entity
@@ -62,7 +63,7 @@ void GameControll::gameInit()
 
 	menu = new Menu(mI);
 	ship = new Ship(mI, "../SpaceGame/resources/animations/rocket.xml");
-	ship->setSoundVolume(0.3);
+	ship->setSoundVolume(0.3f);
 
 	hud = new HUD(mI); // game info
 
@@ -127,7 +128,7 @@ void GameControll::sceneGenerator()
 	{
 		randomX =15 + rand() % (WINDOW_WIDTH - 50);
 		randomY =15 + rand() % (WINDOW_HEIGHT - 150);
-		gameObjects.push_back(new Thing(mI, thingsPicture, ROCK, randomX, randomY, -10, 0, frames));
+		world->gameObjects.push_back(new Thing(mI, thingsPicture, ROCK, randomX, randomY, -10, 0, frames));
 	}
 
 	for (int i = 0; i < 6; i++)
@@ -135,16 +136,16 @@ void GameControll::sceneGenerator()
 		randomX = 15 + rand() % (WINDOW_WIDTH - 50);
 		randomY = 15 + rand() % (WINDOW_HEIGHT - 150);
 		//Thing *ufo = new Thing(mI, thingsPicture, UFO, randomX, randomY, 10,0,frames);
-	gameObjects.push_back(new Thing(mI, thingsPicture, UFO, randomX, randomY, -10, 0, frames));
+		world->gameObjects.push_back(new Thing(mI, thingsPicture, UFO, randomX, randomY, -10, 0, frames));
 	}
 
 	randomX = 15 + rand() % (WINDOW_WIDTH - 50);
 	randomY = 15 + rand() % (WINDOW_HEIGHT - 150);
-	gameObjects.push_back(new Thing(mI, thingsPicture, HEALTH, randomX, randomY, 10, 0, frames));
+	world->gameObjects.push_back(new Thing(mI, thingsPicture, HEALTH, randomX, randomY, 10, 0, frames));
 
 	randomX = 15 + rand() % (WINDOW_WIDTH - 50);
 	randomY = 15 + rand() % (WINDOW_HEIGHT - 150);
-	gameObjects.push_back(new Thing(mI, thingsPicture, DIAMOND, randomX, randomY, 10, 0, frames));
+	world->gameObjects.push_back(new Thing(mI, thingsPicture, DIAMOND, randomX, randomY, 10, 0, frames));
 	
 //	hud->showAlert("Quit F12!");
 	
@@ -257,40 +258,40 @@ void GameControll::Update(int gameTime,double *delta)
 	{
 		// just to prevent initial collisions
 
-		for (int i = 0; i < gameObjects.size(); i++)
+		for (int i = 0; i < world->gameObjects.size(); i++)
 		{
 			// Ai update world info for UFOs
-			if ((gameObjects[i]->getType() == UFO) && play)
+			if ((world->gameObjects[i]->getType() == UFO) && play)
 			{
-				gameObjects[i]->Update(delta);
+				world->gameObjects[i]->Update(delta);
 			}
 
 			// check collisions with ship for all objects
-			if (mI->_entity2dManager->isCollision(ship->getColisionBorder(), "body", gameObjects[i]->getColisionBorder(), "thing"))
+			if (mI->_entity2dManager->isCollision(ship->getColisionBorder(), "body", world->gameObjects[i]->getColisionBorder(), "thing"))
 			{
 				hud->showAlert(" Collision detected!"); // for tests only
-				if (gameObjects[i]->getType() == HEALTH)
+				if (world->gameObjects[i]->getType() == HEALTH)
 				{
 					if (ship->getHealth() < 100)
 					{
-						ship->changeHealth(gameObjects.at(i)->getHealth()); // corect ship health
+						ship->changeHealth(world->gameObjects.at(i)->getHealth()); // corect ship health
 					}
 
 				}
-				if (gameObjects[i]->getType() == DIAMOND)
+				if (world->gameObjects[i]->getType() == DIAMOND)
 				{
 					ship->changeScore(DIAMOND_SCORE); // corect ship health
 					
 				}
-				if ((gameObjects[i]->getType() == ROCK) || (gameObjects[i]->getType() == ASTEROID) || (gameObjects[i]->getType() == UFO))
+				if ((world->gameObjects[i]->getType() == ROCK) || (world->gameObjects[i]->getType() == ASTEROID) || (world->gameObjects[i]->getType() == UFO))
 				{
-					ship->changeHealth(gameObjects.at(i)->getHealth()); // corect ship health
-					explosions.push_back(new Explosion(mI, gameObjects[i]->getCollisionPositionX(), gameObjects[i]->getCollisionPositionY()));// create new explosion in vector
+					ship->changeHealth(world->gameObjects.at(i)->getHealth()); // corect ship health
+					explosions.push_back(new Explosion(mI, world->gameObjects[i]->getCollisionPositionX(), world->gameObjects[i]->getCollisionPositionY()));// create new explosion in vector
 					soundEngine->play2D("../SpaceGame/resources/explosion_player.wav");
 				}
 
-				gameObjects.at(i)->destroy(); // destroy object
-				gameObjects.erase((gameObjects.begin() + i)); // remove pointer from vector
+				world->gameObjects.at(i)->destroy(); // destroy object
+				world->gameObjects.erase((world->gameObjects.begin() + i)); // remove pointer from vector
 			}
 
 
@@ -298,16 +299,16 @@ void GameControll::Update(int gameTime,double *delta)
 			/**/
 			for (int k = 0; k < 10; k++) //k - bullet number
 			{
-				if (mI->_entity2dManager->isCollision(ship->getBulletBorder(k), "bullet", gameObjects[i]->getColisionBorder(), "thing"))
+				if (mI->_entity2dManager->isCollision(ship->getBulletBorder(k), "bullet", world->gameObjects[i]->getColisionBorder(), "thing"))
 				{
-					if ((gameObjects[i]->getType() == ROCK) || (gameObjects[i]->getType() == ASTEROID) || (gameObjects[i]->getType() == UFO))
+					if ((world->gameObjects[i]->getType() == ROCK) || (world->gameObjects[i]->getType() == ASTEROID) || (world->gameObjects[i]->getType() == UFO))
 					{
 						// collision with rock detected
 
-						explosions.push_back(new Explosion(mI, gameObjects[i]->getCollisionPositionX(), gameObjects[i]->getCollisionPositionY()));// create new explosion in vector
+						explosions.push_back(new Explosion(mI, world->gameObjects[i]->getCollisionPositionX(), world->gameObjects[i]->getCollisionPositionY()));// create new explosion in vector
 						ship->changeScore(5); // increase game score
-						gameObjects.at(i)->destroy(); // destroy object
-						gameObjects.erase((gameObjects.begin() + i)); // remove pointer from vector		
+						world->gameObjects.at(i)->destroy(); // destroy object
+						world->gameObjects.erase((world->gameObjects.begin() + i)); // remove pointer from vector		
 						soundEngine->play2D("../SpaceGame/resources/explosion_asteroid.wav");
 
 					}
@@ -315,7 +316,7 @@ void GameControll::Update(int gameTime,double *delta)
 				}
 			}
 			// regenerate items
-			if (gameObjects.size() == 0) sceneGenerator();
+			if (world->gameObjects.size() == 0) sceneGenerator();
 		}
 	}
 }
@@ -330,20 +331,20 @@ void GameControll::AnimationsUpdate( )
 	{
 		if (!explosions[i]->Update(mI, *delta)) explosions.erase((explosions.begin() + i)); // remove explosion from vector
 	}
-	for (int i = 0; i < gameObjects.size(); i++)
+	for (int i = 0; i < world->gameObjects.size(); i++)
 	{
-		gameObjects[i]->animationUpdate(); //update objects animation
+		world->gameObjects[i]->animationUpdate(); //update objects animation
 	}
 }
 
 void GameControll::killObjects()
 {
-	for (int i = 0; i < gameObjects.size(); i++)
+	for (int i = 0; i < world->gameObjects.size(); i++)
 	{
-		gameObjects[i]->destroy(); //delete objects
+		world->gameObjects[i]->destroy(); //delete objects
 	}
 
-	gameObjects.clear();	// remove all pointers from vector
+	world->gameObjects.clear();	// remove all pointers from vector
 }
 void GameControll::saveGameState(void)
 {
@@ -363,12 +364,11 @@ GameControll::~GameControll()
 //	delete enemmy;
 	delete delta;
 
-	bullets.clear();
-	gameObjects.clear();
+
 	explosions.clear();
 	rocks.clear();
 	frames.clear();
-	bullets.clear();
+
 	
 
 }

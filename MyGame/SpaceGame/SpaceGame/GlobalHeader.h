@@ -8,7 +8,7 @@
 #define DIAMOND_SCORE 10u // game score  
 #define GRAVITY 9.81f //gravity
 
-#define PI 3.14159 //the pi number
+//#define PI 3.14159 //the pi number
 
 enum objectType { HEALTH = 1, ASTEROID, ROCK, DIAMOND, UFO, BONUS }; // type of objects on scene
 
