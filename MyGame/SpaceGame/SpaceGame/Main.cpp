@@ -102,7 +102,7 @@ int IndieLib() // main
 		mI->_render->clearViewPort(0, 0, 60);
 		mI->_render->beginScene();
 		mI->_entity2dManager->renderEntities2d();
-		//mI->_entity2dManager->renderCollisionAreas(255, 0, 0, 255); // for tests
+		// mI->_entity2dManager->renderCollisionAreas(255, 0, 0, 255); // for tests
 		mI->_render->endScene();
 		mI->_render->showFpsInWindowTitle(); //FPS
 		//mI->_entity2dManager->renderGridAreas(255, 255, 0, 255);
