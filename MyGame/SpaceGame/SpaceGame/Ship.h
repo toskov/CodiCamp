@@ -29,7 +29,7 @@ private:
 	Sprite *engine = new Sprite();
 	float gravity = 0;  // GRAVITY;
 	bool rotating = false;
-	int shootInterval = 300;
+	double shootInterval = 2;
 	ISoundEngine* soundEngine;
 	float soundVolume = 0.5f;
 

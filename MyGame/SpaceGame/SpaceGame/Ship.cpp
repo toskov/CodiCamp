@@ -199,9 +199,9 @@ Control bullets
 */
 void Ship::Shoot()
 	{ 
-		shootInterval-=*mDelta;
+		shootInterval -=10*(*mDelta);
 		if (shootInterval > 1) return;
-		shootInterval = 300; // speed of shooting. Can be increased in game levels
+		shootInterval =2 ; // speed of shooting. Can be increased in game levels
 		*shots+=1; 
 
 		//moving last to new position

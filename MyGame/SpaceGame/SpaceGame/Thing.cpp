@@ -194,6 +194,25 @@ void Thing::destroy()
 	mI->_surfaceManager->remove(collisionSurface);
 }
 
+double Thing::getAngle()
+{
+	return *rotation;
+}
+
+boolean Thing::readyToShoot()
+{
+	//return ready;
+	return true;
+}
+
+Bullet* Thing::shoot()
+{
+	Bullet *bullet;
+	bullet = new Bullet(mI, *rotation, *posX + relativeX, *posY + relativeY);
+	ready = false;
+	return bullet;
+}
+
 Thing::~Thing()
 {
 	delete velosityX;

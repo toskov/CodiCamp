@@ -3,7 +3,7 @@
 Bullet::Bullet(CIndieLib *mI, float angle, float posX, float posY)
 {
 
-
+	//this->mI = mI;
 	// Creating surface for the background
 
 	if (!mI->_surfaceManager->add(mSurfaceBullet_, "../SpaceGame/resources/fx_lazer_orange_dff.png", IND_OPAQUE, IND_32))
@@ -26,7 +26,7 @@ Bullet::Bullet(CIndieLib *mI, float angle, float posX, float posY)
 void Bullet::Update(double *delta)
 {
 	mDelta = delta;
-	// Need to be updated every frame
+	// Need to be updated every cycle
 	float tempX = mBullet_->getPosX() + *speedX_;
 	float tempY = mBullet_->getPosY() + *speedY_;
 	mBullet_->setPosition(tempX, tempY, 0);
@@ -48,10 +48,20 @@ IND_Entity2d* Bullet::getColisionBorder()
 {
 	return mBullet_;
 }
+bool outOfRange(int x, int y)
+{
+	return false;// The bullet is ready to be destroyed if it is out of window 
+}
 
 void Bullet::destroy()
 {
-
+	/*
+	
+	delete speedX_;
+	delete speedY_;
+	mI->_entity2dManager->remove(mBullet_);
+	mI->_surfaceManager->remove(mSurfaceBullet_);
+	delete mDelta;*/
 }
 
 Bullet::~Bullet()

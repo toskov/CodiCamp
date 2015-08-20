@@ -253,12 +253,27 @@ void GameControll::Update(int gameTime,double *delta)
 
 
 	// ------- Collisions -----------
-
-	if (gameTime > 2)
+	
+	if (gameTime > 2)       // just to prevent initial collisions
 	{
-		// just to prevent initial collisions
+		
+		for (int i = 0; i < (int)(world->bullets.size()); i++)
+		{
+		/*	world->bullets[i]->Update(delta);
 
-		for (int i = 0; i < world->gameObjects.size(); i++)
+			// bullet collector
+			if (world->bullets[i]->outOfRange(WINDOW_WIDTH, WINDOW_HEIGHT))
+			{
+			//	world->bullets.at(i)->destroy(); // destroy object
+			//	world->bullets.erase((world->bullets.begin() + i)); // remove pointer from vector	
+			}
+			*/
+		}
+		
+		
+		
+
+		for (int i = 0; i < (int)(world->gameObjects.size()); i++)
 		{
 			// Ai update world info for UFOs
 			if ((world->gameObjects[i]->getType() == UFO) && play)
@@ -289,9 +304,13 @@ void GameControll::Update(int gameTime,double *delta)
 					explosions.push_back(new Explosion(mI, world->gameObjects[i]->getCollisionPositionX(), world->gameObjects[i]->getCollisionPositionY()));// create new explosion in vector
 					soundEngine->play2D("../SpaceGame/resources/explosion_player.wav");
 				}
-
 				world->gameObjects.at(i)->destroy(); // destroy object
 				world->gameObjects.erase((world->gameObjects.begin() + i)); // remove pointer from vector
+			}
+
+			if (mI->_entity2dManager->isCollision(ship->getColisionBorder(), "body", world->gameObjects[i]->getColisionBorder(), "radar"))
+			{				
+				if (world->gameObjects[i]->readyToShoot()) world->bullets.push_back(world->gameObjects[i]->shoot()); // UFO shooting
 			}
 
 
@@ -327,11 +346,11 @@ void GameControll::Update(int gameTime,double *delta)
 void GameControll::AnimationsUpdate( )
 {
 	//Update explosions 
-	for (int i = 0; i < explosions.size(); i++)
+	for (int i = 0; i < (int)explosions.size(); i++)
 	{
 		if (!explosions[i]->Update(mI, *delta)) explosions.erase((explosions.begin() + i)); // remove explosion from vector
 	}
-	for (int i = 0; i < world->gameObjects.size(); i++)
+	for (int i = 0; i < (int)world->gameObjects.size(); i++)
 	{
 		world->gameObjects[i]->animationUpdate(); //update objects animation
 	}
@@ -339,7 +358,7 @@ void GameControll::AnimationsUpdate( )
 
 void GameControll::killObjects()
 {
-	for (int i = 0; i < world->gameObjects.size(); i++)
+	for (int i = 0; i < (int)world->gameObjects.size(); i++)
 	{
 		world->gameObjects[i]->destroy(); //delete objects
 	}

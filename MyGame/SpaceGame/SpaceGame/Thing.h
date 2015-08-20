@@ -34,10 +34,14 @@ private:
 	vector<Frame*> frames;
 	int frameCount = 0; // number of frames
 	int currentFrame = 0; // current frame in animation
+	boolean ready = true; // ready for shooting once
 	//Ai *brain = new Ai();
 
 public:
+	boolean readyToShoot(void);
 	void setVelosity(int vX,int vY);
+	double getAngle(); // get rotation angle
+	Bullet* shoot();
 	int getHealth(void);
 	int getType();
 	//void show(int x, int y);
