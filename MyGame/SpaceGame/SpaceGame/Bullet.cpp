@@ -63,19 +63,23 @@ bool Bullet::outOfRange(int maxX, int maxY)
 void Bullet::destroy()
 {
 	/**/
-	return; // TODO !!!!!!!!
+	//return; // TODO !!!!!!!!
 
 	delete speedX_;
 	delete speedY_;
-	delete mDelta;
+	mBullet_->deleteBoundingAreas("bullet");
+	mBullet_->setShow(false);
+	//destroy();
+	//mSurfaceBullet_->destroy();
+	//mI->_entity2dManager->remove(mBullet_);
+	//mI->_surfaceManager->remove(mSurfaceBullet_);
 	
-	mI->_surfaceManager->remove(mSurfaceBullet_);
-	mI->_entity2dManager->remove(mBullet_);
+	
 }
 
 Bullet::~Bullet()
 {
 	delete speedX_;
 	delete speedY_;
-	delete mDelta;
+
 }

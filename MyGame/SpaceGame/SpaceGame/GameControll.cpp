@@ -267,6 +267,21 @@ void GameControll::Update(int gameTime,double *delta)
 				world->bullets.erase((world->bullets.begin() + i)); // remove pointer from vector	
 			}
 		/*		*/
+
+			// Check for collisions
+			if (mI->_entity2dManager->isCollision(ship->getColisionBorder(), "body", world->bullets[i]->getColisionBorder(), "bullet"))
+			{
+				// UFO is shooting on you
+				ship->changeHealth(-5); // corect ship health
+				explosions.push_back(new Explosion(mI, ship->getX(), ship->getY()));// create new explosion in vector
+				soundEngine->play2D("../SpaceGame/resources/explosion_player.wav");
+
+				// destroy bullet
+				world->bullets.at(i)->destroy(); // destroy object //TODO must free memory
+				world->bullets.erase((world->bullets.begin() + i)); // remove pointer from vector
+
+
+			}
 		}
 		
 		
