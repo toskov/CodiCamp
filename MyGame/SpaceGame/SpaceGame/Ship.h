@@ -47,6 +47,7 @@ public:
 	void Shoot(); 
 	void setSpeedX(float sX);
 	void setSpeedY(float sY);
+	void setHealth(int i);
 	void increaseSpeed(float step);
 	void changeHealth(int h);
 	void decreaseSpeed(float step);

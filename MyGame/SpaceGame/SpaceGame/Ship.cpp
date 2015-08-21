@@ -304,7 +304,10 @@ void Ship::setSoundVolume(float volume)
 	soundEngine->setSoundVolume(soundVolume);
 
 }
-
+void Ship::setHealth(int h)
+{
+	*health = h;
+}
 void Ship::maxHealth()
 {
 	*health = 100;
